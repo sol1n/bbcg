@@ -12,8 +12,7 @@ $APPLICATION->SetTitle('Главная');
 	<? $APPLICATION->IncludeFile('/include/blocks/news-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/speakers-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/partners-block.php'); ?>
-	<? $APPLICATION->IncludeFile('/include/blocks/media-block.php'); ?>
-	<? $APPLICATION->IncludeFile('/include/blocks/register-iphone-block-block.php'); ?>
+	<? $APPLICATION->IncludeFile('/include/blocks/register-iphone-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/register-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/iphone-block-mobile.php'); ?>
 
