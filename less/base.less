@@ -1,0 +1,72 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  color: @c-text;
+  .ff-open-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-whatintent="mouse"] *:focus {
+  outline: none;
+}
+
+a {
+  color: @c-text;
+
+  &:hover {
+    color: @c-light-burgundy;
+
+    .blue-theme({
+      color: @c-blue;
+    });
+  }
+
+  .keyboard-focus({
+    outline: 3px solid rgba(115, 178, 228, 0.6);
+  })
+}
+
+.ul-triangle-black {
+  .ul-reset;
+  margin-bottom: 20px;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      background: url("../images/icons/icon-list-arrow-black.svg") no-repeat;
+      width: 4px;
+      height: 5px;
+    }
+  }
+}
+
+.ul-triangle-orange {
+  .ul-reset;
+  margin-bottom: 20px;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      background: url("../images/icons/icon-list-arrow-orange.svg") no-repeat;
+      width: 4px;
+      height: 5px;
+    }
+  }
+}

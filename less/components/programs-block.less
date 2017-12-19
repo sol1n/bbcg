@@ -1,0 +1,196 @@
+.programs-block {
+  background-color: #e7c54f;
+  background-image: linear-gradient(302deg, #f1cf4f, #f1cf4f 30%, #e7c54f 30%, #e7c54f 100%);
+
+  & > .wrapper {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 80px;
+      top: -78px;
+      background: url("../images/retail-academy.png") no-repeat center;
+      width: 269px;
+      height: 238px;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+}
+
+.programs-block-downarrow {
+  & > .wrapper {
+    .block-triangle(#e7c54f);
+  }
+}
+
+.programs-block-title {
+  .ff-gilroy-extrabold;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+
+  @media (max-width: 800px) {
+    font-size: 26px;
+  }
+}
+
+.programs-block-subtitle {
+  margin-top: 10px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.43;
+  margin-bottom: 30px;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+.programs-block-cards {
+  //display: flex;
+  //flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.programs-block-cards-item {
+  display: inline-flex;
+  vertical-align: top;
+  width: 289px;
+  padding: 15px;
+  min-height: 210px;
+
+  /*@media (max-width: 1000px) {
+    flex-basis: 33.3333%;
+  }
+
+  @media (max-width: 800px) {
+    flex-basis: 50%;
+  }
+
+  @media (max-width: 600px) {
+    flex-basis: 100%;
+  }*/
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+}
+
+.programs-block-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: @c-text;
+  color: #fff;
+  padding: 16px 10px;
+  border-radius: 1px;
+  text-decoration: none;
+
+  &:hover {
+    color: @c-text;
+
+    .programs-block-card-desc {
+      color: @c-light-burgundy;
+      transition: all 200ms;
+    }
+  }
+}
+
+.programs-block-card-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.programs-block-card-title {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  line-height: 0.88;
+  background-color: #c1940e;
+  border-radius: 1px;
+  padding: 7px 20px;
+  margin-left: -20px;
+  color: #fff;
+}
+
+.programs-block-card-date {
+  flex: 0 0 60px;
+  .ff-gilroy-extrabold;
+  text-align: right;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.programs-block-card-date-day {
+  .ff-gilroy-extrabold;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.programs-block-card-date-month {
+  font-size: 13px;
+}
+
+.programs-block-card-desc {
+  flex: 1;
+  background: #fff;
+  color: @c-text;
+  font-size: 15px;
+  padding: 10px 16px;
+  border-radius: 1px;
+  box-shadow: 3px 3px 0 0 rgba(255, 255, 255, 0.7);
+  transition: all 200ms;
+}
+
+.programs-block-slider {
+  display: none;
+
+  .programs-block-cards-item {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media (max-width: 400px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .programs-block-card-title {
+    margin-left: -10px;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.programs-block-slider-item {
+  @media (max-width: 400px) {
+    padding: 0 10px;
+  }
+}

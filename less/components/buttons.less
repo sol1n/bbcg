@@ -1,0 +1,37 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  line-height: 1.38;
+  background-color: #cecece;
+  color: #fff;
+  border: 1px solid #cecece;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+  padding: 14px 50px;
+  cursor: pointer;
+  transition: all 200ms;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    transition: all 200ms;
+  }
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-light-burgundy {
+  background-color: @c-light-burgundy;
+  border-color: @c-light-burgundy;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@c-light-burgundy, 10%);
+  }
+}

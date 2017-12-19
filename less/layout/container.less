@@ -1,0 +1,11 @@
+.main-container {
+  flex: 1;
+}
+
+.main-container-with-header {
+  padding-top: @header-height;
+
+  @media (max-width: 920px) {
+    padding-top: @header-height-min;
+  }
+}

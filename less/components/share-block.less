@@ -1,0 +1,29 @@
+.share-block {
+  margin-left: -6px;
+  margin-right: -6px;
+  font-size: 0;
+}
+
+.share-block-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: @c-blue;
+  vertical-align: middle;
+  margin: 6px;
+  transition: background-color 200ms;
+
+  svg {
+    * {
+      fill: #fff;
+    }
+  }
+
+  &:hover {
+    background-color: lighten(@c-blue, 10%);
+    transition: background-color 200ms;
+  }
+}

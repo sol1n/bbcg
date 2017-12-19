@@ -1,0 +1,166 @@
+.main-offcanvas-overlay {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: opacity 300ms, left 100ms 300ms;
+  cursor: pointer;
+
+  &.active {
+    left: 0;
+    opacity: 1;
+    transition: opacity 300ms;
+
+    .main-offcanvas {
+      left: 0;
+      transform: translateX(0px);
+      opacity: 1;
+      transition: all 300ms;
+    }
+  }
+}
+
+.main-offcanvas {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  overflow-y: auto;
+  left: -280px;
+  top: 0;
+  background: linear-gradient(122deg, rgba(237,241,243,1) 0%, rgba(237,241,243,1) 72%, rgba(246,248,249,1) 72%, rgba(250,250,250,1) 100%);
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.main-offcanvas-padding {
+  padding: 0 15px;
+}
+
+.main-offcanvas-footer {
+  margin-top: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-offcanvas-logo {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.main-offcanvas-menu {
+  .ul-reset;
+
+  & > li {
+    & > a {
+      .ff-gilroy-extrabold;
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px;
+      border-left: 3px solid transparent;
+      transition: all 200ms;
+
+      &:hover,
+      &:focus {
+        background: #fff;
+        border-color: @c-light-burgundy;
+        transition: all 200ms;
+      }
+    }
+
+    &.active {
+      & > a {
+        background: #fff;
+        border-color: @c-light-burgundy;
+        transition: all 200ms;
+      }
+    }
+
+    & > ul {
+      .ul-reset;
+
+      & > li {
+        & > a {
+          display: block;
+          padding: 10px 15px;
+          text-decoration: none;
+
+          &::before {
+            content: '—';
+            display: inline-block;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-offcanvas-userarea {
+  margin-top: 20px;
+}
+
+.main-offcanvas-userarea-login-register {
+  .ff-gilroy-extrabold;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  padding: 10px 16px;
+  border: solid 1px @c-light-burgundy;
+
+  a {
+    color: @c-light-burgundy;
+    text-decoration: none;
+    transition: all 200ms;
+
+    &:hover {
+      color: @c-text;
+      transition: all 200ms;
+    }
+  }
+}
+
+.main-offcanvas-lang {
+  margin-top: 20px;
+  .ff-gilroy-extrabold;
+}
+
+.main-offcanvas-lang-item {
+  color: #90999d;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ccd3d7;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: @c-light-burgundy;
+  }
+
+  &.active {
+    color: @c-text;
+
+    &:hover {
+      color: @c-text;
+    }
+  }
+}

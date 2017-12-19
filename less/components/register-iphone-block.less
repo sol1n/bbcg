@@ -1,0 +1,163 @@
+.register-iphone-block {
+  background: url("../images/backgrounds/black-pattern.png") repeat #000;
+  background-size: 25%;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  color: #fff;
+
+  & > .wrapper {
+    display: flex;
+
+    @media (max-width: 1050px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .register-iphone-block-right {
+      display: none;
+    }
+  }
+}
+
+.register-iphone-block-mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+
+    .register-iphone-block-right {
+      display: block;
+    }
+  }
+}
+
+.register-iphone-block-left {
+  flex: 0 0 50%;
+
+  @media (max-width: 1050px) {
+    flex-basis: 100%;
+  }
+}
+
+.register-iphone-block-right {
+  position: relative;
+  flex: 0 0 50%;
+  padding-left: 70px;
+
+  @media (max-width: 1050px) {
+    flex-basis: 100%;
+    min-height: 415px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 570px) {
+    min-height: 260px;
+  }
+
+  @media (max-width: 470px) {
+    padding-left: 0;
+    min-height: auto;
+  }
+}
+
+.register-iphone-block-title {
+  .ff-gilroy-extrabold;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+
+  @media (max-width: 800px) {
+    font-size: 26px;
+  }
+}
+
+.register-iphone-block-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.33;
+  margin-top: 10px;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+.register-iphone-block-screen {
+  position: absolute;
+  z-index: 10;
+  bottom: -50px;
+  left: 70px;
+  background: url("../images/backgrounds/iphone-screen.png") no-repeat top center;
+  background-size: cover;
+  width: 270px;
+  height: 415px;
+
+  @media (max-width: 800px) {
+    bottom: -25px;
+  }
+
+  @media (max-width: 570px) {
+    width: 180px;
+    height: 260px;
+  }
+
+  @media (max-width: 470px) {
+    display: none;
+  }
+}
+
+.register-iphone-block-app {
+  position: relative;
+  text-align: center;
+  padding-left: 300px;
+  padding-top: 40px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 300px;
+    bottom: -50px;
+    background: url("../images/backgrounds/iphone-block-arrow.svg") no-repeat center;
+    width: 60px;
+    height: 33px;
+
+    @media (max-width: 570px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 570px) {
+    padding-left: 160px;
+    padding-top: 0;
+  }
+
+  @media (max-width: 470px) {
+    padding-left: 0;
+  }
+
+  br {
+    @media (max-width: 470px) {
+      display: none;
+    }
+  }
+}
+
+.register-iphone-block-app-title {
+  .ff-gilroy-extrabold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.register-iphone-block-app-icon {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,56 @@
+.registration-form {
+  margin-bottom: 40px;
+
+  .form-control-checkbox {
+    label {
+      display: block;
+      color: #888888;
+      font-size: 0.85rem;
+      line-height: 1rem;
+
+      &::before {
+        top: 1px;
+      }
+
+      &::after {
+        top: 8px;
+      }
+    }
+  }
+}
+
+.registration-form-subtitle {
+  position: relative;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-bottom: 1px solid #DEDEDE;
+    width: 100%;
+    display: inline-block;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+    padding: 5px 10px;
+    background: #fff;
+  }
+}
+
+.registration-form-group {
+  margin-bottom: 20px;
+}
+
+.registration-form-submit {
+  margin-top: 30px;
+  text-align: center;
+}

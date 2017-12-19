@@ -1,0 +1,162 @@
+.register-block {
+  background-color: #2a2928;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: 660px) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+.register-block-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media (max-width: 660px) {
+    margin-left:  -7px;
+    margin-right:  -7px;
+  }
+}
+
+.register-block-card {
+  flex: 0 0 calc(~"33.3333% - 30px");
+  margin: 15px;
+
+  @media (max-width: 1080px) {
+    flex: 1 0 calc(~"50% - 30px");
+  }
+
+  @media (max-width: 660px) {
+    margin: 7px;
+    flex: 1 0 calc(~"100% - 30px");
+  }
+}
+
+.register-block-offer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: @c-text;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @c-text;
+
+    .register-block-offer-button {
+      opacity: 1;
+      transition: all 200ms;
+    }
+  }
+}
+
+.register-block-offer-name {
+  .ff-gilroy-extrabold;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+
+.register-block-offer-price {
+  // Calibri for missing ruble sign in Open Sans
+  font-family: -apple-system, BlinkMacSystemFont, Calibri, "Open Sans", Tahoma, sans-serif;
+  text-align: center;
+  padding: 12px;
+}
+
+.register-block-offer-price-val {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.register-block-offer-price-desc {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.register-block-offer-price-base {
+  background-color: #edf1f3;
+  color: @c-text;
+}
+
+.register-block-offer-price-premium {
+  background-color: @c-corn-yellow;
+  color: #fff;
+}
+
+.register-block-offer-desc {
+  padding: 20px 24px;
+  font-size: 15px;
+  line-height: 1.33;
+}
+
+.register-block-offer-plus {
+  .ff-gilroy-extrabold;
+  text-align: center;
+  font-size: 13px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 0 auto 12px;
+    background: url("../images/icons/icon-register-plus.svg") no-repeat  center;
+  }
+}
+
+.register-block-offer-button {
+  opacity: 0.8;
+  margin-top: auto;
+  padding: 20px 24px;
+  transition: all 200ms;
+}
+
+.register-block-contacts {
+  padding: 20px;
+  background-color: #3a3938;
+  color: #bfbfbe;
+  text-align: center;
+}
+
+.register-block-contacts-title {
+  .ff-gilroy-light;
+  font-size: 24px;
+  line-height: 1.21;
+  margin-bottom: 20px;
+}
+
+.register-block-contacts-item {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.register-block-contacts-icon {
+  margin-bottom: 16px;
+}
+
+.register-block-contacts-val {
+  .ff-gilroy-light;
+  font-size: 24px;
+  color: #ffffff;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: all 200ms;
+
+  &:hover,
+  &:focus {
+    color: @c-yellow;
+    border-color: @c-yellow;
+    transition: all 200ms;
+  }
+}
+
+.register-block-contacts-desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.13;
+  margin-top: 8px;
+}

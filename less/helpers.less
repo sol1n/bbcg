@@ -1,0 +1,78 @@
+.ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block-triangle(@color) {
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    left: 15px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: @color transparent transparent transparent;
+
+    @media (max-width: 800px) {
+      bottom: -10px;
+      border-width: 10px 9px 0 9px;
+    }
+  }
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.disable-mouse-outline() {
+  [data-whatinput="mouse"] & {
+    outline: 0;
+  }
+}
+
+.mouse-focus(@rules) {
+  [data-whatinput="mouse"] & {
+    &:focus {
+      @rules();
+    }
+  }
+}
+
+.mouse-hover(@rules) {
+  @media (hover: hover) {
+    &:hover {
+      @rules();
+    }
+  }
+}
+
+.keyboard-focus(@rules) {
+  [data-whatinput="keyboard"] & {
+    &:focus {
+      @rules();
+    }
+  }
+}
+
+// Global page themes
+.blue-theme(@rules) {
+  .blue-theme & {
+    @rules();
+  }
+}

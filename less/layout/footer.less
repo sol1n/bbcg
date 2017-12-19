@@ -1,0 +1,91 @@
+.main-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(43, 42, 41, 0.32);
+
+  & > .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 980px) {
+      flex-direction: column;
+
+      & > div {
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.main-footer-logo {
+
+}
+
+.main-footer-address {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.3;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background: url("../images/icons/icon-footer-place.svg") no-repeat center;
+    width: 12px;
+    height: 15px;
+
+    .blue-theme({
+      background-image: url("../images/icons/icon-footer-place-blue.svg");
+    });
+  }
+}
+
+.main-footer-phones {
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.3;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background: url("../images/icons/icon-footer-phone.svg") no-repeat center;
+    width: 14px;
+    height: 14px;
+
+    .blue-theme({
+      background-image: url("../images/icons/icon-footer-phone-blue.svg");
+    });
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.main-footer-links {
+  a {
+    display: inline-block;
+    font-size: 11px;
+    margin: 2px 0;
+  }
+}
+
+.main-footer-socials {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+  }
+}
+
+.main-footer-developer {
+  text-align: right;
+  font-size: 11px;
+  line-height: 1.3;
+}

@@ -1,0 +1,122 @@
+.side-modal-speaker {
+  max-width: 100%;
+}
+
+.side-modal-speaker-card {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (max-width: @breakpoint-s) {
+    flex-direction: column-reverse;
+  }
+}
+
+.side-modal-speaker-card-text {
+  flex-basis: 60%;
+  padding-right: 40px;
+
+  @media (max-width: @breakpoint-s) {
+    flex-basis: auto;
+  }
+}
+
+.side-modal-speaker-card-photo {
+  margin-bottom: 20px;
+}
+
+.side-modal-speaker-name {
+  font-size: 2.3rem;
+  line-height: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.side-modal-speaker-title {
+  color: #888888;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.side-modal-speaker-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #888888;
+}
+
+.side-modal-speaker-about {
+  color: #888888;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.side-modal-speaker-about-title {
+  text-transform: uppercase;
+  color: @c-text;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.side-modal-speaker-events {
+
+}
+
+.side-modal-speaker-events-title {
+  text-transform: uppercase;
+  color: @c-text;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.side-modal-speaker-events-item {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #E8E8E8;
+  color: @c-text;
+
+  &:hover {
+    color: @c-text;
+
+    .side-modal-speaker-events-item-title {
+      color: @c-blue;
+    }
+  }
+}
+
+.side-modal-speaker-events-item-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.side-modal-speaker-events-item-meta {
+  display: flex;
+  color: #999999;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+.side-modal-speaker-events-item-date {
+  margin-right: 20px;
+}
+
+.side-modal-speaker-events-item-date-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.side-modal-speaker-events-item-place {
+
+}
+
+.side-modal-speaker-events-item-place-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}

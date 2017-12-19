@@ -1,0 +1,139 @@
+.speaker-block-wrapper {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.speaker-block {
+  background: url('../images/bg-news-block.svg') no-repeat calc(~"100% + 100px") -100px #fff;
+}
+
+.speaker-block-card {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (max-width: @breakpoint-m) {
+
+  }
+
+  @media (max-width: @breakpoint-s) {
+    flex-direction: column-reverse;
+  }
+}
+
+.speaker-block-card-text {
+  flex-basis: 60%;
+  padding-right: 40px;
+
+  @media (max-width: @breakpoint-s) {
+    flex-basis: auto;
+  }
+}
+
+.speaker-block-card-photo {
+  margin-bottom: 20px;
+}
+
+.speaker-block-name {
+  font-size: 2.3rem;
+  line-height: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.speaker-block-title {
+  color: #888888;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.speaker-block-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #888888;
+}
+
+.speaker-block-about {
+  color: #888888;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.speaker-block-about-title {
+  text-transform: uppercase;
+  color: @c-text;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.speaker-block-events {
+
+}
+
+.speaker-block-events-title {
+  text-transform: uppercase;
+  color: @c-text;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.speaker-block-events-item {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #E8E8E8;
+  color: @c-text;
+
+  &:hover {
+    color: @c-text;
+
+    .speaker-block-events-item-title {
+      color: @c-blue;
+    }
+  }
+}
+
+.speaker-block-events-item-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.speaker-block-events-item-meta {
+  display: flex;
+  color: #999999;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+.speaker-block-events-item-date {
+  margin-right: 20px;
+}
+
+.speaker-block-events-item-date-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+
+  svg {
+    vertical-align: bottom;
+  }
+}
+
+.speaker-block-events-item-place {
+
+}
+
+.speaker-block-events-item-place-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+
+  svg {
+    vertical-align: bottom;
+  }
+}

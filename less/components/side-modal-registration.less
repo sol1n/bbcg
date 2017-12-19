@@ -1,0 +1,53 @@
+.registration-modal {
+  position: static;
+  width: 600px;
+  height: auto;
+  opacity: 0;
+  align-self: center;
+  transform: scale(0.9);
+  transform-origin: center;
+
+  .side-modal-close {
+    right: 20px;
+    left: auto;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  @media (max-width: 768px) {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .side-modal-overflow {
+    height: auto;
+  }
+}
+
+.side-modal-overlay {
+  &.active {
+    .registration-modal {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.registration-modal-logo {
+  margin-bottom: 20px;
+}
+
+.registration-modal-title {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.registration-modal-form {
+  max-width: 620px;
+  margin: 0 auto 20px;
+}

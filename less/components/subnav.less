@@ -1,0 +1,160 @@
+@subnavLinkColor: #666666;
+@subnavActiveLinkColor: @c-light-burgundy;
+
+.subnav {
+  border-bottom: 1px solid #E8E8E8;
+  background-color: #fff;
+
+  & > .wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: @breakpoint-s) {
+      display: block;
+    }
+  }
+}
+
+.subnav-list {
+  .ul-reset;
+  font-size: 0;
+  margin: 0 -10px;
+}
+
+.subnav-list-right {
+  margin-left: auto;
+
+  @media (max-width: @breakpoint-l) {
+    margin-top: 10px;
+  }
+}
+
+.subnav-list-wide {
+  margin: 0 -15px;
+
+  .subnav-link {
+    padding: 0 20px;
+  }
+}
+
+.subnav-list-program {
+  .subnav-list-item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      width: 1px;
+      height: 50%;
+      background-color: #E0E0E0;
+    }
+
+    &.active {
+      .subnav-link {
+        color: @subnavActiveLinkColor;
+
+        span {
+          &::after {
+            background-color: @subnavActiveLinkColor;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .subnav-link {
+    color: @subnavLinkColor;
+    letter-spacing: 0.4px;
+
+    span {
+      &::after {
+        background-color: @subnavLinkColor;
+      }
+    }
+
+    &:hover {
+      color: @subnavActiveLinkColor;
+
+      span {
+        &::after {
+          background-color: @subnavActiveLinkColor;
+        }
+      }
+    }
+  }
+}
+
+.subnav-list-program-menu {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.subnav-list-item {
+  display: inline-block;
+  vertical-align: middle;
+
+  &.active {
+    .subnav-link {
+      color: @subnavActiveLinkColor;
+
+      span {
+        &::after {
+          width: 100%;
+          background-color: @subnavActiveLinkColor;
+          transition: all 200ms;
+        }
+      }
+    }
+  }
+}
+
+.subnav-link {
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: block;
+  color: @subnavLinkColor;
+  text-transform: uppercase;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: color 200ms;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    border-top: 2px solid transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: transparent;
+      transition: all ease-in-out 200ms;
+    }
+  }
+
+  .mouse-hover({
+    color: @subnavActiveLinkColor;
+    transition: color 200ms;
+
+    span {
+      &::after {
+        width: 100%;
+        background-color: @subnavActiveLinkColor;
+        transition: all ease-in-out 200ms;
+      }
+    }
+  });
+}
