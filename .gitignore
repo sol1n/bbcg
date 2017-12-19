@@ -6,6 +6,8 @@ Homestead.json
 .php_cs.cache
 .env
 .idea
+.vagrant
+mysql-password.txt
 /public/bitrix/web.config
 /public/bitrix/.settings.php
 /public/bitrix/urlrewrite.php
