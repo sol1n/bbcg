@@ -22,7 +22,7 @@
             <div class="news-block-slider-item">
                 <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-1.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-1.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -33,7 +33,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
             <div class="news-block-slider-item">
                 <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-2.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-2.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -54,7 +54,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
             <div class="news-block-slider-item">
                 <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-3.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-3.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -95,7 +95,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
             <div class="news-block-slider-item">
                 <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-4.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-4.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -154,7 +154,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
             <div class="news-block-slider-item">
                 <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-4.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-4.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -175,7 +175,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>

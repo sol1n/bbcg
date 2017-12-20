@@ -16,7 +16,7 @@ gulp.task('less', function() {
         }))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./build/'))
+        .pipe(gulp.dest('./public/assets/build/'))
         .pipe(postcss([
             cssnano({
                 preset: 'default'

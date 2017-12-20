@@ -94,18 +94,20 @@
   border-color: #fff;
   transition: all 200ms;
 
-  .mouse-hover({
-    border-color: @c-light-burgundy;
-    transition: all 200ms;
-  });
-
   &.slick-prev {
+    border-color: #fff;
     background-image: url("../images/icons/icon-slider-arrow-left-white.svg");
   }
 
   &.slick-next {
+    border-color: #fff;
     background-image: url("../images/icons/icon-slider-arrow-right-white.svg");
   }
+
+  .mouse-hover({
+    border-color: @c-light-burgundy;
+    transition: all 200ms;
+  });
 }
 
 .slick-dots {

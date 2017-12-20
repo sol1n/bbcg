@@ -74,7 +74,7 @@
 
                 <div class="register-block-contacts-item">
                     <div class="register-block-contacts-icon">
-                        <?php include "images/icons/icon-contacts-phone-white.svg"; ?>
+                        <?php include "../assets/images/icons/icon-contacts-phone-white.svg"; ?>
                     </div>
                     <a href="tel:+74957852206" class="register-block-contacts-val">
                         +7 (495) 785-22-06
@@ -87,7 +87,7 @@
 
                 <div class="register-block-contacts-item">
                     <div class="register-block-contacts-icon">
-                        <?php include "images/icons/icon-contacts-email-white.svg"; ?>
+                        <?php include "../assets/images/icons/icon-contacts-email-white.svg"; ?>
                     </div>
                     <a href="mailto:iren@b2bcg.ru" class="register-block-contacts-val">
                         iren@b2bcg.ru

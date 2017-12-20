@@ -21,42 +21,42 @@
             <?php for ($i = 1; $i <= 3; $i++) : ?>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/ebay.png" alt="Ebay">
+                    <img src="../assets/images/tmp/logo/ebay.png" alt="Ebay">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
+                    <img src="../assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/m-video.png" alt="М.Видео">
+                    <img src="../assets/images/tmp/logo/m-video.png" alt="М.Видео">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/la-moda.png" alt="LaModa">
+                    <img src="../assets/images/tmp/logo/la-moda.png" alt="LaModa">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/diksi.png" alt="Дикси">
+                    <img src="../assets/images/tmp/logo/diksi.png" alt="Дикси">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/adamas.png" alt="Адамас">
+                    <img src="../assets/images/tmp/logo/adamas.png" alt="Адамас">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/aliexpress.png" alt="Aliexpress">
+                    <img src="../assets/images/tmp/logo/aliexpress.png" alt="Aliexpress">
                 </a>
             </div>
             <div class="partners-block-slide">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/azbuka-vkusa.png" alt="Азбука Вкуса">
+                    <img src="../assets/images/tmp/logo/azbuka-vkusa.png" alt="Азбука Вкуса">
                 </a>
             </div>
             <?php endfor; ?>

@@ -23,12 +23,12 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-download.svg"; ?>
+                                <?php include "../assets/images/icons/icon-download.svg"; ?>
                                 <div class="media-block-card-icon-text">
                                     Скачать
                                 </div>
                             </div>
-                            <img src="/assets/images/tmp/media/media-1.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-1.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Женщины и брутальные мужчины «Русской парусной недели Volvo»
@@ -40,9 +40,9 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-video-play.svg"; ?>
+                                <?php include "../assets/images/icons/icon-video-play.svg"; ?>
                             </div>
-                            <img src="/assets/images/tmp/media/media-2.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-2.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Игра на выбывание
@@ -54,9 +54,9 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-video-play.svg"; ?>
+                                <?php include "../assets/images/icons/icon-video-play.svg"; ?>
                             </div>
-                            <img src="/assets/images/tmp/media/media-3.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-3.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Легендарный дизайнер оденет россиян по-деревенски
@@ -68,9 +68,9 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-video-play.svg"; ?>
+                                <?php include "../assets/images/icons/icon-video-play.svg"; ?>
                             </div>
-                            <img src="/assets/images/tmp/media/media-4.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-4.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Мастер-класс по европейской кухне
@@ -82,12 +82,12 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-download.svg"; ?>
+                                <?php include "../assets/images/icons/icon-download.svg"; ?>
                                 <div class="media-block-card-icon-text">
                                     Скачать
                                 </div>
                             </div>
-                            <img src="/assets/images/tmp/media/media-1.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-1.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Женщины и брутальные мужчины «Русской парусной недели Volvo»
@@ -99,9 +99,9 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-video-play.svg"; ?>
+                                <?php include "../assets/images/icons/icon-video-play.svg"; ?>
                             </div>
-                            <img src="/assets/images/tmp/media/media-2.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-2.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Игра на выбывание
@@ -113,12 +113,12 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-download.svg"; ?>
+                                <?php include "../assets/images/icons/icon-download.svg"; ?>
                                 <div class="media-block-card-icon-text">
                                     Скачать
                                 </div>
                             </div>
-                            <img src="/assets/images/tmp/media/media-3.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-3.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Легендарный дизайнер оденет россиян по-деревенски
@@ -130,9 +130,9 @@
                     <a href="#" class="media-block-card">
                         <div class="media-block-card-photo">
                             <div class="media-block-card-icon">
-                                <?php include "images/icons/icon-video-play.svg"; ?>
+                                <?php include "../assets/images/icons/icon-video-play.svg"; ?>
                             </div>
-                            <img src="/assets/images/tmp/media/media-4.jpg" alt="">
+                            <img src="../assets/images/tmp/media/media-4.jpg" alt="">
                         </div>
                         <div class="media-block-card-title">
                             Мастер-класс по европейской кухне

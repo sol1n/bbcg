@@ -16,12 +16,14 @@ body {
 a {
   color: @c-text;
 
-  &:hover {
-    color: @c-light-burgundy;
+  &:not(.button) {
+    &:hover {
+      color: @c-light-burgundy;
 
-    .blue-theme({
-      color: @c-blue;
-    });
+      .blue-theme({
+        color: @c-blue;
+      });
+    }
   }
 
   .keyboard-focus({

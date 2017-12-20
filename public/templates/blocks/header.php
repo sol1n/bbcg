@@ -1,16 +1,16 @@
 <header class="main-header">
     <div class="wrapper">
         <a href="#" class="main-header-toggler js-offcanvas">
-            <?php include "assets/images/icons/icon-hamburger-menu.svg"; ?>
+            <?php include "../assets/images/icons/icon-hamburger-menu.svg"; ?>
         </a>
         <div class="main-header-logo">
             <a href="index.php">
-                <img src="/assets/images/logo.svg" alt="BBCG — B2B Conference Group">
+                <img src="../assets/images/logo.svg" alt="BBCG — B2B Conference Group">
             </a>
         </div>
         <div class="main-header-mobile-logo">
             <a href="index.php">
-                <img src="/assets/images/logo-min.svg" alt="BBCG — B2B Conference Group">
+                <img src="../assets/images/logo-min.svg" alt="BBCG — B2B Conference Group">
             </a>
         </div>
         <nav class="main-header-menu">
