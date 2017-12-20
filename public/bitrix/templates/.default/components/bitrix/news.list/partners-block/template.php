@@ -21,7 +21,7 @@
             <? foreach ($arResult['ITEMS'] as $item): ?>
                 <div class="partners-block-slide">
                     <? if ($item['PROPERTIES']['LINK']['VALUE']): ?>
-                        <a href="<?=$item['PROPERTIES']['LINK']['VALUE']?>" class="partners-block-card">
+                        <a target="_blank" href="<?=$item['PROPERTIES']['LINK']['VALUE']?>" class="partners-block-card">
                             <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
                         </a>
                     <? else: ?>

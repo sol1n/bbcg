@@ -15,8 +15,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? /* templates/blocks/header */ ?>
 		<header class="main-header">
 		    <div class="wrapper">
-		        <a href="#" class="main-header-toggler js-offcanvas">
-		            <?php include "assets/images/icons/icon-hamburger-menu.svg"; ?>
+		        <a href="/" class="main-header-toggler js-offcanvas">
+		        	<? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-hamburger-menu.svg') ?>
 		        </a>
 		        <div class="main-header-logo">
 		            <a href="/">
@@ -31,19 +31,19 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		        <nav class="main-header-menu">
 		            <ul>
 		                <li>
-		                    <a href="#">О компании</a>
+		                    <a href="/about/">О компании</a>
 		                </li>
 		                <li class="parent">
-		                    <a href="#">Календарь саммитов</a>
+		                    <a href="/summits/">Календарь саммитов</a>
 		                </li>
 		                <li>
-		                    <a href="#">Академия ретейла</a>
+		                    <a href="/academy/">Академия ретейла</a>
 		                </li>
 		                <li>
-		                    <a href="news.php">Новости</a>
+		                    <a href="/news/">Новости</a>
 		                </li>
 		                <li>
-		                    <a href="contacts.php">Контакты</a>
+		                    <a href="/contacts/">Контакты</a>
 		                </li>
 		            </ul>
 		        </nav>
@@ -72,27 +72,27 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		        <div class="main-offcanvas-body">
 		            <ul class="main-offcanvas-menu">
 		                <li class="active">
-		                    <a href="#">
+		                    <a href="/about/">
 		                        О компании
 		                    </a>
 		                </li>
 		                <li>
-		                    <a href="#">
+		                    <a href="/summits/">
 		                        Календарь саммитов
 		                    </a>
 		                </li>
 		                <li>
-		                    <a href="#">
+		                    <a href="/academy/">
 		                        Академия ретейла
 		                    </a>
 		                </li>
 		                <li>
-		                    <a href="news.php">
+		                    <a href="/news/">
 		                        Новости
 		                    </a>
 		                </li>
 		                <li>
-		                    <a href="contacts.php">
+		                    <a href="/contacts/">
 		                        Контакты
 		                    </a>
 		                </li>
