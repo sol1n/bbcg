@@ -8,7 +8,8 @@
         </div>
     </div>
 
-    <div class="location-block-map">
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBa9yBt0tB" width="100%" height="520" frameborder="0"></iframe>
-    </div>
+    <div
+            class="location-block-map"
+            data-maps='{"center": "55.83110973, 37.63869129", "zoom": 16, "placemark": {"name": "ул. Косыгина, 15", "center": "55.83110973, 37.63869129"}}'
+    ></div>
 </section>

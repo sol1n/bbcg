@@ -58,6 +58,7 @@
   font-size: 24px;
   text-align: center;
   padding: 20px;
+  color: @c-text;
 }
 
 .register-block-offer-price {
@@ -91,6 +92,7 @@
   padding: 20px 24px;
   font-size: 15px;
   line-height: 1.33;
+  color: @c-text;
 }
 
 .register-block-offer-plus {
@@ -146,11 +148,12 @@
   text-decoration: none;
   transition: all 200ms;
 
-  &:hover,
-  &:focus {
-    color: @c-yellow;
-    border-color: @c-yellow;
-    transition: all 200ms;
+  &:not(.button) {
+    .mouse-hover({
+      color: @c-yellow;
+      border-color: @c-yellow;
+      transition: all 200ms;
+    });
   }
 }
 

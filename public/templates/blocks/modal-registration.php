@@ -1,5 +1,5 @@
 <div class="registration-modal-logo">
-    <img src="/assets/images/logo.svg" alt="BBCG">
+    <img src="../assets/images/logo.svg" alt="BBCG">
 </div>
 
 <div class="registration-modal-title">

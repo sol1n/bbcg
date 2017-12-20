@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
 </head>
 <body>
@@ -25,7 +25,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="contacts-block-item">
                         <div class="contacts-block-item-icon">
-                            <?php include "images/icons/icon-contacts-place.svg"; ?>
+                            <?php include "../assets/images/icons/icon-contacts-place.svg"; ?>
                         </div>
                         <div class="contacts-block-item-content">
                             <div class="contacts-block-item-title">
@@ -40,7 +40,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="contacts-block-item">
                         <div class="contacts-block-item-icon">
-                            <?php include "images/icons/icon-contacts-phone.svg"; ?>
+                            <?php include "../assets/images/icons/icon-contacts-phone.svg"; ?>
                         </div>
                         <div class="contacts-block-item-content">
                             <div class="contacts-block-item-title">
@@ -56,7 +56,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="contacts-block-item">
                         <div class="contacts-block-item-icon">
-                            <?php include "images/icons/icon-contacts-manager.svg"; ?>
+                            <?php include "../assets/images/icons/icon-contacts-manager.svg"; ?>
                         </div>
                         <div class="contacts-block-item-content">
                             <div class="contacts-block-item-title">
@@ -114,6 +114,7 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
 </body>
 </html>

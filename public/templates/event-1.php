@@ -17,8 +17,10 @@
 <main class="main-container main-container-with-header">
     <?php include "blocks/about-summit-block.php"; ?>
     <?php include "blocks/summit-text-block.php"; ?>
+    <?php include "blocks/sessions-block.php"; ?>
     <?php include "blocks/speakers-block-blue.php"; ?>
     <?php include "blocks/partners-block-blue.php"; ?>
+    <?php include "blocks/reviews-block.php"; ?>
     <?php include "blocks/news-block-blue.php"; ?>
     <?php include "blocks/location-block.php"; ?>
 </main>
@@ -26,5 +28,6 @@
 <?php include "blocks/footer.php"; ?>
 
 <script src="../assets/build/scripts.min.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
 </body>
 </html>

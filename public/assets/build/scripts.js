@@ -16599,14 +16599,20 @@ return $;
         $headerGlobal = $('.header-global'),
         $headerGlobalHeight = $headerGlobal.height();
 
+    function fixHeader() {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop < $headerGlobalHeight) {
+            $header.css('top', $headerGlobalHeight - scrollTop);
+        } else {
+            $header.css('top', 0);
+        }
+    }
+
     if ($headerGlobal.length) {
+        fixHeader();
+
         $(window).on('scroll', function () {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop < $headerGlobalHeight) {
-                $header.css('top', $headerGlobalHeight - scrollTop);
-            } else {
-                $header.css('top', 0);
-            }
+            fixHeader();
         });
     }
 })();
@@ -17035,6 +17041,46 @@ return $;
 
     resize();
 })();
+(function() {
+    var $slider = $(".js-sessions-slider");
+
+    $slider.slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        appendArrows: ".sessions-block-header-arrows",
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 520,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    function resize() {
+        if ($(window).width() < 520) {
+            $slider.slick('slickFilter', function(i) {
+                return i < 10;
+            });
+        }
+    }
+
+    resize();
+})();
 function initSideModalWrapper(classNames) {
     var $modalWrapper = $(
         '<div class="side-modal-overlay">' +
@@ -17269,6 +17315,52 @@ Swipe.prototype.touchHandler = function (event) {
         }
     }
 };
+function initMaps(ymaps) {
+    var mapElements = document.querySelectorAll('[data-maps]');
+
+    for (var i = 0; i < mapElements.length; i++) {
+        (function () {
+            var mapSettings = function () {
+                try {
+                    return JSON.parse(mapElements[i].dataset.maps);
+                } catch (err) {
+                    console.log(err);
+                }
+            };
+
+            var settings = mapSettings();
+
+            if (settings) {
+                var map = new ymaps.Map(mapElements[i], {
+                    center: settings.center.split(','),
+                    zoom: settings.zoom,
+                    controls: ['smallMapDefaultSet']
+                });
+
+                map.behaviors.disable('scrollZoom');
+
+                if (settings.placemark) {
+                    var myGeoObject = new ymaps.GeoObject({
+                            // Описание геометрии.
+                            geometry: {
+                                type: "Point",
+                                coordinates: settings.placemark.center.split(',')
+                            },
+                            properties: {
+                                // Контент метки.
+                                iconContent: settings.placemark.name
+                            }
+                        },
+                        {
+                            preset: 'islands#blackStretchyIcon'
+                        });
+
+                    map.geoObjects.add(myGeoObject);
+                }
+            }
+        })();
+    }
+}
 $(document).ready(function() {
     $(".js-slick-slider").slick();
     $('[data-masked-input]').maskedinput();

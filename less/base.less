@@ -31,6 +31,45 @@ a {
   })
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  .ff-gilroy-extrabold;
+}
+
+h1, .h1 {
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+h2, .h2 {
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+h4, .h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+h6, .h6 {
+  font-size: 13px;
+  line-height: 16px;
+}
+
 .ul-triangle-black {
   .ul-reset;
   margin-bottom: 20px;
@@ -68,6 +107,27 @@ a {
       top: 0.6em;
       background: url("../images/icons/icon-list-arrow-orange.svg") no-repeat;
       width: 4px;
+      height: 5px;
+    }
+  }
+}
+
+.ul-square-blue {
+  .ul-reset;
+  margin-bottom: 20px;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      background-color: @c-blue;
+      width: 5px;
       height: 5px;
     }
   }
