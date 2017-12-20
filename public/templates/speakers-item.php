@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
 </head>
 <body>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="speaker-block-card-photo">
-                        <img src="/assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
+                        <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
                     </div>
                 </div>
 
@@ -92,13 +92,13 @@
                         <div class="speaker-block-events-item-meta">
                             <div class="speaker-block-events-item-date">
                                     <span class="speaker-block-events-item-date-icon">
-                                        <?php include "images/icons/icon-modal-calendar.svg"; ?>
+                                        <?php include "../assets/images/icons/icon-modal-calendar.svg"; ?>
                                     </span>
                                 7 сентября, 14:00
                             </div>
                             <div class="speaker-block-events-item-place">
                                     <span class="speaker-block-events-item-place-icon">
-                                        <?php include "images/icons/icon-modal-marker.svg"; ?>
+                                        <?php include "../assets/images/icons/icon-modal-marker.svg"; ?>
                                     </span>
                                 Основной зал 1
                             </div>
@@ -113,13 +113,13 @@
                         <div class="speaker-block-events-item-meta">
                             <div class="speaker-block-events-item-date">
                                     <span class="speaker-block-events-item-date-icon">
-                                        <?php include "images/icons/icon-modal-calendar.svg"; ?>
+                                        <?php include "../assets/images/icons/icon-modal-calendar.svg"; ?>
                                     </span>
                                 7 сентября, 14:00
                             </div>
                             <div class="speaker-block-events-item-place">
                                     <span class="speaker-block-events-item-place-icon">
-                                        <?php include "images/icons/icon-modal-marker.svg"; ?>
+                                        <?php include "../assets/images/icons/icon-modal-marker.svg"; ?>
                                     </span>
                                 Основной зал 2
                             </div>
@@ -133,6 +133,6 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 </body>
 </html>

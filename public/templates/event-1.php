@@ -22,6 +22,9 @@
     <?php include "blocks/partners-block-blue.php"; ?>
     <?php include "blocks/reviews-block.php"; ?>
     <?php include "blocks/news-block-blue.php"; ?>
+    <?php include "blocks/summit-price-block.php"; ?>
+    <?php include "blocks/summit-registration-block.php"; ?>
+    <?php include "blocks/summit-contacts-block.php"; ?>
     <?php include "blocks/location-block.php"; ?>
 </main>
 

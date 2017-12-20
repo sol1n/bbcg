@@ -15,8 +15,30 @@
         </div>
         <nav class="main-header-menu">
             <ul>
-                <li>
+                <li class="parent">
                     <a href="#">О саммите</a>
+
+                    <div class="main-header-submenu">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <a href="#">Посетителям</a>
+                                </li>
+                                <li>
+                                    <a href="#">Экспонентам</a>
+                                </li>
+                                <li>
+                                    <a href="#">Партнерам</a>
+                                </li>
+                                <li>
+                                    <a href="#">СМИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Полезная информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#">Программа</a>

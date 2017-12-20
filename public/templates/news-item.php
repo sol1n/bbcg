@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
 </head>
 <body>
@@ -70,7 +70,7 @@
                         Организаторами форума выступают Департамент образования города Москвы, Департамент внешнеэкономических и международных связей города Москвы, Департамент информационных технологий города Москвы. Мероприятие пройдет при поддержке Федеральной службы по надзору в сфере образования и науки. Соорганизаторами стали образовательное движение EdCrunch и АО «ВДНХ».
                     </p>
 
-                    <img src="/assets/images/tmp/news/demo-2.jpg" alt="" class="m-t-md m-b-md">
+                    <img src="../assets/images/tmp/news/demo-2.jpg" alt="" class="m-t-md m-b-md">
 
                     <p>
                         Программа форума объединила в себе все основные направления технологического развития потребительского рынка: платформы и экосистемы, стартапы в ритейле, Big Data, e-commerce, интернет вещей (IoT), машинное обучение (ML), блокчейн, технологии Digital Signage, дополненную и виртуальную реальность.
@@ -93,13 +93,13 @@
                         </div>
                         <div class="share-block">
                             <a href="#" target="_blank" class="share-block-item">
-                                <?php include "images/icons/icon-vk.svg"; ?>
+                                <?php include "../assets/images/icons/icon-vk.svg"; ?>
                             </a>
                             <a href="#" target="_blank" class="share-block-item">
-                                <?php include "images/icons/icon-facebook.svg"; ?>
+                                <?php include "../assets/images/icons/icon-facebook.svg"; ?>
                             </a>
                             <a href="#" target="_blank" class="share-block-item">
-                                <?php include "images/icons/icon-twitter.svg"; ?>
+                                <?php include "../assets/images/icons/icon-twitter.svg"; ?>
                             </a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <a href="#" class="news-block-item news-block-item-with-photo m-b-md">
                         <div class="news-block-item-photo">
-                            <img src="/assets/images/tmp/news/news-1.jpg" alt="">
+                            <img src="../assets/images/tmp/news/news-1.jpg" alt="">
                         </div>
                         <div class="news-block-item-content">
                             <div class="news-block-item-title">
@@ -128,7 +128,7 @@
                                     26 октября
                                 </div>
                                 <div class="news-block-item-readmore">
-                                    <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                    <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <a href="#" class="news-block-item news-block-item-with-photo m-b-md">
                         <div class="news-block-item-photo">
-                            <img src="/assets/images/tmp/news/news-2.jpg" alt="">
+                            <img src="../assets/images/tmp/news/news-2.jpg" alt="">
                         </div>
                         <div class="news-block-item-content">
                             <div class="news-block-item-title">
@@ -148,7 +148,7 @@
                                     26 октября
                                 </div>
                                 <div class="news-block-item-readmore">
-                                    <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                    <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                     26 октября
                                 </div>
                                 <div class="news-block-item-readmore">
-                                    <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                    <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                                 </div>
                             </div>
                         </div>
@@ -180,6 +180,6 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 </body>
 </html>

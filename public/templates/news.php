@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
 </head>
 <body>
@@ -56,7 +56,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="#" class="news-block-item news-block-item-with-photo m-b-md">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-1.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-1.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -67,7 +67,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="#" class="news-block-item news-block-item-with-photo m-b-md">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-2.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-2.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -87,7 +87,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="#" class="news-block-item news-block-item-with-photo m-b-md">
                     <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-3.jpg" alt="">
+                        <img src="../assets/images/tmp/news/news-3.jpg" alt="">
                     </div>
                     <div class="news-block-item-content">
                         <div class="news-block-item-title">
@@ -126,7 +126,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                 26 октября
                             </div>
                             <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
+                                <?php include "../assets/images/icons/icon-news-readmore.svg"; ?>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
             <ul class="pagination-list">
                 <li class="pagination-list-item disabled">
                     <span class="pagination-link pagination-link-prev">
-                        <?php include "images/icons/icon-pagination-prev.svg"; ?>
+                        <?php include "../assets/images/icons/icon-pagination-prev.svg"; ?>
                     </span>
                 </li>
                 <li class="pagination-list-item active">
@@ -195,7 +195,7 @@
                 </li>
                 <li class="pagination-list-item">
                     <a href="#" class="pagination-link pagination-link-next">
-                        <?php include "images/icons/icon-pagination-next.svg"; ?>
+                        <?php include "../assets/images/icons/icon-pagination-next.svg"; ?>
                     </a>
                 </li>
             </ul>
@@ -205,6 +205,6 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
 </head>
 <body>
@@ -52,9 +52,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
+                            <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -75,9 +75,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
+                            <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -97,9 +97,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
+                            <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -119,9 +119,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
+                            <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -141,9 +141,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
+                            <img src="../assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -164,9 +164,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
+                            <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -187,9 +187,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
+                            <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -209,9 +209,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
+                            <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -231,9 +231,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
+                            <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -254,9 +254,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
+                            <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -276,9 +276,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
+                            <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -298,9 +298,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <a href="speakers-item.php" class="speakers-block-card">
                         <div class="speakers-block-card-photo">
-                            <img src="/assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
+                            <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
                             <div class="speakers-block-card-logo">
-                                <img src="/assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
+                                <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
                             </div>
                         </div>
                         <div class="speakers-block-card-desc">
@@ -322,7 +322,7 @@
                 <ul class="pagination-list">
                     <li class="pagination-list-item disabled">
                         <span class="pagination-link pagination-link-prev">
-                            <?php include "images/icons/icon-pagination-prev.svg"; ?>
+                            <?php include "../assets/images/icons/icon-pagination-prev.svg"; ?>
                         </span>
                     </li>
                     <li class="pagination-list-item active">
@@ -342,7 +342,7 @@
                     </li>
                     <li class="pagination-list-item">
                         <a href="#" class="pagination-link pagination-link-next">
-                            <?php include "images/icons/icon-pagination-next.svg"; ?>
+                            <?php include "../assets/images/icons/icon-pagination-next.svg"; ?>
                         </a>
                     </li>
                 </ul>
@@ -353,6 +353,6 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
-    <link rel="stylesheet" href="/assets/build/style.min.css">
+    <link rel="stylesheet" href="../assets/build/style.min.css">
 </head>
 <body>
 
@@ -22,47 +22,47 @@
         <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card ">
-                    <img src="/assets/images/tmp/logo/ebay.png" alt="Ebay">
+                    <img src="../assets/images/tmp/logo/ebay.png" alt="Ebay">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
+                    <img src="../assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/m-video.png" alt="М.Видео">
+                    <img src="../assets/images/tmp/logo/m-video.png" alt="М.Видео">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/la-moda.png" alt="LaModa">
+                    <img src="../assets/images/tmp/logo/la-moda.png" alt="LaModa">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/diksi.png" alt="Дикси">
+                    <img src="../assets/images/tmp/logo/diksi.png" alt="Дикси">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/adamas.png" alt="Адамас">
+                    <img src="../assets/images/tmp/logo/adamas.png" alt="Адамас">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/aliexpress.png" alt="Aliexpress">
+                    <img src="../assets/images/tmp/logo/aliexpress.png" alt="Aliexpress">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/azbuka-vkusa.png" alt="Азбука Вкуса">
+                    <img src="../assets/images/tmp/logo/azbuka-vkusa.png" alt="Азбука Вкуса">
                 </a>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card ">
-                    <img src="/assets/images/tmp/logo/ebay.png" alt="Ebay">
+                    <img src="../assets/images/tmp/logo/ebay.png" alt="Ebay">
                 </a>
             </div>
         </div>
@@ -71,6 +71,6 @@
 
 <?php include "blocks/footer.php"; ?>
 
-<script src="/assets/build/scripts.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 </body>
 </html>
