@@ -47,3 +47,4 @@ mysql-password.txt
 **/.section.php
 **/.access.php
 **/.DS_Store
+**/*.log

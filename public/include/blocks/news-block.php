@@ -1,187 +1,26 @@
-<section class="news-block news-block-downarrow">
-    <div class="wrapper">
-        <div class="news-block-header">
-            <div class="news-block-header-left">
-                <div class="news-block-title">
-                    Новости и события ритейла
-                </div>
-                <div class="news-block-subtitle">
-                    Узнайте эксклюзивную информацию о рынке до появления в СМИ
-                </div>
-            </div>
-            <div class="news-block-header-right">
-                <a href="news.php" class="no-wrap">
-                    Все новости
-                </a>
-                <div class="news-block-header-arrows"></div>
-            </div>
-        </div>
-
-        <div class="news-block-slider js-news-slider">
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-1.jpg" alt="">
-                    </div>
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            «ВШЭУ» запустила программу «Менеджмент в ритейле»
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-2.jpg" alt="">
-                    </div>
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Приглашаем на деловые экскурсии
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-blank" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Ретейлеры для директоров
-                            по Ритейлу: Инновации
-                            в управлении ритейлом (розничным блоком)!
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-3.jpg" alt="">
-                    </div>
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Меркурий: от теории к практике
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-blank" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Мастер-класс по европейской кухне
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-blank" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Ретейлеры для директоров
-                            по Ритейлу: Инновации
-                            в управлении ритейлом (розничным блоком)!
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-4.jpg" alt="">
-                    </div>
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            В рамках RBR 2017, состоялся гала ужин Академии Ритейла и каким будет fashion-ритейл в ближайшем будущем, бла…
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="news-block-slider-item">
-                <a href="data/news/news-1.php" class="news-block-item news-block-item-with-photo" data-side-modal data-side-modal-class="side-modal-wide side-modal-news">
-                    <div class="news-block-item-photo">
-                        <img src="/assets/images/tmp/news/news-4.jpg" alt="">
-                    </div>
-                    <div class="news-block-item-content">
-                        <div class="news-block-item-title">
-                            Каким будет fashion-ритейл в ближайшем будущем?
-                        </div>
-                        <div class="news-block-item-meta">
-                            <div class="news-block-item-date">
-                                26 октября
-                            </div>
-                            <div class="news-block-item-readmore">
-                                <?php include "images/icons/icon-news-readmore.svg"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php endfor; ?>
-        </div>
-    </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "news-block",
+    Array(
+        "ADD_SECTIONS_CHAIN" => "N",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "N",
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array(),
+        "IBLOCK_ID" => NEWS_IBLOCK,
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "NEWS_COUNT" => "30",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "main",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PROPERTY_CODE" => array("*"),
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC"
+    )
+);?>

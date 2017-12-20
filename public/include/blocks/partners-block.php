@@ -1,65 +1,26 @@
-<section class="partners-block partners-block-downarrow">
-    <div class="wrapper">
-        <div class="partners-block-header">
-            <div class="partners-block-header-left">
-                <div class="partners-block-title">
-                    Партнеры
-                </div>
-                <div class="partners-block-subtitle">
-                    Наши партнеры &mdash; крупнейшие мировые компании
-                </div>
-            </div>
-            <div class="partners-block-header-right">
-                <a href="#" class="no-wrap">
-                    Все партнеры
-                </a>
-                <div class="partners-block-header-arrows"></div>
-            </div>
-        </div>
-
-        <div class="media-block-slider js-partners-slider">
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/ebay.png" alt="Ebay">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/m-video.png" alt="М.Видео">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/la-moda.png" alt="LaModa">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/diksi.png" alt="Дикси">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/adamas.png" alt="Адамас">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/aliexpress.png" alt="Aliexpress">
-                </a>
-            </div>
-            <div class="partners-block-slide">
-                <a href="#" class="partners-block-card">
-                    <img src="/assets/images/tmp/logo/azbuka-vkusa.png" alt="Азбука Вкуса">
-                </a>
-            </div>
-            <?php endfor; ?>
-        </div>
-    </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "partners-block",
+    Array(
+        "ADD_SECTIONS_CHAIN" => "N",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "N",
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array(),
+        "IBLOCK_ID" => PARTNERS_IBLOCK,
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "NEWS_COUNT" => "32",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "main",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PROPERTY_CODE" => array("*"),
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC"
+    )
+);?>

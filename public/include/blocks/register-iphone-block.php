@@ -17,11 +17,11 @@
                     Приложение <br>
                     BBCG
                 </div>
-                <a href="#" target="_blank" class="register-iphone-block-app-icon">
+                <a href="https://itunes.apple.com/us/app/bbcg/id691970503" target="_blank" class="register-iphone-block-app-icon">
                     <img src="/assets/images/icons/icon-appstore-white.svg" alt="App Store">
                 </a>
                 <br>
-                <a href="#" target="_blank" class="register-iphone-block-app-icon">
+                <a href="https://play.google.com/store/apps/details?id=com.konferenza.bbcg" target="_blank" class="register-iphone-block-app-icon">
                     <img src="/assets/images/icons/icon-google-play-white.svg" alt="Google Play">
                 </a>
             </div>

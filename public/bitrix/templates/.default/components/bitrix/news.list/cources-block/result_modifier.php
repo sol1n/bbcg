@@ -21,10 +21,11 @@
                 $arResult['ITEMS'][$k]['MONTH'] = FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             } else {
                 //Start and end dates are in different months
-                $endDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-                $beginDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-                $arResult['ITEMS'][$k]['DAYS'] = "$beginDay – $endDay";
-                $arResult['ITEMS'][$k]['MONTH'] = FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $endDay = FormatDate('j.m', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $beginDay = FormatDate('j.m', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $arResult['ITEMS'][$k]['DAYS'] = $beginDay;
+                $arResult['ITEMS'][$k]['MONTH'] = $endDay;
+                $arResult['ITEMS'][$k]['TWOMONTH'] = true;
             }
         }
     }
