@@ -35,52 +35,35 @@
                 </div>
             <? endif ?>
 
-            <div class="speaker-block-events">
-                <div class="speaker-block-events-title">
-                    Выступления
+            <? if ($arResult['EVENTS']): ?>
+                <div class="speaker-block-events">
+                    <div class="speaker-block-events-title">
+                        Выступления
+                    </div>
+                    <? foreach ($arResult['EVENTS'] as $event): ?>
+                        <a href="<?=$event['DETAIL_PAGE_URL']?>" class="speaker-block-events-item">
+                            <div class="speaker-block-events-item-title">
+                                <?=$event['NAME']?>
+                            </div>
+
+                            <div class="speaker-block-events-item-meta">
+                                <div class="speaker-block-events-item-date">
+                                    <span class="speaker-block-events-item-date-icon">
+                                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-modal-calendar.svg') ?>
+                                    </span>
+                                    <?=$event['DATE']?>
+                                </div>
+                                <div class="speaker-block-events-item-place">
+                                    <span class="speaker-block-events-item-place-icon">
+                                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-modal-marker.svg') ?>
+                                    </span>
+                                    <?=$event['PROPERTY_AREA_NAME']?>
+                                </div>
+                            </div>
+                        </a>
+                    <? endforeach ?>
                 </div>
-                <a href="#" class="speaker-block-events-item">
-                    <div class="speaker-block-events-item-title">
-                        «Система образования как инструмент консолидации городского сообщества»
-                    </div>
-
-                    <div class="speaker-block-events-item-meta">
-                        <div class="speaker-block-events-item-date">
-                                <span class="speaker-block-events-item-date-icon">
-                                    <?php include "images/icons/icon-modal-calendar.svg"; ?>
-                                </span>
-                            7 сентября, 14:00
-                        </div>
-                        <div class="speaker-block-events-item-place">
-                                <span class="speaker-block-events-item-place-icon">
-                                    <?php include "images/icons/icon-modal-marker.svg"; ?>
-                                </span>
-                            Основной зал 1
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="speaker-block-events-item">
-                    <div class="speaker-block-events-item-title">
-                        Съезд учителей города Москвы
-                    </div>
-
-                    <div class="speaker-block-events-item-meta">
-                        <div class="speaker-block-events-item-date">
-                                <span class="speaker-block-events-item-date-icon">
-                                    <?php include "images/icons/icon-modal-calendar.svg"; ?>
-                                </span>
-                            7 сентября, 14:00
-                        </div>
-                        <div class="speaker-block-events-item-place">
-                                <span class="speaker-block-events-item-place-icon">
-                                    <?php include "images/icons/icon-modal-marker.svg"; ?>
-                                </span>
-                            Основной зал 2
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <? endif ?>
         </div>
     </div>
 </div>
