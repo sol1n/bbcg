@@ -79,18 +79,32 @@
                 </form>
             </div>
             <div class="summit-registration-block-right">
+                <div class="summit-registration-block-right-title">
+                    Альтернативные
+                    способы регистрации
+                </div>
                 <div class="summit-registration-block-card">
                     <div class="summit-registration-block-card-icon">
-
+                        <?php include "../assets/images/icons/icon-contacts-phone-white.svg"; ?>
                     </div>
-                    BBCG предоставляет традиционные скидки постоянным участникам, и при регистрации 2-х и более представителей компании.
+                    <div class="summit-registration-block-card-value">
+                        <a href="tel:+74957852206">+7 (495) 785-22-06</a> <br>
+                        или <a href="tel:7811134">781-11-34</a>
+                    </div>
+
+                    контактное лицо Ирина Чиннова
                 </div>
 
                 <div class="summit-registration-block-card">
                     <div class="summit-registration-block-card-icon">
-
+                        <?php include "../assets/images/icons/icon-contacts-email-white.svg"; ?>
                     </div>
-                    В случае предоставления описания 1 реализованного решения по оптимизации бизнеса — дополнительная скидка 15%.
+                    <div class="summit-registration-block-card-value">
+                        <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a>
+                    </div>
+
+                    Скачать заявку и отправить
+                    на указанную почту
                 </div>
             </div>
         </div>

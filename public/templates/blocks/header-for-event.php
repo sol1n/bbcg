@@ -10,7 +10,7 @@
         </div>
         <div class="main-header-mobile-logo">
             <a href="index.php">
-                <img src="../assets/images/logo-min.svg" alt="BBCG — B2B Conference Group">
+                <img src="../assets/images/logo-online-retail-russia.png" alt="Бизнес форум «Online Retail Russia»" height="34">
             </a>
         </div>
         <nav class="main-header-menu">
@@ -47,16 +47,10 @@
                     <a href="#">Спикеры</a>
                 </li>
                 <li>
-                    <a href="#">Отзывы</a>
-                </li>
-                <li>
                     <a href="#">Партнеры</a>
                 </li>
                 <li>
                     <a href="#">Новости</a>
-                </li>
-                <li>
-                    <a href="#">Регистрация</a>
                 </li>
                 <li>
                     <a href="#">Контакты</a>

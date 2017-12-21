@@ -1,6 +1,6 @@
 .summit-price-block {
-  background: url("../assets/images/backgrounds/black-pattern.png") repeat #000;
-  background-size: 50%;
+  background: url("../images/backgrounds/black-pattern.png") repeat #000;
+  background-size: 25%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -15,6 +15,10 @@
 
 .summit-price-block-row {
   display: flex;
+
+  @media (max-width: @breakpoint-m) {
+    flex-direction: column;
+  }
 }
 
 .summit-price-block-left {
@@ -26,22 +30,38 @@
   flex-direction: column;
   align-items: stretch;
   padding-left: 30px;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  margin-top: -8px;
+  margin-bottom: -8px;
 
   & > div {
     flex: 1 0 auto;
+
+    @media (max-width: @breakpoint-m) {
+      flex: auto;
+    }
+  }
+
+  @media (max-width: @breakpoint-m) {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: row;
   }
 }
 
 .summit-price-block-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   display: flex;
   align-items: stretch;
   border-radius: 2px;
   background-color: #fff;
   overflow: hidden;
+
+  @media (max-width: @breakpoint-m) {
+    margin-bottom: 20px;
+  }
 
   tbody {
     width: 100%;
@@ -113,16 +133,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.17);
   color: #fff;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
   padding: 16px;
-  margin: 5px 0;
+  margin: 8px 0;
   border-radius: 2px;
 }
 
 .summit-price-block-card-icon {
+  width: 40px;
+  max-height: 40px;
   margin-bottom: 6px;
 }

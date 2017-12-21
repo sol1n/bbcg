@@ -1,5 +1,9 @@
 .location-block {
   padding-top: 60px;
+
+  @media (max-width: @breakpoint-m) {
+    padding-top: 30px;
+  }
 }
 
 .location-block-title {
@@ -7,6 +11,10 @@
   font-size: 50px;
   margin-bottom: 10px;
   text-transform: uppercase;
+
+  @media (max-width: @breakpoint-m) {
+    font-size: 30px;
+  }
 }
 
 .location-block-desc {

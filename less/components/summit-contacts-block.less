@@ -1,0 +1,134 @@
+.summit-contacts-block {
+  background: url("../images/backgrounds/black-pattern.png") repeat #000;
+  background-size: 25%;
+  padding-bottom: 50px;
+}
+
+.summit-contacts-blocks {
+  & > [class^="col-"] {
+    display: flex;
+  }
+}
+
+.summit-contacts-block-title {
+  .ff-gilroy-extrabold;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.summit-contacts-block-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.summit-contacts-block-card-title {
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.summit-contacts-block-card-desc {
+  margin-bottom: 15px;
+  line-height: 19px;
+}
+
+.summit-contacts-block-card-manager {
+  text-align: center;
+  margin-top: auto;
+}
+
+.summit-contacts-block-card-manager-photo {
+  margin-bottom: 8px;
+
+  img {
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+  }
+}
+
+.summit-contacts-block-card-manager-name {
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.summit-contacts-block-card-manager-contacts {
+  line-height: 19px;
+}
+
+.summit-contacts-block-app {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: @breakpoint-l) {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+
+.summit-contacts-block-app-iphone {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  margin-left: -85px;
+  background: url("../images/backgrounds/iphone-screen.png") no-repeat top center;
+  background-size: 100%;
+  width: 170px;
+  height: 460px;
+
+  @media (max-width: @breakpoint-l) {
+    display: none;
+  }
+}
+
+.summit-contacts-block-app-footer {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  justify-self: flex-end;
+  background-color: @c-blue;
+  color: #fff;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.summit-contacts-block-app-title {
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.summit-contacts-block-app-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: @breakpoint-l) {
+    flex-direction: column;
+  }
+
+  svg {
+    max-width: 100%;
+    height: 38px;
+
+    @media (max-width: @breakpoint-l) {
+      width: 120px;
+      height: auto;
+      margin-top: 10px;
+    }
+  }
+}

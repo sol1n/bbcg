@@ -12,10 +12,10 @@
         }
     }
 
-    if ($headerGlobal.length) {
+    if ($headerGlobal.length && $headerGlobal.is(":visible")) {
         fixHeader();
 
-        $(window).on('scroll', function () {
+        $(window).on('scroll resize', function () {
             fixHeader();
         });
     }

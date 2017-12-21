@@ -1,6 +1,6 @@
 .summit-registration-block {
-  background: url("../assets/images/backgrounds/black-pattern.png") repeat #000;
-  background-size: 50%;
+  background: url("../images/backgrounds/black-pattern.png") repeat #000;
+  background-size: 25%;
   padding-bottom: 50px;
 }
 
@@ -14,6 +14,10 @@
 
 .summit-registration-block-row {
   display: flex;
+
+  @media (max-width: @breakpoint-m) {
+    flex-direction: column;
+  }
 }
 
 .summit-registration-block-left {
@@ -21,22 +25,50 @@
 }
 
 .summit-registration-block-right {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   padding-left: 30px;
   margin-top: -5px;
   margin-bottom: -5px;
 
-  & > div {
-    flex: 1 0 auto;
+  @media (max-width: @breakpoint-m) {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
+}
+
+.summit-registration-block-right-title {
+  .ff-gilroy-extrabold;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #fff;
 }
 
 .summit-registration-block-form {
   background-color: #fff;
   border-radius: 2px;
   padding: 30px;
+
+  .form-input {
+    background-color: #EDF1F3;
+    border-color: #CCD3D7;
+    border-radius: 2px;
+
+    &:focus {
+      border-color: @c-blue;
+    }
+  }
+
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: @breakpoint-m) {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .summit-registration-block-form-title {
@@ -50,12 +82,21 @@
 
   .button {
     float: right;
+
+    @media (max-width: @breakpoint-s) {
+      float: none;
+      width: 100%;
+    }
   }
 }
 
 .submit-registration-block-form-manager {
   display: flex;
   align-items: center;
+
+  @media (max-width: @breakpoint-s) {
+    margin-bottom: 20px;
+  }
 }
 
 .submit-registration-block-form-manager-photo {
@@ -74,16 +115,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.17);
   color: #fff;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
-  padding: 16px;
-  margin: 5px 0;
+  padding: 16px 25px;
+  margin: 10px 0;
   border-radius: 2px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .summit-registration-block-card-icon {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+
+  svg {
+    max-height: 40px;
+  }
+}
+
+.summit-registration-block-card-value {
+  font-size: 17px;
+  margin-bottom: 4px;
+  line-height: 21px;
 }
