@@ -162,7 +162,7 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-                            <a href="program-event.php" data-side-modal-class="side-modal-wide side-modal-event" data-side-modal data-side-modal-url="data/events-items/event-1.php" data-side-modal-prevent-mobile class="program-table-event program-table-event-global program-table-event-offset-30 program-table-event-height-30">
+                            <a href="program-event.php" data-side-modal-class="side-modal-wide side-modal-event" data-side-modal data-side-modal-url="blocks/event-modal.php" data-side-modal-prevent-mobile class="program-table-event program-table-event-global program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         09:30 — 10:00
