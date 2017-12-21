@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?> 
 
 <main class="main-container main-container-with-header">
-    <div class="main-heading main-heading-red">
+    <div class="main-heading main-heading-black">
         <div class="wrapper">
             <h1 class="main-heading-title">Спикеры</h1>
 

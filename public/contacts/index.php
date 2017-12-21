@@ -1,8 +1,9 @@
 <?
+define('NEED_MAP', 1);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?> 
 <main class="main-container main-container-with-header">
-    <div class="main-heading main-heading-green">
+    <div class="main-heading main-heading-black">
         <div class="wrapper">
             <h1 class="main-heading-title">Контакты</h1>
         </div>
