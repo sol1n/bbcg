@@ -3,11 +3,10 @@
         <div class="speakers-block-header">
             <div class="speakers-block-header-left">
                 <div class="speakers-block-title">
-                    300+ спикеров
+                    <?=$arParams['TITLE']?>
                 </div>
                 <div class="speakers-block-subtitle">
-                    Для зарегистрированных пользователей доступен сервис вопросов спикерам
-                    с возможностью получить ответ по почте или на саммите
+                    <?=$arParams['SUBTITLE']?>
                 </div>
             </div>
             <div class="speakers-block-header-right">

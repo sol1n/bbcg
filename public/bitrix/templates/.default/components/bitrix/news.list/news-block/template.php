@@ -3,10 +3,10 @@
         <div class="news-block-header">
             <div class="news-block-header-left">
                 <div class="news-block-title">
-                    Новости и события ритейла
+                    <?=$arParams['TITLE']?>
                 </div>
                 <div class="news-block-subtitle">
-                    Узнайте эксклюзивную информацию о рынке до появления в СМИ
+                    <?=$arParams['TITLE']?>
                 </div>
             </div>
             <div class="news-block-header-right">

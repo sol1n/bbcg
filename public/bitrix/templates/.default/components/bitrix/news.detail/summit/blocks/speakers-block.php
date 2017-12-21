@@ -1,7 +1,11 @@
-<?$APPLICATION->IncludeComponent(
+<?
+global $speakersFilter;
+$speakersFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
+$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "partners-block",
+    "speakers-block",
     Array(
+        "FILTER_NAME" => "speakersFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
@@ -10,9 +14,9 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => PARTNERS_IBLOCK,
+        "IBLOCK_ID" => SPEAKERS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "32",
+        "NEWS_COUNT" => "30",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -22,7 +26,7 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => "Партнеры",
-        "SUBTITLE" => "Наши партнеры &mdash; крупнейшие мировые компании"
+        "TITLE" => $arResult['SPEAKERS_TITLE']['title'],
+        "SUBTITLE" => $arResult['SPEAKERS_TITLE']['subtitle'],
     )
 );?>

@@ -1,7 +1,11 @@
-<?$APPLICATION->IncludeComponent(
+<?
+global $partnersFilter;
+$partnersFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
+$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "partners-block",
     Array(
+        "FILTER_NAME" => "partnersFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
@@ -22,7 +26,7 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => "Партнеры",
-        "SUBTITLE" => "Наши партнеры &mdash; крупнейшие мировые компании"
+        "TITLE" => $arResult['PARTNERS_TITLE']['title'],
+        "SUBTITLE" => $arResult['PARTNERS_TITLE']['subtitle'],
     )
 );?>

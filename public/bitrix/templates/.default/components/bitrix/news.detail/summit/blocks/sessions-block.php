@@ -1,7 +1,11 @@
-<?$APPLICATION->IncludeComponent(
+<?
+global $sessionsFilter;
+$sessionsFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
+$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "partners-block",
+    "sessions-block",
     Array(
+        "FILTER_NAME" => "sessionsFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
@@ -10,7 +14,7 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => PARTNERS_IBLOCK,
+        "IBLOCK_ID" => EVENTS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "NEWS_COUNT" => "32",
         "PAGER_SHOW_ALWAYS" => "N",
@@ -22,7 +26,7 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => "Партнеры",
-        "SUBTITLE" => "Наши партнеры &mdash; крупнейшие мировые компании"
+        "TITLE" => $arResult['PARTNERS_TITLE']['title'],
+        "SUBTITLE" => $arResult['PARTNERS_TITLE']['subtitle'],
     )
 );?>

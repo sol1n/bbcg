@@ -21,6 +21,8 @@
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
         "SORT_BY1" => "ACTIVE_FROM",
-        "SORT_ORDER1" => "DESC"
+        "SORT_ORDER1" => "DESC",
+        "TITLE" => "НОВОСТИ И СОБЫТИЯ РИТЕЙЛА",
+        "SUBTITLE" => "Узнайте эксклюзивную информацию о рынке до появления в СМИ",
     )
 );?>
