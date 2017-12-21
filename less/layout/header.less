@@ -36,6 +36,9 @@
   padding: 10px;
 
   svg {
+    width: 24px;
+    height: 24px;
+
     * {
       fill: @c-text;
       transition: all 200ms;
@@ -308,6 +311,47 @@
   }
 }
 
+.main-header-userarea-mobile {
+  display: none;
+
+  @media (max-width: 920px) {
+    display: block;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover {
+    svg {
+      * {
+        fill: @c-light-burgundy;
+
+        .blue-theme({
+          fill: @c-blue;
+        });
+      }
+    }
+  }
+
+  .main-header-user {
+    width: auto;
+  }
+
+  .main-header-user-dropdown-wrapper {
+    left: auto;
+    right: 0;
+  }
+
+  .main-header-user-dropdown {
+    &::before {
+      left: auto;
+      right: 15px;
+    }
+  }
+}
+
 .main-header-userarea-login-register {
   .ff-gilroy-extrabold;
   display: inline-block;
@@ -428,9 +472,14 @@
 
       &:hover,
       &:focus {
-        background-color: @c-blue;
+        background-color: @c-light-burgundy;
         color: #fff;
         transition: background-color 200ms, color 200ms;
+
+        .blue-theme({
+          background-color: @c-blue;
+          color: #fff;
+        });
       }
     }
   }

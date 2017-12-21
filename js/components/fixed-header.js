@@ -5,14 +5,14 @@
 
     function fixHeader() {
         var scrollTop = $(window).scrollTop();
-        if (scrollTop < $headerGlobalHeight) {
+        if (scrollTop < $headerGlobalHeight && $headerGlobal.is(":visible")) {
             $header.css('top', $headerGlobalHeight - scrollTop);
         } else {
             $header.css('top', 0);
         }
     }
 
-    if ($headerGlobal.length && $headerGlobal.is(":visible")) {
+    if ($headerGlobal.length) {
         fixHeader();
 
         $(window).on('scroll resize', function () {

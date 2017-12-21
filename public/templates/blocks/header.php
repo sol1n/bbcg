@@ -48,5 +48,9 @@
                 </a>
             </div>
         </div>
+
+        <a href="#" class="main-header-userarea-mobile">
+            <?php include "../assets/images/icons/icon-header-login.svg"; ?>
+        </a>
     </div>
 </header>

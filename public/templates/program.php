@@ -36,17 +36,17 @@
         <div class="wrapper">
             <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-program-menu">
                 <li class="subnav-list-item active">
-                    <a href="#" class="subnav-link">
+                    <a href="program.php" class="subnav-link">
                         <span>Вся программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
-                    <a href="#" class="subnav-link">
+                    <a href="program.php" class="subnav-link">
                         <span>Деловая программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
-                    <a href="#" class="subnav-link">
+                    <a href="program.php" class="subnav-link">
                         <span>Специальные мероприятия</span>
                     </a>
                 </li>

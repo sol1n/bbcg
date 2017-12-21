@@ -16,11 +16,34 @@
             </div>
         </div>
         <div class="main-offcanvas-body">
+            <div class="main-offcanvas-event-logo">
+                <div class="main-offcanvas-padding">
+                    <img src="../assets/images/logo-online-retail-russia.png" alt="">
+                </div>
+            </div>
             <ul class="main-offcanvas-menu">
-                <li class="active">
+                <li class="parent active">
                     <a href="#">
                         О компании
                     </a>
+
+                    <ul>
+                        <li>
+                            <a href="#">Посетителям</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Экспонентам</a>
+                        </li>
+                        <li>
+                            <a href="#">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="#">СМИ</a>
+                        </li>
+                        <li>
+                            <a href="#">Полезная информация</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">

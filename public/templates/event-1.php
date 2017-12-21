@@ -12,7 +12,7 @@
 
 <?php include "blocks/header-global.php"; ?>
 <?php include "blocks/header-for-event.php"; ?>
-<?php include "blocks/offcanvas.php"; ?>
+<?php include "blocks/offcanvas-event.php"; ?>
 
 <main class="main-container main-container-with-header">
     <?php include "blocks/about-summit-block.php"; ?>
