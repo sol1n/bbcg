@@ -94,7 +94,7 @@ $(document).ready(function () {
             eventsViewPortWidth += $(this).outerWidth();
         });
 
-        $('.program-table-event-global').css('width', eventsViewPortWidth);
+        $('.program-table-event-global').css('width', eventsViewPortWidth - 1);
 
         programTableMobileFixed();
     }

@@ -18,7 +18,7 @@
                 <li>
                     <a href="#">О компании</a>
                 </li>
-                <li class="parent">
+                <li>
                     <a href="#">Календарь саммитов</a>
                 </li>
                 <li>
