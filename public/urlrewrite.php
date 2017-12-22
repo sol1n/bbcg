@@ -16,10 +16,20 @@ $arUrlRewrite = array(
 		"PATH" => "/speakers/detail.php",
 	),
 	array(
+		"CONDITION" => "#^/(.*)/events/(.*)/.*#",
+		"RULE" => "summit=\$1&date=\$2",
+		"PATH" => "/summits/events/index.php",
+	),
+	array(
+		"CONDITION" => "#^/(.*)/events/.*#",
+		"RULE" => "summit=\$1",
+		"PATH" => "/summits/events/index.php",
+	),
+	array(
 		"CONDITION" => "#^/(.*)/.*#",
 		"RULE" => "element=\$1",
 		"PATH" => "/summits/detail.php",
-	)
+	),
 );
 
 ?>

@@ -24,7 +24,7 @@
 
     $headers = [
     	'NEWS_TITLE' => ['title' => ['Новости']], 
-    	'PROGAM_TITLE' => ['title' => 'Сессии и мастер-классы'], 
+    	'PROGRAM_TITLE' => ['title' => 'Сессии и мастер-классы'], 
     	'SPEAKERS_TITLE' => ['title' => ['Спикеры']], 
     	'PARTNERS_TITLE' => ['title' => ['Партнеры']]
     ];

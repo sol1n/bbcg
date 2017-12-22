@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="speakers-block-header-right">
-                <a href="/speakers/" class="no-wrap">
+                <a href="speakers/" class="no-wrap">
                     Все спикеры
                 </a>
                 <div class="speakers-block-header-arrows"></div>

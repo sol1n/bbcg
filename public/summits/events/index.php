@@ -1,18 +1,18 @@
 <?
-define('NEED_MAP', true);
+define('NEED_EVENTS_TABLE', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <main class="main-container main-container-with-header">
     <?
-        $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit', Array (
+        $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-program', Array (
             "USE_SHARE" => "N",
             "AJAX_MODE" => "N",
             "IBLOCK_TYPE" => "content",
             "IBLOCK_ID" => SUMMITS_IBLOCK,
             "ELEMENT_ID" => "",
-            "ELEMENT_CODE" => $_REQUEST['element'],
+            "ELEMENT_CODE" => $_REQUEST['summit'],
             "CHECK_DATES" => "Y",
             "FIELD_CODE" => Array("ID", "PREVIEW_PICTURE", "DETAIL_PICTURE", "PREVIEW_TEXT", "DATE_CREATE", "CREATED_BY"),
             "PROPERTY_CODE" => Array("*"),
@@ -38,7 +38,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             "DISPLAY_TOP_PAGER" => "N",
             "DISPLAY_BOTTOM_PAGER" => "N",
             "SET_STATUS_404" => "Y",
-            "SHOW_404" => "Y",     
+            "SHOW_404" => "Y",
+            "DATE" => isset($_REQUEST['date']) ? $_REQUEST['date'] : null     
         ), false);
     ?>
 </main>

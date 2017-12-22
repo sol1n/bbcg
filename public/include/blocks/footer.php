@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <div class="wrapper">
         <div class="main-footer-logo">
-            <img src="../assets/images/logo.svg" alt="BBCG — B2B Conference Group">
+            <img src="/assets/images/logo.svg" alt="BBCG — B2B Conference Group">
         </div>
         <div class="main-footer-address">
             Москва, Дербеневская наб., <br>
@@ -17,10 +17,10 @@
         </div>
         <div class="main-footer-socials">
             <a href="#" target="_blank">
-                <img src="../assets/images/icons/icon-facebook.svg" alt="Facebook">
+                <img src="/assets/images/icons/icon-facebook.svg" alt="Facebook">
             </a>
             <a href="#" target="_blank">
-                <img src="../assets/images/icons/icon-twitter.svg" alt="Twitter">
+                <img src="/assets/images/icons/icon-twitter.svg" alt="Twitter">
             </a>
         </div>
         <div class="main-footer-developer">

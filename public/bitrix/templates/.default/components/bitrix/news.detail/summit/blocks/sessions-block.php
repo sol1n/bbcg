@@ -26,7 +26,7 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => $arResult['PARTNERS_TITLE']['title'],
-        "SUBTITLE" => $arResult['PARTNERS_TITLE']['subtitle'],
+        "TITLE" => $arResult['PROGRAM_TITLE']['title'],
+        "SUBTITLE" => $arResult['PROGRAM_TITLE']['subtitle'],
     )
 );?>

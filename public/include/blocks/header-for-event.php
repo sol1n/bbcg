@@ -41,7 +41,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/program/">Программа</a>
+                    <a href="/<?$APPLICATION->ShowProperty('code')?>/events/">Программа</a>
                 </li>
                 <li>
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/speakers/">Спикеры</a>
