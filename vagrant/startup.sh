@@ -7,3 +7,4 @@
 # Reload is required because on system startup /vagrant directory may not be initialized yet,
 # so nginx may be missing our vhosts configs.
 sudo service nginx reload
+sudo service php7.0-fpm restart
