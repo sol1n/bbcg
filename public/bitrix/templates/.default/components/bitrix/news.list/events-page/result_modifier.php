@@ -2,6 +2,28 @@
     define('EVENTS_STEP', 10);
     CModule::IncludeModule('iblock');
 
+    //Collects speakers
+    $speakers = [];
+    foreach ($arResult['ITEMS'] as $item) {
+        if (is_array($item['PROPERTIES']['SPEAKERS']['VALUE']) && count($item['PROPERTIES']['SPEAKERS']['VALUE'])) {
+            foreach ($item['PROPERTIES']['SPEAKERS']['VALUE'] as $speaker) {
+                $speakers[$speaker] = true;
+            }
+        }
+    }
+    $speakers = array_keys($speakers);
+    $res = CIBlockElement::GetList(
+        ['SORT' => 'ASC'],
+        ['IBLOCK_ID' => SPEAKERS_IBLOCK, 'ID' => $speakers, 'ACTIVE' => 'Y'],
+        false,
+        false,
+        ['ID', 'NAME', 'PREVIEW_TEXT']
+    );
+    $speakers = [];
+    while ($speaker = $res->Fetch()) {
+        $speakers[$speaker['ID']] = $speaker;
+    }
+
     //Gets areas
     $arResult['AREAS'] = $areaSequence = [];
 
@@ -67,6 +89,14 @@
 
         $item['minutes'] = abs($end->getTimestamp() - $begin->getTimestamp()) / 60;
 
+        if (is_array($item['PROPERTIES']['SPEAKERS']['VALUE']) && count($item['PROPERTIES']['SPEAKERS']['VALUE'])) {
+            foreach ($item['PROPERTIES']['SPEAKERS']['VALUE'] as $speaker) {
+                if (isset($speakers[$speaker])) {
+                    $item['speakers'][] = $speakers[$speaker];
+                }
+            }
+        }
+
         if ($area = $item['PROPERTIES']['AREA']['VALUE'][0]) {
             if (count($item['PROPERTIES']['AREA']['VALUE']) > 1) {
                 $areaIndex = 0;
@@ -85,8 +115,20 @@
             }
             $arResult['AREAS'][$area]['ITEMS'][] = $item;
         } else {
+            if ($item['speakers'] && count($item['speakers'])) {
+                $speakers = $item['speakers'];
+                $item['speakers'] = [[],[],[]];
+                foreach($speakers as $k => $speaker) {
+                    $index = $k % 3;
+                    $item['speakers'][$index][] = $speaker;
+                }
+            }
+
+
             $arResult['GLOBALS']['ITEMS'][] = $item;
         }
+
+        
     }
 
     //Generates an empty timeline
@@ -116,13 +158,13 @@
         $arResult['TIMELINE'][$counter]['GLOBALS'][] = [
             'id' => $item['ID'],
             'name' => $item['NAME'],
+            'speakers' => $item['speakers'],
             'description' => $item['PREVIEW_TEXT'],
             'duration' => $item['minutes'],
             'offset' => $offset,
             'begin' => $item['begin'],
             'end' => $item['end'],
             'url' => $item['DETAIL_PAGE_URL'],
-            'speakers' => $eventSpeakers,
             'width' => $item['width'],
             'color' => $item['color'],
             'open' => $item['PROPERTIES']['noopen']['VALUE'] != 'Y',
@@ -152,13 +194,13 @@
             $arResult['TIMELINE'][$counter][$k][] = [
                 'id' => $item['ID'],
                 'name' => $item['NAME'],
+                'speakers' => $item['speakers'],
                 'description' => $item['PREVIEW_TEXT'],
                 'duration' => $item['minutes'],
                 'offset' => $offset,
                 'begin' => $item['begin'],
                 'end' => $item['end'],
                 'url' => $item['DETAIL_PAGE_URL'],
-                'speakers' => $eventSpeakers,
                 'width' => $item['width'],
                 'color' => $item['color'],
                 'open' => $item['PROPERTIES']['noopen']['VALUE'] != 'Y',

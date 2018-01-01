@@ -47,10 +47,10 @@
                                             <? if ($area['FIRST']): ?>
                                                 <? foreach ($cell['GLOBALS'] as $event): ?>
                                                     <a 
-                                                        href="program-event.php" 
+                                                        href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
                                                         data-side-modal-class="side-modal-wide side-modal-event" 
                                                         data-side-modal 
-                                                        data-side-modal-url="blocks/event-modal.php" 
+                                                        data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
                                                         data-side-modal-prevent-mobile 
                                                         class="
                                                             program-table-event
@@ -68,19 +68,35 @@
                                                             </span>
                                                         </div>
 
-                                                        <div class="program-table-event-title">
+                                                        <div class="program-table-event-subtitle">
                                                             <?=$event['name']?>
                                                         </div>
+
+                                                        <? if ($event['speakers']): ?>
+                                                            <div class="row">
+                                                                <? foreach($event['speakers'] as $row): ?>
+                                                                    <div class="col-xs-12 col-sm-4">
+                                                                        <div class="program-table-event-speakers">
+                                                                            <? foreach ($row as $speaker): ?>
+                                                                            <p>
+                                                                                <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                            </p>
+                                                                            <? endforeach ?>
+                                                                        </div>
+                                                                    </div>
+                                                                <? endforeach ?>
+                                                            </div>
+                                                        <? endif ?>
                                                     </a>
                                                 <? endforeach ?>
                                             <? endif ?>
 
                                             <? foreach ($cell[$k] as $event): ?>
                                                 <a 
-                                                    href="program-event.php" 
+                                                    href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
                                                     data-side-modal-class="side-modal-wide side-modal-event" 
                                                     data-side-modal 
-                                                    data-side-modal-url="blocks/event-modal.php" 
+                                                    data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
                                                     data-side-modal-prevent-mobile 
                                                     class="
                                                         program-table-event
@@ -97,9 +113,19 @@
                                                         </span>
                                                     </div>
 
-                                                    <div class="program-table-event-title">
+                                                    <div class="program-table-event-subtitle">
                                                         <?=$event['name']?>
                                                     </div>
+
+                                                    <? if ($event['speakers']): ?>
+                                                        <div class="program-table-event-speakers">
+                                                            <? foreach ($event['speakers'] as $speaker): ?>
+                                                                <p>
+                                                                    <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                </p>
+                                                            <? endforeach ?>
+                                                        </div>
+                                                    <? endif ?>
                                                 </a>
                                             <? endforeach ?>
                                         </div>

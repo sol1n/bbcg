@@ -12,7 +12,7 @@
         "FIELD_CODE" => array(),
         "IBLOCK_ID" => COURCES_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "16",
+        "NEWS_COUNT" => "8",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",

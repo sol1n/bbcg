@@ -6,7 +6,13 @@
                 <div class="events-block-slider-item">
                     <div class="events-block-item events-block-item-<?=$item['SUMMIT']['COLOR']?>">
                         <div class="events-block-item-header" style="background-image: url('<?=$item['PREVIEW_PICTURE']['SRC']?>');">
-                            <a href="<?=$item['DETAIL_PAGE_URL']?>" class="events-block-item-border">
+                            <a 
+                                data-side-modal-class="side-modal-wide side-modal-event" 
+                                data-side-modal 
+                                data-side-modal-url="/api/events/element/?id=<?=$item['ID']?>"
+                                href="<?=$item['SUMMIT']['DETAIL_PAGE_URL']?>events/<?=$item['ID']?>/" 
+                                class="events-block-item-border"
+                            >
                                 <div class="events-block-item-name">
                                     <?=$item['NAME']?>
                                 </div>

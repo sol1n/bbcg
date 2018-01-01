@@ -69,7 +69,8 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "ID",
         "SORT_ORDER1" => "ASC",
-        "DATE" => $arParams['DATE']
+        "DATE" => $arParams['DATE'],
+        "SUMMIT" => $arResult['CODE']
     )
 );?>
 

@@ -22,7 +22,7 @@
                 <? $date = FormatDate('j F', MakeTimeStamp($item['PROPERTIES']['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")); ?>
                     <div class="sessions-block-slider-item">
                         <a 
-                            href="events/<?=$item['ID']?>" 
+                            href="events/<?=$item['ID']?>/" 
                             class="sessions-block-item"
                         >
                             <? if ($item['TAG']): ?>
