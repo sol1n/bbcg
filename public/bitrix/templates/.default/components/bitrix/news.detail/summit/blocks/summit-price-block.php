@@ -1,113 +1,31 @@
-<section class="summit-price-block">
-    <div class="wrapper">
-        <div class="summit-price-block-title">
-            Стоимость участия
-        </div>
-
-        <div class="summit-price-block-row">
-            <div class="summit-price-block-left">
-                <div style="overflow-x: auto">
-                    <table class="summit-price-block-table">
-                        <tr class="summit-price-block-table-heading">
-                            <th>
-                                <div class="summit-price-block-table-title">
-                                    Представители компаний
-                                </div>
-                            </th>
-                            <td>
-                                <div class="summit-price-block-table-title">
-                                    Раняя регистрация
-                                </div>
-                                <div class="summit-price-block-table-subtitle">
-                                    до 1 марта
-                                </div>
-                            </td>
-                            <td>
-                                <div class="summit-price-block-table-title">
-                                    Поздняя регистрация
-                                </div>
-                                <div class="summit-price-block-table-subtitle">
-                                    после 1 марта
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <div class="summit-price-block-table-border">
-                                    Розничная сеть или интернет-магазин с оборотом менее 50 млн. руб. в год.
-                                </div>
-                            </th>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <div class="summit-price-block-table-border">
-                                    Розничная сеть или интернет-магазин с оборотом менее 50 млн. руб. в год.
-                                </div>
-                            </th>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <div class="summit-price-block-table-border">
-                                    Розничная сеть или интернет-магазин с оборотом менее 50 млн. руб. в год.
-                                </div>
-                            </th>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="summit-price-block-table-border">
-                                    <span class="summit-price-block-table-value">32 125 руб</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>&nbsp;</th>
-                            <td colspan="2">
-                                <div class="summit-price-block-table-charge">
-                                    Цены указаны с учетом НДС 18%.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="summit-price-block-right">
-                <div class="summit-price-block-card">
-                    <div class="summit-price-block-card-icon">
-                        <?php include "../assets/images/icons/icon-summit-registration-users.svg"; ?>
-                    </div>
-                    BBCG предоставляет традиционные скидки постоянным участникам, и при регистрации 2-х и более представителей компании.
-                </div>
-
-                <div class="summit-price-block-card">
-                    <div class="summit-price-block-card-icon">
-                        <?php include "../assets/images/icons/icon-summit-registration-discount.svg"; ?>
-                    </div>
-                    В случае предоставления описания 1 реализованного решения по оптимизации бизнеса — дополнительная скидка 15%.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?
+global $pricingFilter;
+$pricingFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
+$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "pricing-block",
+    Array(
+        "FILTER_NAME" => "pricingFilter",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "N",
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array(),
+        "IBLOCK_ID" => PRICING_IBLOCK,
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "NEWS_COUNT" => "20",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => "main",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PROPERTY_CODE" => array("*"),
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC",
+        "EARLY_REGISTRATION" => $arResult['PROPERTIES']['EARLY_REGISTRATION']['VALUE']
+    )
+);?>

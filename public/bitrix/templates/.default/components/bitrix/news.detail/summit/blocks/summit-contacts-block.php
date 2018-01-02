@@ -1,11 +1,11 @@
 <?
-global $partnersFilter;
-$partnersFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
+global $contactsFilter;
+$contactsFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
 $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "contacts-block",
     Array(
-        "FILTER_NAME" => "partnersFilter",
+        "FILTER_NAME" => "contactsFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
