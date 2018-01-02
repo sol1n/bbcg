@@ -25,11 +25,11 @@
         $index = $item['PROPERTIES']['SUMMIT']['VALUE'];
         $arResult['ITEMS'][$k]['SUMMIT'] = $summits[$index];
 
-        $end = FormatDate('d', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-        $begin = FormatDate('d', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+        $end = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+        $begin = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
 
         if ($end == $begin) {
-            $duration = FormatDate('d F', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+            $duration = FormatDate('j F', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
         } else {
             $duration = "$begin - $end " . FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
         }

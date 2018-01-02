@@ -8,7 +8,7 @@
             <div class="summit-registration-block-left">
                 <form action="#" method="POST" class="summit-registration-block-form" data-validate>
                     <div class="summit-registration-block-form-title">
-                        Форма регистрации на саммите «BBCG»
+                        Форма регистрации на саммите «<?=$arResult['NAME']?>»
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">

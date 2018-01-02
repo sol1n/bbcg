@@ -16,16 +16,16 @@
             <a href="#" target="_blank">Пользовательское соглашение</a>
         </div>
         <div class="main-footer-socials">
-            <a href="#" target="_blank">
+            <a title="Facebook" href="https://www.facebook.com/B2BCG/?ref=site" target="_blank">
                 <img src="/assets/images/icons/icon-facebook.svg" alt="Facebook">
             </a>
-            <a href="#" target="_blank">
+            <a title="Twitter" href="https://twitter.com/B2BCG" target="_blank">
                 <img src="/assets/images/icons/icon-twitter.svg" alt="Twitter">
             </a>
         </div>
         <div class="main-footer-developer">
             Разработка сайта <br>
-            <a href="http://300it.ru" target="_blank">Digital Sparta</a>
+            <a href="http://300it.ru" title="Разработка сайта - Digital Sparta" target="_blank">Digital Sparta</a>
         </div>
     </div>
 </footer>
