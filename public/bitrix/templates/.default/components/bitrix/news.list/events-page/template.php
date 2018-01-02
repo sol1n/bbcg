@@ -60,6 +60,9 @@
                                                             <? if ($event['width']): ?>
                                                                 program-table-event-width-<?=$event['width']?>
                                                             <? endif ?>
+                                                            <? if ($event['color']): ?>
+                                                                program-table-event-<?=$event['color']?>
+                                                            <? endif ?>
                                                         "
                                                     >
                                                         <div class="program-table-event-meta">
@@ -105,6 +108,9 @@
                                                         <? if ($event['width']): ?>
                                                             program-table-event-width-<?=$event['width']?>
                                                         <? endif ?>
+                                                        <? if ($event['color']): ?>
+                                                            program-table-event-<?=$event['color']?>
+                                                        <? endif ?>
                                                     "
                                                 >
                                                     <div class="program-table-event-meta">
@@ -141,4 +147,38 @@
             </div>
         </div>
     <? endif ?>
+</div>
+
+<div class="program-table-mobile">
+    <div class="program-table-mobile-date">
+        <?=$arResult['DAY']?> <?=$arResult['MONTH']?>
+    </div>
+
+    <? foreach ($arResult['MOBILE_ITEMS'] as $event): ?>
+        <div class="
+            program-table-mobile-event
+            <? if ($event['color']): ?>
+                program-table-mobile-event-<?=$event['color']?>
+            <? endif ?>
+            "
+        >
+            <a href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    <?=$event['NAME']?>
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-item-clock.svg');  ?>
+                        <?=$event['begin']?> — <?=$event['end']?>
+                    </span>
+                    <? if ($event['area']): ?>
+                        <span class="program-table-mobile-event-location">
+                            <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-map-mark.svg');  ?>
+                            <?=$event['area']?>
+                        </span>
+                    <? endif ?>
+                </div>
+            </a>
+        </div>
+    <? endforeach ?>
 </div>

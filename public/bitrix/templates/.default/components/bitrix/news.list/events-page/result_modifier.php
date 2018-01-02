@@ -2,6 +2,26 @@
     define('EVENTS_STEP', 10);
     CModule::IncludeModule('iblock');
 
+    //Gets colors
+    $tags = $colors = [];
+    foreach ($arResult['ITEMS'] as $item) {
+        if ($item['PROPERTIES']['TAG']['VALUE']) {
+            $tags[$item['PROPERTIES']['TAG']['VALUE']] = true;
+        }
+    }
+    if (count($tags)) {
+        $res = CIBlockElement::GetList(
+            ['ID' => 'ASC'],
+            ['IBLOCK_ID' => TAGS_IBLOCK, 'ID' => array_keys($tags)],
+            false,
+            false,
+            ['ID', 'NAME', 'PROPERTY_COLOR']
+        );
+        while ($tag = $res->Fetch()) {
+            $colors[$tag['ID']] = $tag['PROPERTY_COLOR_VALUE'];
+        }
+    }
+
     //Collects speakers
     $speakers = [];
     foreach ($arResult['ITEMS'] as $item) {
@@ -97,6 +117,10 @@
             }
         }
 
+        if ($item['PROPERTIES']['TAG']['VALUE'] && isset($colors[$item['PROPERTIES']['TAG']['VALUE']])) {
+            $item['color'] = $colors[$item['PROPERTIES']['TAG']['VALUE']];
+        }
+
         if ($area = $item['PROPERTIES']['AREA']['VALUE'][0]) {
             if (count($item['PROPERTIES']['AREA']['VALUE']) > 1) {
                 $areaIndex = 0;
@@ -113,6 +137,13 @@
                 }
                 $item['width'] = $eventWidht;
             }
+
+            $areasPull = [];
+            foreach ($item['PROPERTIES']['AREA']['VALUE'] as $area) {
+                $areasPull[] = $arResult['AREAS'][$area]['NAME'];
+            }
+            $item['area'] = implode(', ', $areasPull);
+
             $arResult['AREAS'][$area]['ITEMS'][] = $item;
         } else {
             if ($item['speakers'] && count($item['speakers'])) {
@@ -123,12 +154,10 @@
                     $item['speakers'][$index][] = $speaker;
                 }
             }
-
-
             $arResult['GLOBALS']['ITEMS'][] = $item;
         }
 
-        
+        $arResult['MOBILE_ITEMS'][] = $item;
     }
 
     //Generates an empty timeline
