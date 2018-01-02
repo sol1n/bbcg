@@ -43,13 +43,16 @@
 }
 
 .side-modal-overflow {
-  height: 100%;
   overflow-y: auto;
   padding: 30px;
   -webkit-overflow-scrolling: touch;
 
   @media (max-width: @breakpoint-s) {
     padding: 15px;
+  }
+
+  @media (max-height: 400px) {
+    height: 100%;
   }
 }
 
