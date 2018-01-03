@@ -15,31 +15,7 @@
         </div>
         <nav class="main-header-menu">
             <ul>
-                <li class="parent">
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/">О саммите</a>
-
-                    <div class="main-header-submenu">
-                        <div class="wrapper">
-                            <ul>
-                                <li>
-                                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/vistors/">Посетителям</a>
-                                </li>
-                                <li>
-                                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/exhibitors/">Экспонентам</a>
-                                </li>
-                                <li>
-                                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/partners/">Партнерам</a>
-                                </li>
-                                <li>
-                                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/smi/">СМИ</a>
-                                </li>
-                                <li>
-                                    <a href="/<?$APPLICATION->ShowProperty('code')?>/about/information/">Полезная информация</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+                <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
                 <li>
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/events/">Программа</a>
                 </li>

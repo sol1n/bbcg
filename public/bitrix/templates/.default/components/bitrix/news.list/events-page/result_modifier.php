@@ -144,6 +144,7 @@
             }
             $item['area'] = implode(', ', $areasPull);
 
+            $area = $item['PROPERTIES']['AREA']['VALUE'][0];
             $arResult['AREAS'][$area]['ITEMS'][] = $item;
         } else {
             if ($item['speakers'] && count($item['speakers'])) {

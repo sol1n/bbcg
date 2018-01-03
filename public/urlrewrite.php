@@ -31,10 +31,21 @@ $arUrlRewrite = array(
 		"PATH" => "/summits/events/index.php",
 	),
 	array(
+		"CONDITION" => "#^/(.*)/about/(.*)/.*#",
+		"RULE" => "element=\$1&page=\$2",
+		"PATH" => "/summits/page.php",
+	),
+	array(
+		"CONDITION" => "#^/(.*)/about/.*#",
+		"RULE" => "element=\$1",
+		"PATH" => "/summits/about.php",
+	),
+	array(
 		"CONDITION" => "#^/(.*)/.*#",
 		"RULE" => "element=\$1",
 		"PATH" => "/summits/detail.php",
 	),
+
 );
 
 ?>
