@@ -46,11 +46,13 @@
                                         <div class="program-table-column-hour">
                                             <? if ($area['FIRST']): ?>
                                                 <? foreach ($cell['GLOBALS'] as $event): ?>
-                                                    <a 
-                                                        href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
-                                                        data-side-modal-class="side-modal-wide side-modal-event" 
-                                                        data-side-modal 
-                                                        data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                    <a
+                                                        <? if ($event['open']): ?>
+                                                            href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
+                                                            data-side-modal-class="side-modal-wide side-modal-event" 
+                                                            data-side-modal 
+                                                            data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                        <? endif ?>
                                                         data-side-modal-prevent-mobile 
                                                         class="
                                                             program-table-event
@@ -95,11 +97,13 @@
                                             <? endif ?>
 
                                             <? foreach ($cell[$k] as $event): ?>
-                                                <a 
-                                                    href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
-                                                    data-side-modal-class="side-modal-wide side-modal-event" 
-                                                    data-side-modal 
-                                                    data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                <a
+                                                    <? if ($event['open']): ?>
+                                                        href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
+                                                        data-side-modal-class="side-modal-wide side-modal-event" 
+                                                        data-side-modal 
+                                                        data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                    <? endif ?>
                                                     data-side-modal-prevent-mobile 
                                                     class="
                                                         program-table-event

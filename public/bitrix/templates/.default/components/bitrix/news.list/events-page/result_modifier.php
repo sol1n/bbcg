@@ -197,7 +197,7 @@
             'url' => $item['DETAIL_PAGE_URL'],
             'width' => $item['width'],
             'color' => $item['color'],
-            'open' => $item['PROPERTIES']['noopen']['VALUE'] != 'Y',
+            'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
             'subtitle' => $item['subtitle']
         ];
     }
@@ -233,7 +233,7 @@
                 'url' => $item['DETAIL_PAGE_URL'],
                 'width' => $item['width'],
                 'color' => $item['color'],
-                'open' => $item['PROPERTIES']['noopen']['VALUE'] != 'Y',
+                'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
                 'subtitle' => $item['subtitle']
             ];
         }
