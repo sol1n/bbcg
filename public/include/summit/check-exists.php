@@ -13,7 +13,7 @@
 				['IBLOCK_ID' => SUMMITS_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $code],
 				false,
 				false,
-				['ID', 'NAME']
+				['ID', 'NAME', 'CODE']
 			);
 			$summit = $res->Fetch();
 			if (! $summit) {

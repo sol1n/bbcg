@@ -1,3 +1,4 @@
+<? $summitCode = $summit['CODE']; ?>
 <header class="main-header main-header-with-global">
     <div class="wrapper">
         <a href="#" class="main-header-toggler js-offcanvas">
@@ -16,19 +17,29 @@
         <nav class="main-header-menu">
             <ul>
                 <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
-                <li>
+                <li 
+                    <? if (CSite::InDir("/$summitCode/events/")): ?>class="acitve"<? endif ?>
+                >
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/events/">Программа</a>
                 </li>
-                <li>
+                <li
+                    <? if (CSite::InDir("/$summitCode/speakers/")): ?>class="acitve"<? endif ?>
+                >
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/speakers/">Спикеры</a>
                 </li>
-                <li>
+                <li
+                    <? if (CSite::InDir("/$summitCode/partners/")): ?>class="acitve"<? endif ?>
+                >
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/partners/">Партнеры</a>
                 </li>
-                <li>
+                <li
+                    <? if (CSite::InDir("/$summitCode/news/")): ?>class="acitve"<? endif ?>
+                >
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/news/">Новости</a>
                 </li>
-                <li>
+                <li
+                    <? if (CSite::InDir("/$summitCode/contacts/")): ?>class="acitve"<? endif ?>
+                >
                     <a href="/<?$APPLICATION->ShowProperty('code')?>/contacts/">Контакты</a>
                 </li>
             </ul>
