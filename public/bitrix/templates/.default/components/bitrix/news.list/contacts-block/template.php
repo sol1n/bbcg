@@ -36,7 +36,7 @@
                     <div class="summit-contacts-block-app-footer">
                         <div class="summit-contacts-block-app-title">
                             Скачать приложение
-                            «<?=$arResult['NAME']?>»
+                            «<?=$arParams['NAME']?>»
                         </div>
 
                         <div class="summit-contacts-block-app-footer-links">
