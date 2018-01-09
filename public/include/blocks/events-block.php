@@ -1,6 +1,6 @@
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "events-promo",
+    "banners-block",
     Array(
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
@@ -10,9 +10,9 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => EVENTS_IBLOCK,
+        "IBLOCK_ID" => BANNERS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "30",
+        "NEWS_COUNT" => "15",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -22,7 +22,7 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "SORT_BY2" => "PROPERTY_BEGIN",
-        "SORT_ORDER2" => "ASC",
+        "SORT_BY2" => "ID",
+        "SORT_ORDER2" => "DESC",
     )
 );?>
