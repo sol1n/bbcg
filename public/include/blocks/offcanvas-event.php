@@ -16,8 +16,38 @@
             </div>
         </div>
         <div class="main-offcanvas-body">
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "main-offcanvas-menu", Array("ROOT_MENU_TYPE" => "top"), false);?>
-            <div class="main-offcanvas-padding"></div>
+            <div class="main-offcanvas-event-logo">
+                <div class="main-offcanvas-padding">
+                    <img src="../assets/images/logo-online-retail-russia.png" alt="">
+                </div>
+            </div>
+            <ul class="main-offcanvas-menu">
+                <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
+                <li>
+                    <a href="/summits/">
+                        Календарь саммитов
+                    </a>
+                </li>
+                <li>
+                    <a href="/academy/">
+                        Академия ретейла
+                    </a>
+                </li>
+                <li>
+                    <a href="/news/">
+                        Новости
+                    </a>
+                </li>
+                <li>
+                    <a href="/contacts/">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+
+            <div class="main-offcanvas-padding">
+
+            </div>
         </div>
         <div class="main-offcanvas-footer">
             <div class="text-center">

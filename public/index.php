@@ -1,9 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
 ?> 
-
-<main class="main-container main-container-with-header">
 
 	<? $APPLICATION->IncludeFile('/include/blocks/events-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/about-block.php'); ?>
@@ -14,9 +11,6 @@ $APPLICATION->SetTitle('Главная');
 	<? $APPLICATION->IncludeFile('/include/blocks/partners-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/register-iphone-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/iphone-block-mobile.php'); ?>
-
-</main>
-
 
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

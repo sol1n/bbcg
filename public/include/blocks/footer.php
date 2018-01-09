@@ -12,8 +12,7 @@
             <a href="tel:+74957811134">+7 (495) 781-11-34</a>
         </div>
         <div class="main-footer-links">
-            <a href="#" target="_blank">Использование Cookie</a> <br>
-            <a href="#" target="_blank">Пользовательское соглашение</a>
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "main-footer-links", Array("ROOT_MENU_TYPE" => "bottom"), false);?>
         </div>
         <div class="main-footer-socials">
             <a title="Facebook" href="https://www.facebook.com/B2BCG/?ref=site" target="_blank">

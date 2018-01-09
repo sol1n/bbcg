@@ -15,5 +15,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-event.php"; ?>
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-event.php"; ?>
+
+		<main class="main-container main-container-with-header">
 

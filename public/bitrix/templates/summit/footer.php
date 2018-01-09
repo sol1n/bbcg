@@ -2,6 +2,7 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 ?>
+	</main>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
 
 		<script src="/assets/build/scripts.min.js"></script>
