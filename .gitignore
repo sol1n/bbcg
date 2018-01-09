@@ -44,6 +44,9 @@ mysql-password.txt
 /public/bitrix/templates/.default/footer.php
 /public/bitrix/templates/.default/header.php
 /public/upload
+/public/summits/index.php
+/public/.top.menu.php
+/public/.bottom.menu.php
 **/.section.php
 **/.access.php
 **/.DS_Store

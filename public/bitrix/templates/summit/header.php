@@ -13,9 +13,16 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	</head>
 	<body class="<?$APPLICATION->ShowProperty('color', 'blue')?>-theme">
 
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-event.php"; ?>
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-event.php"; ?>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/summit/check-exists.php"; ?>
+		
+		<? if (is_null($summit)): ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+		<? else: ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-event.php"; ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-event.php"; ?>
+		<? endif ?>
 
 		<main class="main-container main-container-with-header">
 

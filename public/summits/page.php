@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "IBLOCK_TYPE" => "content",
         "IBLOCK_ID" => SUMMITS_IBLOCK,
         "ELEMENT_ID" => "",
-        "ELEMENT_CODE" => $_REQUEST['element'],
+        "ELEMENT_CODE" => $_REQUEST['summit'],
         "CHECK_DATES" => "Y",
         "FIELD_CODE" => Array("ID", "PREVIEW_PICTURE", "DETAIL_PICTURE", "PREVIEW_TEXT", "DATE_CREATE", "CREATED_BY"),
         "PROPERTY_CODE" => Array("*"),
