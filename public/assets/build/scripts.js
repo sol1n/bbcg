@@ -16628,9 +16628,9 @@ return $;
                     validation = $form.is('[data-validate]');
 
                 if (validation && $form.valid()) {
-                    submitForm();
+                    checkCaptcha();
                 } else if (!validation) {
-                    submitForm();
+                    checkCaptcha();
                 }
 
                 function showOverlay() {
@@ -16646,6 +16646,24 @@ return $;
                         $(formOverlay).removeClass('active').spin(false);
                     } else {
                         $('body').spin(false);
+                    }
+                }
+
+                function checkCaptcha() {
+                    if ($form.find('[data-recaptcha]')) {
+                        var key = $form.find('[data-recaptcha]').data('recaptcha');
+                        var verifyCallback = function(token){
+                            formData.append('g-token', token);
+                            submitForm();
+                        }
+                        var captchaID = grecaptcha.render('recaptcha-placeholder', { 
+                          'sitekey' : key, 
+                          'callback' : verifyCallback,
+                          'size' : 'invisible'
+                        });
+                        grecaptcha.execute(captchaID);
+                    } else {
+                        submitForm();
                     }
                 }
 
@@ -17379,4 +17397,10 @@ $(document).ready(function() {
         }
         return false;
     });
+
+
 });
+
+var gCapthaInit = function() {
+    
+}

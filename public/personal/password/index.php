@@ -53,14 +53,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                     <label for="cabinet-new-password" class="form-label">
                         Новый пароль
                     </label>
-                    <input id="cabinet-new-password" type="password" class="form-input" name="new_password" required>
+                    <input id="cabinet-new-password" type="password" class="form-input" name="new_password" minlength="6" required>
                 </div>
 
                 <div class="form-group">
                     <label for="cabinet-new-password-2" class="form-label">
                         Подтвердите новый пароль
                     </label>
-                    <input id="cabinet-new-password-2" type="password" class="form-input" name="new_password2" required>
+                    <input id="cabinet-new-password-2" type="password" class="form-input" name="new_password2" minlength="6" required>
                 </div>
 
                 <button type="submit" class="button button-light-burgundy">

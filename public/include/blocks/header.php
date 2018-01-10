@@ -74,10 +74,10 @@
         <? else: ?>
             <div class="main-header-userarea">
                 <div class="main-header-userarea-login-register">
-                    <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
+                    <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                         Войти
                     </a>
-                    <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                    <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
                         Регистрация
                     </a>
                 </div>
@@ -86,8 +86,6 @@
             <a href="#" class="main-header-userarea-mobile">
                 <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-header-login.svg') ?>
             </a>
-        <? endif ?>
-
-        
+        <? endif ?>        
     </div>
 </header>

@@ -16,4 +16,10 @@ $(document).ready(function() {
         }
         return false;
     });
+
+
 });
+
+var gCapthaInit = function() {
+    
+}
