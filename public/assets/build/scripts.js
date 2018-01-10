@@ -17364,6 +17364,7 @@ function initMaps(ymaps) {
 $(document).ready(function() {
     $(".js-slick-slider").slick();
     $('[data-masked-input]').maskedinput();
+    $('[data-form-ajax]').formAjax();
     $('[data-validate]').formValidation();
 
     $('.js-smooth-scroll').click(function() {
