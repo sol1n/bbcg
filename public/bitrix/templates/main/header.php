@@ -13,6 +13,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	</head>
 	<body>
 
+		<? $user = user(); ?>
+
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
 		

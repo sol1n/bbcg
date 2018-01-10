@@ -14,6 +14,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<body class="<?$APPLICATION->ShowProperty('color', 'blue')?>-theme">
 
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/summit/check-exists.php"; ?>
+
+		<? $user = user(); ?>
 		
 		<? if (is_null($summit)): ?>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>

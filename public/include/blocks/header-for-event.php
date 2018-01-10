@@ -45,15 +45,67 @@
             </ul>
         </nav>
 
-        <div class="main-header-userarea">
-            <div class="main-header-userarea-login-register">
-                <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
-                    Войти
-                </a>
-                <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
-                    Регистрация
-                </a>
+        <? if ($USER->IsAuthorized()): ?>
+            <div class="main-header-userarea">
+                <div class="main-header-user">
+                    <div class="main-header-user-name">
+                    <? if (isset($user['LAST_NAME']) || isset($user['NAME'])): ?>
+                        <?=$user['NAME']?><br><?=$user['LAST_NAME']?>
+                    <? else: ?>
+                        <?=$user['LOGIN']?>
+                    <? endif ?>
+                    </div>
+                    <div class="main-header-user-toggler"></div>
+
+                    <div class="main-header-user-dropdown-wrapper">
+                        <div class="main-header-user-dropdown">
+                            <ul class="main-header-user-dropdown-menu">
+                                <li>
+                                    <a href="/personal/">Мой профиль</a>
+                                </li>
+                                <li class="main-header-user-dropdown-menu-divider"></li>
+                                <li>
+                                    <a href="/?logout=yes" onclick="return confirm('Вы действительно хотите выйти?');">Выйти</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="main-header-userarea-mobile">
+                <div class="main-header-user">
+                    <div class="main-header-user-photo">
+                        <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-header-user.svg"); ?>
+                    </div>
+
+
+                    <div class="main-header-user-dropdown-wrapper">
+                        <div class="main-header-user-dropdown">
+                            <ul class="main-header-user-dropdown-menu">
+                                <li>
+                                    <a href="/personal/">Мой профиль</a>
+                                </li>
+                                <li class="main-header-user-dropdown-menu-divider"></li>
+                                <li>
+                                    <a href="/?logout=yes" onclick="return confirm('Вы действительно хотите выйти?');">Выйти</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <? else: ?>
+            <div class="main-header-userarea">
+                <div class="main-header-userarea-login-register">
+                    <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
+                        Войти
+                    </a>
+                    <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                        Регистрация
+                    </a>
+                </div>
+            </div>
+        <? endif ?>
     </div>
 </header>

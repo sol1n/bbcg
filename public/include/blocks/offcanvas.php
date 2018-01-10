@@ -5,14 +5,16 @@
                 <img src="/assets/images/logo.svg" alt="">
             </div>
             <div class="main-offcanvas-userarea">
-                <div class="main-offcanvas-userarea-login-register">
-                    <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
-                        Войти
-                    </a>
-                    <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
-                        Регистрация
-                    </a>
-                </div>
+                <? if (!$USER->IsAuthorized()): ?>
+                    <div class="main-offcanvas-userarea-login-register">
+                        <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
+                            Войти
+                        </a>
+                        <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                            Регистрация
+                        </a>
+                    </div>
+                <? endif ?>
             </div>
         </div>
         <div class="main-offcanvas-body">
