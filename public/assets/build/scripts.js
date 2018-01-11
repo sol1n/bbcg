@@ -16650,7 +16650,7 @@ return $;
                 }
 
                 function checkCaptcha() {
-                    if ($form.find('[data-recaptcha]')) {
+                    if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
                             formData.append('g-token', token);

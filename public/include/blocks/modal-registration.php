@@ -1,12 +1,16 @@
+<?
+define('STOP_STATISTICS', true);
+require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
+?>
 <div class="registration-modal-logo">
-    <img src="../assets/images/logo.svg" alt="BBCG">
+    <img src="/assets/images/logo.svg" alt="BBCG">
 </div>
 
 <div class="registration-modal-title">
     Регистрация
 </div>
 
-<form action="data/form-response.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
+<form action="/api/registration/" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
     <div id="registration-form-overlay" class="form-overlay"></div>
     <div class="row">
         <div class="col-xs-12 col-sm-4">
@@ -72,7 +76,7 @@
         </div>
     </div>
 
-    <div id="recaptcha-placeholder" data-recaptcha="6LcPCEAUAAAAAGqTbJAUzUCbGkQ5vE-01o_Fvio2"></div>
+    <div id="recaptcha-placeholder" data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
 
     <div class="registration-form-submit">
         <button type="submit" class="button button-light-burgundy g-recaptcha">Зарегистрироваться</button>

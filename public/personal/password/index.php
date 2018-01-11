@@ -38,17 +38,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                 </div>
             </div>
 
-            <? if ($_SESSION['success']): ?>
-                <p>Пароль успешно изменен</p>
-                <? unset($_SESSION['success']); ?>
-            <? endif ?>
-
-            <? if ($_SESSION['error']): ?>
-                <p>Ошибка изменения пароля</p>
-                <? unset($_SESSION['error']); ?>
-            <? endif ?>
-
-            <form action="/api/password/" method="POST">
+            <form action="/api/password/" method="POST" data-validate data-form-ajax>
                 <div class="form-group">
                     <label for="cabinet-new-password" class="form-label">
                         Новый пароль
@@ -61,6 +51,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                         Подтвердите новый пароль
                     </label>
                     <input id="cabinet-new-password-2" type="password" class="form-input" name="new_password2" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-messages animated flash js-form-messages"></div>
                 </div>
 
                 <button type="submit" class="button button-light-burgundy">
