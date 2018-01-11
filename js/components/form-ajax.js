@@ -36,14 +36,17 @@
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
                             formData.append('g-token', token);
+                            grecaptcha.reset(window.captchaID);
                             submitForm();
                         }
-                        var captchaID = grecaptcha.render('recaptcha-placeholder', { 
-                          'sitekey' : key, 
-                          'callback' : verifyCallback,
-                          'size' : 'invisible'
-                        });
-                        grecaptcha.execute(captchaID);
+                        if (!('captchaID' in window)) {
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder', { 
+                              'sitekey' : key, 
+                              'callback' : verifyCallback,
+                              'size' : 'invisible'
+                            });
+                        }
+                        grecaptcha.execute(window.captchaID);
                     } else {
                         submitForm();
                     }

@@ -38,4 +38,18 @@
     		$arResult[$key] = $default;
     	}
     }
+
+    CModule::IncludeModule('iblock');
+    $res = CIBlockElement::GetList(
+        ['SORT' => 'ASC'],
+        ['IBLOCK_ID' => CONTACTS_IBLOCK, 'ACTIVE' => 'Y', 'PROPERTY_SUMMIT' => $arResult['ID']],
+        false,
+        false,
+        ['ID', 'NAME', 'PROPERTY_FIO', 'PREVIEW_PICTURE']
+    );
+    if ($contact = $res->Fetch()) {
+        $arResult['CONTACT'] = $contact;
+    } else {
+        $arResult['CONTACT'] = null;
+    }
 ?>

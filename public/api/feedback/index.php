@@ -45,10 +45,27 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             ]);
         }
     } else {
+        CModule::IncludeModule('iblock');
+        $el = new CIblockElement;
+        $result = $el->Add([
+            'IBLOCK_ID' => FEEDBACK_IBLOCK,
+            'NAME' => $_REQUEST['name'],
+            'PREVIEW_TEXT' => $_REQUEST['email'],
+            'DETAIL_TEXT' => $_REQUEST['message'],
+        ]);
         echo json_encode([
             'success' => true,
-            'reload' => true
+            'message' => $messages['success'],
+            'requestId' => $result
         ]);
+
+        fastcgi_finish_request();
+        $data = [
+            'name' => $_REQUEST['name'],
+            'email' => $_REQUEST['email'],
+            'message' => $_REQUEST['message']
+        ];
+        $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data);
     }
 }
 else
@@ -58,7 +75,4 @@ else
         'message' => $messages['empty']
     ]);
 }
-
-
-
 ?>

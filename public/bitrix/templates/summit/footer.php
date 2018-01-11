@@ -5,6 +5,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	</main>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
 
+		<div id="recaptcha-placeholder"></div>
+
 		<script src="/assets/build/scripts.min.js"></script>
 		<? if (defined('NEED_MAP')): ?>
 			<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
@@ -12,5 +14,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? if (defined('NEED_EVENTS_TABLE')): ?>
 			<script src="/assets/build/program-table.js"></script>
 		<? endif ?>
+
+		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 	</body>
 </html>
