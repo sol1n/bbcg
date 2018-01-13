@@ -14,17 +14,17 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="m-b">
                                 <label class="form-label">
-                                    Имя
+                                    Фамилия
                                 </label>
-                                <input type="text" name="name" class="form-input" required>
+                                <input type="text" name="surname" class="form-input" required>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="m-b">
                                 <label class="form-label">
-                                    Фамилия
+                                    Имя
                                 </label>
-                                <input type="text" name="surname" class="form-input" required>
+                                <input type="text" name="name" class="form-input" required>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">

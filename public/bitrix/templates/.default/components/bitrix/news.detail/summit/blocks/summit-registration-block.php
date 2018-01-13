@@ -16,24 +16,24 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="m-b">
                                 <label class="form-label">
-                                    Имя
-                                </label>
-                                <? if (isset($arParams['USER']['NAME'])): ?>
-                                    <input type="text" name="name" class="form-input" value="<?=$arParams['USER']['NAME']?>" required>
-                                <? else: ?>
-                                    <input type="text" name="name" class="form-input" required>
-                                <? endif ?>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="m-b">
-                                <label class="form-label">
                                     Фамилия
                                 </label>
                                 <? if (isset($arParams['USER']['LAST_NAME'])): ?>
                                     <input type="text" name="surname" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?>" required>
                                 <? else: ?>
                                     <input type="text" name="surname" class="form-input" required>
+                                <? endif ?>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="m-b">
+                                <label class="form-label">
+                                    Имя
+                                </label>
+                                <? if (isset($arParams['USER']['NAME'])): ?>
+                                    <input type="text" name="name" class="form-input" value="<?=$arParams['USER']['NAME']?>" required>
+                                <? else: ?>
+                                    <input type="text" name="name" class="form-input" required>
                                 <? endif ?>
                             </div>
                         </div>

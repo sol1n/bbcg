@@ -23,15 +23,15 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <div class="form-group">
-                            <label class="form-label" for="registration-form-name">Имя *</label>
-                            <input id="registration-form-name" type="text" name="first_name" class="form-input" required>
-                            <div class="form-control-errors"></div>
+                            <label class="form-label" for="registration-form-last-name">Фамилия *</label>
+                            <input id="registration-form-last-name" type="text" name="last_name" class="form-input" required>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <div class="form-group">
-                            <label class="form-label" for="registration-form-last-name">Фамилия *</label>
-                            <input id="registration-form-last-name" type="text" name="last_name" class="form-input" required>
+                            <label class="form-label" for="registration-form-name">Имя *</label>
+                            <input id="registration-form-name" type="text" name="first_name" class="form-input" required>
+                            <div class="form-control-errors"></div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
