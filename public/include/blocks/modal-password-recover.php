@@ -2,14 +2,14 @@
     Восстановление пароля
 </div>
 
-<form action="/api/password-restore/submit/" method="POST" class="login-modal-form" data-form-ajax="" data-validate="" novalidate="novalidate">
+<form action="/api/password-restore/" method="POST" class="login-modal-form" data-form-ajax="" data-validate="" novalidate="novalidate">
     <div class="form-group">
         <label for="login-modal-login" class="form-label">Логин</label>
         <input id="login-modal-login" name="email" class="form-input" autofocus="" required="" type="text">
     </div>
 
     <div class="form-group">
-        <p>Вернуться к <a data-side-modal="" data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal" href="#">авторизации</a></p>
+        <p>Вернуться к <a data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal" href="/login/">авторизации</a></p>
     </div>
 
     <div class="form-group">
