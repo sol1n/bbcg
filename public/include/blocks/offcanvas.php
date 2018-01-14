@@ -2,15 +2,15 @@
     <div class="main-offcanvas">
         <div class="main-offcanvas-header">
             <div class="main-offcanvas-logo">
-                <img src="/assets/images/logo.svg" alt="">
+                <img src="/assets/images/logo.svg" alt="B2B Conference Group">
             </div>
             <div class="main-offcanvas-userarea">
                 <? if (!$USER->IsAuthorized()): ?>
                     <div class="main-offcanvas-userarea-login-register">
-                        <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
+                        <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                             Войти
                         </a>
-                        <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
                             Регистрация
                         </a>
                     </div>

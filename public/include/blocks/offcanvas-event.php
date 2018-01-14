@@ -7,10 +7,10 @@
             <div class="main-offcanvas-userarea">
                 <? if (!$USER->IsAuthorized()): ?>
                     <div class="main-offcanvas-userarea-login-register">
-                        <a href="login.php" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
+                        <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                             Войти
                         </a>
-                        <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
                             Регистрация
                         </a>
                     </div>
@@ -20,7 +20,7 @@
         <div class="main-offcanvas-body">
             <div class="main-offcanvas-event-logo">
                 <div class="main-offcanvas-padding">
-                    <img src="../assets/images/logo-online-retail-russia.png" alt="">
+                    <img src="<?$APPLICATION->ShowProperty('logo')?>" alt="<?$APPLICATION->ShowProperty('name')?>">
                 </div>
             </div>
             <ul class="main-offcanvas-menu">

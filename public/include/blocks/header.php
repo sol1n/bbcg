@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <a href="#" class="main-header-userarea-mobile">
+            <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal" class="main-header-userarea-mobile">
                 <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-header-login.svg') ?>
             </a>
         <? endif ?>        
