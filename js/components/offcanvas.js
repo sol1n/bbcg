@@ -31,21 +31,4 @@
 
         return false;
     });
-
-    /*if ( $(offcanvasOverlay).length ) {
-        var offcanvasHammer = new Hammer($(offcanvasOverlay)[0]);
-        offcanvasHammer.on("swipeleft", function(e) {
-            hide();
-        });
-    }*/
-
-    if (Swipe && document.getElementById("offcanvas")) {
-        new Swipe(document.getElementById("offcanvas"), function(event, direction) {
-            event.preventDefault();
-
-            if (direction === 'left') {
-                hide();
-            }
-        });
-    }
 })();
