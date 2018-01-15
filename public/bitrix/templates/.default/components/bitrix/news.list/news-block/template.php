@@ -50,29 +50,27 @@
                             </div>
                         </a>
                     <? else: ?>
-                        <div class="news-block-slider-item">
-                            <a 
-                                href="<?=$item['DETAIL_PAGE_URL']?>" 
-                                class="news-block-item news-block-item-blank" 
-                                data-side-modal 
-                                data-side-modal-url="/api/news/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
-                                data-side-modal-class="side-modal-wide side-modal-news"
-                            >
-                                <div class="news-block-item-content">
-                                    <div class="news-block-item-title">
-                                        <?=$item['NAME']?>
+                        <a 
+                            href="<?=$item['DETAIL_PAGE_URL']?>" 
+                            class="news-block-item news-block-item-blank" 
+                            data-side-modal 
+                            data-side-modal-url="/api/news/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
+                            data-side-modal-class="side-modal-wide side-modal-news"
+                        >
+                            <div class="news-block-item-content">
+                                <div class="news-block-item-title">
+                                    <?=$item['NAME']?>
+                                </div>
+                                <div class="news-block-item-meta">
+                                    <div class="news-block-item-date">
+                                        <?=$item['DATE']?>
                                     </div>
-                                    <div class="news-block-item-meta">
-                                        <div class="news-block-item-date">
-                                            <?=$item['DATE']?>
-                                        </div>
-                                        <div class="news-block-item-readmore">
-                                            <?=file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-readmore.svg')?>
-                                        </div>
+                                    <div class="news-block-item-readmore">
+                                        <?=file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-readmore.svg')?>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     <? endif ?>
                 </div>
             <? endforeach ?>
