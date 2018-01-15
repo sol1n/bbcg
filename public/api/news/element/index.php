@@ -36,7 +36,8 @@ if ($_REQUEST['id'])
           "DISPLAY_TOP_PAGER" => "N",
           "DISPLAY_BOTTOM_PAGER" => "N",
           "SET_STATUS_404" => "Y",
-          "SHOW_404" => "Y",     
+          "SHOW_404" => "Y",
+          "LANG" => $_REQUEST['lang']
       ),
   false
   );

@@ -42,10 +42,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                 <?=$user['DISPLAY_NAME']?>
             </div>
 
-            <div class="cabinet-block-profile-subtitle">
-                <?=$user['WORK_POSITION']?>
-            </div>
-
             <div class="cabinet-block-profile-table-title">
                 Личные данные
             </div>
@@ -57,27 +53,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                         <td><?=$user['PERSONAL_PHONE']?></td>
                     </tr>
                     <tr>
-                        <th>Дата рождения</th>
-                        <? if ($user['PERSONAL_BIRTHDAY']): ?>
-	                        <? $d = FormatDate('j F Y', MakeTimeStamp($user['PERSONAL_BIRTHDAY'], "DD.MM.YYYY HH:MI:SS")); ?>
-	                        <td><?=$d?></td>
-	                    <? else: ?>
-	                    	<td></td>
-	                    <? endif ?>
-                    </tr>
-                    <tr>
-                        <th>Регион</th>
-                        <td><?=$user['PERSONAL_STATE']?></td>
-                    </tr>
-                    <tr>
-                        <th>Город</th>
-                        <td><?=$user['PERSONAL_CITY']?></td>
+                        <th>E-mail</th>
+                        <td><?=$user['EMAIL']?></td>
                     </tr>
                 </table>
             </div>
 
             <div class="cabinet-block-profile-table-title">
-                Организация
+                Информация о работе
             </div>
 
             <div class="overflow-auto">
@@ -85,6 +68,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                     <tr>
                         <th>Организация</th>
                         <td><?=$user['WORK_COMPANY']?></td>
+                    </tr>                    
+                    <tr>
+                        <th>Должность</th>
+                        <td><?=$user['WORK_POSITION']?></td>
                     </tr>
                 </table>
             </div>

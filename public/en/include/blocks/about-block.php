@@ -20,7 +20,7 @@
                         300
                     </div>
                     <div class="about-block-stats-item-desc">
-                        top speakers
+                        top<br>speakers
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                         100
                     </div>
                     <div class="about-block-stats-item-desc">
-                        partner companies
+                        partner<br>companies
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="about-block-seo-photo"></div>
 
             <div class="about-block-seo-button">
-                <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">Регистрация</a>
+                <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">Registration</a>
 
                 <div class="about-block-seo-button-desc">
                     Exclusive information and useful contacts in retail sphere.
