@@ -7,6 +7,13 @@
             <div class="register-iphone-block-subtitle">
                 Registration gives access to exclusive news and presentations, the opportunity to ask a question to the speaker, as well as discounts for participation in the summits
             </div>
+            <? if (! $USER->IsAuthorized()): ?>
+                <div class="register-iphone-block-button">
+                    <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
+                        Registration
+                    </a>
+                </div>
+            <? endif ?>
         </div>
         <div class="register-iphone-block-right">
             <div class="register-iphone-block-screen"></div>

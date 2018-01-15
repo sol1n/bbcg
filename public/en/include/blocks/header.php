@@ -4,12 +4,12 @@
             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-hamburger-menu.svg') ?>
         </a>
         <div class="main-header-logo">
-            <a href="/">
+            <a href="/en/">
                 <img src="/assets/images/logo.svg" alt="BBCG — B2B Conference Group">
             </a>
         </div>
         <div class="main-header-mobile-logo">
-            <a href="/">
+            <a href="/en/">
                 <img src="/assets/images/logo-min.svg" alt="BBCG — B2B Conference Group">
             </a>
         </div>
@@ -25,7 +25,7 @@
             <div class="main-header-userarea">
                 <div class="main-header-user">
                     <div class="main-header-user-name">
-                    <? if (isset($user['LAST_NAME']) || isset($user['NAME'])): ?>
+                    <? if (!empty($user['LAST_NAME']) || !empty($user['NAME'])): ?>
                         <?=$user['NAME']?><br><?=$user['LAST_NAME']?>
                     <? else: ?>
                         <?=$user['LOGIN']?>

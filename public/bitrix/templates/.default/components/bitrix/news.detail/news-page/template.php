@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="wrapper">
     <div class="news-item-wrapper">
         <div class="news-item m-t-xl m-b-xl">
@@ -16,7 +19,7 @@
 
                 <div class="news-item-share">
                     <div class="news-item-share-title">
-                        Поделиться
+                        <?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
                     </div>
                     <div class="share-block">
                         <a href="#" target="_blank" class="share-block-item">

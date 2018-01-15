@@ -5,13 +5,13 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <div class="main-heading main-heading-black">
     <div class="wrapper">
         <h1 class="main-heading-title">
-            <a href="/news/">
-                Новости
+            <a href="/en/news/">
+                News
             </a>
         </h1>
 
-        <form method="POST" action="/news/" class="main-heading-search-form">
-            <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
+        <form method="POST" action="/en/news/" class="main-heading-search-form">
+            <input type="search" name="search" class="main-heading-search-input" placeholder="Search">
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
     </div>
@@ -30,13 +30,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "COUNT_ELEMENTS" => "N",
         "TOP_DEPTH" => "1",
         "SECTION_FIELDS" => "",
-        "SECTION_USER_FIELDS" => "",
+        "SECTION_USER_FIELDS" => ['UF_EN_NAME'],
         "ADD_SECTIONS_CHAIN" => "Y",
         "CACHE_TYPE" => "A",
         "CACHE_TIME" => "3600",
         "CACHE_NOTES" => "",
         "CACHE_GROUPS" => "N",
-      "opened" => $_REQUEST['section']
+        "opened" => $_REQUEST['section'],
+        "LANG" => "en"
     )       
 );?>
 
@@ -54,7 +55,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_TITLE" => "Y",
         "SET_CANONICAL_URL" => "Y",
         "SET_BROWSER_TITLE" => "Y",
-        "BROWSER_TITLE" => "NAME",
+        "BROWSER_TITLE" => "EN_NAME",
         "SET_META_KEYWORDS" => "Y",
         "META_KEYWORDS" => "-",
         "SET_META_DESCRIPTION" => "Y",
@@ -74,7 +75,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
-        "LANG" => "ru"
+        "LANG" => "en"
     ),
 false
 );
