@@ -1,4 +1,4 @@
-<section class="summit-registration-block">
+<section id="summit-registration-block" class="summit-registration-block">
     <div class="wrapper">
         <div class="summit-registration-block-title">
             Регистрация
