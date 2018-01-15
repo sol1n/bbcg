@@ -161,6 +161,10 @@
           .salad-theme({
             color: @c-salad;
           });
+
+          .navy-theme({
+            color: @c-navy;
+          });
         }
       }
 
@@ -219,6 +223,10 @@
             .salad-theme({
               border-color: transparent transparent @c-salad transparent;
             });
+
+            .navy-theme({
+              border-color: transparent transparent @c-navy transparent;
+            });
           }
 
           &::after {
@@ -267,6 +275,10 @@
             .salad-theme({
               border-color: @c-salad transparent transparent transparent;
             });
+
+            .navy-theme({
+              border-color: @c-navy transparent transparent transparent;
+            });
           }
         }
 
@@ -282,6 +294,50 @@
             max-height: 100px;
             transition: opacity 200ms, max-height 200ms;
           }
+        }
+      }
+
+      &.active {
+        & > a {
+          .blue-theme({
+            color: @c-blue;
+          });
+
+          .ink-theme({
+            color: @c-ink;
+          });
+
+          .yellow-theme({
+            color: @c-yellow;
+          });
+
+          .orange-theme({
+            color: @c-orange;
+          });
+
+          .red-theme({
+            color: @c-red;
+          });
+
+          .magenta-theme({
+            color: @c-magenta;
+          });
+
+          .green-theme({
+            color: @c-green;
+          });
+
+          .red-orange-theme({
+            color: @c-red-orange;
+          });
+
+          .salad-theme({
+            color: @c-salad;
+          });
+
+          .navy-theme({
+            color: @c-navy;
+          });
         }
       }
 
@@ -342,6 +398,10 @@
 
   .salad-theme({
     background-color: @c-salad;
+  });
+
+  .navy-theme({
+    background-color: @c-navy;
   });
 
   & > .wrapper {
@@ -495,6 +555,10 @@
         .salad-theme({
           fill: @c-salad;
         });
+
+        .navy-theme({
+          fill: @c-navy;
+        });
       }
     }
   }
@@ -560,6 +624,10 @@
     border-color: @c-salad;
   });
 
+  .navy-theme({
+    border-color: @c-navy;
+  });
+
   a {
     color: @c-light-burgundy;
     text-decoration: none;
@@ -599,6 +667,10 @@
 
     .salad-theme({
       color: @c-salad;
+    });
+
+    .navy-theme({
+      color: @c-navy;
     });
 
     &::after {
@@ -738,6 +810,10 @@
 
         .salad-theme({
           background-color: @c-salad;
+        });
+
+        .navy-theme({
+          background-color: @c-navy;
         });
       }
     }
