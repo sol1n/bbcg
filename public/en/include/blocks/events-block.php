@@ -1,6 +1,6 @@
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "speakers-block",
+    "banners-block",
     Array(
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
@@ -10,9 +10,9 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => SPEAKERS_IBLOCK,
+        "IBLOCK_ID" => BANNERS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "30",
+        "NEWS_COUNT" => "15",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -22,8 +22,8 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "LANG" => "ru",
-        "TITLE" => "300+ спикеров",
-        "SUBTITLE" => "Для зарегистрированных пользователей доступен сервис вопросов спикерам с возможностью получить ответ по почте или на саммите"
+        "SORT_BY2" => "ID",
+        "SORT_ORDER2" => "DESC",
+        "LANG" => "en"
     )
 );?>

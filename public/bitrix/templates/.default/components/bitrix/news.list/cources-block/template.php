@@ -1,10 +1,10 @@
 <section class="programs-block programs-block-downarrow">
     <div class="wrapper">
         <div class="programs-block-title">
-            Программы обучения
+            <?=$arParams['TITLE']?>
         </div>
         <div class="programs-block-subtitle">
-            Академия Ритейла предлагает уникальные учебные курсы
+            <?=$arParams['SUBTITLE']?>
         </div>
 
         <div class="programs-block-cards">

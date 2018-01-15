@@ -1,6 +1,6 @@
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "speakers-block",
+    "partners-block",
     Array(
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
@@ -10,9 +10,9 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => SPEAKERS_IBLOCK,
+        "IBLOCK_ID" => PARTNERS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "30",
+        "NEWS_COUNT" => "32",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -22,8 +22,8 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "LANG" => "ru",
-        "TITLE" => "300+ спикеров",
-        "SUBTITLE" => "Для зарегистрированных пользователей доступен сервис вопросов спикерам с возможностью получить ответ по почте или на саммите"
+        "LANG" => "en",
+        "TITLE" => "Partners",
+        "SUBTITLE" => "Our partners &mdash; the largest world companies",
     )
 );?>

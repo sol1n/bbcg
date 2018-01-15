@@ -15,7 +15,12 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<? $user = user(); ?>
 
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+		<? if (SITE_LANGUAGE == 'en'): ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas.php"; ?>
+		<? else: ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+		<? endif ?>
 		
 		<main class="main-container main-container-with-header">

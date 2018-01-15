@@ -48,6 +48,8 @@ mysql-password.txt
 /public/summits/index.php
 /public/.top.menu.php
 /public/.bottom.menu.php
+/public/en/.top.menu.php
+/public/en/.bottom.menu.php
 **/.section.php
 **/.access.php
 **/.DS_Store

@@ -7,10 +7,10 @@
             <div class="main-offcanvas-userarea">
                 <? if (!$USER->IsAuthorized()): ?>
                     <div class="main-offcanvas-userarea-login-register">
-                        <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
+                        <a href="/en/login/" data-side-modal data-side-modal-url="/en/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                             Войти
                         </a>
-                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                        <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
                             Регистрация
                         </a>
                     </div>
@@ -24,8 +24,8 @@
         <div class="main-offcanvas-footer">
             <div class="text-center">
                 <div class="main-offcanvas-lang">
-                    <a href="/" class="main-offcanvas-lang-item active">Рус</a>
-                    <a href="/en/" class="main-offcanvas-lang-item">Eng</a>
+                    <a href="/" class="main-offcanvas-lang-item">Рус</a>
+                    <a href="/en/" class="main-offcanvas-lang-item active">Eng</a>
                 </div>
             </div>
         </div>

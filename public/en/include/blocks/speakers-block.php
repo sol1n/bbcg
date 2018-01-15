@@ -22,8 +22,8 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "LANG" => "ru",
-        "TITLE" => "300+ спикеров",
-        "SUBTITLE" => "Для зарегистрированных пользователей доступен сервис вопросов спикерам с возможностью получить ответ по почте или на саммите"
+        "LANG" => "en",
+        "TITLE" => "300+ speakers",
+        "SUBTITLE" => "For registered users, the service of the questions is available to the speakers with the possibility of receiving a response by mail or at a summit",
     )
 );?>

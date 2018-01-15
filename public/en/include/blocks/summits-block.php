@@ -18,7 +18,8 @@
         "SHOW_PARENT_NAME" => "N",
         "TOP_DEPTH" => "2",
         "VIEW_MODE" => "TEXT",
-        "TITLE" => "Главные бизнес-саммиты индустрии",
-        "SUBTITLE" => "Каждый саммит BBCG отличает полномасштабность и полный кворум ключевых игроков рынка"
+        "LANG" => "en",
+        "TITLE" => "The main business summits of the industry",
+        "SUBTITLE" => "Each BBCG summit is distinguished by the full scope and full quorum of key market players"
     )
 );?>

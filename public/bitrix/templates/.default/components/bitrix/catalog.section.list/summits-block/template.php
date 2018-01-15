@@ -3,10 +3,10 @@
         <div class="summits-block-header">
             <div class="summits-block-header-left">
                 <div class="summits-block-title">
-                    Главные бизнес-саммиты индустрии
+                    <?=$arParams['TITLE']?>
                 </div>
                 <div class="summits-block-subtitle">
-                    Каждый саммит BBCG отличает полномасштабность и полный кворум ключевых игроков рынка
+                    <?=$arParams['SUBTITLE']?>
                 </div>
             </div>
             <div class="summits-block-header-right">

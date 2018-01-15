@@ -3,7 +3,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 ?>
 	</main>
-		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
+		<? if (SITE_LANGUAGE == 'en'): ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/footer.php"; ?>
+		<? else: ?>
+			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
+		<? endif ?>
 
 		<div id="recaptcha-placeholder"></div>
 

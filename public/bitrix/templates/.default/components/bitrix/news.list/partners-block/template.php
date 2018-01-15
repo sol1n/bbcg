@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <? if ($arResult['ITEMS']): ?>
     <section class="partners-block partners-block-downarrow">
         <div class="wrapper">
@@ -11,8 +14,8 @@
                     </div>
                 </div>
                 <div class="partners-block-header-right">
-                    <a href="/partners/" class="no-wrap">
-                        Все партнеры
+                    <a href="<?=$arResult['INDEX_PAGE_URL']?>" class="no-wrap">
+                        <?=Loc::GetMessage('ALL_PARTNERS', [], $arParams['LANG'])?> 
                     </a>
                     <div class="partners-block-header-arrows"></div>
                 </div>

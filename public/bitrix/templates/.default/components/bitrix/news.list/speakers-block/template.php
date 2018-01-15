@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <section class="speakers-block speakers-block-downarrow">
     <div class="wrapper">
         <div class="speakers-block-header">
@@ -10,8 +13,8 @@
                 </div>
             </div>
             <div class="speakers-block-header-right">
-                <a href="speakers/" class="no-wrap">
-                    Все спикеры
+                <a href="<?=$arResult['INDEX_PAGE_URL']?>" class="no-wrap">
+                    <?=Loc::GetMessage('ALL_SPEAKERS', [], $arParams['LANG'])?> 
                 </a>
                 <div class="speakers-block-header-arrows"></div>
             </div>
@@ -24,7 +27,7 @@
                         href="<?=$item['DETAIL_PAGE_URL']?>" 
                         class="speakers-block-card" 
                         data-side-modal 
-                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=ru"
+                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                     >
                         <div class="speakers-block-card-photo">
@@ -57,7 +60,7 @@
                         href="<?=$item['DETAIL_PAGE_URL']?>" 
                         class="speakers-block-card-photo" 
                         data-side-modal 
-                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=ru"
+                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                     >
                         <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
@@ -74,7 +77,7 @@
                             href="<?=$item['DETAIL_PAGE_URL']?>" 
                             class="speakers-block-card-name"
                             data-side-modal 
-                            data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=ru"
+                            data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                             data-side-modal-class="side-modal-wide side-modal-speaker"
                         >
                             <?=$item['NAME']?>

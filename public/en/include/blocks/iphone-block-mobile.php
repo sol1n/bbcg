@@ -4,7 +4,7 @@
             <div class="register-iphone-block-screen"></div>
             <div class="register-iphone-block-app">
                 <div class="register-iphone-block-app-title">
-                    Приложение <br>
+                    Mobile application <br>
                     BBCG
                 </div>
                 <a href="<?=IOS_APP_LINK?>" target="_blank" class="register-iphone-block-app-icon">

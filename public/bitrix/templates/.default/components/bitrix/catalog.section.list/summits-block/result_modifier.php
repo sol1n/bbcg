@@ -18,22 +18,40 @@
         
         if ($begin == $end) {
             //One-day summit
-            $duration = FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
+            if ($arParams['LANG'] == 'en') {
+                $duration = mb_strtolower(PHPFormatDateTime($element["PROPERTY_END_VALUE"], "j F"));
+            } else {
+                $duration = mb_strtolower(FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS")));
+            }
         } else {
             $end = FormatDate('m', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
             $begin = FormatDate('m', MakeTimeStamp($element["PROPERTY_BEGIN_VALUE"], "DD.MM.YYYY HH:MI:SS"));
 
             if ($begin == $end) {
                 //Start and end dates are in one month
-                $endDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
-                $beginDay = FormatDate('j', MakeTimeStamp($element["PROPERTY_BEGIN_VALUE"], "DD.MM.YYYY HH:MI:SS"));
-                $duration = "$beginDay – $endDay";
+                if ($arParams['LANG'] == 'en') {
+                    $endDay = PHPFormatDateTime($element["PROPERTY_END_VALUE"], 'j F');
+                    $beginDay = PHPFormatDateTime($element["PROPERTY_BEGIN_VALUE"], 'j');
+                } else {
+                    $endDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
+                    $beginDay = FormatDate('j', MakeTimeStamp($element["PROPERTY_BEGIN_VALUE"], "DD.MM.YYYY HH:MI:SS"));
+                }
+                $duration = mb_strtolower("$beginDay – $endDay");
             } else {
                 //Start and end dates are in different months
-                $endDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
-                $beginDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_BEGIN_VALUE"], "DD.MM.YYYY HH:MI:SS"));
-                $duration = "$beginDay – $endDay";
+                if ($arParams['LANG'] == 'en') {
+                    $endDay = PHPFormatDateTime($element["PROPERTY_END_VALUE"], 'j F');
+                    $beginDay = PHPFormatDateTime($element["PROPERTY_BEGIN_VALUE"], 'j F');
+                } else {
+                    $endDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_END_VALUE"], "DD.MM.YYYY HH:MI:SS"));
+                    $beginDay = FormatDate('j F', MakeTimeStamp($element["PROPERTY_BEGIN_VALUE"], "DD.MM.YYYY HH:MI:SS"));
+                }
+                $duration = mb_strtolower("$beginDay – $endDay");
             }
+        }
+
+        if ($arParams['LANG'] == 'en') {
+            $element['DETAIL_PAGE_URL'] = '/en' . $element['DETAIL_PAGE_URL'];
         }
 
         $elements[$element['IBLOCK_SECTION_ID']][] = [

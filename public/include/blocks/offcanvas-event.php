@@ -54,8 +54,8 @@
         <div class="main-offcanvas-footer">
             <div class="text-center">
                 <div class="main-offcanvas-lang">
-                    <a href="#" class="main-offcanvas-lang-item active">Рус</a>
-                    <a href="#" class="main-offcanvas-lang-item">Eng</a>
+                    <a href="/" class="main-offcanvas-lang-item active">Рус</a>
+                    <a href="/en/" class="main-offcanvas-lang-item">Eng</a>
                 </div>
             </div>
         </div>

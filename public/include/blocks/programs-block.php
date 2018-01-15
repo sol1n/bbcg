@@ -21,6 +21,8 @@
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
         "SORT_BY1" => "PROPERTY_BEGIN",
-        "SORT_ORDER1" => "ASC"
+        "SORT_ORDER1" => "ASC",
+        "TITLE" => "Программы обучения",
+        "SUBTITLE" => "Академия Ритейла предлагает уникальные учебные курсы"
     )
 );?>

@@ -1,10 +1,18 @@
-<section class="register-iphone-block register-iphone-block-mobile">
+<section class="register-iphone-block">
     <div class="wrapper">
+        <div class="register-iphone-block-left">
+            <div class="register-iphone-block-title">
+                Register on BBCG website
+            </div>
+            <div class="register-iphone-block-subtitle">
+                Registration gives access to exclusive news and presentations, the opportunity to ask a question to the speaker, as well as discounts for participation in the summits
+            </div>
+        </div>
         <div class="register-iphone-block-right">
             <div class="register-iphone-block-screen"></div>
             <div class="register-iphone-block-app">
                 <div class="register-iphone-block-app-title">
-                    Приложение <br>
+                    Mobile application <br>
                     BBCG
                 </div>
                 <a href="<?=IOS_APP_LINK?>" target="_blank" class="register-iphone-block-app-icon">

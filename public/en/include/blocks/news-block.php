@@ -1,6 +1,6 @@
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "speakers-block",
+    "news-block",
     Array(
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
@@ -10,7 +10,7 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => SPEAKERS_IBLOCK,
+        "IBLOCK_ID" => NEWS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "NEWS_COUNT" => "30",
         "PAGER_SHOW_ALWAYS" => "N",
@@ -20,10 +20,10 @@
         "PROPERTY_CODE" => array("*"),
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
-        "SORT_BY1" => "SORT",
-        "SORT_ORDER1" => "ASC",
-        "LANG" => "ru",
-        "TITLE" => "300+ спикеров",
-        "SUBTITLE" => "Для зарегистрированных пользователей доступен сервис вопросов спикерам с возможностью получить ответ по почте или на саммите"
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC",
+        "TITLE" => "NEWS AND EVENTS OF RETAIL",
+        "SUBTITLE" => "Learn exclusive information about the market before appearing in the media",
+        "LANG" => "en"
     )
 );?>

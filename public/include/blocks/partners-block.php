@@ -22,6 +22,7 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
+        "LANG" => "ru",
         "TITLE" => "Партнеры",
         "SUBTITLE" => "Наши партнеры &mdash; крупнейшие мировые компании"
     )

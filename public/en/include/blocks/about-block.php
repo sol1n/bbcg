@@ -39,7 +39,7 @@
             </div>
 
             <div class="about-block-button">
-                <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
+                <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
                     Регистрация
                 </a>
 
@@ -70,15 +70,13 @@
 
             <div class="about-block-seo-photo"></div>
 
-            <? if (! $USER->IsAuthorized()): ?>
-                <div class="about-block-seo-button">
-                    <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">Регистрация</a>
+            <div class="about-block-seo-button">
+                <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">Регистрация</a>
 
-                    <div class="about-block-seo-button-desc">
-                        Эксклюзивная информация и полезные контакты в сфере ритейла.
-                    </div>
+                <div class="about-block-seo-button-desc">
+                    Эксклюзивная информация и полезные контакты в сфере ритейла.
                 </div>
-            <? endif ?>
+            </div>
 
             <div class="about-block-seo-desc">
                 <div class="about-block-seo-desc-name">
