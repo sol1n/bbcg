@@ -10,8 +10,8 @@
                         17
                     </div>
                     <div class="about-block-stats-item-desc">
-                        лет <br>
-                        работы
+                        working <br>
+                        years
                     </div>
                 </div>
 
@@ -20,7 +20,7 @@
                         300
                     </div>
                     <div class="about-block-stats-item-desc">
-                        топ спикеров
+                        top speakers
                     </div>
                 </div>
 
@@ -29,23 +29,23 @@
                         100
                     </div>
                     <div class="about-block-stats-item-desc">
-                        компаний партнеров
+                        partner companies
                     </div>
                 </div>
             </div>
 
             <div class="about-block-desc">
-                BBCG — лидер в организации ежегодных деловых саммитов первых лиц бизнеса в ключевых отраслях экономики России. Наша миссия — давать идеи для вашего роста, расти вместе с вами, опережая рынок.
+                BBCG is a leader in event organisation. We organise annual summits for top officials in key industries of Russian economy. Our mission is to give ideas for your personal development, to grow with you ahead of the field.
             </div>
 
             <? if (! $USER->IsAuthorized()): ?>
                 <div class="about-block-button">
                     <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
-                        Регистрация
+                        Registration
                     </a>
 
                     <div class="about-block-button-desc">
-                        Эксклюзивная информация и полезные контакты в сфере ритейла.
+                        Exclusive information and useful contacts in retail sphere.
                     </div>
                 </div>
             <? endif ?>
@@ -54,17 +54,17 @@
             <div class="about-block-seo">
                 <div class="about-block-seo-bubble">
                     <div class="about-block-seo-bubble-title">
-                        Уважаемые, коллеги, друзья!
+                        Dear friends and colleagues!    
                     </div>
                     <div class="about-block-seo-bubble-text">
                         <p>
-                            Ритейл меняется, и с каждым годом скорость изменений нарастает. Сегодня уже недостаточно один-два раза в год обмениваться информацией, чтобы оставаться «в рынке». Это должен быть непрерывный процесс.
+                            Retail changes faster every year. Today exchanging information once or twice a year is now enough be up-to-date. This process should be ongoing.
                         </p>
                         <p>
-                            За 17 лет работы BBCG накоплена уникальная база знаний и контактов участников рынка. Мы готовы поделиться этой информацией с вами.
+                            In last 17 working years we collected a unique knowledge base and contacts of key market players. Sharing this information is the main priority of our events.
                         </p>
                         <p>
-                            Приглашаем вас стать участниками саммитов BBCG!
+                            We look forward to welcoming you at BBCG summits!
                         </p>
                     </div>
                 </div>
@@ -76,17 +76,17 @@
                 <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">Регистрация</a>
 
                 <div class="about-block-seo-button-desc">
-                    Эксклюзивная информация и полезные контакты в сфере ритейла.
+                    Exclusive information and useful contacts in retail sphere.
                 </div>
             </div>
 
             <div class="about-block-seo-desc">
                 <div class="about-block-seo-desc-name">
-                    Алексей Филатов
+                    Alexey Filatov
                 </div>
                 <div class="about-block-seo-desc-title">
-                    Управляющий директор <br>
-                    «B2B Conference Group»
+                    Alexey Filatov
+                    Chairman<br>«B2B Conference Group»
                 </div>
             </div>
         </div>

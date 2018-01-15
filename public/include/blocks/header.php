@@ -25,7 +25,7 @@
             <div class="main-header-userarea">
                 <div class="main-header-user">
                     <div class="main-header-user-name">
-                    <? if (isset($user['LAST_NAME']) || isset($user['NAME'])): ?>
+                    <? if (!empty($user['LAST_NAME']) || !empty($user['NAME'])): ?>
                         <?=$user['NAME']?><br><?=$user['LAST_NAME']?>
                     <? else: ?>
                         <?=$user['LOGIN']?>
