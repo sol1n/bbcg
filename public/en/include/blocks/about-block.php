@@ -38,15 +38,17 @@
                 BBCG — лидер в организации ежегодных деловых саммитов первых лиц бизнеса в ключевых отраслях экономики России. Наша миссия — давать идеи для вашего роста, расти вместе с вами, опережая рынок.
             </div>
 
-            <div class="about-block-button">
-                <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
-                    Регистрация
-                </a>
+            <? if (! $USER->IsAuthorized()): ?>
+                <div class="about-block-button">
+                    <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
+                        Регистрация
+                    </a>
 
-                <div class="about-block-button-desc">
-                    Эксклюзивная информация и полезные контакты в сфере ритейла.
+                    <div class="about-block-button-desc">
+                        Эксклюзивная информация и полезные контакты в сфере ритейла.
+                    </div>
                 </div>
-            </div>
+            <? endif ?>
         </div>
         <div class="about-block-right">
             <div class="about-block-seo">
