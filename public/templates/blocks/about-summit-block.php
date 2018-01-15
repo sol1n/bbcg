@@ -12,7 +12,7 @@
                 рынка и бизнеса производителей
             </div>
             <div class="about-summit-block-button">
-                <a href="#" class="button button-blue">
+                <a href="#summit-registration-block" class="button button-blue js-smooth-scroll">
                     Регистрация
                 </a>
             </div>
