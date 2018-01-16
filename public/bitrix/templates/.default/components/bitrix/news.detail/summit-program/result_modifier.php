@@ -11,7 +11,7 @@
 		$date = $begin->format('d.m.Y');
 		$arResult['DATES'][$date] = FormatDate('j F', $begin->getTimestamp());
 		$begin->modify('+1 day');
-	} while ($begin < $end);
+	} while ($begin <= $end);
 
 	$arParams['DATE'] = isset($arParams['DATE']) ? $arParams['DATE'] : $firstDay;
 
