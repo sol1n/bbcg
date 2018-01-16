@@ -14,8 +14,8 @@
             $arResult['ITEMS'][$k]['TAG'] = $tags[$item['PROPERTIES']['TAG']['VALUE']];
         }
 
-        if (isset($item['PROPERTIES']['SPEAKERS']['VALUE'][0])) {
-            $speakers[$item['PROPERTIES']['SPEAKERS']['VALUE'][0]] = true;
+        if (isset($item['PROPERTIES']['CARD_SPEAKER']['VALUE'])) {
+            $speakers[$item['PROPERTIES']['CARD_SPEAKER']['VALUE']] = true;
         } else {
             $arResult['ITEMS'][$k]['SPEAKER'] = false;
         }
@@ -30,8 +30,8 @@
     }
 
     foreach ($arResult['ITEMS'] as $k => $item) {
-        if (isset($item['PROPERTIES']['SPEAKERS']['VALUE'][0])) {
-            $index = $item['PROPERTIES']['SPEAKERS']['VALUE'][0];
+        if (isset($item['PROPERTIES']['CARD_SPEAKER']['VALUE'])) {
+            $index = $item['PROPERTIES']['CARD_SPEAKER']['VALUE'];
             if (isset($speakers[$index])) {
                 $arResult['ITEMS'][$k]['SPEAKER'] = $speakers[$index];
             }
