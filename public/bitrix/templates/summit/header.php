@@ -18,13 +18,23 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? $user = user(); ?>
 		
 		<? if (is_null($summit)): ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+			<? if (SITE_LANGUAGE == 'en'): ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas.php"; ?>
+			<? else: ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
+			<? endif ?>
 		<? else: ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-event.php"; ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-event.php"; ?>
+			<? if (SITE_LANGUAGE == 'en'): ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header-global.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header-for-event.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas-event.php"; ?>
+			<? else: ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-event.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-event.php"; ?>
+			<? endif ?>
 		<? endif ?>
 
 		<main class="main-container main-container-with-header">
-

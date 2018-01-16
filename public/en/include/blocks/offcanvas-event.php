@@ -2,18 +2,18 @@
     <div class="main-offcanvas">
         <div class="main-offcanvas-header">
             <div class="main-offcanvas-logo">
-                <a href="/">
+                <a href="/en/">
                     <img src="/assets/images/logo.svg" alt="BBCG — B2B Conference Group">
                 </a>
             </div>
             <div class="main-offcanvas-userarea">
                 <? if (!$USER->IsAuthorized()): ?>
                     <div class="main-offcanvas-userarea-login-register">
-                        <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
-                            Войти
+                        <a href="/en/login/" data-side-modal data-side-modal-url="/en/include/blocks/modal-login.php" data-side-modal-class="login-modal">
+                            Login
                         </a>
-                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
-                            Регистрация
+                        <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                            Registration
                         </a>
                     </div>
                 <? endif ?>
@@ -26,25 +26,25 @@
                 </div>
             </div>
             <ul class="main-offcanvas-menu">
-                <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
+                <? $APPLICATION->IncludeFile('/en/include/blocks/summit-about-pages.php'); ?>
                 <li>
-                    <a href="/summits/">
-                        Календарь саммитов
+                    <a href="/en/summits/">
+                        Summit calendar
                     </a>
                 </li>
                 <li>
-                    <a href="/academy/">
-                        Академия ретейла
+                    <a href="/en/academy/">
+                        Academy of Retail
                     </a>
                 </li>
                 <li>
-                    <a href="/news/">
-                        Новости
+                    <a href="/en/news/">
+                        News
                     </a>
                 </li>
                 <li>
-                    <a href="/contacts/">
-                        Контакты
+                    <a href="/en/contacts/">
+                        Contacts
                     </a>
                 </li>
             </ul>

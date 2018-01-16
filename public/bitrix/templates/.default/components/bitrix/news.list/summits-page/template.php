@@ -4,7 +4,7 @@
             <? foreach ($arResult['ITEMS'] as $item): ?>
                 <? $color = $item['PROPERTIES']['COLOR']['VALUE']; ?>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="/<?=$item['CODE']?>/" class="events-calendar-item m-b-md">
+                    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="events-calendar-item m-b-md">
                         <div class="events-calendar-item-header">
                             <? if ($item['PROPERTIES']['ICON']['VALUE']): ?>
                                 <? $icon = CFile::GetPath($item['PROPERTIES']['ICON']['VALUE']); ?>
