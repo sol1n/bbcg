@@ -11,7 +11,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <link rel="stylesheet" href="/assets/build/style.min.css">
 	    <meta name="theme-color" content="#1b1b1b">
 	</head>
-	<body>
+	<body class="blue-theme">
 
 		<? $user = user(); ?>
 

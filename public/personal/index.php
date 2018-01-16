@@ -39,7 +39,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             </div>
 
             <div class="cabinet-block-profile-title">
-                <?=$user['DISPLAY_NAME']?>
+                <?=$user['DISPLAY_NAME']?> <?=$user['SECOND_NAME']?>
+            </div>
+            <div class="cabinet-block-profile-subtitle"> 
+                &nbsp;
             </div>
 
             <div class="cabinet-block-profile-table-title">

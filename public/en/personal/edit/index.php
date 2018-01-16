@@ -35,7 +35,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             Editing a profile
         </div>
 
-        <form action="/api/personal/" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
+        <form action="/api/personal/?lang=en" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
             <div id="registration-form-overlay" class="form-overlay"></div>
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
