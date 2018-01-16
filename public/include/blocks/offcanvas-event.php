@@ -2,7 +2,9 @@
     <div class="main-offcanvas">
         <div class="main-offcanvas-header">
             <div class="main-offcanvas-logo">
-                <img src="/assets/images/logo.svg" alt="">
+                <a href="/">
+                    <img src="/assets/images/logo.svg" alt="BBCG — B2B Conference Group">
+                </a>
             </div>
             <div class="main-offcanvas-userarea">
                 <? if (!$USER->IsAuthorized()): ?>
