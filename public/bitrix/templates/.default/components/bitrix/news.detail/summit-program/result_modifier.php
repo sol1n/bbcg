@@ -19,7 +19,7 @@
 	$begin = new DateTime($arParams['DATE']);
 	$beginFormated = $begin->format('Y-m-d') . ' 00:00:00';
 	$begin->modify('+1 day');
-	$endFormated = $begin->format('Y-m-d') . ' 00:00:00';
+	$endFormated = $begin->format('Y-m-d') . ' 23:59:59';
 	$arParams['FILTER'] = [
 		'>=PROPERTY_begin' => $beginFormated,
 		'<PROPERTY_begin' => $endFormated
