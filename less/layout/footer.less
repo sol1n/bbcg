@@ -30,20 +30,14 @@
   position: relative;
   padding-left: 20px;
   line-height: 1.3;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    background: url("../images/icons/icon-footer-place.svg") no-repeat center;
-    width: 12px;
-    height: 15px;
-
-    .blue-theme({
-      background-image: url("../images/icons/icon-footer-place-blue.svg");
-    });
-  }
+.main-footer-address-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 13px;
+  height: 16px;
 }
 
 .main-footer-phones {
@@ -51,23 +45,100 @@
   padding-left: 22px;
   line-height: 1.3;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    background: url("../images/icons/icon-footer-phone.svg") no-repeat center;
-    width: 14px;
-    height: 14px;
-
-    .blue-theme({
-      background-image: url("../images/icons/icon-footer-phone-blue.svg");
-    });
-  }
-
   a {
     text-decoration: none;
   }
+}
+
+.main-footer-phones-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 15px;
+  height: 14px;
+}
+
+.main-footer-address-icon,
+.main-footer-phones-icon {
+  .blue-theme({
+    svg {
+      * {
+        fill: @c-blue;
+      }
+    }
+  });
+
+  .ink-theme({
+    svg {
+      * {
+        fill: @c-ink;
+      }
+    }
+  });
+
+  .yellow-theme({
+    svg {
+      * {
+        fill: @c-yellow;
+      }
+    }
+  });
+
+  .orange-theme({
+    svg {
+      * {
+        fill: @c-orange;
+      }
+    }
+  });
+
+  .red-theme({
+    svg {
+      * {
+        fill: @c-red;
+      }
+    }
+  });
+
+  .magenta-theme({
+    svg {
+      * {
+        fill: @c-magenta;
+      }
+    }
+  });
+
+  .green-theme({
+    svg {
+      * {
+        fill: @c-green;
+      }
+    }
+  });
+
+  .red-orange-theme({
+    svg {
+      * {
+        fill: @c-red-orange;
+      }
+    }
+  });
+
+  .salad-theme({
+    svg {
+      * {
+        fill: @c-salad;
+      }
+    }
+  });
+
+  .navy-theme({
+    svg {
+      * {
+        fill: @c-navy;
+      }
+    }
+  });
 }
 
 .main-footer-links {

@@ -4,10 +4,16 @@
             <img src="../assets/images/logo.svg" alt="BBCG — B2B Conference Group">
         </div>
         <div class="main-footer-address">
+            <div class="main-footer-address-icon">
+                <?php include "../assets/images/icons/icon-footer-place.svg"; ?>
+            </div>
             Москва, Дербеневская наб., <br>
             д. 11, БЦ «Полларс»
         </div>
         <div class="main-footer-phones">
+            <div class="main-footer-phones-icon">
+                <?php include "../assets/images/icons/icon-footer-phone.svg"; ?>
+            </div>
             <a href="tel:+74957852206">+7 (495) 785-22-06</a>, <br>
             <a href="tel:+74957811134">+7 (495) 781-11-34</a>
         </div>

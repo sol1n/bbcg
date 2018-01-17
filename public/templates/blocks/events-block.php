@@ -248,7 +248,7 @@
                     </div>
                     <a href="#" class="events-block-item-footer">
                         <div class="events-block-item-logo">
-                            <img src="../assets/images/summits-logo/food-retail-russia.svg" alt="Online Retail Russia">
+                            <img src="../assets/images/summits-logo/food-business-russia.svg" alt="Online Retail Russia">
                         </div>
                         <div class="events-block-item-title">
                             Академия ритейла

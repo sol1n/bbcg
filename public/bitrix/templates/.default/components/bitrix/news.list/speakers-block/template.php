@@ -55,14 +55,14 @@
 
         <div class="speakers-block-compact">
             <? foreach ($arResult['ITEMS'] as $item): ?>
-                <div class="speakers-block-card">
-                    <a 
-                        href="<?=$item['DETAIL_PAGE_URL']?>" 
-                        class="speakers-block-card-photo" 
-                        data-side-modal 
-                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
-                        data-side-modal-class="side-modal-wide side-modal-speaker"
-                    >
+                <a
+                    href="<?=$item['DETAIL_PAGE_URL']?>"
+                    class="speakers-block-card"
+                    data-side-modal
+                    data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
+                    data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
                         <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
 
                         <? if ($item['PROPERTIES']['LOGO']['VALUE']): ?>
@@ -71,22 +71,16 @@
                                 <img src="<?=$logo?>" alt="<?=$item['PROPERTIES']['LOGO']['DESCRIPTION']?>">
                             </div>
                         <? endif ?>
-                    </a>
+                    </div>
                     <div class="speakers-block-card-desc">
-                        <a 
-                            href="<?=$item['DETAIL_PAGE_URL']?>" 
-                            class="speakers-block-card-name"
-                            data-side-modal 
-                            data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
-                            data-side-modal-class="side-modal-wide side-modal-speaker"
-                        >
+                        <div class="speakers-block-card-name">
                             <?=$item['NAME']?>
-                        </a>
+                        </div>
                         <div class="speakers-block-card-title">
                             <?=$item['~PREVIEW_TEXT']?>
                         </div>
                     </div>
-                </div>
+                </a>
             <? endforeach ?>
         </div>
     </div>

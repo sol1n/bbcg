@@ -15,7 +15,7 @@
         </div>
         <nav class="main-header-menu">
             <ul>
-                <li>
+                <li class="active">
                     <a href="#">О компании</a>
                 </li>
                 <li>

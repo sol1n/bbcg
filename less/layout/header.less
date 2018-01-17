@@ -307,6 +307,8 @@
 
       &.active {
         & > a {
+          color: @c-light-burgundy;
+
           .blue-theme({
             color: @c-blue;
           });
@@ -725,11 +727,17 @@
   }
 }
 
+.main-header-user-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .main-header-user-toggler {
-  width: 8px;
+  width: 12px;
   height: 5px;
   margin-left: auto;
-  background: url('../images/icons/icon-select-arrow-down.svg');
+  background: url('../images/icons/icon-select-arrow-down.svg') no-repeat right center;
 }
 
 .main-header-user-dropdown-wrapper {
@@ -785,42 +793,52 @@
         transition: background-color 200ms, color 200ms;
 
         .blue-theme({
+          color: #fff;
           background-color: @c-blue;
         });
 
         .ink-theme({
+          color: #fff;
           background-color: @c-ink;
         });
 
         .yellow-theme({
+          color: #fff;
           background-color: @c-yellow;
         });
 
         .orange-theme({
+          color: #fff;
           background-color: @c-orange;
         });
 
         .red-theme({
+          color: #fff;
           background-color: @c-red;
         });
 
         .magenta-theme({
+          color: #fff;
           background-color: @c-magenta;
         });
 
         .green-theme({
+          color: #fff;
           background-color: @c-green;
         });
 
         .red-orange-theme({
+          color: #fff;
           background-color: @c-red-orange;
         });
 
         .salad-theme({
+          color: #fff;
           background-color: @c-salad;
         });
 
         .navy-theme({
+          color: #fff;
           background-color: @c-navy;
         });
       }
