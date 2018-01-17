@@ -5,7 +5,7 @@
         </a>
         <div class="main-header-logo">
             <a href="index.php">
-                <img src="../assets/images/logo.svg" alt="BBCG — B2B Conference Group">
+                <img src="../assets/images/logo.svg" width="120" alt="BBCG — B2B Conference Group">
             </a>
         </div>
         <div class="main-header-mobile-logo">
