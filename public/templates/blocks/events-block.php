@@ -61,7 +61,7 @@
             </div>
 
             <div class="events-block-slider-item">
-                <div class="events-block-item events-block-item-yellow">
+                <div class="events-block-item events-block-item-corn-yellow">
                     <div class="events-block-item-header" style="background-image: url('../assets/images/tmp/events/event-3.jpg');">
                         <a href="#" class="events-block-item-border">
                             <div class="events-block-item-name">
@@ -90,7 +90,7 @@
             </div>
 
             <div class="events-block-slider-item">
-                <div class="events-block-item events-block-item-orange">
+                <div class="events-block-item events-block-item-yellow">
                     <div class="events-block-item-header" style="background-image: url('../assets/images/tmp/events/event-1.jpg');">
                         <a href="#" class="events-block-item-border">
                             <div class="events-block-item-name">
@@ -103,10 +103,10 @@
                     </div>
                     <a href="#" class="events-block-item-footer">
                         <div class="events-block-item-logo">
-                            <img src="../assets/images/summits-logo/diy-household.svg" alt="Online Retail Russia">
+                            <img src="../assets/images/summits-logo/diy-household.svg" alt="DIY Household Retail">
                         </div>
                         <div class="events-block-item-title">
-                            Online Retail Russia
+                            DIY Household Retail
                         </div>
                         <div class="events-block-item-desc">
                             X международный конгресс первых лиц большого ритейла, Интернет-торговли и мультиканальных сетей.
