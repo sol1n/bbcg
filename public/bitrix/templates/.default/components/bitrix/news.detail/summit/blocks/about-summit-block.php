@@ -1,4 +1,6 @@
-<?
+<? 
+    use \Bitrix\Main\Localization\Loc;
+
     if ($arResult['DETAIL_PICTURE']) {
         $background = $arResult['DETAIL_PICTURE']['SRC'];
     } else {
@@ -19,7 +21,7 @@
             </div>
             <div class="about-summit-block-button">
                 <a href="#summit-registration-block" class="button button-blue js-smooth-scroll">
-                    Регистрация
+                    <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
                 </a>
             </div>
         </div>

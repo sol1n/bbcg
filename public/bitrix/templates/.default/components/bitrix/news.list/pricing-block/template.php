@@ -1,8 +1,11 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <? if ($arResult['ITEMS']): ?>
     <section class="summit-price-block">
         <div class="wrapper">
             <div class="summit-price-block-title">
-                Стоимость участия
+                <?=Loc::GetMessage('PARTICIPATE_PRICING', [], $arParams['LANG'])?>
             </div>
 
             <div class="summit-price-block-row">
@@ -12,26 +15,26 @@
                             <tr class="summit-price-block-table-heading">
                                 <th>
                                     <div class="summit-price-block-table-title">
-                                        Вид регистрации
+                                        <?=Loc::GetMessage('REGISTRATION_TYPE', [], $arParams['LANG'])?>
                                     </div>
                                 </th>
                                 <td>
                                     <div class="summit-price-block-table-title">
-                                        Раняя регистрация
+                                        <?=Loc::GetMessage('EARLY_REGISTRATION', [], $arParams['LANG'])?>
                                     </div>
                                     <? if ($arResult['EARLY_REGISTRATION']): ?>
                                         <div class="summit-price-block-table-subtitle">
-                                            до <?=$arResult['EARLY_REGISTRATION']?>
+                                            <?=Loc::GetMessage('BEFORE', [], $arParams['LANG'])?> <?=$arResult['EARLY_REGISTRATION']?>
                                         </div>
                                     <? endif ?>
                                 </td>
                                 <td>
                                     <div class="summit-price-block-table-title">
-                                        Поздняя регистрация
+                                        <?=Loc::GetMessage('LATE_REGISTRATION', [], $arParams['LANG'])?>
                                     </div>
                                     <? if ($arResult['EARLY_REGISTRATION']): ?>
                                         <div class="summit-price-block-table-subtitle">
-                                            после <?=$arResult['EARLY_REGISTRATION']?>
+                                            <?=Loc::GetMessage('LATE_REGISTRATION', [], $arParams['LANG'])?> <?=$arResult['EARLY_REGISTRATION']?>
                                         </div>
                                     <? endif ?>
                                 </td>
@@ -63,7 +66,7 @@
                                 <th>&nbsp;</th>
                                 <td colspan="2">
                                     <div class="summit-price-block-table-charge">
-                                        Цены указаны с учетом НДС 18%.
+                                        <?=Loc::GetMessage('PRICE_SPECIFIED_WITH_NDS', [], $arParams['LANG'])?>
                                     </div>
                                 </td>
                             </tr>
@@ -75,14 +78,14 @@
                         <div class="summit-price-block-card-icon">
                             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-summit-registration-users.svg"); ?>
                         </div>
-                        BBCG предоставляет традиционные скидки постоянным участникам, и при регистрации 2-х и более представителей компании.
+                        <?=Loc::GetMessage('TRADITIONAL_DISCOUNTS', [], $arParams['LANG'])?>
                     </div>
 
                     <div class="summit-price-block-card">
                         <div class="summit-price-block-card-icon">
                             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-summit-registration-discount.svg"); ?>
                         </div>
-                        В случае предоставления описания 1 реализованного решения по оптимизации бизнеса — дополнительная скидка 15%.
+                        <?=Loc::GetMessage('ADDITIONAL_DISCOUNT', [], $arParams['LANG'])?>
                     </div>
                 </div>
             </div>

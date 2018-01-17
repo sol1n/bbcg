@@ -26,6 +26,7 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "EARLY_REGISTRATION" => $arResult['PROPERTIES']['EARLY_REGISTRATION']['VALUE']
+        "EARLY_REGISTRATION" => $arResult['PROPERTIES']['EARLY_REGISTRATION']['VALUE'],
+        "LANG" => $arParams['LANG']
     )
 );?>

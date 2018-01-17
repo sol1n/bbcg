@@ -29,5 +29,6 @@ $APPLICATION->IncludeComponent(
         "NAME" => $arResult['NAME'],
         "ANDROID_APP_LINK" => $arResult['PROPERTIES']['ANDROID_APP_LINK']['VALUE'],
         "IOS_APP_LINK" => $arResult['PROPERTIES']['IOS_APP_LINK']['VALUE'],
+        "LANG" => $arParams['LANG']
     )
 );?>

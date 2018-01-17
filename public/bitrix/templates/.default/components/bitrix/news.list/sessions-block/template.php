@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <section class="sessions-block">
     <div class="wrapper">
         <div class="sessions-block-header">
@@ -11,7 +14,7 @@
             </div>
             <div class="sessions-block-header-right">
                 <a href="events/" class="no-wrap">
-                    Вся программа
+                    <?=Loc::GetMessage('ALL_EVENTS', [], $arParams['LANG'])?>
                 </a>
                 <div class="sessions-block-header-arrows"></div>
             </div>
@@ -19,7 +22,6 @@
 
         <div class="sessions-block-slider js-sessions-slider">
             <? foreach ($arResult['ITEMS'] as $item): ?>
-                <? $date = FormatDate('j F', MakeTimeStamp($item['PROPERTIES']['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")); ?>
                     <div class="sessions-block-slider-item">
                         <a 
                             href="events/<?=$item['ID']?>/"
@@ -58,7 +60,7 @@
 
                                 <div class="sessions-block-item-meta">
                                     <div class="sessions-block-item-date">
-                                        <?=$date?>
+                                        <?=$item['DATE']?>
                                     </div>
                                     <div class="sessions-block-item-readmore">
                                         <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-readmore.svg') ?>
