@@ -101,7 +101,7 @@
                                 </div>
                             <? endif ?>
                             <div class="col-xs-12 col-sm-6">
-                                <button type="submit" class="button button-blue">Регистрация</button>
+                                <button type="submit" class="button button-<?$APPLICATION->ShowProperty('color', 'blue')?>">Регистрация</button>
                             </div>
                         </div>
                     </div>

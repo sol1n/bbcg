@@ -18,7 +18,7 @@
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
             <div class="about-summit-block-button">
-                <a href="#summit-registration-block" class="button button-blue js-smooth-scroll">
+                <a href="#summit-registration-block" class="button button-<?$APPLICATION->ShowProperty('color', 'blue')?> js-smooth-scroll">
                     Регистрация
                 </a>
             </div>
