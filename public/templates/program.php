@@ -5,6 +5,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>BBCG — B2B Conference group</title>
     <link rel="stylesheet" href="../assets/build/style.min.css">
+    <meta name="theme-color" content="#1b1b1b">
+    <link rel="icon" type="image/png" href="../favicon.png" />
 </head>
 <body>
 

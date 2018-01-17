@@ -6,6 +6,7 @@
     <title>BBCG — B2B Conference group</title>
     <link rel="stylesheet" href="../assets/build/style.min.css">
     <meta name="theme-color" content="#1b1b1b">
+    <link rel="icon" type="image/png" href="../favicon.png" />
 </head>
 <!-- В body ставим классы для изменения цветовой схемы сайта -->
 <body class="blue-theme">

@@ -25,7 +25,7 @@
                         <div class="summits-block-cards-cell">
                             <div class="summits-block-card">
                                 <a href="#" class="summits-block-card-image">
-                                    <img src="../assets/images/summits-logo/food-retail-russia.svg" alt="Food Retail Russia">
+                                    <img src="../assets/images/summits-logo/food-business-russia.svg" alt="Food Business Russia">
                                 </a>
                                 <div class="summits-block-card-date">
                                     23-24 марта
