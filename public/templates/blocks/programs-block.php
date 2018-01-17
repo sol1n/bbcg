@@ -141,7 +141,7 @@
                 <a href="#" class="programs-block-card">
                     <div class="programs-block-card-header">
                         <div class="programs-block-card-title">
-                            Финансовый директор
+                            <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 40, "…"); ?>
                         </div>
                         <div class="programs-block-card-date">
                             <div class="programs-block-card-date-day">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="programs-block-card-desc">
-                        Скорость и эффективность продаж в современной рознице
+                        <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 80, "…"); ?>
                     </div>
                 </a>
             </div>
@@ -306,7 +306,7 @@
                     <a href="#" class="programs-block-card">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
-                                Финансовый директор
+                                <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 60, "…"); ?>
                             </div>
                             <div class="programs-block-card-date">
                                 <div class="programs-block-card-date-day">
@@ -318,7 +318,7 @@
                             </div>
                         </div>
                         <div class="programs-block-card-desc">
-                            Скорость и эффективность продаж в современной рознице
+                            <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 110, "…"); ?>
                         </div>
                     </a>
                 </div>
