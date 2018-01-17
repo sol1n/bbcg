@@ -45,10 +45,10 @@
                     </div>
                     <a href="#" class="events-block-item-footer">
                         <div class="events-block-item-logo">
-                            <img src="../assets/images/summits-logo/russian-export-day.svg" alt="Russian Export Day 2017">
+                            <img src="../assets/images/summits-logo/staff-only-forum.svg" alt="Staff only Forum">
                         </div>
                         <div class="events-block-item-title">
-                            Russian Export Day 2017
+                            Staff only Forum
                         </div>
                         <div class="events-block-item-desc">
                             Делегаты: 500 руководителей бизнеса из традиционного сетевого ритейла и компаний интернет-торговли...

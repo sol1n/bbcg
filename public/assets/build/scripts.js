@@ -16707,7 +16707,7 @@ return $;
                             window.location.reload();
                         }
                     }).fail(function (jqXHR, textStatus, errorThrown) {
-                        alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
+                        alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз. Error while loading data. Please, try again or contact us.');
                         console.log(jqXHR);
                         console.log(errorThrown);
                     }).always(function () {
@@ -17185,7 +17185,7 @@ $(document).on('click', '[data-side-modal]', function (e) {
             $modalContent = data;
             initSideModal($modalContent, classNames, preventOverlayClose, preventEscClose);
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            alert('Ошибка загрузки данных. Пожалуйста, попробуйте перезагрузить страницу.');
+            alert('Ошибка загрузки данных. Пожалуйста, попробуйте перезагрузить страницу. Error while loading data. Please, try to reload page.');
             console.log(jqXHR);
             console.log(errorThrown);
         }).always(function () {

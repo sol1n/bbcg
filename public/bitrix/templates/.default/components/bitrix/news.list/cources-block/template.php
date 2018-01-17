@@ -1,8 +1,4 @@
-<? if ($arParams['LANG'] == 'en'): ?>
-    <section class="programs-block programs-block-en programs-block-downarrow">
-<? else: ?>
-    <section class="programs-block programs-block-downarrow">
-<? endif ?>
+<section class="programs-block programs-block-downarrow">
     <div class="wrapper">
         <div class="programs-block-title">
             <?=$arParams['TITLE']?>
@@ -17,7 +13,7 @@
                     <a href="<?=$item['DETAIL_PAGE_URL']?>" class="programs-block-card">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
-                                <?=$item['NAME']?>
+                                <?=mb_strimwidth($item['NAME'], 0, 40, "…"); ?>
                             </div>
                             <div class="programs-block-card-date">
                                 <div class="programs-block-card-date-day">
@@ -29,7 +25,7 @@
                             </div>
                         </div>
                         <div class="programs-block-card-desc">
-                            <?=mb_strimwidth($item['~PREVIEW_TEXT'], 0, 80, "…")?>
+                            <?=mb_strimwidth($item['~PREVIEW_TEXT'], 0, 80, "…"); ?>
                         </div>
                     </a>    
                 </div>

@@ -89,7 +89,7 @@
                             window.location.reload();
                         }
                     }).fail(function (jqXHR, textStatus, errorThrown) {
-                        alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
+                        alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз. Error while loading data. Please, try again or contact us.');
                         console.log(jqXHR);
                         console.log(errorThrown);
                     }).always(function () {
