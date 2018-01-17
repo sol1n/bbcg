@@ -63,15 +63,71 @@
 }
 
 .speakers-list-item-photo {
-  height: 80px;
-  flex: 0 0 95px;
+  height: 60px;
+  flex: 0 0 75px;
 
   img {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
     object-fit: cover;
   }
+}
+
+.speakers-list-item-avatar {
+  .ff-gilroy-extrabold;
+  margin-right: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+.speakers-list-item-avatar-circle {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: @c-light-burgundy;
+
+  .blue-theme({
+    background-color: @c-blue;
+  });
+
+  .ink-theme({
+    background-color: @c-ink;
+  });
+
+  .yellow-theme({
+    background-color: @c-yellow;
+  });
+
+  .orange-theme({
+    background-color: @c-orange;
+  });
+
+  .red-theme({
+    background-color: @c-red;
+  });
+
+  .magenta-theme({
+    background-color: @c-magenta;
+  });
+
+  .green-theme({
+    background-color: @c-green;
+  });
+
+  .red-orange-theme({
+    background-color: @c-red;
+  });
+
+  .salad-theme({
+    background-color: @c-salad;
+  });
+
+  .navy-theme({
+    background-color: @c-navy;
+  });
 }
 
 .speakers-list-item-text {

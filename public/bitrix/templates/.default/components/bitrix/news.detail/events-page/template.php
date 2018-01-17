@@ -21,7 +21,7 @@
                 <?=$arResult['~DETAIL_TEXT']?>
 
                 <? if ($arResult['SPEAKERS']): ?>
-                    <h3 class="tt-uppercase">Спикеры</h3>
+                    <h4 class="tt-uppercase">Спикеры</h4>
 
                     <div class="m-t-md m-b-md">
                         <ul class="speakers-list">
