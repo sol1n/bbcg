@@ -20,7 +20,7 @@ if ($_REQUEST['lang'] == 'en')
 {
     $messages = [
         'theme' => 'B2B Conference Group site registration',
-        'success' => "<h1 class='message-modal-title'>Thank you</h1><p class='text-center'>Accounting data on the site sent, please check your email account</p>",
+        'success' => "<div class='message-modal-title'>Thank you</div><p class='text-center'>Accounting data on the site sent, please check your email account</p>",
         'error' => "You did not fill out the required fields",
         'exists' => "This email already exist",
         'template' => "user/register-to-user-en"
@@ -30,7 +30,7 @@ else
 {
     $messages = [
         'theme' => 'Регистрация на сайте «B2B Conference Group»',
-        'success' => "<h1 class='message-modal-title'>Благодарим вас</h1><p class='text-center'>Доступ на сайт отправлен в e-mail, пожалуйста проверьте свой электронный ящик</p>",
+        'success' => "<div class='message-modal-title'>Благодарим вас</div><p class='text-center'>Доступ на сайт отправлен в e-mail, пожалуйста проверьте свой электронный ящик</p>",
         'error' => "Вы не заполнили обязательные поля",
         'exists' => "Участник с таким email уже зарегистрирован",
         'template' => "user/register-to-user"

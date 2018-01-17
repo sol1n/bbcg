@@ -19,7 +19,7 @@ if (! function_exists('generateRandomString')) {
 if ($_REQUEST['lang'] == 'en')
 {
     $messages = [
-        'complete' => "<h1 class='message-modal-title'>Please, check the mail</h1><p class='text-center'>Data for recovery sent to your E-mail</p>",
+        'complete' => "<div class='message-modal-title'>Please, check the mail</div><p class='text-center'>Data for recovery sent to your E-mail</p>",
         'empty' => 'You did not fill out the required fields',
         'theme' => 'Password restore',
         'template' => 'user/restore-en'
@@ -28,7 +28,7 @@ if ($_REQUEST['lang'] == 'en')
 else
 {
     $messages = [
-        'complete' => "<h1 class='message-modal-title'>Пожалуйста, проверьте почту</h1><p class='text-center'>Даннные для восстановления отправленны на ваш E-mail</p>",
+        'complete' => "<div class='message-modal-title'>Пожалуйста, проверьте почту</div><p class='text-center'>Даннные для восстановления отправленны на ваш E-mail</p>",
         'empty' => 'Вы не заполнили обязательные поля',
         'theme' => 'Восстановление пароля',
         'template' => 'user/restore'

@@ -8,7 +8,7 @@
                 <?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?>
             </div>
 
-            <div class="row summit-contacts-blocks">
+            <div class="row between-xs summit-contacts-blocks">
                 <? foreach ($arResult["ITEMS"] as $item): ?>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="summit-contacts-block-card">

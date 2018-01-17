@@ -1,0 +1,53 @@
+.message-modal {
+  position: static;
+  max-width: 380px;
+  height: auto;
+  min-height: auto;
+  opacity: 0;
+  align-self: center;
+  transform: scale(0.8);
+  transform-origin: center;
+
+  .side-modal-close {
+    top: 0;
+    right: 0;
+    left: auto;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  @media (max-width: 500px) {
+    align-self: flex-start;
+    margin-top: 30px;
+  }
+}
+
+.side-modal-overlay {
+  &.active {
+    .message-modal {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.message-modal-title {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.login-modal-links {
+  a {
+    color: @c-text;
+
+    &:hover {
+      color: @c-blue;
+    }
+  }
+}
