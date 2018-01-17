@@ -13,7 +13,7 @@
                     <a href="<?=$item['DETAIL_PAGE_URL']?>" class="programs-block-card">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
-                                <?=$item['NAME']?>
+                                <?=mb_strimwidth($item['NAME'], 0, 40, "…"); ?>
                             </div>
                             <div class="programs-block-card-date">
                                 <div class="programs-block-card-date-day">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="programs-block-card-desc">
-                            <?=$item['~PREVIEW_TEXT']?>
+                            <?=mb_strimwidth($item['~PREVIEW_TEXT'], 0, 80, "…"); ?>
                         </div>
                     </a>    
                 </div>
