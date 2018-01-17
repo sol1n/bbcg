@@ -11,7 +11,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <title><?$APPLICATION->ShowTitle();?></title>
 	    <link rel="stylesheet" href="/assets/build/style.min.css">
 	    <meta name="theme-color" content="#1b1b1b">
-        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="/favicon.png">
 	</head>
 	<body class="<?$APPLICATION->ShowProperty('color', 'red')?>-theme">
 

@@ -1,8 +1,11 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <? if ($arResult['PROPERTIES']['ADDRESS']['VALUE']): ?>
     <section class="location-block">
         <div class="wrapper">
             <div class="location-block-title">
-                Место проведения
+                <?=Loc::GetMessage('LOCATION', [], $arParams['LANG'])?>
             </div>
             <div class="location-block-desc">
                 <?=$arResult['PROPERTIES']['ADDRESS']['VALUE']?>

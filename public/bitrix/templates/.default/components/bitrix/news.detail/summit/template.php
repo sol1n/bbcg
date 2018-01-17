@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <?php include "blocks/about-summit-block.php"; ?>
 <?php include "blocks/summit-text-block.php"; ?>
 <?php include "blocks/sessions-block.php"; ?>

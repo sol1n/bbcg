@@ -13,7 +13,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<script src="/assets/build/scripts.min.js?<?=rand(0, 99999)?>"></script>
 		<? if (defined('NEED_MAP')): ?>
-			<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
+			<? if (SITE_LANGUAGE == 'en'): ?>
+				<script src="//api-maps.yandex.ru/2.1/?lang=en_US&onload=initMaps"></script>
+			<? else: ?>
+				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
+			<? endif ?>
 		<? endif ?>
 		<? if (defined('NEED_EVENTS_TABLE')): ?>
 			<script src="/assets/build/program-table.js"></script>

@@ -28,5 +28,6 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER1" => "ASC",
         "TITLE" => $arResult['PROGRAM_TITLE']['title'],
         "SUBTITLE" => $arResult['PROGRAM_TITLE']['subtitle'],
+        "LANG" => $arParams['LANG']
     )
 );?>

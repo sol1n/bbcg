@@ -31,7 +31,11 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                     >
                         <div class="speakers-block-card-photo">
-                            <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
+                            <? if ($item['PREVIEW_PICTURE']): ?>
+                                <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
+                            <? else: ?>
+                                <img src="/assets/images/no-speaker.png" alt="<?=$item['NAME']?>">
+                            <? endif ?>
 
                             <? if ($item['PROPERTIES']['LOGO']['VALUE']): ?>
                                 <? $logo = CFile::GetPath($item['PROPERTIES']['LOGO']['VALUE']); ?>
@@ -63,7 +67,11 @@
                     data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
+                        <? if ($item['PREVIEW_PICTURE']): ?>
+                            <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>">
+                        <? else: ?>
+                            <img src="/assets/images/no-speaker.png" alt="<?=$item['NAME']?>">
+                        <? endif ?>
 
                         <? if ($item['PROPERTIES']['LOGO']['VALUE']): ?>
                             <? $logo = CFile::GetPath($item['PROPERTIES']['LOGO']['VALUE']); ?>
