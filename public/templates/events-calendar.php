@@ -56,7 +56,7 @@
                             <img src="../assets/images/summits-icons/food-business-russia.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-light-burgundy">Food</span> Business Russia
+                            <?php include "../assets/images/summits-logo/food-business-russia-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -85,7 +85,7 @@
                             <img src="../assets/images/summits-icons/staff-only-forum.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-blue">Staff</span> only Forum
+                            <?php include "../assets/images/summits-logo/staff-only-forum-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -114,7 +114,7 @@
                             <img src="../assets/images/summits-icons/online-retail-russia.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-blue">Online</span> Retail Russia
+                            <?php include "../assets/images/summits-logo/online-retail-russia-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -143,7 +143,7 @@
                             <img src="../assets/images/summits-icons/diy-household-retail.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-corn-yellow">DIY Household & Furniture</span> Retail
+                            <?php include "../assets/images/summits-logo/diy-household-retail-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -172,7 +172,7 @@
                             <img src="../assets/images/summits-icons/retail-business-russia.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-light-burgundy">Retail</span> Business Russia
+                            <?php include "../assets/images/summits-logo/retail-business-russia-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -201,7 +201,7 @@
                             <img src="../assets/images/summits-icons/fashion-retail-business.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-magenta">Fashion</span> Retail Business
+                            <?php include "../assets/images/summits-logo/fashion-retail-business-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -230,7 +230,7 @@
                             <img src="../assets/images/summits-icons/retail-director-forum.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-blue">Retail</span> Director Forum
+                            <?php include "../assets/images/summits-logo/retail-business-russia-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов
@@ -259,7 +259,7 @@
                             <img src="../assets/images/summits-icons/digital-technologies-forum.svg" alt="">
                         </div>
                         <div class="events-calendar-item-header-title">
-                            <span class="events-calendar-item-header-title-em b-ink">Digital</span> Technologies Forum
+                            <?php include "../assets/images/summits-logo/digital-technologies-forum-label.svg"; ?>
                         </div>
                         <div class="events-calendar-item-header-subtitle">
                             Москва, СЕО level, 300+ делегатов

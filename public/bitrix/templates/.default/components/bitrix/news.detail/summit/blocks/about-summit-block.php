@@ -20,7 +20,7 @@
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
             <div class="about-summit-block-button">
-                <a href="#summit-registration-block" class="button button-blue js-smooth-scroll">
+                <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
                     <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
                 </a>
             </div>

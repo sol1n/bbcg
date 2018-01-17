@@ -5,12 +5,12 @@
         </a>
         <div class="main-header-logo">
             <a href="index.php">
-                <img src="../assets/images/logo-online-retail-russia.png" alt="Бизнес форум «Online Retail Russia»">
+                <img src="../assets/images/summits-logo/online-retail-russia-label.svg" alt="Бизнес форум «Online Retail Russia»">
             </a>
         </div>
         <div class="main-header-mobile-logo">
             <a href="index.php">
-                <img src="../assets/images/logo-online-retail-russia.png" alt="Бизнес форум «Online Retail Russia»" height="34">
+                <img src="../assets/images/summits-logo/online-retail-russia-label.svg" alt="Бизнес форум «Online Retail Russia»" height="34">
             </a>
         </div>
         <nav class="main-header-menu">

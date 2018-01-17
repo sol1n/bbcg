@@ -103,7 +103,9 @@
                                 </div>
                             <? endif ?>
                             <div class="col-xs-12 col-sm-6">
-                                <button type="submit" class="button button-blue"><?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?></button>
+                                <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
+                                    <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -79,10 +79,6 @@
     display: block;
   }
 
-  img {
-    width: 120px;
-  }
-
   @media (max-width: 920px) {
     display: none;
   }
@@ -112,8 +108,11 @@
   height: 100%;
   .ff-gilroy-extrabold;
   font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   & > ul {
+    white-space: nowrap;
     height: 100%;
     .ul-reset;
 
@@ -447,9 +446,10 @@
         }
 
         &:not(.button) {
+          color: #fff !important;
+
           .mouse-hover({
-            color: #fff;
-            text-shadow: 0 0 10px;
+            text-shadow: 0 0 10px #fff;
             transition: all 200ms;
           });
         }
