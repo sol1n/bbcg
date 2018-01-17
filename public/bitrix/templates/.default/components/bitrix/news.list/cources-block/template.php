@@ -1,4 +1,8 @@
-<section class="programs-block programs-block-downarrow">
+<? if ($arParams['LANG'] == 'en'): ?>
+    <section class="programs-block programs-block-en programs-block-downarrow">
+<? else: ?>
+    <section class="programs-block programs-block-downarrow">
+<? endif ?>
     <div class="wrapper">
         <div class="programs-block-title">
             <?=$arParams['TITLE']?>
@@ -25,7 +29,7 @@
                             </div>
                         </div>
                         <div class="programs-block-card-desc">
-                            <?=$item['~PREVIEW_TEXT']?>
+                            <?=mb_strimwidth($item['~PREVIEW_TEXT'], 0, 80, "…")?>
                         </div>
                     </a>    
                 </div>
