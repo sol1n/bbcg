@@ -17013,14 +17013,23 @@ return $;
     var $slider = $(".js-programs-slider");
     $slider.slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: false,
-        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: true,
+        dots: false,
+        appendArrows: ".programs-block-header-arrows",
         responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
             {
                 breakpoint: 767,
                 settings: {
+                    dots: true,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
@@ -17028,6 +17037,7 @@ return $;
             {
                 breakpoint: 580,
                 settings: {
+                    dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
