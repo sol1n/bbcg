@@ -9,7 +9,7 @@
                     <?=$arParams['TITLE']?>
                 </div>
                 <div class="news-block-subtitle">
-                    <?=$arParams['TITLE']?>
+                    <?=$arParams['SUBTITLE']?>
                 </div>
             </div>
             <div class="news-block-header-right">
