@@ -24,6 +24,6 @@
         "SORT_ORDER1" => "ASC",
         "LANG" => "en",
         "TITLE" => "Studying programs",
-        "SUBTITLE" => "Academy of Retail offers unique training courses"
+        "SUBTITLE" => "Academy of Retail offers unique training courses",
     )
 );?>

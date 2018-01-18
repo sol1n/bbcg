@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <section class="programs-block programs-block-downarrow">
     <div class="wrapper">
         <div class="programs-block-header">
@@ -10,8 +13,8 @@
                 </div>
             </div>
             <div class="programs-block-header-right">
-                <a href="academy.php" class="no-wrap">
-                    Все программы
+                <a href="<?=$arResult['INDEX_PAGE_URL']?>" class="no-wrap">
+                    <?=Loc::GetMessage('ALL_PROGRAMS', [], $arParams['LANG'])?>
                 </a>
                 <div class="programs-block-header-arrows"></div>
             </div>
