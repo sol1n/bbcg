@@ -67,7 +67,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
             <div class="form-group">
                 <div class="form-control form-control-checkbox">
-                    <input id="registration-form-agreement" type="checkbox" name="agreement" required>
                     <label for="registration-form-agreement">
                         Нажимая кнопку «Зарегистрироваться», <br> я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a>.
                     </label>
