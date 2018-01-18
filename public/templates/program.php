@@ -143,6 +143,9 @@
                             <div class="program-table-heading-cell">
                                 <div class="program-table-heading-cell-title">Зона 2</div>
                             </div>
+                            <div class="program-table-heading-cell">
+                                <div class="program-table-heading-cell-title">Зона 3</div>
+                            </div>
                         </div>
                         <div class="program-table-scroll">
                             <div class="program-table-scroll-track js-program-table-scroll-track">
@@ -611,6 +614,38 @@
                                             </p>
                                         </div>
                                     </a>
+                                </div>
+                            </div>
+
+                            <div class="program-table-column">
+                                <!-- 9:00 — 10:00 -->
+                                <div class="program-table-column-hour">
+
+                                </div>
+
+                                <!-- 10:00 — 11:00 -->
+                                <div class="program-table-column-hour">
+
+                                </div>
+
+                                <!-- 11:00 — 12:00 -->
+                                <div class="program-table-column-hour program-table-column-hour-large">
+
+                                </div>
+
+                                <!-- 12:00 — 13:00 -->
+                                <div class="program-table-column-hour program-table-column-hour-large">
+
+                                </div>
+
+                                <!-- 13:00 — 14:00 -->
+                                <div class="program-table-column-hour program-table-column-hour-large">
+
+                                </div>
+
+                                <!-- 14:00 — 15:00 -->
+                                <div class="program-table-column-hour program-table-column-hour-large">
+
                                 </div>
                             </div>
                         </div>

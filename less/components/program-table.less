@@ -217,12 +217,14 @@
 }
 
 .program-table-heading-cell {
-  flex: 0 0 @program-table-cell-width;
+  position: relative;
+  flex: 1 0 auto;
+  min-width: 160px;
   background-color: #fff;
   border-top: 1px solid @program-table-border-color;
   border-right: 1px solid @program-table-border-color;
   border-bottom: 1px solid @program-table-border-color;
-  padding: 15px;
+  padding: 30px;
 
   /*@media (max-width: @program-table-cell-width-breakpoint) {
     flex-basis: @program-table-cell-width-min
@@ -230,6 +232,10 @@
 }
 
 .program-table-heading-cell-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   font-size: 1rem;
   font-weight: 500;
   color: #666666;
@@ -339,7 +345,8 @@
 }
 
 .program-table-column {
-  flex: 0 0 @program-table-cell-width;
+  flex: 1 0 auto;
+  min-width: 180px;
   border-right: 1px solid #E0E0E0;
 
   /*@media (max-width: @program-table-cell-width-breakpoint) {
