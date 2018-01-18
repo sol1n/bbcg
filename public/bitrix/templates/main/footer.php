@@ -11,7 +11,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<div id="recaptcha-placeholder"></div>
 
-		<script src="/assets/build/scripts.min.js?<?=rand(0, 99999)?>"></script>
+		<script src="/assets/build/scripts.min.js"></script>
 		<? if (defined('NEED_MAP')): ?>
 			<? if (SITE_LANGUAGE == 'en'): ?>
 				<script src="//api-maps.yandex.ru/2.1/?lang=en_US&onload=initMaps"></script>
