@@ -4,7 +4,7 @@
 
 <form action="/api/password-restore/" method="POST" class="login-modal-form" data-form-ajax="" data-validate="" novalidate="novalidate">
     <div class="form-group">
-        <label for="login-modal-login" class="form-label">Логин</label>
+        <label for="login-modal-login" class="form-label">E-mail</label>
         <input id="login-modal-login" name="email" class="form-input" autofocus="" required="" type="text">
     </div>
 
