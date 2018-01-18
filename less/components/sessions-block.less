@@ -89,11 +89,9 @@
   text-decoration: none;
   border: 1px solid #CCD3D7;
   outline: none;
-  transition: all 200ms;
 
-  .mouse-hover({
+  &:hover {
     border-color: @c-light-burgundy;
-    transition: all 200ms;
 
     .blue-theme({
       border-color: @c-blue;
@@ -138,7 +136,6 @@
     .sessions-block-item-content {
       color: #fff;
       background-color: @c-light-burgundy;
-      transition: all 200ms;
 
       .blue-theme({
         background-color: @c-blue;
@@ -181,9 +178,52 @@
       });
     }
 
+    .sessions-block-item-meta {
+      background: linear-gradient(180deg,transparent, @c-light-burgundy 17px);
+
+      .blue-theme({
+        background: linear-gradient(180deg,transparent, @c-blue 17px);
+      });
+
+      .ink-theme({
+        background: linear-gradient(180deg,transparent, @c-ink 17px);
+      });
+
+      .yellow-theme({
+        background: linear-gradient(180deg,transparent, @c-yellow 17px);
+      });
+
+      .orange-theme({
+        background: linear-gradient(180deg,transparent, @c-orange 17px);
+      });
+
+      .red-theme({
+        background: linear-gradient(180deg,transparent, @c-red 17px);
+      });
+
+      .magenta-theme({
+        background: linear-gradient(180deg,transparent, @c-magenta 17px);
+      });
+
+      .green-theme({
+        background: linear-gradient(180deg,transparent, @c-green 17px);
+      });
+
+      .red-orange-theme({
+        background: linear-gradient(180deg,transparent, @c-red-orange 17px);
+      });
+
+      .salad-theme({
+        background: linear-gradient(180deg,transparent, @c-salad 17px);
+      });
+
+      .navy-theme({
+        background: linear-gradient(180deg,transparent, @c-navy 17px);
+      });
+    }
+
     .sessions-block-item-date {
       color: #fff;
-      transition: all 200ms;
     }
 
     .sessions-block-item-readmore {
@@ -191,7 +231,7 @@
       opacity: 1;
       transition: all 200ms;
     }
-  });
+  }
 }
 
 .sessions-block-item-tag {
@@ -291,7 +331,6 @@
   height: 200px;
   color: @c-text;
   overflow: hidden;
-  transition: all 200ms;
 }
 
 .sessions-block-item-title {
@@ -322,7 +361,6 @@
 .sessions-block-item-date {
   font-size: 12px;
   color: #90999D;
-  transition: all 200ms;
 }
 
 .sessions-block-item-readmore {
