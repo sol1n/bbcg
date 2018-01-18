@@ -1,10 +1,20 @@
-<section class="programs-block programs-block-with-logo programs-block-downarrow">
+<section class="programs-block programs-block-downarrow">
     <div class="wrapper">
-        <div class="programs-block-title">
-            <?=$arParams['TITLE']?>
-        </div>
-        <div class="programs-block-subtitle">
-            <?=$arParams['SUBTITLE']?>
+        <div class="programs-block-header">
+            <div class="programs-block-header-left">
+                <div class="programs-block-title">
+                    <?=$arParams['TITLE']?>
+                </div>
+                <div class="programs-block-subtitle">
+                    <?=$arParams['SUBTITLE']?>
+                </div>
+            </div>
+            <div class="programs-block-header-right">
+                <a href="academy.php" class="no-wrap">
+                    Все программы
+                </a>
+                <div class="programs-block-header-arrows"></div>
+            </div>
         </div>
 
         <div class="programs-block-slider js-programs-slider">
@@ -32,17 +42,6 @@
                     </div>
                 </div>
             <? endforeach ?>
-        </div>
-
-        <div class="programs-block-header">
-            <div class="programs-block-header-left">
-            </div>
-            <div class="programs-block-header-right">
-                <a href="academy.php" class="no-wrap">
-                    Все программы
-                </a>
-                <div class="programs-block-header-arrows"></div>
-            </div>
         </div>
     </div>
 </section>
