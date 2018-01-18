@@ -131,7 +131,7 @@
                 Специализированные образовательные курсы. Уровни executive и administrative.
             </div>
 
-            <div class="programs-block-cards">
+            <div class="programs-block-cards m-t-md">
                 <div class="programs-block-cards-item">
                     <a href="#" class="programs-block-card">
                         <div class="programs-block-card-header">
