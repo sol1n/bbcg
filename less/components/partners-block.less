@@ -6,7 +6,6 @@
     padding-top: 60px;
     padding-bottom: 55px;
 
-
     @media (max-width: 800px) {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -72,6 +71,7 @@
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  max-width: 770px;
 
   @media (max-width: 800px) {
     font-size: 26px;
@@ -83,6 +83,7 @@
   font-size: 21px;
   font-weight: 300;
   line-height: 1.43;
+  max-width: 770px;
 
   @media (max-width: 800px) {
     font-size: 16px;
@@ -209,4 +210,14 @@
 .partners-block-slider {
   margin-left: -5px;
   margin-right: -5px;
+}
+
+.partners-block-row  {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  [class^='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

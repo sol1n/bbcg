@@ -1,4 +1,4 @@
-<section class="programs-block programs-block-downarrow">
+<section class="programs-block programs-block-with-logo programs-block-downarrow">
     <div class="wrapper">
         <div class="programs-block-title">
             Программы обучения
