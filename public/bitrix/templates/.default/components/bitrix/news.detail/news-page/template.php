@@ -22,13 +22,13 @@
                         <?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
                     </div>
                     <div class="share-block">
-                        <a href="#" target="_blank" class="share-block-item">
+                        <a href="#" target="_blank" data-share="vk" class="share-block-item">
                             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-vk.svg'); ?>
                         </a>
-                        <a href="#" target="_blank" class="share-block-item">
+                        <a href="#" target="_blank" data-share="fb" class="share-block-item">
                             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-facebook.svg'); ?>
                         </a>
-                        <a href="#" target="_blank" class="share-block-item">
+                        <a href="#" target="_blank" data-share="tw" class="share-block-item">
                             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-twitter.svg'); ?>
                         </a>
                     </div>
