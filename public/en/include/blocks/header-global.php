@@ -1,7 +1,7 @@
 <div class="header-global">
     <div class="wrapper">
         <a href="/en/" class="header-global-logo">
-            <img src="/assets/images/logo-global-gray.svg" alt="BBCG">
+            <img src="/assets/images/logo.svg" alt="BBCG">
         </a>
 
         <?$APPLICATION->IncludeComponent("bitrix:menu", "header-global-menu", Array("ROOT_MENU_TYPE" => "top"), false);?>
