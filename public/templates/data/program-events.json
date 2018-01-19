@@ -1,0 +1,16 @@
+{
+  "suggestions": [
+    {
+      "value": "Событие №1",
+      "data": "/program.php"
+    },
+    {
+      "value": "Событие №2",
+      "data": "/program.php"
+    },
+    {
+      "value": "Событие №3",
+      "data": "/program.php"
+    }
+  ]
+}
