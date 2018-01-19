@@ -2,7 +2,7 @@
 define('NEED_MAP', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <?
     $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-news', Array (
@@ -23,7 +23,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "META_KEYWORDS" => "-",
         "SET_META_DESCRIPTION" => "Y",
         "META_DESCRIPTION" => "-",
-        "SET_STATUS_404" => "Y",
+        "SET_STATUS_404" => "N",
         "SET_LAST_MODIFIED" => "Y",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "ADD_SECTIONS_CHAIN" => "Y",
@@ -37,7 +37,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_TOP_PAGER" => "N",
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
-        "SHOW_404" => "Y",     
+        "SHOW_404" => "Y",
+        "SEARCH" => $_GET['search']
     ), false);
 ?>
 

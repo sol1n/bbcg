@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             </a>
         </h1>
 
-        <form method="POST" action="/en/news/" class="main-heading-search-form">
+        <form method="GET" action="/en/news/" class="main-heading-search-form">
             <input type="search" name="search" class="main-heading-search-input" placeholder="Search">
             <input type="submit" value="" class="main-heading-search-submit">
         </form>

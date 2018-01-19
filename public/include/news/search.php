@@ -1,5 +1,5 @@
 <?
-if ($_POST['search'])
+if ($_GET['search'])
 {
 	CModule::IncludeModule('search');
 	CModule::IncludeModule('iblock');
@@ -7,7 +7,6 @@ if ($_POST['search'])
 	$obSearch = new CSearch;
 	$obSearch->Search(array(
 		'QUERY' => $_REQUEST['search'],
-		'SITE_ID' => LANG,
 		'MODULE_ID' => 'iblock',
 		'PARAM1' => 'content',
 		'PARAM2' => NEWS_IBLOCK

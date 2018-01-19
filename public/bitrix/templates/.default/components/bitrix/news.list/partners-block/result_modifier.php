@@ -1,5 +1,7 @@
 <?
-    if ($arParams['LANG'] == 'en') {
+    if ($arParams['INDEX_PAGE_URL']) {
+        $arResult['INDEX_PAGE_URL'] = $arParams['INDEX_PAGE_URL'];
+    } elseif ($arParams['LANG'] == 'en') {
         $arResult['INDEX_PAGE_URL'] = '/en/partners/';
     } else {
         $arResult['INDEX_PAGE_URL'] = '/partners/';

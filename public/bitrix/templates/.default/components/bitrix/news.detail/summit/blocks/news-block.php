@@ -28,6 +28,7 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER1" => "DESC",
         "TITLE" => $arResult['NEWS_TITLE']['title'],
         "SUBTITLE" => $arResult['NEWS_TITLE']['subtitle'],
-        "LANG" => $arParams['LANG']
+        "INDEX_PAGE_URL" => $arResult['NEWS_TITLE']['link'],
+        "LANG" => $arParams['LANG'],
     )
 );?>

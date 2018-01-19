@@ -1,7 +1,6 @@
 <div class="wrapper m-t-md m-b-md">
     <div class="row">
         <? foreach ($arResult['ITEMS'] as $item): ?>
-            <? $date = FormatDate('j F', MakeTimeStamp($item['ACTIVE_FROM'], "DD.MM.YYYY HH:MI:SS")); ?>
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <? if ($item['PREVIEW_PICTURE']): ?>
                     <a
@@ -23,7 +22,7 @@
                             </div>
                             <div class="news-block-item-meta">
                                 <div class="news-block-item-date">
-                                    <?=$date?>
+                                    <?=$item['DATE']?>
                                 </div>
                                 <div class="news-block-item-readmore">
                                     <?=file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-readmore.svg')?>
@@ -35,7 +34,7 @@
                     <a
                         <? if ($arParams['OPEN_MODAL']): ?>
                             data-side-modal 
-                            data-side-modal-url="/api/news/element/?id=<?=$item['ID']?>&lang=ru"
+                            data-side-modal-url="/api/news/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                             data-side-modal-class="side-modal-wide side-modal-news"
                         <? endif ?>
                         href="<?=$item['DETAIL_PAGE_URL']?>" 
@@ -47,7 +46,7 @@
                             </div>
                             <div class="news-block-item-meta">
                                 <div class="news-block-item-date">
-                                    <?=$date?>
+                                    <?=$item['DATE']?>
                                 </div>
                                 <div class="news-block-item-readmore">
                                     <?=file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-news-readmore.svg')?>

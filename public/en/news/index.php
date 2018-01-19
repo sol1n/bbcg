@@ -10,14 +10,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             </a>
         </h1>
 
-        <form method="POST" class="main-heading-search-form">
-            <input type="search" name="search" class="main-heading-search-input" placeholder="Search">
+        <form method="GET" class="main-heading-search-form">
+            <input type="search" name="search" class="main-heading-search-input" placeholder="Search" value="<?=htmlspecialchars($_GET['search'])?>">
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
     </div>
 </div>
 
-<? include($_SERVER['DOCUMENT_ROOT'] . "/en/include/news/search.php") ?>
+<? include($_SERVER['DOCUMENT_ROOT'] . "/include/news/search.php") ?>
 
 <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "news-subnav",
     Array(
@@ -40,7 +40,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     )       
 );?>
 
-<? if ($_POST['search'] && !$searchResults): ?>
+<? if ($_GET['search'] && !$searchResults): ?>
     <center style="margin: 150px 0">Nothing found on your request</center>
 <? else: ?>
     <?

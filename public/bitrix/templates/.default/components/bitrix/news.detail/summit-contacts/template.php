@@ -102,7 +102,7 @@
                 <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
                 
                 <div class="feedback-block-submit">
-                    <button type="submit" class="button button-light-burgundy">
+                    <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
                         Отправить
                     </button>
                 </div>

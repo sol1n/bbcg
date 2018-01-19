@@ -28,6 +28,7 @@ $APPLICATION->IncludeComponent(
         "SORT_ORDER1" => "ASC",
         "TITLE" => $arResult['PARTNERS_TITLE']['title'],
         "SUBTITLE" => $arResult['PARTNERS_TITLE']['subtitle'],
+        "INDEX_PAGE_URL" => $arResult['PARTNERS_TITLE']['link'],
         "LANG" => $arParams['LANG']
     )
 );?>

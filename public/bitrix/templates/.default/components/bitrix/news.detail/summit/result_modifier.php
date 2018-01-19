@@ -22,14 +22,57 @@
         }
     }
 
-    $headers = [
-    	'NEWS_TITLE' => ['title' => ['Новости']], 
-    	'PROGRAM_TITLE' => ['title' => 'Сессии и мастер-классы'], 
-    	'SPEAKERS_TITLE' => ['title' => ['Спикеры']], 
-    	'PARTNERS_TITLE' => ['title' => ['Партнеры']]
-    ];
+    if ($arParams['LANG'] == 'en') {
+        $headers = [
+        	'NEWS_TITLE' => [
+                'title' => 'News',
+                'subtitle' => 'Learn exclusive information about the market before appearing in the media',
+                'link' => '/en/' . $arResult['CODE'] . '/news/'
+            ],
+        	'PROGRAM_TITLE' => [
+                'title' => 'Sessions and master classes',
+                'subtitle' => '20+ sessions and master classes',
+                'link' => '/en/' . $arResult['CODE'] . '/events/'
+            ], 
+        	'SPEAKERS_TITLE' => [
+                'title' => 'Speakers',
+                'subtitle' => 'For registered users, the service of the questions is available to speakers with the possibility of receiving a response by mail or at a summit',
+                'link' => '/en/' . $arResult['CODE'] . '/speakers/'
+            ], 
+        	'PARTNERS_TITLE' => [
+                'title' => 'Parters',
+                'subtitle' => 'Our partners &mdash; the largest world companies',
+                'link' => '/en/' . $arResult['CODE'] . '/partners/'
+            ]
+        ];
+    } else {
+        $headers = [
+            'NEWS_TITLE' => [
+                'title' => 'Новости',
+                'subtitle' => 'Узнайте эксклюзивную информацию о рынке до появления в СМИ',
+                'link' => '/' . $arResult['CODE'] . '/news/'
+            ],
+            'PROGRAM_TITLE' => [
+                'title' => 'Сессии и мастер-классы',
+                'subtitle' => '20+ сессий и мастер-классов',
+                'link' => '/' . $arResult['CODE'] . '/events/'
+            ], 
+            'SPEAKERS_TITLE' => [
+                'title' => 'Спикеры',
+                'subtitle' => 'Для зарегистрированных пользователей доступен сервис вопросов спикерам с возможностью получить ответ по почте или на саммите',
+                'link' => '/' . $arResult['CODE'] . '/speakers/'
+            ], 
+            'PARTNERS_TITLE' => [
+                'title' => 'Партнеры',
+                'subtitle' => 'Наши партнеры &mdash; крупнейшие мировые компании',
+                'link' => '/' . $arResult['CODE'] . '/partners/'
+            ]
+        ];
+    }
+
+
     foreach ($headers as $key => $default) {
-    	if (isset($arResult['PROPERTIES'][$key]['VALUE'])) {
+    	if (!empty($arResult['PROPERTIES'][$key]['VALUE'])) {
     		$arResult[$key] = [
     			'title' => $arResult['PROPERTIES'][$key]['VALUE'],
     			'subtitle' => $arResult['PROPERTIES'][$key]['DESCRIPTION']

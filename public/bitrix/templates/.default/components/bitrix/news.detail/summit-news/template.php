@@ -1,21 +1,31 @@
+<?
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="main-heading main-heading-<?=$arResult['COLOR']?>">
     <div class="wrapper">
         <h1 class="main-heading-title">
-            <a href="/news/">
-                Новости
+            <a href="<?=$arResult['INDEX_PAGE_URL']?>">
+                <?=Loc::GetMessage('NEWS', [], $arParams['LANG'])?>
             </a>
         </h1>
 
-        <form method="POST" class="main-heading-search-form">
-            <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
+        <form method="GET" class="main-heading-search-form">
+            <input 
+                type="search" 
+                name="search" 
+                class="main-heading-search-input" 
+                placeholder="<?=Loc::GetMessage('SEARCH', [], $arParams['LANG'])?>" 
+                value="<?=htmlspecialchars($arParams['SEARCH'])?>"
+            >
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
     </div>
 </div>
 
+<? include($_SERVER['DOCUMENT_ROOT'] . "/include/news/search.php") ?>
 
-<? if ($_POST['search'] && !$searchResults): ?>
-    <center style="margin: 150px 0">По вашему запросу ничего не найдено</center>
+<? if ($arParams['SEARCH'] && !$searchResults): ?>
+    <center style="margin: 150px 0"><?=Loc::GetMessage('NOT_FOUND', [], $arParams['LANG'])?></center>
 <? else: ?>
     <?
         global $filter;
@@ -46,7 +56,8 @@
             "CACHE_TIME" => "3600",
             "CACHE_FILTER" => "Y",
             "CACHE_GROUPS" => "N",
-            "OPEN_MODAL" => 1
+            "OPEN_MODAL" => 1,
+            "LANG" => $arParams['LANG']
         ), false);
     ?>
 <? endif ?>
