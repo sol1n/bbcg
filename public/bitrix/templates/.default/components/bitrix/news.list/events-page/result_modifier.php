@@ -122,6 +122,11 @@
         }
 
         if ($area = $item['PROPERTIES']['AREA']['VALUE'][0]) {
+
+            foreach ($item['PROPERTIES']['AREA']['VALUE'] as $eventAreaId) {
+                $arResult['AREAS'][$eventAreaId]['using'] = true;
+            }
+
             if (count($item['PROPERTIES']['AREA']['VALUE']) > 1) {
                 $areaIndex = 0;
                 foreach ($areaSequence as $k => $v) {
@@ -238,7 +243,7 @@
             ];
         }
 
-        if (! count($area['ITEMS'])) {
+        if (!count($area['ITEMS']) && !$area['using']) {
             unset($arResult['AREAS'][$k]);
         }
     }
