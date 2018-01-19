@@ -1,5 +1,5 @@
 <?
-if ($_POST['search'])
+if ($_GET['search'])
 {
 	CModule::IncludeModule('search');
 	CModule::IncludeModule('iblock');

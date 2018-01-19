@@ -1,9 +1,9 @@
 <? if ($arResult['ITEMS']): ?>
     <li class="parent">
         <? if ($arParams['LANG'] == 'en'): ?>
-            <a href="/en/<?$APPLICATION->ShowProperty('code')?>/about/">About</a>
+            <a href="/en/<?=$arParams['SUMMIT_CODE']?>/about/">About</a>
         <? else: ?>
-            <a href="/<?$APPLICATION->ShowProperty('code')?>/about/">О саммите</a>
+            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О саммите</a>
         <? endif ?>
 
         <div class="main-header-submenu">
@@ -12,9 +12,9 @@
                     <? foreach ($arResult['ITEMS'] as $page): ?>
                         <li>
                             <? if ($arParams['LANG'] == 'en'): ?>
-                                <a href="/en/<?$APPLICATION->ShowProperty('code')?>/about/<?=$page["CODE"]?>/"><?=$page['NAME']?></a>
+                                <a href="/en/<?=$arParams['SUMMIT_CODE']?>/about/<?=$page["CODE"]?>/"><?=$page['NAME']?></a>
                             <? else: ?>
-                                <a href="/<?$APPLICATION->ShowProperty('code')?>/about/<?=$page["CODE"]?>/"><?=$page['NAME']?></a>
+                                <a href="/<?=$arParams['SUMMIT_CODE']?>/about/<?=$page["CODE"]?>/"><?=$page['NAME']?></a>
                             <? endif ?>
                         </li>
                     <? endforeach ?>
@@ -25,9 +25,9 @@
 <? else: ?>
     <li>
         <? if ($arParams['LANG'] == 'en'): ?>
-            <a href="/en/<?$APPLICATION->ShowProperty('code')?>/about/">About</a>
+            <a href="/en/<?=$arParams['SUMMIT_CODE']?>/about/">About</a>
         <? else: ?>
-            <a href="/<?$APPLICATION->ShowProperty('code')?>/about/">О саммите</a>
+            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О саммите</a>
         <? endif ?>
     </li>
 <? endif ?>

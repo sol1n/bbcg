@@ -22,18 +22,18 @@
     </div>
 </div>
 
-<? include($_SERVER['DOCUMENT_ROOT'] . "/include/news/search.php") ?>
 
-<? if ($arParams['SEARCH'] && !$searchResults): ?>
+<? if ($arParams['SEARCH'] && !$arResult['searchResults']): ?>
     <center style="margin: 150px 0"><?=Loc::GetMessage('NOT_FOUND', [], $arParams['LANG'])?></center>
 <? else: ?>
     <?
         global $filter;
-        if ($searchResults)
+        if ($$arResult['searchResults'])
         {
-            $filter['ID'] = $searchResults;
+            $filter['ID'] = $$arResult['searchResults'];
         }
         $filter['PROPERTY_SUMMIT'] = $arResult['ID'];
+
         $APPLICATION->IncludeComponent("bitrix:news.list", "news-page", array(
             "FILTER_NAME" => "filter",
             "IBLOCK_ID" => NEWS_IBLOCK,

@@ -1,6 +1,6 @@
 <?
 	$obCache = new CPHPCache();
-    if($obCache->InitCache(360, $_REQUEST['element'], '/summit-about-pages'))
+    if($obCache->InitCache(360, $_REQUEST['summit'], '/summit-about-pages'))
     {
        $summit = $obCache->GetVars();
     }
@@ -9,10 +9,10 @@
       CModule::IncludeModule('iblock');
       $res = CIBlockElement::GetList(
       	['ID' => 'ASC'],
-      	['IBLOCK_ID' => SUMMITS_IBLOCK, '=CODE' => $_REQUEST['element']],
+      	['IBLOCK_ID' => SUMMITS_IBLOCK, '=CODE' => $_REQUEST['summit']],
       	false,
       	false,
-      	['ID', 'NAME']
+      	['ID', 'NAME', 'CODE']
       );
       $summit = $res->Fetch();
       $obCache->EndDataCache($summit);
@@ -46,7 +46,8 @@
 			        "SET_TITLE" => "N",
 			        "SORT_BY1" => "SORT",
 			        "SORT_ORDER1" => "ASC",
-			        "LANG" => "en"
+			        "LANG" => "en",
+			        "SUMMIT_CODE" => $summit['CODE']
 			    )
 			);
     }

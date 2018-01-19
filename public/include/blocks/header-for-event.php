@@ -20,27 +20,27 @@
                 <li 
                     <? if (CSite::InDir("/$summitCode/events/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/events/">Программа</a>
+                    <a href="/<?=$summitCode?>/events/">Программа</a>
                 </li>
                 <li
                     <? if (CSite::InDir("/$summitCode/speakers/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/speakers/">Спикеры</a>
+                    <a href="/<?=$summitCode?>/speakers/">Спикеры</a>
                 </li>
                 <li
                     <? if (CSite::InDir("/$summitCode/partners/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/partners/">Партнеры</a>
+                    <a href="/<?=$summitCode?>/partners/">Партнеры</a>
                 </li>
                 <li
                     <? if (CSite::InDir("/$summitCode/news/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/news/">Новости</a>
+                    <a href="/<?=$summitCode?>/news/">Новости</a>
                 </li>
                 <li
                     <? if (CSite::InDir("/$summitCode/contacts/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/<?$APPLICATION->ShowProperty('code')?>/contacts/">Контакты</a>
+                    <a href="/<?=$summitCode?>/contacts/">Контакты</a>
                 </li>
             </ul>
         </nav>

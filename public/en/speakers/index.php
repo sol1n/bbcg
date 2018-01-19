@@ -4,17 +4,17 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
 <div class="main-heading main-heading-black">
     <div class="wrapper">
-        <h1 class="main-heading-title">Спикеры</h1>
+        <h1 class="main-heading-title">Speakers</h1>
 
         <form method="GET" class="main-heading-search-form">
-            <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск" value="<?=htmlspecialchars($_GET['search'])?>">
+            <input type="search" name="search" class="main-heading-search-input" placeholder="Search" value="<?=htmlspecialchars($_GET['search'])?>">
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
     </div>
 </div>
 
 <?$APPLICATION->IncludeFile(
-  SITE_DIR."include/speakers/alphabet-ru.php",
+  SITE_DIR."include/speakers/alphabet-en.php",
   Array(),
   Array("MODE"=>"html")
   );
@@ -23,7 +23,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <? include($_SERVER['DOCUMENT_ROOT'] . "/include/speakers/search.php") ?>
 
 <? if ($_POST['search'] && !$searchResults): ?>
-    <center style="margin: 150px 0">По вашему запросу ничего не найдено</center>
+    <center style="margin: 150px 0">Nothing found on your request</center>
 <? else: ?>
     <?
         global $filter;
@@ -57,6 +57,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             "CACHE_TIME" => "3600",
             "CACHE_FILTER" => "Y",
             "CACHE_GROUPS" => "N",
+            "LANG" => "en"
         ), false);
     ?>
 <? endif ?>
