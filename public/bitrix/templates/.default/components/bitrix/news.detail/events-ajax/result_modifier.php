@@ -1,5 +1,6 @@
 <?
     CModule::IncludeModule('iblock');
+	$colors = ["blue", "ink", "yellow", "orange", "red", "magenta", "green", "red-orange", "salad", "navy"];
 
     if (isset($arResult['PROPERTIES']['AREA']['VALUE'][0])) {
 	    $res = CIBlockElement::GetList(
@@ -23,6 +24,16 @@
 			['ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PAGE_URL']
 		);
 		while ($speaker = $res->GetNext()) {
+			if (empty($speaker['PREVIEW_PICTURE'])) {
+				$exploded = explode(' ', $speaker['NAME']);
+				if (is_array($exploded) && count($exploded) == 2) {
+					$speaker['LETTERS'] = mb_substr($exploded[0], 0, 1) . mb_substr($exploded[1], 0, 1);
+				} else {
+					$speaker['LETTERS'] = '?';
+				}
+				$speaker['COLOR'] = $colors[array_rand($colors)];
+			}
+
 		    $arResult['SPEAKERS'][] = $speaker;
 		}
 	}
