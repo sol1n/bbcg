@@ -75,7 +75,8 @@
     	if (!empty($arResult['PROPERTIES'][$key]['VALUE'])) {
     		$arResult[$key] = [
     			'title' => $arResult['PROPERTIES'][$key]['VALUE'],
-    			'subtitle' => $arResult['PROPERTIES'][$key]['DESCRIPTION']
+    			'subtitle' => $arResult['PROPERTIES'][$key]['DESCRIPTION'],
+                'link' => $default['link']
     		];
     	} else {
     		$arResult[$key] = $default;
