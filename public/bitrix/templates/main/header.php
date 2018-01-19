@@ -13,7 +13,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <meta name="theme-color" content="#1b1b1b">
 	    <link rel="icon" type="image/png" href="/favicon.png">
 	</head>
-	<body> 
+	<? if (CSite::InDir('/summits/') || CSite::InDir('/en/summits/')): ?>
+		<body class="b-smoke-white">
+	<? else: ?>
+		<body>
+	<? endif ?>
 
 		<? $user = user(); ?>
 
