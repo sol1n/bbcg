@@ -24,7 +24,13 @@
             <? foreach ($arResult['ITEMS'] as $item): ?>
                 <div class="programs-block-slider-item">
                     <div class="programs-block-cards-item">
-                        <a href="<?=$item['DETAIL_PAGE_URL']?>" class="programs-block-card">
+                        <a 
+                            href="<?=$item['DETAIL_PAGE_URL']?>" 
+                            class="programs-block-card"
+                            data-side-modal 
+                            data-side-modal-url="/api/cources/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
+                            data-side-modal-class="side-modal-wide side-modal-news"
+                        >
                             <div class="programs-block-card-header">
                                 <div class="programs-block-card-title">
                                     <?=mb_strimwidth($item['NAME'], 0, 40, "…"); ?>
