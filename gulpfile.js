@@ -37,6 +37,7 @@ var jsFiles = [
         './node_modules/slick-carousel/slick/slick.js',
         './node_modules/jquery-modal/jquery.modal.js',
         './node_modules/jquery-validation/dist/jquery.validate.js',
+        './node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js',
         './node_modules/baron/baron.min.js',
         './js/components/**/*.js',
         './js/scripts.js'

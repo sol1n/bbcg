@@ -23,7 +23,7 @@
                 </a>
             </h1>
 
-            <form action="#" method="POST" class="main-heading-search-form">
+            <form action="#" method="POST" class="main-heading-search-form" data-suggest-search="data/program-events.json">
                 <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
                 <input type="submit" value="" class="main-heading-search-submit">
             </form>
@@ -75,6 +75,29 @@
                             </div>
                         </div>
                     </blockquote>
+
+                    <h2>
+                        Text-large (.text-large)
+                    </h2>
+                    <p class="text-large">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, alias animi autem corporis culpa dolores eligendi, est ex harum illo in ipsam laborum pariatur quam, quasi reprehenderit similique vel.
+                    </p>
+
+                    <h2>
+                        Text-normal (.text-normal)
+                    </h2>
+                    <p class="text-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, alias animi autem corporis culpa dolores eligendi, est ex harum illo in ipsam laborum pariatur quam, quasi reprehenderit similique vel.
+                    </p>
+
+                    <h2>
+                        Text-small (.text-small)
+                    </h2>
+                    <p class="text-small">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, alias animi autem corporis culpa dolores eligendi, est ex harum illo in ipsam laborum pariatur quam, quasi reprehenderit similique vel.
+                    </p>
+
+                    <div class="m-b-xl"></div>
 
                     <p>
                         Форум Digital Technologies по праву считается уникальным мероприятием для розничных сетей, онлайн-бизнеса, телеком-операторов и банковского сектора. За два дня открытой деловой программы выступили 50 спикеров, в том числе Юрий Берченко, руководитель по работе с ключевыми клиентами, Google, Нурбек Атамбаев, глава, Gett Delivery Russia, Юрий Зайцев, руководитель цифровой лаборатории, Softline, Атанас Райков, директор по развитию бизнеса, Viber в России, СНГ и странах Центральной и Восточной Европы, Алексей Федоров, управляющий партнер, «220 вольт», Дарья Зайцева, директор по развитию платежных решений, AliExpress в России и СНГ, Мария Крот, заместитель генерального менеджера, UberEATS в России и многие другие.
