@@ -13,8 +13,8 @@
                                 </div>
                             <? endif ?>
                             <div class="events-calendar-item-header-title">
-                                <span class="events-calendar-item-header-title-em b-<?=$color?>"><?=$item['PROPERTIES']['LEFT_PART_NAME']['VALUE']?></span>
-                                <?=$item['PROPERTIES']['RIGHT_PART_NAME']['VALUE']?>
+                                <? $summitLogo = CFile::GetPath($item['PROPERTIES']['HEADER_LOGO']['VALUE']); ?>
+                                <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . $summitLogo); ?>
                             </div>
                             <div class="events-calendar-item-header-subtitle">
                                 <?=$item['PROPERTIES']['SHORT_DESCRIPTION']['VALUE']?>
