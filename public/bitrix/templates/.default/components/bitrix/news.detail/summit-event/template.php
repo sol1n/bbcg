@@ -32,7 +32,11 @@
 
         <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-right">
             <li class="subnav-list-item">
-                <form method="GET" data-suggest-search="data/program-events.json" class="program-table-search">
+                <form 
+                    method="GET" 
+                    data-suggest-search="/api/search/events/?lang=<?=$arParams['LANG']?>&summit=<?=$arResult['ID']?>" 
+                    class="program-table-search"
+                >
                     <input type="text" class="program-table-search-input" placeholder="Поиск событий" name="search">
                     <button type="submit" class="program-table-search-button"></button>
                 </form>

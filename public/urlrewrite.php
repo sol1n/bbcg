@@ -46,6 +46,21 @@ $arUrlRewrite = array(
 		"PATH" => "/en/summits/speakers.php",
 	),
 	array(
+		"CONDITION" => "#^/en/(.*)/events/([0-9]+)/.*#",
+		"RULE" => "summit=\$1&id=\$2",
+		"PATH" => "/en/summits/events/detail.php",
+	),	
+	array(
+		"CONDITION" => "#^/en/(.*)/events/(.*)/.*#",
+		"RULE" => "summit=\$1&date=\$2",
+		"PATH" => "/en/summits/events/index.php",
+	),
+	array(
+		"CONDITION" => "#^/en/(.*)/events/.*#",
+		"RULE" => "summit=\$1",
+		"PATH" => "/en/summits/events/index.php",
+	),
+	array(
 		"CONDITION" => "#^/en/(.*)/.*#",
 		"RULE" => "summit=\$1",
 		"PATH" => "/en/summits/detail.php",

@@ -6,13 +6,25 @@
             <div class="main-heading-tabs">
                 <? foreach ($arResult['DATES'] as $k => $date): ?>
                     <? if ($arParams['DATE'] == $k): ?>
-                        <a href="/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item active">
-                            <?=$date?>
-                        </a>
+                        <? if ($arParams['LANG'] == 'en'): ?>
+                            <a href="/en/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item active">
+                                <?=$date?>
+                            </a>
+                        <? else: ?>
+                            <a href="/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item active">
+                                <?=$date?>
+                            </a>
+                        <? endif ?>
                     <? else: ?>
-                        <a href="/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item">
-                            <?=$date?>
-                        </a>
+                        <? if ($arParams['LANG'] == 'en'): ?>
+                            <a href="/en/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item">
+                                <?=$date?>
+                            </a>
+                        <? else: ?>
+                            <a href="/<?=$arResult['CODE']?>/events/<?=$k?>/" class="main-heading-tabs-item">
+                                <?=$date?>
+                            </a>
+                        <? endif ?>
                     <? endif ?>
                 <? endforeach ?>
             </div>
@@ -32,7 +44,11 @@
 
         <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-right">
             <li class="subnav-list-item">
-                <form method="GET" data-suggest-search="data/program-events.json" class="program-table-search">
+                <form 
+                    method="GET" 
+                    data-suggest-search="/api/search/events/?lang=<?=$arParams['LANG']?>&summit=<?=$arResult['ID']?>" 
+                    class="program-table-search"
+                >
                     <input type="text" class="program-table-search-input" placeholder="Поиск событий" name="search">
                     <button type="submit" class="program-table-search-button"></button>
                 </form>

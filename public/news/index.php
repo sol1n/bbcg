@@ -10,8 +10,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             </a>
         </h1>
 
-        <form method="GET" class="main-heading-search-form">
-            <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск" value="<?=htmlspecialchars($_GET['search'])?>">
+        <form method="GET" class="main-heading-search-form" data-suggest-search="/api/search/news/">
+            <input 
+                type="search" 
+                name="search" 
+                class="main-heading-search-input" 
+                placeholder="Поиск" 
+                value="<?=htmlspecialchars($_GET['search'])?>"
+            >
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
     </div>

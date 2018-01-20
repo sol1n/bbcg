@@ -6,7 +6,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     <div class="wrapper">
         <h1 class="main-heading-title">Спикеры</h1>
 
-        <form method="GET" class="main-heading-search-form">
+        <form method="GET" class="main-heading-search-form" data-suggest-search="/api/search/speakers/">
             <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск" value="<?=htmlspecialchars($_GET['search'])?>">
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
