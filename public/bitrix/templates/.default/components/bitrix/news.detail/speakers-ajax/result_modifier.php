@@ -15,7 +15,10 @@
     		$event['DETAIL_PAGE_URL'] = '/' . $event['PROPERTY_SUMMIT_CODE'] . '/events/' . $event['ID'] . '/';
     		$event['DATE'] = mb_strtolower(FormatDate('j F, h:i', MakeTimeStamp($event['PROPERTY_BEGIN_VALUE'], "DD.MM.YYYY HH:MI:SS")));
     	}
-    	$arResult['EVENTS'][] = $event;
+        if (isset($arResult['EVENTS'][$event['ID']]['PROPERTY_AREA_NAME'])) {
+            $event['PROPERTY_AREA_NAME'] = $arResult['EVENTS'][$event['ID']]['PROPERTY_AREA_NAME'] . ', ' . $event['PROPERTY_AREA_NAME'];
+        }
+    	$arResult['EVENTS'][$event['ID']] = $event;
     }
 
     if ($arParams['LANG'] == 'en') {

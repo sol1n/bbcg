@@ -11,7 +11,9 @@
         </div>
     </div>
     <div class="side-modal-speaker-card-photo">
-        <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arResult['NAME']?>">
+        <? if ($arResult['PREVIEW_PICTURE']): ?>
+            <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arResult['NAME']?>">
+        <? endif ?>
     </div>
 </div>
 

@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="wrapper">
     <div class="speaker-block-wrapper">
         <div class="speaker-block p-t-xl p-b-xl">
@@ -28,7 +31,7 @@
             <? if ($arResult['DETAIL_TEXT']): ?>
                 <div class="speaker-block-about">
                     <div class="speaker-block-about-title">
-                        О спикере
+                        <?=Loc::GetMessage('ABOUT_SPEAKER', [], $arParams['LANG'])?>
                     </div>
 
                     <?=$arResult['~DETAIL_TEXT']?>
@@ -36,29 +39,31 @@
             <? endif ?>
 
             <? if ($arResult['EVENTS']): ?>
-                <div class="speaker-block-events">
-                    <div class="speaker-block-events-title">
-                        Выступления
+                <div class="side-modal-speaker-events">
+                    <div class="side-modal-speaker-events-title">
+                        <?=Loc::GetMessage('EVENTS', [], $arParams['LANG'])?>
                     </div>
                     <? foreach ($arResult['EVENTS'] as $event): ?>
-                        <a href="<?=$event['DETAIL_PAGE_URL']?>" class="speaker-block-events-item">
-                            <div class="speaker-block-events-item-title">
+                        <a href="<?=$event['DETAIL_PAGE_URL']?>" class="side-modal-speaker-events-item">
+                            <div class="side-modal-speaker-events-item-title">
                                 <?=$event['NAME']?>
                             </div>
 
-                            <div class="speaker-block-events-item-meta">
-                                <div class="speaker-block-events-item-date">
-                                    <span class="speaker-block-events-item-date-icon">
+                            <div class="side-modal-speaker-events-item-meta">
+                                <div class="side-modal-speaker-events-item-date">
+                                    <span class="side-modal-speaker-events-item-date-icon">
                                         <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-modal-calendar.svg') ?>
                                     </span>
                                     <?=$event['DATE']?>
                                 </div>
-                                <div class="speaker-block-events-item-place">
-                                    <span class="speaker-block-events-item-place-icon">
-                                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-modal-marker.svg') ?>
-                                    </span>
-                                    <?=$event['PROPERTY_AREA_NAME']?>
-                                </div>
+                                <? if (isset($event['PROPERTY_AREA_NAME'])): ?>
+                                    <div class="side-modal-speaker-events-item-place">
+                                        <span class="side-modal-speaker-events-item-place-icon">
+                                            <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-modal-marker.svg') ?>
+                                        </span>
+                                        <?=$event['PROPERTY_AREA_NAME']?>
+                                    </div>
+                                <? endif ?>
                             </div>
                         </a>
                     <? endforeach ?>
