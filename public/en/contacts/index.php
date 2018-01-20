@@ -74,7 +74,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group">
-                        <label for="feedback-form-name" class="form-label">Name *</label>
+                        <label for="feedback-form-name" class="form-label">Name and surname *</label>
                         <? if (isset($user['NAME']) || isset($user['LAST_NAME'])): ?>
                             <? $username = trim($user['LAST_NAME'] . ' ' . $user['NAME']); ?>
                             <input id="feedback-form-name" type="text" class="form-input" name="name" value="<?=$username?>" required placeholder="Ivan Ivanov">
