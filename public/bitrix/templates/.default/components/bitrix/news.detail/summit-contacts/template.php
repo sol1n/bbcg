@@ -65,6 +65,7 @@
     <div class="feedback-block">
         <div class="wrapper">
             <form action="/api/feedback/" method="POST" class="feedback-block-form" data-validate data-form-ajax>
+                <input name="summit" value="<?=$arResult['ID']?>" type="hidden" >
                 <div class="feedback-block-title">
                     Обратная связь
                 </div>
@@ -72,9 +73,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="feedback-form-name" class="form-label">Имя *</label>
-                            <? if (isset($user['NAME']) || isset($user['LAST_NAME'])): ?>
-                                <? $username = trim($user['LAST_NAME'] . ' ' . $user['NAME']); ?>
+                            <label for="feedback-form-name" class="form-label">Фамилия и имя *</label>
+                            <? if (isset($arParams['USER']['NAME']) || isset($arParams['USER']['LAST_NAME'])): ?>
+                                <? $username = trim($arParams['USER']['LAST_NAME'] . ' ' . $arParams['USER']['NAME']); ?>
                                 <input id="feedback-form-name" type="text" class="form-input" name="name" value="<?=$username?>" required placeholder="Иван Иванов">
                             <? else: ?>
                                 <input id="feedback-form-name" type="text" class="form-input" name="name" required placeholder="Иван Иванов">
@@ -85,8 +86,8 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
                             <label for="feedback-form-email" class="form-label">E-mail *</label>
-                            <? if (isset($user['EMAIL'])): ?>
-                                <input id="feedback-form-email" type="email" class="form-input" name="email" value="<?=$user['EMAIL']?>" required placeholder="ivanov@mail.ru">
+                            <? if (isset($arParams['USER']['EMAIL'])): ?>
+                                <input id="feedback-form-email" type="email" class="form-input" name="email" value="<?=$arParams['USER']['EMAIL']?>" required placeholder="ivanov@mail.ru">
                             <? else: ?>
                                 <input id="feedback-form-email" type="email" class="form-input" name="email" required placeholder="ivanov@mail.ru">
                             <? endif ?>

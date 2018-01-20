@@ -52,6 +52,9 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'NAME' => $_REQUEST['name'],
             'PREVIEW_TEXT' => $_REQUEST['email'],
             'DETAIL_TEXT' => $_REQUEST['message'],
+            'PROPERTY_VALUES' => [
+                'SUMMIT' => $_REQUEST['summit']
+            ]
         ]);
         echo json_encode([
             'success' => true,
@@ -60,10 +63,18 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
         ]);
 
         fastcgi_finish_request();
+
+        if (isset($_REQUEST['summit']) && !empty($_REQUEST['summit'])) {
+            $summit = CIBlockElement::GetByID($_REQUEST['summit'])->Fetch();
+        } else {
+            $summit = null;
+        }
+
         $data = [
             'name' => $_REQUEST['name'],
             'email' => $_REQUEST['email'],
-            'message' => $_REQUEST['message']
+            'message' => $_REQUEST['message'],
+            'summit' => is_null($summit) ? '' : $summit['NAME']
         ];
         $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data);
     }

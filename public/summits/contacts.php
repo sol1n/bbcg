@@ -37,7 +37,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_TOP_PAGER" => "N",
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
-        "SHOW_404" => "Y",     
+        "SHOW_404" => "Y",
+        "USER" => $user
     ), false);
 ?>
 
