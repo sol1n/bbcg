@@ -10,9 +10,11 @@
                 </div>
             </div>
             <div class="summits-block-header-right">
-                <div class="summits-block-header-year js-summits-slider-current-year">
-                    <?=$arResult['SECTIONS'][0]['NAME']?>
-                </div>
+                <? if (count($arResult['SECTIONS']) > 1): ?>
+                    <div class="summits-block-header-year js-summits-slider-current-year">
+                        <?=$arResult['SECTIONS'][0]['NAME']?>
+                    </div>
+                <? endif ?>
                 <div class="summits-block-header-arrows"></div>
             </div>
         </div>

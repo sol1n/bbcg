@@ -7,7 +7,7 @@
             <div class="register-iphone-block-subtitle">
                 Регистрация дает доступ к эксклюзивным новостям
                 и презентациям, возможность задать вопрос спикеру,
-                а так же скидки на участие в саммитах
+                а также скидки на участие в саммитах
             </div>
             <? if (! $USER->IsAuthorized()): ?>
                 <div class="register-iphone-block-button">
