@@ -9,10 +9,10 @@
 </script>
 <? if ($USER->IsAuthorized()): ?>
     <script>
-        gtag('set', {'user_id': $USER->GetID()}); 
+        gtag('set', {'user_id': <? echo $USER->GetID() ?>}); 
     </script>
 <? elseif (isset($_GET['user_id'])): ?>
     <script>
-        gtag('set', {'user_id': $USER->GetID()}); 
+        gtag('set', {'user_id': <? echo $USER->GetID() ?>}); 
     </script>
 <? endif ?>
