@@ -8,8 +8,5 @@
         </div>
     </div>
 
-    <div
-            class="location-block-map"
-            data-maps='{"center": "55.83110973, 37.63869129", "zoom": 16, "placemark": {"name": "ул. Косыгина, 15", "center": "55.83110973, 37.63869129"}}'
-    ></div>
+    <div id="js-contacts-map" class="location-block-map"  data-map-coords="55.83081987, 37.63869129" data-map-zoom="16" data-map-data="data/maps.json"></div>
 </section>

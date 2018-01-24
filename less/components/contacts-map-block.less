@@ -24,17 +24,6 @@
   height: 70px;
   color: #777777;
   cursor: pointer;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    margin-left: -12px;
-    top: -10px;
-    width: 24px;
-    height: 20px;
-    background: url("../images/icons/icon-logo-color.svg") no-repeat center;
-  }
 
   &::after {
     content: '';
@@ -57,30 +46,114 @@
 }
 
 .contacts-map-balloon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%; //ie11
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &::before {
+    content: '';
+    width: 123px;
+    height: 26px;
+    background: url("../images/logo-white.svg") no-repeat center;
+    background-size: cover;
+    margin-bottom: 15px;
+  }
 }
 
 .contacts-map-balloon-main {
   width: 260px;
   height: 130px;
-  background: @c-navy;
+  background: @c-light-burgundy;
   color: #fff;
   font-size: 1rem;
 
-  &::before {
-    position: static;
-    margin-left: 0;
-    margin-bottom: 10px;
-    width: 46px;
-    height: 90px;
-    background: url("../images/icons/icon-logo-white.svg") no-repeat center;
-  }
+  .blue-theme({
+    background-color: @c-blue;
+  });
+
+  .ink-theme({
+    background-color: @c-ink;
+  });
+
+  .yellow-theme({
+    background-color: @c-yellow;
+  });
+
+  .orange-theme({
+    background-color: @c-orange;
+  });
+
+  .red-theme({
+    background-color: @c-red;
+  });
+
+  .magenta-theme({
+    background-color: @c-magenta;
+  });
+
+  .green-theme({
+    background-color: @c-green;
+  });
+
+  .red-orange-theme({
+    background-color: @c-red;
+  });
+
+  .salad-theme({
+    background-color: @c-salad;
+  });
+
+  .navy-theme({
+    background-color: @c-navy;
+  });
 
   &::after {
-    border-color: @c-navy transparent transparent transparent;
+    border-color: @c-light-burgundy transparent transparent transparent;
+
+    .blue-theme({
+      border-color: @c-blue transparent transparent transparent;
+    });
+
+    .ink-theme({
+      border-color: @c-ink transparent transparent transparent;
+    });
+
+    .yellow-theme({
+      border-color: @c-yellow transparent transparent transparent;
+    });
+
+    .orange-theme({
+      border-color: @c-orange transparent transparent transparent;
+    });
+
+    .red-theme({
+      border-color: @c-red transparent transparent transparent;
+    });
+
+    .magenta-theme({
+      border-color: @c-magenta transparent transparent transparent;
+    });
+
+    .green-theme({
+      border-color: @c-green transparent transparent transparent;
+    });
+
+    .red-orange-theme({
+      border-color: @c-red transparent transparent transparent;
+    });
+
+    .salad-theme({
+      border-color: @c-salad transparent transparent transparent;
+    });
+
+    .navy-theme({
+      border-color: @c-navy transparent transparent transparent;
+    });
   }
 
   &.contacts-map-balloon-hover {

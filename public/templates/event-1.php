@@ -33,6 +33,6 @@
 <?php include "blocks/footer.php"; ?>
 
 <script src="../assets/build/scripts.min.js"></script>
-<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMaps"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 </body>
 </html>
