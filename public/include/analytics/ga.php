@@ -13,6 +13,6 @@
     </script>
 <? elseif (isset($_GET['user_id'])): ?>
     <script>
-        gtag('set', {'user_id': <? echo $USER->GetID() ?>}); 
+        gtag('set', {'user_id': <? echo htmlspecialchars($_GET['user_id']) ?>}); 
     </script>
 <? endif ?>
