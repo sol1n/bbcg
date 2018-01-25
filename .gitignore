@@ -47,6 +47,7 @@ mysql-password.txt
 /public/about
 /public/.top.menu.php
 /public/.bottom.menu.php
+/public/academy/.academy.menu.php
 /public/en/.top.menu.php
 /public/en/.bottom.menu.php
 **/.section.php
