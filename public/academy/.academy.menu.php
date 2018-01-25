@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Об академии", 
+		"/academy/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Спикеры", 
+		"/academy/speakers/", 
+		Array(), 
+		Array(), 
+		"" 
+	),	
+	Array(
+		"Партнеры", 
+		"/academy/parents/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/academy/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/academy/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

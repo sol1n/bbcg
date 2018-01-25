@@ -110,6 +110,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     </div>
 </section>
 
+<? $APPLICATION->IncludeFile('/include/academy/speakers-academy-block.php'); ?>
+
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "cources-page",
@@ -138,6 +140,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SUBTITLE" => "Программы обучения"
     )
 );?>
+
+
+<? $APPLICATION->IncludeFile('/include/academy/news-block.php'); ?>
+<? $APPLICATION->IncludeFile('/include/academy/registration-block.php'); ?>
 
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

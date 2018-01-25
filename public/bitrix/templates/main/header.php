@@ -25,7 +25,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas.php"; ?>
 		<? else: ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+			
+			<? if (CSite::InDir('/academy/')): ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-academy.php"; ?>
+			<? else: ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+			<? endif ?>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
 		<? endif ?>
 		
