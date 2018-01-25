@@ -4,7 +4,21 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 header('Content-type:application/json;charset=utf-8');
 
+global $filter;
+if ($_REQUEST['summit']) {
+	$filter = [
+		[
+			'LOGIC' => 'OR',
+			'=PROPERTY_SUMMIT' => false,
+			'PROPERTY_SUMMIT' => $_REQUEST['summit']
+		]
+	];
+} else {
+	$filter = ['PROPERTY_SUMMIT' => false];
+}
+
 $APPLICATION->IncludeComponent("bitrix:news.list", "map-json", array(
+	"FILTER_NAME" => "filter",
 	"IBLOCK_ID" => PLACES_IBLOCK,
 	"NEWS_COUNT" => "200",
 	"SORT_BY1" => "ID",

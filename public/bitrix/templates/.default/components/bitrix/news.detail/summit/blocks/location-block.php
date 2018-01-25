@@ -15,16 +15,13 @@
         <?
             $latitude = $arResult['PROPERTIES']['LATITUDE']['VALUE'];
             $longitude = $arResult['PROPERTIES']['LONGITUDE']['VALUE'];
-            $map = [
-                'center' => "$latitude, $longitude",
-                'zoom' => 16,
-                'placemark' => [
-                    'name' => $arResult['NAME'],
-                    'center' => "$latitude, $longitude",
-                ]
-            ]
         ?>
-
-        <div class="location-block-map" data-maps='<?=json_encode($map)?>'></div>
+        <div 
+            id="js-contacts-map"
+            class="location-block-map"
+            data-map-coords="<?="$latitude, $longitude"?>"
+            data-map-zoom="16"
+            data-map-data="/api/map/?summit=<?=$arResult['ID']?>"
+        ></div>
     </section>
 <? endif ?>
