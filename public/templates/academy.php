@@ -11,7 +11,8 @@
 </head>
 <body>
 
-<?php include "blocks/header.php"; ?>
+<?php include "blocks/header-global.php"; ?>
+<?php include "blocks/header-for-academy.php"; ?>
 <?php include "blocks/offcanvas.php"; ?>
 
 <main class="main-container main-container-with-header">
@@ -121,6 +122,8 @@
             </div>
         </div>
     </section>
+
+    <?php include "blocks/speakers-academy-block.php"; ?>
 
     <section id="academy-programm" class="programs-block">
         <div class="wrapper">
@@ -285,6 +288,11 @@
         </div>
     </section>
 
+    <?php include "blocks/news-block.php"; ?>
+    <?php include "blocks/summit-registration-block.php"; ?>
+    <?php include "blocks/summit-contacts-block.php"; ?>
+
+    <!--
     <section class="partners-block">
         <div class="wrapper">
             <div class="partners-block-header">
@@ -342,6 +350,7 @@
             </div>
         </div>
     </section>
+    -->
 </main>
 
 <?php include "blocks/footer.php"; ?>
