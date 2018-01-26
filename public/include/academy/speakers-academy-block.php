@@ -8,407 +8,107 @@
             Более 50 основателей и СЕО сильнейших розничных компаний объединили усилия, чтобы вместе с ведущими вузами страны модернизировать систему профильного образования. Чтобы системно передавать студентам свой опыт, знание технологий и понимание бизнеса будущего.
         </div>
 
-        <div class="h3 m-t-xl m-b-lg">
-            Почетный президент Академии ритейла
-        </div>
+        <?
+            global $filter;
+            $filter = ['PROPERTY_ACADEMY_PRESIDENT_VALUE' => 'Y'];
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "speakers-row-block",
+                Array(
+                    "FILTER_NAME" => "filter",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "N",
+                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "A",
+                    "DISPLAY_BOTTOM_PAGER" => "N",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "FIELD_CODE" => array(),
+                    "IBLOCK_ID" => SPEAKERS_IBLOCK,
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "NEWS_COUNT" => "6",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_TEMPLATE" => "main",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "PROPERTY_CODE" => array("*"),
+                    "SET_STATUS_404" => "N",
+                    "SET_TITLE" => "N",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "LANG" => "ru",
+                    "TITLE" => "Почетный президент Академии ритейла",
+                )
+            );
+        ?>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Ковпак Игорь
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Основатель, ТС «Кировский»
-                            г. Екатеринбург
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <?
+            global $filter;
+            $filter = ['PROPERTY_ACADEMY_CO_CHAIRMAN_VALUE' => 'Y'];
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "speakers-row-block",
+                Array(
+                    "FILTER_NAME" => "filter",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "N",
+                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "A",
+                    "DISPLAY_BOTTOM_PAGER" => "N",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "FIELD_CODE" => array(),
+                    "IBLOCK_ID" => SPEAKERS_IBLOCK,
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "NEWS_COUNT" => "6",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_TEMPLATE" => "main",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "PROPERTY_CODE" => array("*"),
+                    "SET_STATUS_404" => "N",
+                    "SET_TITLE" => "N",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "LANG" => "ru",
+                    "TITLE" => "Почетные сопредседатели Академии ритейла",
+                )
+            );
+        ?>
 
-        <div class="h3 m-t-xl m-b-lg">
-            Почетные сопредседатели Академии ритейла
-        </div>
+        <?
+            global $filter;
+            $filter = ['PROPERTY_ACADEMY_BOARD_VALUE' => 'Y'];
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "speakers-slider-block",
+                Array(
+                    "FILTER_NAME" => "filter",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "N",
+                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "A",
+                    "DISPLAY_BOTTOM_PAGER" => "N",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "FIELD_CODE" => array(),
+                    "IBLOCK_ID" => SPEAKERS_IBLOCK,
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "NEWS_COUNT" => "6",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_TEMPLATE" => "main",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "PROPERTY_CODE" => array("*"),
+                    "SET_STATUS_404" => "N",
+                    "SET_TITLE" => "N",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "LANG" => "ru",
+                    "TITLE" => "Состав Академии ритейла",
+                )
+            );
+        ?>
 
-        <div class="row">
-            <?php for ($i = 1; $i <= 6; $i++) : ?>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                        <div class="speakers-block-card-photo">
-                            <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                            <div class="speakers-block-card-logo">
-                                <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="speakers-block-card-desc">
-                            <div class="speakers-block-card-name">
-                                Ковпак Игорь
-                            </div>
-                            <div class="speakers-block-card-title">
-                                Основатель, ТС «Кировский»
-                                г. Екатеринбург
-                            </div>
-                            <div class="speakers-block-card-ask-question">
-                                Задать вопрос
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            <?php endfor; ?>
-        </div>
-
-        <div class="speakers-block-header m-t-xl">
-            <div class="speakers-block-header-left">
-                <div class="h3">
-                    Состав Академии ритейла
-                </div>
-            </div>
-            <div class="speakers-block-header-right">
-                <div class="speakers-block-header-arrows"></div>
-            </div>
-        </div>
-
-        <div class="speakers-block-slider js-speakers-slider">
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Ковпак Игорь
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Основатель, ТС «Кировский»
-                            г. Екатеринбург
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Татьяна Луковецкая
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Глава, Рольф Retail
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Adam Elman
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Global Head of Delivery for Plan A, Marks & Spencer
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Adam Elman
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Global Head of Delivery for Plan A, Marks & Spencer
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Jay DeBlank
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Director of Reporting, Insights,
-                            & Analytics, 7-Eleven, Даллас
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-6.png" alt="Gianluca Montesano">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-6.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Gianluca Montesano
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Региональный менеджер компании, ILPRA SPA
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-7.png" alt="Кен Хьюз">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-7.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Кен Хьюз
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Директор, Glacier Consulting. Видеодоклад
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-8.png" alt="Томислав Юкич">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Томислав Юкич
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Член совета директоров, mStart, Agrokor, Загреб
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php endfor; ?>
-        </div>
-
-        <div class="speakers-block-compact">
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Ковпак Игорь
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Основатель, ТС «Кировский»
-                        г. Екатеринбург
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Татьяна Луковецкая
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Глава, Рольф Retail
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Adam Elman
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Global Head of Delivery for Plan A, Marks & Spencer
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo" >
-                    <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Adam Elman
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Global Head of Delivery for Plan A, Marks & Spencer
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Jay DeBlank
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Director of Reporting, Insights,
-                        & Analytics, 7-Eleven, Даллас
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-6.png" alt="Gianluca Montesano">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-6.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Gianluca Montesano
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Региональный менеджер компании, ILPRA SPA
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-7.png" alt="Кен Хьюз">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-7.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Кен Хьюз
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Директор, Glacier Consulting. Видеодоклад
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-8.png" alt="Томислав Юкич">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Томислав Юкич
-                    </div>
-                    <div class="speakers-block-card-title">
-                        Член совета директоров, mStart, Agrokor, Загреб
-                    </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 </section>
