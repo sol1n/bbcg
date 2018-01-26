@@ -59,7 +59,8 @@
             </div>
 
             <div class="speakers-block-compact">
-                <? foreach ($arResult['ITEMS'] as $item): ?>
+                <? foreach ($arResult['ITEMS'] as $k => $item): ?>
+                    <? if ($k > 7) break; ?>
                     <a
                         href="<?=$item['DETAIL_PAGE_URL']?>"
                         class="speakers-block-card"
