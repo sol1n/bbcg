@@ -265,25 +265,25 @@
                 </div>
 
                 <div class="programs-block-cards-item">
-                            <a href="#" class="programs-block-card">
-                                <div class="programs-block-card-header">
-                                    <div class="programs-block-card-title">
-                                        <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 60, "…"); ?>
-                                    </div>
-                                    <div class="programs-block-card-date">
-                                        <div class="programs-block-card-date-day">
-                                            20–23
-                                        </div>
-                                        <div class="programs-block-card-date-month">
-                                            ноября
-                                        </div>
-                                    </div>
+                    <a href="#" class="programs-block-card">
+                        <div class="programs-block-card-header">
+                            <div class="programs-block-card-title">
+                                <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 60, "…"); ?>
+                            </div>
+                            <div class="programs-block-card-date">
+                                <div class="programs-block-card-date-day">
+                                    20–23
                                 </div>
-                                <div class="programs-block-card-desc">
-                                    <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 110, "…"); ?>
+                                <div class="programs-block-card-date-month">
+                                    ноября
                                 </div>
-                            </a>
+                            </div>
                         </div>
+                        <div class="programs-block-card-desc">
+                            <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 110, "…"); ?>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

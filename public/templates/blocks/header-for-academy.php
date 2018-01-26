@@ -10,7 +10,7 @@
         </div>
         <div class="main-header-mobile-logo">
             <a href="index.php">
-                <img src="../assets/images/summits-logo/retail-academy-horizontal.svg" alt="Академия Ритейла — BBCG" height="34">
+                <img src="../assets/images/retail-academy-horizontal.svg" alt="Академия Ритейла — BBCG" height="34">
             </a>
         </div>
         <nav class="main-header-menu">
