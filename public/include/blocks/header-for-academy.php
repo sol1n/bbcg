@@ -4,12 +4,12 @@
             <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-hamburger-menu.svg"); ?>
         </a>
         <div class="main-header-logo">
-            <a href="/">
+            <a href="/academy/">
                 <img src="/assets/images/retail-academy-horizontal.svg" alt="Академия Ритейла — BBCG">
             </a>
         </div>
         <div class="main-header-mobile-logo">
-            <a href="/">
+            <a href="/academy/">
                 <img src="/assets/images/retail-academy-horizontal.svg" alt="Академия Ритейла — BBCG" height="34">
             </a>
         </div>
