@@ -1,115 +1,9 @@
 <?
-define('NEED_MAP', 1);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
-<section class="about-academy-block">
-    <div class="wrapper">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8">
-                <div class="about-academy-block-text">
-                    <h1 class="about-academy-block-subtitle">
-                        Академия ритейла
-                    </h1>
-                    <h2 class="about-academy-block-title">
-                        Новое будущее ритейла. <br> Сегодня!
-                    </h2>
-
-                    <div class="about-academy-block-desc">
-                        Ритейл &mdash; одна из самых динамичных и технологичных отраслей экономики. И чем стремительнее меняется ритейл, тем острее ощущается дефицит квалифицированных кадров. С каждым днем увеличивается разрыв между теоретической базой высшей школы и реальными задачами бизнеса
-                    </div>
-
-                    <a href="#academy-programm" class="button button-old-gold js-smooth-scroll">
-                        <span class="c-text">Программы академии</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="about-academy-block-logo">
-                    <img src="/assets/images/retail-academy.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="summit-text-block">
-    <div class="wrapper">
-
-        <h3 class="h2 tt-uppercase m-t-n">
-            Открытые программы
-        </h3>
-
-        <div class="row m-b-xl">
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Подготовлены на базе исследований и прямых запросов членов Академии.
-                    </li>
-                    <li>
-                        Отражают логику и структуру программ ведущих международных партнеров Академии.
-                    </li>
-                    <li>
-                        Объединяют слушателей (топ-менеджмент) из компаний лидеров отрасли.
-                    </li>
-                    <li>
-                        Проходят в самом современном образовательном формате intensive & hyper connected.
-                    </li>
-                    <li>
-                        Не существует двух одинаковых курсов, контент непрерывно обновляется и актуализируется.
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Всегда более 75% спикеров это CEO и топ-менедж- мент крупнейших компаний.
-                    </li>
-                    <li>
-                        100% материалов всегда доступны слушателям на мобильных устройствах.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="h2 tt-uppercase m-t-n">
-            Корпоративные курсы, МВА и стратегические сессии
-        </h3>
-
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Готовятся на основе интервью с первыми лицами компании.
-                    </li>
-                    <li>
-                        Отражают ключевые тренды, данные исследова- ний, часто проводимых специально.
-                    </li>
-                    <li>
-                        Проводятся с привлечением экспертизы и, даже, с личным участием Членов Академии.
-                    </li>
-                    <li>
-                        Начиная с 2018 года проводятся в формате intensive & hyper connected.
-                    </li>
-                    <li>
-                        Всегда учитывают задачу развития кроссфункци- онального взаимодействия в бизнесе.
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Всегда включают анализ итогов и обратную связь для руководителей бизнеса.
-                    </li>
-                    <li>
-                        Всегда 100% материалов доступны слушателям на мобильных устройствах.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
+<? $APPLICATION->IncludeFile('/include/academy/promo-block.php'); ?>
+<? $APPLICATION->IncludeFile('/include/academy/description-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/speakers-academy-block.php'); ?>
 
 <?$APPLICATION->IncludeComponent(
@@ -141,9 +35,11 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     )
 );?>
 
-
+<? $APPLICATION->IncludeFile('/include/academy/recourse-block.php'); ?>
+<? $APPLICATION->IncludeFile('/include/academy/graduates-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/news-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/registration-block.php'); ?>
+<? $APPLICATION->IncludeFile('/include/academy/contacts-block.php'); ?>
 
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

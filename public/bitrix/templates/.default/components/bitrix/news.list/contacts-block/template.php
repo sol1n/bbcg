@@ -34,26 +34,28 @@
                 </div>
                 <? endforeach ?>
 
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="summit-contacts-block-app">
-                        <div class="summit-contacts-block-app-iphone"></div>
-                        <div class="summit-contacts-block-app-footer">
-                            <div class="summit-contacts-block-app-title">
-                                <?=Loc::GetMessage('DOWNLOAD_APP', [], $arParams['LANG'])?>
-                                «<?=$arParams['NAME']?>»
-                            </div>
+                <? if (!$arParams['HIDE_APPS']): ?>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="summit-contacts-block-app">
+                            <div class="summit-contacts-block-app-iphone"></div>
+                            <div class="summit-contacts-block-app-footer">
+                                <div class="summit-contacts-block-app-title">
+                                    <?=Loc::GetMessage('DOWNLOAD_APP', [], $arParams['LANG'])?>
+                                    «<?=$arParams['NAME']?>»
+                                </div>
 
-                            <div class="summit-contacts-block-app-footer-links">
-                                <a href="<?=$arResult['IOS_APP_LINK']?>" target="_blank">
-                                    <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-appstore-white.svg"); ?>
-                                </a>
-                                <a href="<?=$arResult['ANDROID_APP_LINK']?>" target="_blank">
-                                    <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-google-play-white.svg"); ?>
-                                </a>
+                                <div class="summit-contacts-block-app-footer-links">
+                                    <a href="<?=$arResult['IOS_APP_LINK']?>" target="_blank">
+                                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-appstore-white.svg"); ?>
+                                    </a>
+                                    <a href="<?=$arResult['ANDROID_APP_LINK']?>" target="_blank">
+                                        <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-google-play-white.svg"); ?>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <? endif ?>
             </div>
         </div>
     </section>

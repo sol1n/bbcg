@@ -1,11 +1,8 @@
 <?
-global $contactsFilter;
-$contactsFilter = ['PROPERTY_SUMMIT' => $arResult['ID']];
 $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "contacts-block",
     Array(
-        "FILTER_NAME" => "contactsFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
@@ -16,7 +13,7 @@ $APPLICATION->IncludeComponent(
         "FIELD_CODE" => array(),
         "IBLOCK_ID" => CONTACTS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "4",
+        "NEWS_COUNT" => "3",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -30,5 +27,6 @@ $APPLICATION->IncludeComponent(
         "ANDROID_APP_LINK" => $arResult['PROPERTIES']['ANDROID_APP_LINK']['VALUE'],
         "IOS_APP_LINK" => $arResult['PROPERTIES']['IOS_APP_LINK']['VALUE'],
         "LANG" => $arParams['LANG'],
+        "HIDE_APPS" => 1
     )
 );?>
