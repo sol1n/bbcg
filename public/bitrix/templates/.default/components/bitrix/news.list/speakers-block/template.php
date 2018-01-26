@@ -10,7 +10,7 @@
                         <?=$arParams['TITLE']?>
                     </div>
                     <div class="speakers-block-subtitle">
-                        <?=$arParams['SUBTITLE']?>
+                        <?=htmlspecialchars_decode($arParams['SUBTITLE'])?>
                     </div>
                 </div>
                 <div class="speakers-block-header-right">
@@ -92,6 +92,12 @@
                     </a>
                 <? endforeach ?>
             </div>
+
+            <? if ($arParams['DESCRIPTION']): ?>
+                <div class="speakers-block-footer">
+                    <?=htmlspecialchars_decode($arParams['DESCRIPTION'])?>
+                </div>
+            <? endif ?>
         </div>
     </section>
 <? endif ?>

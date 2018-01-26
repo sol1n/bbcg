@@ -20,6 +20,6 @@
         "VIEW_MODE" => "TEXT",
         "LANG" => "en",
         "TITLE" => "The main business summits of the industry",
-        "SUBTITLE" => "Each BBCG summit is distinguished by the full scope and full quorum of key market players"
+        "SUBTITLE" => "Every BBCG business event is uniquely novel in content, sincerity and quorum of key market players"
     )
 );?>
