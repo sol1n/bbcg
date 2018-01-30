@@ -11,7 +11,7 @@
         <div class="speakers-block-header-right">
             <? if ($arParams['INDEX_PAGE_URL']): ?>
                 <a href="<?=$arParams['INDEX_PAGE_URL']?>" class="no-wrap">
-                    <?=Loc::GetMessage('ALL_SPEAKERS', [], $arParams['LANG'])?>
+                    <?=$arParams['INDEX_PAGE_URL_TITLE']?>
                 </a>
             <? endif ?>
             <div class="speakers-block-header-arrows"></div>

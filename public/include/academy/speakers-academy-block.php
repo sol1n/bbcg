@@ -106,7 +106,8 @@
                     "SORT_ORDER1" => "DESC",
                     "LANG" => "ru",
                     "TITLE" => "Состав Академии ритейла",
-                    "INDEX_PAGE_URL" => "/academy/speakers/"
+                    "INDEX_PAGE_URL" => "/academy/speakers/",
+                    "INDEX_PAGE_URL_TITLE" => "Весь состав"
                 )
             );
         ?>
