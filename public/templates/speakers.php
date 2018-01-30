@@ -310,7 +310,7 @@
                                 Adam Elman
                             </div>
                             <div class="speakers-block-card-title">
-                                Global Head of Delivery for Plan A, Marks & Spencer
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur cumque dignissimos ducimus earum eligendi ipsa.
                             </div>
                             <div class="speakers-block-card-ask-question">
                                 Задать вопрос

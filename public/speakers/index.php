@@ -52,7 +52,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             "DISPLAY_TOP_PAGER" => "N",
             "DISPLAY_BOTTOM_PAGER" => "Y",
             "PAGER_SHOW_ALWAYS" => "N",
-            "PAGER_TEMPLATE" => "inverse",
+            //"PAGER_TEMPLATE" => "inverse",
             "CACHE_TYPE" => "A",
             "CACHE_TIME" => "3600",
             "CACHE_FILTER" => "Y",

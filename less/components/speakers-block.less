@@ -129,6 +129,15 @@
     color: #fff;
     transition: all 200ms;
 
+    .speakers-block-card-desc {
+      max-height: 140px;
+      transition: all 200ms;
+
+      &::after {
+        opacity: 0;
+        transition: all 200ms;
+      }
+    }
 
     .speakers-block-card-logo {
       opacity: 0;
@@ -187,8 +196,22 @@
   left: 0;
   width: 100%;
   min-height: 80px;
+  max-height: 80px;
   background-color: #2b2a29;
   padding: 10px 12px;
+  overflow: hidden;
+  transition: all 200ms;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, #2b2a29 50%);
+    transition: all 200ms;
+  }
 }
 
 .speakers-block-card-name {
