@@ -67,8 +67,11 @@
 
   .mouse-hover({
     background: @c-light-burgundy;
-    color: #fff;
     transition: background 200ms, color 200ms;
+
+    &:not(.button) {
+      color: #fff;
+    }
 
     svg {
       * {
