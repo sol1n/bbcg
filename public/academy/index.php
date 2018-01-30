@@ -30,13 +30,11 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_TITLE" => "N",
         "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => "Академия ритейла",
-        "SUBTITLE" => "Программы обучения"
+        "TITLE" => "Программы обучения",
+        "SUBTITLE" => "Образовательные программы для профессионалов ритейла"
     )
 );?>
 
-<? $APPLICATION->IncludeFile('/include/academy/recourse-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/graduates-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/news-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/registration-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/contacts-block.php'); ?>

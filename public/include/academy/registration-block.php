@@ -1,7 +1,7 @@
 <section id="summit-registration-block" class="summit-registration-block">
     <div class="wrapper">
         <div class="summit-registration-block-title p-t-xxl">
-            Регистрация
+            Оставьте заявку на обучение
         </div>
 
         <div class="summit-registration-block-row">
