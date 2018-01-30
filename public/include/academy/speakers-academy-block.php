@@ -37,7 +37,7 @@
                     "SORT_BY1" => "ACTIVE_FROM",
                     "SORT_ORDER1" => "DESC",
                     "LANG" => "ru",
-                    "TITLE" => "Почетный президент Академии ритейла",
+                    "TITLE" => "Президент Академии ритейла",
                 )
             );
         ?>
@@ -106,6 +106,7 @@
                     "SORT_ORDER1" => "DESC",
                     "LANG" => "ru",
                     "TITLE" => "Состав Академии ритейла",
+                    "INDEX_PAGE_URL" => "/academy/speakers/"
                 )
             );
         ?>

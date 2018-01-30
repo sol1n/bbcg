@@ -6,7 +6,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     <div class="wrapper">
         <h1 class="main-heading-title">
             <a href="/academy/speakers/">
-                Спикеры
+                Состав академии ритейла
             </a>
         </h1>
 
@@ -29,7 +29,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     $APPLICATION->IncludeComponent("bitrix:news.list", "speakers-page", array(
         "FILTER_NAME" => "filter",
         "IBLOCK_ID" => SPEAKERS_IBLOCK,
-        "NEWS_COUNT" => "15",
+        "NEWS_COUNT" => "16",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
         "FIELD_CODE" => array("ACTIVE_FROM"),
