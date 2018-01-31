@@ -1,8 +1,8 @@
 <div class="program-table-wrapper js-program-table-scroll">
     <? if (! $arResult['ITEMS']): ?>
-        <center style="margin: 140px 0">
+        <div class="text-center" style="margin: 140px 0">
             Мероприятия не найдены
-        </center>
+        </div>
     <? else: ?>
         <div class="b-smoke-white"> 
             <div class="wrapper"> 
@@ -140,9 +140,6 @@
                                             <? endforeach ?>
                                         </div>
                                     <? endforeach ?>
-                                    <div class="program-table-column-hour program-table-column-hour-large">
-
-                                    </div>
                                 </div>
                             <? endforeach ?>
                         </div>
