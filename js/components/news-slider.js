@@ -4,7 +4,7 @@
     $slider.slick({
         infinite: true,
         slidesToShow: 4,
-        rows: 2,
+        rows: 1,
         slidesToScroll: 4,
         appendArrows: ".news-block-header-arrows",
         responsive: [
