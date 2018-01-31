@@ -1,8 +1,11 @@
 <?
+global $filter;
+$filter = ['PROPERTY_ACADEMY_VALUE' => 'Y'];
 $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "contacts-block",
     Array(
+        "FILTER_NAME" => "filter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
