@@ -20,7 +20,7 @@
         <div class="programs-block-slider js-programs-slider">
             <div class="programs-block-slider-item">
                 <div class="programs-block-cards-item">
-                    <a href="#" class="programs-block-card">
+                    <a href="#" class="programs-block-card programs-block-card-hot">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
                                 СЕО и генеральный директор
@@ -45,7 +45,7 @@
 
             <div class="programs-block-slider-item">
                 <div class="programs-block-cards-item">
-                    <a href="#" class="programs-block-card">
+                    <a href="#" class="programs-block-card programs-block-card-hot">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
                                 Retail директор
@@ -184,7 +184,7 @@
 
             <div class="programs-block-slider-item">
                 <div class="programs-block-cards-item">
-                    <a href="#" class="programs-block-card">
+                    <a href="#" class="programs-block-card programs-block-card-hot">
                         <div class="programs-block-card-header">
                             <div class="programs-block-card-title">
                                 <?php echo mb_strimwidth("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deleniti, dolorem earum enim facilis id iste laborum libero magnam maxime neque nostrum omnis, quisquam, sed unde velit veritatis voluptatibus.", 0, 60, "…"); ?>
