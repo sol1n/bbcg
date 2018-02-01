@@ -77,7 +77,7 @@
             Магистратура в ведущих университетах
         </h3>
 
-        <div class="row">
+        <div class="row m-b-xl">
             <div class="col-xs-12 col-md-6">
                 <ul class="ul-square-old-gold">
                     <li>
