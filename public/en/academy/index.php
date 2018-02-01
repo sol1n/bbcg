@@ -35,76 +35,77 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
 <section class="summit-text-block">
     <div class="wrapper">
+        <div class="summit-text-block-content">
+            <h3 class="h2 tt-uppercase m-t-n">
+                Open programs
+            </h3>
 
-        <h3 class="h2 tt-uppercase m-t-n">
-            Open programs
-        </h3>
-
-        <div class="row m-b-xl">
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Prepared on the basis of research and direct requests of members of the Academy.
-                    </li>
-                    <li>
-                        Reflect the logic and structure of the programs of the leading international partners of the Academy.
-                    </li>
-                    <li>
-                        They unite listeners (top management) from the companies of industry leaders.
-                    </li>
-                    <li>
-                        Pass in the most modern educational format intensive & hyper connected.
-                    </li>
-                    <li>
-                        There are no two identical courses, the content is continuously updated and updated.
-                    </li>
-                </ul>
+            <div class="row m-b-xl">
+                <div class="col-xs-12 col-md-6">
+                    <ul class="ul-square-old-gold">
+                        <li>
+                            Prepared on the basis of research and direct requests of members of the Academy.
+                        </li>
+                        <li>
+                            Reflect the logic and structure of the programs of the leading international partners of the Academy.
+                        </li>
+                        <li>
+                            They unite listeners (top management) from the companies of industry leaders.
+                        </li>
+                        <li>
+                            Pass in the most modern educational format intensive & hyper connected.
+                        </li>
+                        <li>
+                            There are no two identical courses, the content is continuously updated and updated.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <ul class="ul-square-old-gold">
+                        <li>
+                            Always more than 75% of the speakers are the CEO and top management of the largest companies.
+                        </li>
+                        <li>
+                            100% of the materials are always available to listeners on mobile devices.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Always more than 75% of the speakers are the CEO and top management of the largest companies.
-                    </li>
-                    <li>
-                        100% of the materials are always available to listeners on mobile devices.
-                    </li>
-                </ul>
-            </div>
-        </div>
 
-        <h3 class="h2 tt-uppercase m-t-n">
-            Corporate courses, MBA and strategic sessions
-        </h3>
+            <h3 class="h2 tt-uppercase m-t-n">
+                Corporate courses, MBA and strategic sessions
+            </h3>
 
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Prepare on the basis of interviews with the company's top executives.
-                    </li>
-                    <li>
-                        Reflect key trends, research data, often conducted specifically.
-                    </li>
-                    <li>
-                        They are conducted with the assistance of expertise and, even, with the personal participation of the members of the Academy.
-                    </li>
-                    <li>
-                        Starting in 2018, they are held in the format intensive & hyper connected.
-                    </li>
-                    <li>
-                        Always consider the task of developing cross-functional interaction in business.
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <ul class="ul-square-old-gold">
-                    <li>
-                        Always include an analysis of the results and feedback for business executives.
-                    </li>
-                    <li>
-                        100% of the materials are available to listeners on mobile devices.
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <ul class="ul-square-old-gold">
+                        <li>
+                            Prepare on the basis of interviews with the company's top executives.
+                        </li>
+                        <li>
+                            Reflect key trends, research data, often conducted specifically.
+                        </li>
+                        <li>
+                            They are conducted with the assistance of expertise and, even, with the personal participation of the members of the Academy.
+                        </li>
+                        <li>
+                            Starting in 2018, they are held in the format intensive & hyper connected.
+                        </li>
+                        <li>
+                            Always consider the task of developing cross-functional interaction in business.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <ul class="ul-square-old-gold">
+                        <li>
+                            Always include an analysis of the results and feedback for business executives.
+                        </li>
+                        <li>
+                            100% of the materials are available to listeners on mobile devices.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
