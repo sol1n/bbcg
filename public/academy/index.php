@@ -31,7 +31,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
         "TITLE" => "Программы обучения",
-        "SUBTITLE" => "Образовательные программы для профессионалов ритейла"
+        "SUBTITLE" => "Образовательные программы для топ менеджеров ритейла"
     )
 );?>
 

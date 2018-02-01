@@ -90,8 +90,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="submit-registration-block-form-manager">
-                                    С вами свяжется Ирина Чиннова, для уточнения
-                                    деталей в течение 2-х дней
+                                    С вами свяжется Ксения Черенкова, для уточнения
+                                    деталей в течение 3-х часов в рабочие дни
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -112,10 +112,9 @@
                         <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-contacts-phone-white.svg"); ?>
                     </div>
                     <div class="summit-registration-block-card-value">
-                        <a href="tel:+74957852206">+7 (495) 785-22-06</a> <br>
-                        или <a href="tel:7811134">781-11-34</a>
+                        <a href="tel:+74957852206">+7 (495) 785-22-06</a>
                     </div>
-                    контактное лицо Ирина Чиннова
+                    контактное лицо Ксения Черенкова
                 </div>
 
                 <div class="summit-registration-block-card">
@@ -123,7 +122,7 @@
                         <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-contacts-email-white.svg"); ?>
                     </div>
                     <div class="summit-registration-block-card-value">
-                        <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a>
+                        <a href="mailto:RAcademy@b2bcg.ru">RAcademy@b2bcg.ru</a>
                     </div>
                     Скачать заявку и отправить
                     на указанную почту
