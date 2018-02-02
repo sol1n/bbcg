@@ -1,3 +1,3 @@
 <?
-	$MESS["ABOUT_SPEAKER"] = "About the speaker";
+	$MESS["ABOUT_SPEAKER"] = "About the graduate";
 ?>

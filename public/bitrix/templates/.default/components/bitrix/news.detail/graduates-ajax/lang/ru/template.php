@@ -1,3 +1,3 @@
 <?
-	$MESS["ABOUT_SPEAKER"] = "О спикере";
+	$MESS["ABOUT_SPEAKER"] = "О выпускнике";
 ?>
