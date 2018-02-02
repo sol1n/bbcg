@@ -86,7 +86,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             'position' => $_REQUEST['title'],
             'summit' => 'Академия ритейла'
         ];
-        $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data);
+        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
     }
 }
 else
