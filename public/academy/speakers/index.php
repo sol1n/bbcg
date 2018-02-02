@@ -48,6 +48,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
+        "SORT_BY1" => "PROPERTY_ACADEMY_SORT",
+        "SORT_ORDER1" => "ASC",
     ), false);
 ?>
 
