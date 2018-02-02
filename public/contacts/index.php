@@ -67,6 +67,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <div class="feedback-block">
     <div class="wrapper">
         <form action="/api/feedback/" method="POST" class="feedback-block-form" data-validate data-form-ajax>
+            <input type="hidden" name="from" value="contacts">
             <div class="feedback-block-title">
                 Обратная связь
             </div>

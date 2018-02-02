@@ -29,10 +29,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<? if (CSite::InDir('/academy/')): ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-global.php"; ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header-for-academy.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas-for-academy.php"; ?>
 			<? else: ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/header.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
 			<? endif ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/offcanvas.php"; ?>
 		<? endif ?>
 		
 		<main class="main-container main-container-with-header">

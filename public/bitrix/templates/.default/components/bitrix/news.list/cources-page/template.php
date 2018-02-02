@@ -40,5 +40,11 @@
                 </div>
             <? endforeach ?>
         </div>
+
+        <? if ($arParams['DESCRIPTION']): ?>
+            <div class="programs-block-description">
+                <?=htmlspecialchars_decode($arParams['DESCRIPTION'])?>
+            </div>
+        <? endif ?>
     </div>
 </section>

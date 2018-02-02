@@ -4,9 +4,12 @@
             Оставьте заявку на обучение
         </div>
 
+        <? $user = user(); ?>
+
         <div class="summit-registration-block-row">
             <div class="summit-registration-block-left">
                 <form action="/api/academy/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
+                    <input type="hidden" name="from" value="retail-academy">
                     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
                     
                     <div class="summit-registration-block-form-title">

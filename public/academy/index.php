@@ -31,7 +31,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
         "TITLE" => "Программы обучения",
-        "SUBTITLE" => "Образовательные программы для профессионалов ритейла"
+        "SUBTITLE" => "Образовательные программы для профессионалов ритейла",
+        "DESCRIPTION" => "Вы можете скачать <a target=\"_blank\" href=\"/upload/retail-academy-cources-2018.pdf\">список программ на 2018 год</a> в формате pdf"
     )
 );?>
 
