@@ -12,10 +12,13 @@
 
         <div class="programs-block-cards m-t-md">
             <? foreach ($arResult['ITEMS'] as $item): ?>
+                <? if ($item['PROPERTIES']['HOT']['VALUE']): ?>
+                    <? $hot = 'programs-block-card-hot' ?>
+                <? endif ?>
                 <div class="programs-block-cards-item">
                     <a 
                         href="#" 
-                        class="programs-block-card"
+                        class="programs-block-card <?=$hot?>"
                         data-side-modal 
                         data-side-modal-url="/api/cources/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                         data-side-modal-class="side-modal-wide side-modal-news"
