@@ -5,6 +5,11 @@
         </div>
 
         <div class="summit-text-block-content">
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque, consequuntur distinctio eaque facilis fuga iure laboriosam rem veritatis voluptas. Ab cumque debitis dolore doloremque, doloribus facilis molestiae placeat sint?
+            </p>
+
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <p>

@@ -122,7 +122,7 @@
     });
 
     .red-orange-theme({
-      border-color: @c-red;
+      border-color: @c-red-orange;
     });
 
     .salad-theme({
@@ -166,7 +166,7 @@
       });
 
       .red-orange-theme({
-        background-color: @c-red;
+        background-color: @c-red-orange;
       });
 
       .salad-theme({
@@ -174,51 +174,51 @@
       });
 
       .navy-theme({
-        border-color: @c-navy;
+        background-color: @c-navy;
       });
     }
 
     .sessions-block-item-meta {
-      background: linear-gradient(180deg,transparent, @c-light-burgundy 9px);
+      background: linear-gradient(180deg, fadeout(@c-light-burgundy, 100%), @c-light-burgundy 9px);
 
       .blue-theme({
-        background: linear-gradient(180deg,transparent, @c-blue 9px);
+        background: linear-gradient(180deg, fadeout(@c-blue, 100%), @c-blue 9px);
       });
 
       .ink-theme({
-        background: linear-gradient(180deg,transparent, @c-ink 9px);
+        background: linear-gradient(180deg, fadeout(@c-ink, 100%), @c-ink 9px);
       });
 
       .yellow-theme({
-        background: linear-gradient(180deg,transparent, @c-yellow 9px);
+        background: linear-gradient(180deg, fadeout(@c-yellow, 100%), @c-yellow 9px);
       });
 
       .orange-theme({
-        background: linear-gradient(180deg,transparent, @c-orange 9px);
+        background: linear-gradient(180deg, fadeout(@c-orange, 100%), @c-orange 9px);
       });
 
       .red-theme({
-        background: linear-gradient(180deg,transparent, @c-red 9px);
+        background: linear-gradient(180deg, fadeout(@c-red, 100%), @c-red 9px);
       });
 
       .magenta-theme({
-        background: linear-gradient(180deg,transparent, @c-magenta 9px);
+        background: linear-gradient(180deg, fadeout(@c-magenta, 100%), @c-magenta 9px);
       });
 
       .green-theme({
-        background: linear-gradient(180deg,transparent, @c-green 9px);
+        background: linear-gradient(180deg, fadeout(@c-green, 100%), @c-green 9px);
       });
 
       .red-orange-theme({
-        background: linear-gradient(180deg,transparent, @c-red-orange 9px);
+        background: linear-gradient(180deg, fadeout(@c-red-orange, 100%), @c-red-orange 9px);
       });
 
       .salad-theme({
-        background: linear-gradient(180deg,transparent, @c-salad 9px);
+        background: linear-gradient(180deg, fadeout(@c-salad, 100%), @c-salad 9px);
       });
 
       .navy-theme({
-        background: linear-gradient(180deg,transparent, @c-navy 9px);
+        background: linear-gradient(180deg, fadeout(@c-navy, 100%), @c-navy 9px);
       });
     }
 
@@ -275,7 +275,7 @@
   });
 
   .red-orange-theme({
-    background-color: @c-red;
+    background-color: @c-red-orange;
   });
 
   .salad-theme({
@@ -351,7 +351,7 @@
   bottom: 0;
   width: 100%;
   padding: 16px 20px;
-  background: linear-gradient(180deg,transparent, #edf1f3 9px);
+  background: linear-gradient(180deg, rgba(237, 241, 243, 0.01), #edf1f3 9px);
   display: flex;
   align-items: center;
   justify-content: space-between;

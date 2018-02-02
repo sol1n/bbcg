@@ -81,3 +81,26 @@
         "SHOW_404" => "Y",
     ), false);
 ?>
+
+<div class="wrapper m-t-lg m-b-lg text-center">
+    <ul class="program-table-pagination">
+        <? foreach ($arResult['DATES'] as $k => $date): ?>
+            <?php
+            $url = "/" . $arResult['CODE'] . "/events/$k/";
+            $active = "";
+            if ($arParams['LANG'] == 'en') {
+                $url = "/en" . $url;
+            }
+            if ($arParams['DATE'] == $k) {
+                $active = "active";
+            }
+            ?>
+            <li class="program-table-pagination-item <?=$active?>">
+                <a href="<?=$url?>">
+                    <?=$date?>
+                </a>
+            </li>
+        <? endforeach ?>
+    </ul>
+</div>
+

@@ -748,6 +748,26 @@
             </a>
         </div>
     </div>
+
+    <div class="wrapper m-t-lg m-b-lg text-center">
+        <ul class="program-table-pagination">
+            <li class="program-table-pagination-item active">
+                <a href="#">
+                    7 сентября
+                </a>
+            </li>
+            <li class="program-table-pagination-item">
+                <a href="#">
+                    8 сентября
+                </a>
+            </li>
+            <li class="program-table-pagination-item">
+                <a href="#">
+                    9 сентября
+                </a>
+            </li>
+        </ul>
+    </div>
 </main>
 
 <?php include "blocks/footer.php"; ?>
