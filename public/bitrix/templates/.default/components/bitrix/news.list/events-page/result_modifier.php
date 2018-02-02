@@ -153,9 +153,9 @@
             $arResult['AREAS'][$area]['ITEMS'][] = $item;
         } else {
             if ($item['speakers'] && count($item['speakers'])) {
-                $speakers = $item['speakers'];
+                $speakersLocal = $item['speakers'];
                 $item['speakers'] = [[],[],[]];
-                foreach($speakers as $k => $speaker) {
+                foreach($speakersLocal as $k => $speaker) {
                     $index = $k % 3;
                     $item['speakers'][$index][] = $speaker;
                 }
