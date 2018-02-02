@@ -23,6 +23,11 @@ else
     ];
 }
 
+$from = [
+    'retail-academy' => 'Академия ритейла',
+    'contacts' => 'Контакты'
+];
+
 if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] && $_POST['company'] && $_POST['title'] && $_POST['g-token'])
 {
     $curl = curl_init();
@@ -47,11 +52,13 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             ]);
         }
     } else {
+        $page = isset($_REQUEST['from']) && isset($from[$_REQUEST['from']]) ? $from[$_REQUEST['from']] : ''; 
+
         CModule::IncludeModule('iblock');
 
         $el = new CIblockElement;
         $result = $el->Add([
-            'IBLOCK_ID' => REQUESTS_IBLOCK,
+            'IBLOCK_ID' => FEEDBACK_IBLOCK,
             'NAME' => 'Заявка на участие',
             'PROPERTY_VALUES' => [
                 'EMAIL' => $_REQUEST['email'],
@@ -60,6 +67,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'LAST_NAME' => $_REQUEST['surname'],
                 'POSITION' => $_REQUEST['title'],
                 'COMPANY' => $_REQUEST['company'],
+                'PAGE' => $page
             ]
         ]);
         echo json_encode([

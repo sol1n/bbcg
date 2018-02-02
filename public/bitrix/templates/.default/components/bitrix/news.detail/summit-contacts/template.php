@@ -66,6 +66,7 @@
         <div class="wrapper">
             <form action="/api/feedback/" method="POST" class="feedback-block-form" data-validate data-form-ajax>
                 <input name="summit" value="<?=$arResult['ID']?>" type="hidden" >
+                <input name="from" value="<?=$arResult['NAME']?>" type="hidden" >
                 <div class="feedback-block-title">
                     Обратная связь
                 </div>

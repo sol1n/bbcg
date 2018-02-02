@@ -1,7 +1,9 @@
 <? if ($arResult['~DETAIL_TEXT']): ?>
     <section class="summit-text-block">
         <div class="wrapper">
-            <?=$arResult['~DETAIL_TEXT']?>
+            <div class="summit-text-block-content">
+                <?=$arResult['~DETAIL_TEXT']?>
+            </div>
         </div>
     </section>
 <? endif ?>

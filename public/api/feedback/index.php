@@ -21,6 +21,11 @@ else
     ];
 }
 
+$from = [
+    'retail-academy' => 'Академия ритейла',
+    'contacts' => 'Контакты'
+];
+
 if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
 {
     $curl = curl_init();
@@ -45,6 +50,8 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             ]);
         }
     } else {
+        $page = isset($_REQUEST['from']) && isset($from[$_REQUEST['from']]) ? $from[$_REQUEST['from']] : ''; 
+
         CModule::IncludeModule('iblock');
         $el = new CIblockElement;
         $result = $el->Add([
@@ -53,7 +60,8 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'PREVIEW_TEXT' => $_REQUEST['email'],
             'DETAIL_TEXT' => $_REQUEST['message'],
             'PROPERTY_VALUES' => [
-                'SUMMIT' => $_REQUEST['summit']
+                'SUMMIT' => $_REQUEST['summit'],
+                'PAGE' => $page
             ]
         ]);
         echo json_encode([
@@ -74,7 +82,8 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'name' => $_REQUEST['name'],
             'email' => $_REQUEST['email'],
             'message' => $_REQUEST['message'],
-            'summit' => is_null($summit) ? '' : $summit['NAME']
+            'summit' => is_null($summit) ? '' : $summit['NAME'],
+            'page' => $page
         ];
         $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data);
     }
