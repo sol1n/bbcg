@@ -81,7 +81,8 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'position' => $_REQUEST['title'],
                 'summit' => $summit['NAME']
             ];
-            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data);
+            $cc = ['iren@b2bcg.ru', 'info@b2bcg.ru', 'b2bcg-froms@yandex.ru', 'Borisenko@b2bcg.ru', 'O.Pogorilo@trinity-events.com'];
+            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, $cc);
         } else {
             echo json_encode([
                 'success' => false,

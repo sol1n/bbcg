@@ -85,7 +85,8 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'summit' => is_null($summit) ? '' : $summit['NAME'],
             'page' => $page
         ];
-        $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data);
+        $cc = ['iren@b2bcg.ru', 'info@b2bcg.ru', 'b2bcg-froms@yandex.ru', 'Borisenko@b2bcg.ru', 'O.Pogorilo@trinity-events.com'];
+        $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data, $cc);
     }
 }
 else
