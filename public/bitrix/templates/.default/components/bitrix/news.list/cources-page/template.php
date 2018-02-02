@@ -12,9 +12,7 @@
 
         <div class="programs-block-cards m-t-md">
             <? foreach ($arResult['ITEMS'] as $item): ?>
-                <? if ($item['PROPERTIES']['HOT']['VALUE']): ?>
-                    <? $hot = 'programs-block-card-hot' ?>
-                <? endif ?>
+                <? $hot = $item['PROPERTIES']['HOT']['VALUE'] ? 'programs-block-card-hot' : '' ?>
                 <div class="programs-block-cards-item">
                     <a 
                         href="#" 
