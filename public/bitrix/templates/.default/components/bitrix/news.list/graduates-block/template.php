@@ -13,7 +13,7 @@
                     href="<?=$item['DETAIL_PAGE_URL']?>" 
                     class="speakers-block-card" 
                     data-side-modal 
-                    data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
+                    data-side-modal-url="/api/graduates/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                     data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
@@ -49,7 +49,7 @@
                 href="<?=$item['DETAIL_PAGE_URL']?>"
                 class="speakers-block-card"
                 data-side-modal
-                data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
+                data-side-modal-url="/api/graduates/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                 data-side-modal-class="side-modal-wide side-modal-speaker"
             >
                 <div class="speakers-block-card-photo">
