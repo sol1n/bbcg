@@ -58,7 +58,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
 
         $el = new CIblockElement;
         $result = $el->Add([
-            'IBLOCK_ID' => FEEDBACK_IBLOCK,
+            'IBLOCK_ID' => REQUESTS_IBLOCK,
             'NAME' => 'Заявка на участие',
             'PROPERTY_VALUES' => [
                 'EMAIL' => $_REQUEST['email'],
@@ -67,7 +67,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'LAST_NAME' => $_REQUEST['surname'],
                 'POSITION' => $_REQUEST['title'],
                 'COMPANY' => $_REQUEST['company'],
-                'PAGE' => $page
+                'SUMMIT' => ACADEMY_SUMMIT
             ]
         ]);
         echo json_encode([
