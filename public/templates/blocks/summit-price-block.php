@@ -93,21 +93,6 @@
                     </table>
                 </div>
             </div>
-            <div class="summit-price-block-right">
-                <div class="summit-price-block-card">
-                    <div class="summit-price-block-card-icon">
-                        <?php include "../assets/images/icons/icon-summit-registration-users.svg"; ?>
-                    </div>
-                    BBCG предоставляет традиционные скидки постоянным участникам, и при регистрации 2-х и более представителей компании.
-                </div>
-
-                <div class="summit-price-block-card">
-                    <div class="summit-price-block-card-icon">
-                        <?php include "../assets/images/icons/icon-summit-registration-discount.svg"; ?>
-                    </div>
-                    В случае предоставления описания 1 реализованного решения по оптимизации бизнеса — дополнительная скидка 15%.
-                </div>
-            </div>
         </div>
     </div>
 </section>
