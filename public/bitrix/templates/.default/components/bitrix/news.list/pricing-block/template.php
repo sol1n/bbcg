@@ -34,7 +34,7 @@
                                     </div>
                                     <? if ($arResult['EARLY_REGISTRATION']): ?>
                                         <div class="summit-price-block-table-subtitle">
-                                            <?=Loc::GetMessage('LATE_REGISTRATION', [], $arParams['LANG'])?> <?=$arResult['EARLY_REGISTRATION']?>
+                                            <?=Loc::GetMessage('AFTER', [], $arParams['LANG'])?> <?=$arResult['EARLY_REGISTRATION']?>
                                         </div>
                                     <? endif ?>
                                 </td>
