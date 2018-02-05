@@ -55,6 +55,8 @@
             "SET_TITLE" => "N",
             "SORT_BY1" => "SORT",
             "SORT_ORDER1" => "ASC",
+            "SORT_BY2" => "PROPERTY_LASTNAME",
+            "SORT_ORDER2" => "ASC",
             "OPEN_MODAL" => 1
         )
     );?>
