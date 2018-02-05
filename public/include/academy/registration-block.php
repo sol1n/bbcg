@@ -117,7 +117,7 @@
                     <div class="summit-registration-block-card-value">
                         <a href="tel:+74957852206">+7 (495) 785-22-06</a>
                     </div>
-                    контактное лицо Ксения Черенкова
+                    Контактное лицо Ксения Черенкова
                 </div>
 
                 <div class="summit-registration-block-card">
