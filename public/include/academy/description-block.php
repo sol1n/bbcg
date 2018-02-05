@@ -41,7 +41,7 @@
                 Корпоративные курсы, МВА и стратегические сессии
             </h3>
 
-            <div class="row">
+            <div class="row m-b-xl">
                 <div class="col-xs-12 col-md-6">
                     <ul class="ul-square-old-gold">
                         <li>
@@ -78,7 +78,7 @@
             </h3>
 
 
-        <div class="row m-b-xl">
+        <div class="row">
             <div class="col-xs-12 col-md-6">
                 <ul class="ul-square-old-gold">
                     <li>
