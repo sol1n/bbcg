@@ -71,7 +71,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     <div class="form-group">
         <div class="form-control form-control-checkbox">
             <label for="registration-form-agreement">
-                By clicking the "Register" button, <br>I accept the <a href="/en/eula/" target="_blank">terms of the User Agreement</a>.
+                By clicking the "Register" button, <br>I accept the <a href="/en/eula/" target="_blank">terms of the User Agreement</a> and consent to the processing of personal data.
             </label>
         </div>
     </div>
