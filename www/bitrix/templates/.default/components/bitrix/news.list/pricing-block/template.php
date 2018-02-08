@@ -74,19 +74,7 @@
                     </div>
                 </div>
                 <div class="summit-price-block-right">
-                    <div class="summit-price-block-card">
-                        <div class="summit-price-block-card-icon">
-                            <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-summit-registration-users.svg"); ?>
-                        </div>
-                        <?=Loc::GetMessage('TRADITIONAL_DISCOUNTS', [], $arParams['LANG'])?>
-                    </div>
-
-                    <div class="summit-price-block-card">
-                        <div class="summit-price-block-card-icon">
-                            <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-summit-registration-discount.svg"); ?>
-                        </div>
-                        <?=Loc::GetMessage('ADDITIONAL_DISCOUNT', [], $arParams['LANG'])?>
-                    </div>
+                    
                 </div>
             </div>
         </div>

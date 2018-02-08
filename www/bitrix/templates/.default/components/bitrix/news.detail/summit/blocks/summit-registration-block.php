@@ -112,7 +112,29 @@
                 </form>
             </div>
             <div class="summit-registration-block-right">
-                
+                <div class="summit-registration-block-right-title">
+                    <?=Loc::GetMessage('ALTERNATIVE_REGISTRATION', [], $arParams['LANG'])?>
+                </div>
+                <div class="summit-registration-block-card">
+                    <div class="summit-registration-block-card-icon">
+                        <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-contacts-phone-white.svg"); ?>
+                    </div>
+                    <div class="summit-registration-block-card-value">
+                        <a href="tel:+74957852206">+7 (495) 785-22-06</a> <br>
+                        <?=Loc::GetMessage('OR', [], $arParams['LANG'])?> <a href="tel:7811134">781-11-34</a>
+                    </div>
+                    <?=Loc::GetMessage('CONTACT_PERSON', [], $arParams['LANG'])?>
+                </div>
+
+                <div class="summit-registration-block-card">
+                    <div class="summit-registration-block-card-icon">
+                        <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-contacts-email-white.svg"); ?>
+                    </div>
+                    <div class="summit-registration-block-card-value">
+                        <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a>
+                    </div>
+                    <?=Loc::GetMessage('DOWNLOAD_AND_SEND_REQUEST', [], $arParams['LANG'])?>
+                </div>
             </div>
         </div>
     </div>
