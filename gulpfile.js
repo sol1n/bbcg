@@ -16,7 +16,7 @@ gulp.task('less', function() {
         }))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/assets/build/'))
+        .pipe(gulp.dest('./www/assets/build/'))
         .pipe(postcss([
             cssnano({
                 preset: 'default'
@@ -25,7 +25,7 @@ gulp.task('less', function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./public/assets/build/'));
+        .pipe(gulp.dest('./www/assets/build/'));
 });
 
 var jsFiles = [
@@ -42,7 +42,7 @@ var jsFiles = [
         './js/components/**/*.js',
         './js/scripts.js'
     ],
-    jsDest = './public/assets/build';
+    jsDest = './www/assets/build';
 
 gulp.task('scripts', function() {
     return gulp.src(jsFiles)
