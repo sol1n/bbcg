@@ -46,6 +46,21 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="m-b">
                                 <label class="form-label">
+                                    Выберите программу
+                                </label>
+                                <div class="form-select">
+                                    <select name="program">
+                                        <option value="1">СЕО и генеральный директор</option>
+                                        <option value="2">Retail директор</option>
+                                        <option value="3">Коммерческий директор</option>
+                                        <option value="4">Операционный директор</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="m-b">
+                                <label class="form-label">
                                     Компания
                                 </label>
                                 <input type="text" name="company" class="form-input" required>

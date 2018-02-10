@@ -22,12 +22,17 @@
     </div>
 
     <div class="wrapper m-t-md m-b-md">
+        <h2 class="text-center">Генеральный отраслевой партнер</h2>
         <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card ">
                     <img src="../assets/images/tmp/logo/ebay.png" alt="Ebay">
                 </a>
             </div>
+        </div>
+
+        <h2 class="text-center">При поддержке</h2>
+        <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
                     <img src="../assets/images/tmp/logo/ozon.ru.png" alt="Ozon.ru">
@@ -48,6 +53,10 @@
                     <img src="../assets/images/tmp/logo/diksi.png" alt="Дикси">
                 </a>
             </div>
+        </div>
+
+        <h2 class="text-center">Информационные партнеры</h2>
+        <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3 m-b-md">
                 <a href="#" class="partners-block-card">
                     <img src="../assets/images/tmp/logo/adamas.png" alt="Адамас">
