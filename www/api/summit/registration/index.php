@@ -71,7 +71,9 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'requestId' => $result
             ]);
 
-            fastcgi_finish_request();
+            if (function_exists('fastcgi_finish_request')) {
+                fastcgi_finish_request();
+            }
             $data = [
                 'name' => $_REQUEST['name'],
                 'surname' => $_REQUEST['surname'],
@@ -81,8 +83,8 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'position' => $_REQUEST['title'],
                 'summit' => $summit['NAME']
             ];
-            $cc = ['iren@b2bcg.ru', 'info@b2bcg.ru', 'b2bcg-froms@yandex.ru', 'Borisenko@b2bcg.ru', 'O.Pogorilo@trinity-events.com'];
-            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, $cc);
+            
+            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
         } else {
             echo json_encode([
                 'success' => false,

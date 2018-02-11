@@ -70,7 +70,9 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'requestId' => $result
         ]);
 
-        fastcgi_finish_request();
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+        }
 
         if (isset($_REQUEST['summit']) && !empty($_REQUEST['summit'])) {
             $summit = CIBlockElement::GetByID($_REQUEST['summit'])->Fetch();
@@ -85,8 +87,8 @@ if ($_POST['email'] && $_POST['name'] && $_POST['message'] && $_POST['g-token'])
             'summit' => is_null($summit) ? '' : $summit['NAME'],
             'page' => $page
         ];
-        $cc = ['iren@b2bcg.ru', 'info@b2bcg.ru', 'b2bcg-froms@yandex.ru', 'Borisenko@b2bcg.ru', 'O.Pogorilo@trinity-events.com'];
-        $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data, $cc);
+        
+        $result = sendEmail(ADMINISTRATION_EMAIL, 'Сообщение на сайте', 'feedback/administration', $data, [], ['sol1n@mail.ru']);
     }
 }
 else
