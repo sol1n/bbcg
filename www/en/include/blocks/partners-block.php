@@ -1,7 +1,11 @@
-<?$APPLICATION->IncludeComponent(
+<?
+global $partnersFilter;
+$partnersFilter = ['PROPERTY_SHOW_MAINPAGE_VALUE' => 'Y'];
+$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "partners-block",
     Array(
+        "FILTER_NAME" => "partnersFilter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",

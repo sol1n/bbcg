@@ -3,9 +3,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 <? $APPLICATION->IncludeFile('/include/academy/promo-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/description-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/speakers-academy-block.php'); ?>
-
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "cources-page",
@@ -35,7 +32,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DESCRIPTION" => "Вы можете скачать <a target=\"_blank\" href=\"/upload/retail-academy-cources-2018.pdf\">список программ на 2018 год</a> в формате pdf"
     )
 );?>
-
+<? $APPLICATION->IncludeFile('/include/academy/speakers-academy-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/news-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/registration-block.php'); ?>
 <? $APPLICATION->IncludeFile('/include/academy/contacts-block.php'); ?>
