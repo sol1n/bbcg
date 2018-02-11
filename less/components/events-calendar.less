@@ -11,6 +11,13 @@
   background: #fff;
   text-decoration: none;
   color: @c-text;
+  border: 2px solid transparent;
+  transition: border 200ms;
+
+  .mouse-hover({
+    border: 2px solid @c-light-burgundy;
+    transition: border 200ms;
+  });
 }
 
 .events-calendar-item-header {
