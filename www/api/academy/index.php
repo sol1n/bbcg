@@ -58,7 +58,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
 
         $el = new CIblockElement;
         $result = $el->Add([
-            'IBLOCK_ID' => REQUESTS_IBLOCK,
+            'IBLOCK_ID' => ACADEMY_REQUESTS_IBLOCK,
             'NAME' => 'Заявка на участие',
             'PROPERTY_VALUES' => [
                 'EMAIL' => $_REQUEST['email'],
@@ -67,7 +67,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'LAST_NAME' => $_REQUEST['surname'],
                 'POSITION' => $_REQUEST['title'],
                 'COMPANY' => $_REQUEST['company'],
-                'SUMMIT' => ACADEMY_SUMMIT
+                'PROGRAM' => $_REQUEST['program']
             ]
         ]);
         echo json_encode([
@@ -76,7 +76,18 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             'requestId' => $result
         ]);
 
-        fastcgi_finish_request();
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+        }
+        
+        $program = '';
+        if (isset($_REQUEST['program']) && is_numeric($_REQUEST['program'])) {
+            $program = CIblockElement::GetByID($_REQUEST['program'])->Fetch();
+            if ($program) {
+                $program = $program['NAME'];
+            }
+        }
+        
         $data = [
             'name' => $_REQUEST['name'],
             'surname' => $_REQUEST['surname'],
@@ -84,9 +95,9 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             'phone' => $_REQUEST['phone'],
             'company' => $_REQUEST['company'],
             'position' => $_REQUEST['title'],
-            'summit' => 'Академия ритейла'
+            'program' => $program
         ];
-        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
+        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'academy/administration', $data, [], ['sol1n@mail.ru']);
     }
 }
 else
