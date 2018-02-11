@@ -1,3 +1,4 @@
+<? $summitCode = $summit['CODE']; ?>
 <div id="offcanvas" class="main-offcanvas-overlay">
     <div class="main-offcanvas">
         <div class="main-offcanvas-header">
@@ -27,25 +28,30 @@
             </div>
             <ul class="main-offcanvas-menu">
                 <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
-                <li>
-                    <a href="/summits/">
-                        Календарь саммитов
-                    </a>
+                <li 
+                    <? if (CSite::InDir("/$summitCode/events/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/events/">Программа</a>
                 </li>
-                <li>
-                    <a href="/academy/">
-                        Академия ретейла
-                    </a>
+                <li
+                    <? if (CSite::InDir("/$summitCode/speakers/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/speakers/">Спикеры</a>
                 </li>
-                <li>
-                    <a href="/news/">
-                        Новости
-                    </a>
+                <li
+                    <? if (CSite::InDir("/$summitCode/partners/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/partners/">Партнеры</a>
                 </li>
-                <li>
-                    <a href="/contacts/">
-                        Контакты
-                    </a>
+                <li
+                    <? if (CSite::InDir("/$summitCode/news/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/news/">Новости</a>
+                </li>
+                <li
+                    <? if (CSite::InDir("/$summitCode/contacts/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/contacts/">Контакты</a>
                 </li>
             </ul>
 
