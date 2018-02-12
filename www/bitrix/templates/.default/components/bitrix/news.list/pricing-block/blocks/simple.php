@@ -34,7 +34,7 @@
                                     <td>
                                         <div class="summit-price-block-table-border">
                                             <span class="summit-price-block-table-value">
-                                                <?=$item['PROPERTIES']['BEFORE']['VALUE']?>
+                                                <?=$item['PROPERTIES']['AFTER']['VALUE']?>
                                             </span>
                                         </div>
                                     </td>
@@ -51,9 +51,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="summit-price-block-right">
-                    
-                </div>
+                <div class="summit-price-block-right"></div>
             </div>
         </div>
     </section>
