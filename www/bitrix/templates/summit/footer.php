@@ -20,7 +20,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<? endif ?>
 		<? endif ?>
 		<? if (defined('NEED_EVENTS_TABLE')): ?>
-			<script src="/assets/build/program-table.js"></script>
+			<script src="/assets/build/program-table.min.js"></script>
 		<? endif ?>
 
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>	
