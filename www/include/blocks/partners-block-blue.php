@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="partners-block-header">
             <div class="partners-block-header-left">
-                <div class="partners-block-title">
+                <h3 class="partners-block-title">
                     500+ участников разных лет
-                </div>
+                </h3>
                 <div class="partners-block-subtitle">
                     Владельцы и топ-менеджеры сетевого ритейла, интернет-торговли
                     и мультиканальных сетей

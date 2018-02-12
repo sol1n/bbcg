@@ -1,8 +1,8 @@
 <section id="summit-registration-block" class="summit-registration-block p-t-xl">
     <div class="wrapper">
-        <div class="summit-registration-block-title">
+        <h3 class="summit-registration-block-title">
             Регистрация
-        </div>
+        </h3>
 
         <div class="summit-registration-block-row">
             <div class="summit-registration-block-left">

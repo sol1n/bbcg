@@ -4,9 +4,9 @@
 <? if ($arResult["ITEMS"]): ?>
     <section class="summit-contacts-block">
         <div class="wrapper">
-            <div class="summit-contacts-block-title">
+            <h3 class="summit-contacts-block-title">
                 <?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?>
-            </div>
+            </h3>
 
             <div class="row between-xs summit-contacts-blocks">
                 <? foreach ($arResult["ITEMS"] as $item): ?>

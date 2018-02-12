@@ -1,8 +1,8 @@
 <section class="location-block">
     <div class="wrapper">
-        <div class="location-block-title">
+        <h3 class="location-block-title">
             Место проведения
-        </div>
+        </h3>
         <div class="location-block-desc">
             Москва, Отель Корстон ул. Косыгина, 15
         </div>

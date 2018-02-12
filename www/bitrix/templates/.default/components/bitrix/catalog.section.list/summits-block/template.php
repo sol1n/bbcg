@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="summits-block-header">
             <div class="summits-block-header-left">
-                <div class="summits-block-title">
+                <h2 class="summits-block-title">
                     <?=$arParams['TITLE']?>
-                </div>
+                </h2>
                 <div class="summits-block-subtitle">
                     <?=$arParams['SUBTITLE']?>
                 </div>

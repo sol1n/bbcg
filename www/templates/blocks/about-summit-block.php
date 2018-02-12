@@ -1,9 +1,9 @@
 <section class="about-summit-block" style="background-image: url('../assets/images/tmp/events/about-summit-bg.jpg')">
     <div class="wrapper">
         <div class="about-summit-block-content">
-            <div class="about-summit-block-title">
+            <h1 class="about-summit-block-title">
                 Бизнес Форум ONLINE RETAIL RUSSIA
-            </div>
+            </h1>
             <div class="about-summit-block-date">
                 23–24 марта
             </div>

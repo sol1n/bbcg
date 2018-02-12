@@ -4341,6 +4341,8 @@ body {
   letter-spacing: -0.1px;
   text-transform: uppercase;
   max-width: 870px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 800px) {
   .summits-block-title {
@@ -4524,6 +4526,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 800px) {
   .programs-block-title {
@@ -4812,6 +4816,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .news-block-title {
@@ -5397,6 +5403,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .speakers-block-title {
@@ -5955,6 +5963,8 @@ body {
   letter-spacing: -0.1px;
   text-transform: uppercase;
   max-width: 770px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 800px) {
   .partners-block-title {
@@ -6183,6 +6193,8 @@ body {
   letter-spacing: -0.1px;
   max-width: 870px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .media-block-title {
@@ -6420,6 +6432,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 800px) {
   .register-iphone-block-title {
@@ -8386,6 +8400,8 @@ body {
   padding-top: 50px;
   padding-bottom: 10px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .about-summit-block-title {
@@ -8985,6 +9001,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .sessions-block-title {
@@ -9317,6 +9335,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.1px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .reviews-block-title {
@@ -10238,6 +10258,7 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   color: #fff;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .summit-price-block-row {
@@ -10479,6 +10500,7 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   color: #fff;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .summit-registration-block-row {
@@ -10641,6 +10663,7 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   color: #fff;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .summit-contacts-block-card {
@@ -10810,6 +10833,7 @@ body {
 .location-block-title {
   font-family: 'GilroyExtraBold', Tahoma, sans-serif;
   font-size: 50px;
+  margin-top: 0;
   margin-bottom: 10px;
   text-transform: uppercase;
 }

@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="news-block-header">
             <div class="news-block-header-left">
-                <div class="news-block-title">
+                <h3 class="news-block-title">
                     Новости
-                </div>
+                </h3>
                 <div class="news-block-subtitle">
                     Узнайте эксклюзивную информацию о рынке до появления в СМИ
                 </div>

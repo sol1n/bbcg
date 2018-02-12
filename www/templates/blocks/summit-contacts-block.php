@@ -1,8 +1,8 @@
 <section class="summit-contacts-block">
     <div class="wrapper">
-        <div class="summit-contacts-block-title">
+        <h3 class="summit-contacts-block-title">
             Контакты
-        </div>
+        </h3>
 
         <div class="row summit-contacts-blocks">
             <div class="col-xs-12 col-sm-6 col-md-3">

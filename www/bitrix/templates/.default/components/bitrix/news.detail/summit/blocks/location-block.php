@@ -4,9 +4,9 @@
 <? if ($arResult['PROPERTIES']['ADDRESS']['VALUE']): ?>
     <section class="location-block">
         <div class="wrapper">
-            <div class="location-block-title">
+            <h3 class="location-block-title">
                 <?=Loc::GetMessage('LOCATION', [], $arParams['LANG'])?>
-            </div>
+            </h3>
             <div class="location-block-desc">
                 <?=$arResult['PROPERTIES']['ADDRESS']['VALUE']?>
             </div>

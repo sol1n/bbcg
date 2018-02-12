@@ -1,8 +1,8 @@
 <section class="summit-price-block">
     <div class="wrapper">
-        <div class="summit-price-block-title">
+        <h3 class="summit-price-block-title">
             Стоимость участия
-        </div>
+        </h3>
 
         <div class="summit-price-block-row">
             <div class="summit-price-block-left">
