@@ -48,7 +48,8 @@
                                                 <? foreach ($cell['GLOBALS'] as $event): ?>
                                                     <a
                                                         <? if ($event['open']): ?>
-                                                            href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
+                                                            id="program-table-event-<?=$event['id']?>"
+                                                            href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/"
                                                             data-side-modal-class="side-modal-wide side-modal-event" 
                                                             data-side-modal 
                                                             data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
