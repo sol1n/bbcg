@@ -1,7 +1,7 @@
 <?
 	$MESS["PARTICIPATE_PRICING"] = "Стоимость участия";
 	$MESS["REGISTRATION_TYPE"] = "Вид регистрации";
-	$MESS["EARLY_REGISTRATION"] = "Раняя регистрация";
+	$MESS["EARLY_REGISTRATION"] = "Ранняя регистрация";
 	$MESS["BEFORE"] = "до";
 	$MESS["LATE_REGISTRATION"] = "Поздняя регистрация";
 	$MESS["AFTER"] = "после";
