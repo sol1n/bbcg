@@ -3984,6 +3984,8 @@ body {
   letter-spacing: -0.1px;
   text-transform: uppercase;
   max-width: 420px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .about-block-title::after {
   content: '';
@@ -7751,6 +7753,44 @@ body {
   background-color: #af3255;
   -webkit-transition: background-color 200ms;
   transition: background-color 200ms;
+}
+.download-app-block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.download-app-block.inverse {
+  color: #fff;
+}
+.download-app-block-title {
+  font-family: 'GilroyExtraBold', Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+.download-app-block-links {
+  white-space: nowrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.download-app-block-links a {
+  display: inline-block;
+  margin: 5px;
+}
+.download-app-block-links svg {
+  max-width: 100%;
+  height: 38px;
+}
+@media (max-width: 1170px) {
+  .download-app-block-links svg {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+  }
 }
 .side-modal-overlay {
   display: -webkit-box;
