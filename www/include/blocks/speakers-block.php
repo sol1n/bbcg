@@ -22,6 +22,8 @@
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "PROPERTY_LASTNAME",
+        "SORT_ORDER2" => "ASC",
         "LANG" => "ru",
         "TITLE" => "300+ спикеров",
         "SUBTITLE" => "Для зарегистрированных пользователей доступ к уникальному сервису:<br/> \"knowledge on demand\", персональные сессии с рядом спикеров*",
