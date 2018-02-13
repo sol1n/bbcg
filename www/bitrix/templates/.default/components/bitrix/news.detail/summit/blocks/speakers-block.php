@@ -26,6 +26,8 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "PROPERTY_LASTNAME",
+        "SORT_ORDER2" => "ASC",
         "TITLE" => $arResult['SPEAKERS_TITLE']['title'],
         "SUBTITLE" => $arResult['SPEAKERS_TITLE']['subtitle'],
         "INDEX_PAGE_URL" => $arResult['SPEAKERS_TITLE']['link'],

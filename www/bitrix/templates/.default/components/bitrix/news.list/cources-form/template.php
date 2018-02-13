@@ -109,7 +109,7 @@
                     <div class="submit-registration-block-form-footer">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
-                                <div class="submit-registration-block-form-manager">
+                                <div class="submit-registration-block-form-hint">
                                     <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', [], $arParams['LANG'])?>
                                 </div>
                             </div>
