@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cssnano = require('cssnano'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    merge = require('merge-stream');
 
 gulp.task('less', function() {
     return gulp.src('./less/style.less')
@@ -15,13 +16,13 @@ gulp.task('less', function() {
             console.log(err);
         }))
         .pipe(postcss([ autoprefixer() ]))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./www/assets/build/'))
         .pipe(postcss([
             cssnano({
                 preset: 'default'
             })
         ]))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -45,14 +46,24 @@ var jsFiles = [
     jsDest = './www/assets/build';
 
 gulp.task('scripts', function() {
-    return gulp.src(jsFiles)
+    var mainScripts = gulp.src(jsFiles)
         .pipe(sourcemaps.init())
-            .pipe(concat('scripts.js'))
-            .pipe(gulp.dest(jsDest))
-            .pipe(rename('scripts.min.js'))
-            .pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(jsDest));
+
+    var programTable = gulp.src('./js/program-table.js')
+        .pipe(sourcemaps.init())
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('program-table.min.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest(jsDest));
+
+    return merge(mainScripts, programTable);
 });
 
 gulp.task('default', ['less', 'scripts'], function() {

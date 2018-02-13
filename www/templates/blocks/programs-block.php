@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="programs-block-header">
             <div class="programs-block-header-left">
-                <div class="programs-block-title">
+                <h3 class="programs-block-title">
                     Программы обучения
-                </div>
+                </h3>
                 <div class="programs-block-subtitle">
                     Академия Ритейла предлагает уникальные учебные курсы
                 </div>

@@ -1,8 +1,8 @@
 <section class="summit-contacts-block">
     <div class="wrapper">
-        <div class="summit-contacts-block-title">
+        <h3 class="summit-contacts-block-title">
             Контакты
-        </div>
+        </h3>
 
         <div class="row summit-contacts-blocks">
             <div class="col-xs-12 col-sm-6 col-md-3">
@@ -70,23 +70,42 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="summit-contacts-block-app">
-                    <div class="summit-contacts-block-app-iphone"></div>
-                    <div class="summit-contacts-block-app-footer">
-                        <div class="summit-contacts-block-app-title">
-                            Скачать приложение
-                            «Online retail Russia»
+                <div class="summit-contacts-block-card">
+                    <div class="summit-contacts-block-card-title">
+                        Регистрация участников
+                    </div>
+                    <div class="summit-contacts-block-card-desc">
+                        Зарегистрироваться в качестве участника – заполните заявку на участие и отправьте Ирине Чинновой
+                    </div>
+                    <div class="summit-contacts-block-card-manager">
+                        <div class="summit-contacts-block-card-manager-photo">
+                            <img src="../assets/images/tmp/reviews/image-2.png" alt="">
                         </div>
-
-                        <div class="summit-contacts-block-app-footer-links">
-                            <a href="#" target="_blank">
-                                <?php include "../assets/images/icons/icon-appstore-white.svg"; ?>
-                            </a>
-                            <a href="#" target="_blank">
-                                <?php include "../assets/images/icons/icon-google-play-white.svg"; ?>
-                            </a>
+                        <div class="summit-contacts-block-card-manager-name">
+                            Ирина Чиннова
+                        </div>
+                        <div class="summit-contacts-block-card-manager-contacts">
+                            <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a> или +7 (495) 785-22-06, доб. 1159
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center m-t-xl ">
+            <div class="download-app-block inverse">
+                <div class="download-app-block-links">
+                    <a href="#" target="_blank">
+                        <?php include "../assets/images/icons/icon-appstore-white.svg"; ?>
+                    </a>
+                    <a href="#" target="_blank">
+                        <?php include "../assets/images/icons/icon-google-play-white.svg"; ?>
+                    </a>
+                </div>
+
+                <div class="download-app-block-title">
+                    Скачать приложение
+                    «Online retail Russia»
                 </div>
             </div>
         </div>

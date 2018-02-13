@@ -128,9 +128,9 @@
 
     <section id="academy-programm" class="programs-block">
         <div class="wrapper">
-            <div class="programs-block-title">
+            <h3 class="programs-block-title">
                 Календарь 2018
-            </div>
+            </h3>
             <div class="programs-block-subtitle">
                 Специализированные образовательные курсы. Уровни executive и administrative.
             </div>
@@ -298,9 +298,9 @@
         <div class="wrapper">
             <div class="partners-block-header">
                 <div class="partners-block-header-left">
-                    <div class="partners-block-title">
+                    <h3 class="partners-block-title">
                         Партнеры
-                    </div>
+                    </h3>
                     <div class="partners-block-subtitle">
                         Представляя вашему вниманию программу образовательных курсов executive и operational уровней на 2018 год, мы искренне благодарим за практическую поддержку:
                     </div>

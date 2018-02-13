@@ -10,9 +10,9 @@
 <section class="about-summit-block" style="background-image: url('<?=$background?>')">
     <div class="wrapper">
         <div class="about-summit-block-content">
-            <div class="about-summit-block-title">
+            <h1 class="about-summit-block-title">
                 <?=$arResult['NAME']?>
-            </div>
+            </h1>
             <div class="about-summit-block-date">
                 <?=$arResult['DURATION']?>
             </div>

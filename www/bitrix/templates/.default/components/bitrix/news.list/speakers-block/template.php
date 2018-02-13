@@ -6,9 +6,9 @@
         <div class="wrapper">
             <div class="speakers-block-header">
                 <div class="speakers-block-header-left">
-                    <div class="speakers-block-title">
+                    <h3 class="speakers-block-title">
                         <?=$arParams['TITLE']?>
-                    </div>
+                    </h3>
                     <div class="speakers-block-subtitle">
                         <?=htmlspecialchars_decode($arParams['SUBTITLE'])?>
                     </div>

@@ -1,9 +1,9 @@
 <section class="about-block about-block-downarrow">
     <div class="wrapper">
         <div class="about-block-left">
-            <div class="about-block-title">
+            <h1 class="about-block-title">
                 B2B Conference Group
-            </div>
+            </h1>
             <div class="about-block-stats">
                 <div class="about-block-stats-item">
                     <div class="about-block-stats-item-value">

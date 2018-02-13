@@ -1,8 +1,8 @@
 <section class="reviews-block">
     <div class="wrapper">
-        <div class="reviews-block-title">
+        <h3 class="reviews-block-title">
             1000+ благодарных отзывов
-        </div>
+        </h3>
         <div class="reviews-block-subtitle">
             от участников прошлых лет
         </div>

@@ -99,12 +99,6 @@ $(document).ready(function () {
         programTableMobileFixed();
     }
 
-    programTableScroll();
-    programTableResize();
-
-    $(window).scroll(programTableScroll);
-    $(window).resize(programTableResize);
-
     $('[data-program-table-fav]').click(function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -126,13 +120,26 @@ $(document).ready(function () {
                 active ? $link.removeClass('active') : $link.addClass('active');
             }
         }).fail(function (jqXHR, textStatus, errorThrown) {
-            alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
+            alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз. Error while loading data. Please, try again or contact us.');
             console.log(jqXHR);
             console.log(errorThrown);
         }).always(function () {
             $('body').spin(false);
         });
+    });
 
-    })
+    programTableScroll();
+    programTableResize();
+
+    $(window).scroll(programTableScroll);
+    $(window).resize(programTableResize);
+
+    if (window.location.hash && initSideModal) {
+        $event = $(window.location.hash);
+
+        if ($event.length) {
+            $event.click();
+        }
+    }
 });
 

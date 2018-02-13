@@ -1,9 +1,9 @@
 <section class="register-iphone-block">
     <div class="wrapper">
         <div class="register-iphone-block-left">
-            <div class="register-iphone-block-title">
+            <h3 class="register-iphone-block-title">
                 Зарегистрируйтесь на сайте BBCG
-            </div>
+            </h3>
             <div class="register-iphone-block-subtitle">
                 Регистрация дает доступ к эксклюзивным новостям
                 и презентациям, возможность задать вопрос спикеру,

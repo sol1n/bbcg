@@ -1,9 +1,9 @@
 <section class="register-iphone-block">
     <div class="wrapper">
         <div class="register-iphone-block-left">
-            <div class="register-iphone-block-title">
+            <h3 class="register-iphone-block-title">
                 Register on BBCG website
-            </div>
+            </h3>
             <div class="register-iphone-block-subtitle">
                 Registration gives access to exclusive news and presentations, the opportunity to ask a question to the speaker, as well as discounts for participation in the summits
             </div>

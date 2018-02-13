@@ -3,9 +3,9 @@
 ?>
 <section id="academy-programm" class="programs-block p-b-xl">
     <div class="wrapper">
-        <div class="programs-block-title">
+        <h3 class="programs-block-title">
             <?=$arParams['TITLE']?>
-        </div>
+        </h3>
         <div class="programs-block-subtitle">
             <?=$arParams['SUBTITLE']?>
         </div>

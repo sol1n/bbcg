@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="speakers-block-header">
             <div class="speakers-block-header-left">
-                <div class="speakers-block-title">
+                <h3 class="speakers-block-title">
                     300+ спикеров
-                </div>
+                </h3>
                 <div class="speakers-block-subtitle">
                     Для зарегистрированных пользователей доступен сервис вопросов спикерам
                     с возможностью получить ответ по почте или на саммите

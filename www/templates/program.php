@@ -158,13 +158,13 @@
                             <div class="program-table-column">
                                 <!-- 9:00 — 10:00 -->
                                 <div class="program-table-column-hour">
-                                    <a href="program-event.php" data-side-modal-class="side-modal-wide side-modal-event" data-side-modal data-side-modal-url="blocks/event-modal.php" data-side-modal-prevent-mobile class="program-table-event program-table-event-global program-table-event-offset-30 program-table-event-height-30">
+                                    <a id="program-table-event-3" href="program-event.php" data-side-modal-class="side-modal-wide side-modal-event" data-side-modal data-side-modal-url="blocks/event-modal.php" data-side-modal-prevent-mobile class="program-table-event program-table-event-global program-table-event-offset-30 program-table-event-height-30">
                                         <div class="program-table-event-meta">
                                             <span class="program-table-event-meta-date">
                                                 09:30 — 10:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
 
@@ -182,7 +182,7 @@
                                                 10:00 — 11:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
 
@@ -233,7 +233,7 @@
                                                 11:00 — 13:00
                                             </span>
                                             <div class="program-table-event-meta-fav active" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -258,7 +258,7 @@
                                                 12:30 — 13:30
                                             </span>
                                             <div class="program-table-event-meta-fav active" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -283,7 +283,7 @@
                                                 13:30 — 14:30
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -308,7 +308,7 @@
                                                 14:30 — 15:30
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -340,7 +340,7 @@
                                                 9:00 — 9:30
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -370,7 +370,7 @@
                                                 11:00 — 11:30
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -391,7 +391,7 @@
                                                 11:30 — 12:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -416,7 +416,7 @@
                                                 12:00 — 13:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -441,7 +441,7 @@
                                                 13:00 — 14:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -466,7 +466,7 @@
                                                 14:00 — 14:45
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -503,7 +503,7 @@
                                                 11:00 — 11:30
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -524,7 +524,7 @@
                                                 11:30 — 12:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -549,7 +549,7 @@
                                                 12:00 — 13:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -574,7 +574,7 @@
                                                 13:00 — 14:00
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -599,7 +599,7 @@
                                                 14:00 — 14:45
                                             </span>
                                             <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
-                                                <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                                <?php include "../assets/images/icons/icon-program-table-fav.svg"; ?>
                                             </div>
                                         </div>
                                         <div class="program-table-event-subtitle">
@@ -667,17 +667,17 @@
                 </div>
                 <div class="program-table-mobile-event-meta">
                     <span class="program-table-mobile-event-date">
-                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        <?php include "../assets/images/icons/icon-news-item-clock.svg"; ?>
                         12:00 - 12:30
                     </span>
                     <span class="program-table-mobile-event-location">
-                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        <?php include "../assets/images/icons/icon-map-mark.svg"; ?>
                         Конференц-зал
                     </span>
                 </div>
             </a>
             <a href="#" class="program-table-mobile-event-fav">
-                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+                <?php include "../assets/images/icons/icon-news-item-fav.svg"; ?>
             </a>
         </div>
 
@@ -688,17 +688,17 @@
                 </div>
                 <div class="program-table-mobile-event-meta">
                     <span class="program-table-mobile-event-date">
-                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        <?php include "../assets/images/icons/icon-news-item-clock.svg"; ?>
                         12:30 - 13:00
                     </span>
                     <span class="program-table-mobile-event-location">
-                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        <?php include "../assets/images/icons/icon-map-mark.svg"; ?>
                         Зона 1
                     </span>
                 </div>
             </a>
             <a href="#" class="program-table-mobile-event-fav">
-                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+                <?php include "../assets/images/icons/icon-news-item-fav-active.svg"; ?>
             </a>
         </div>
 
@@ -713,17 +713,17 @@
                 </div>
                 <div class="program-table-mobile-event-meta">
                     <span class="program-table-mobile-event-date">
-                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        <?php include "../assets/images/icons/icon-news-item-clock.svg"; ?>
                         12:00 - 12:30
                     </span>
                     <span class="program-table-mobile-event-location">
-                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        <?php include "../assets/images/icons/icon-map-mark.svg"; ?>
                         Конференц-зал
                     </span>
                 </div>
             </a>
             <a href="#" class="program-table-mobile-event-fav">
-                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+                <?php include "../assets/images/icons/icon-news-item-fav.svg"; ?>
             </a>
         </div>
 
@@ -734,17 +734,17 @@
                 </div>
                 <div class="program-table-mobile-event-meta">
                     <span class="program-table-mobile-event-date">
-                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        <?php include "../assets/images/icons/icon-news-item-clock.svg"; ?>
                         12:30 - 13:00
                     </span>
                     <span class="program-table-mobile-event-location">
-                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        <?php include "../assets/images/icons/icon-map-mark.svg"; ?>
                         Зона 1
                     </span>
                 </div>
             </a>
             <a href="#" class="program-table-mobile-event-fav">
-                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+                <?php include "../assets/images/icons/icon-news-item-fav-active.svg"; ?>
             </a>
         </div>
     </div>
@@ -773,6 +773,6 @@
 <?php include "blocks/footer.php"; ?>
 
 <script src="../assets/build/scripts.min.js"></script>
-<script src="../assets/build/program-table.js"></script>
+<script src="../assets/build/program-table.min.js"></script>
 </body>
 </html>

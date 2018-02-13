@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="speakers-block-header">
             <div class="speakers-block-header-left">
-                <div class="speakers-block-title">
+                <h3 class="speakers-block-title">
                     Спикеры
-                </div>
+                </h3>
                 <div class="speakers-block-subtitle">
                     Лучшие решения лидеров рынка в формате живого общения
                 </div>

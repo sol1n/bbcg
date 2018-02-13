@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="sessions-block-header">
             <div class="sessions-block-header-left">
-                <div class="sessions-block-title">
+                <h3 class="sessions-block-title">
                     20+ сессий и мастер-классов
-                </div>
+                </h3>
                 <div class="sessions-block-subtitle">
                     в течение 2-х дней
                 </div>

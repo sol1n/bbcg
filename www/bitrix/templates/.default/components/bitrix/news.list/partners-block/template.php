@@ -6,9 +6,9 @@
         <div class="wrapper">
             <div class="partners-block-header">
                 <div class="partners-block-header-left">
-                    <div class="partners-block-title">
+                    <h3 class="partners-block-title">
                         <?=$arParams['TITLE']?>
-                    </div>
+                    </h3>
                     <div class="partners-block-subtitle">
                         <?=$arParams['SUBTITLE']?>
                     </div>

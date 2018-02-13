@@ -2,9 +2,9 @@
     <div class="wrapper">
         <div class="media-block-header">
             <div class="media-block-header-left">
-                <div class="media-block-title">
+                <h3 class="media-block-title">
                     Уникальная медиатека BBCG
-                </div>
+                </h3>
                 <div class="media-block-subtitle">
                     В медиатеке собрана эксклюзивная информация с презентациями и выступлениями спикеров за 17 лет работы на рынке ритейла.
                 </div>
