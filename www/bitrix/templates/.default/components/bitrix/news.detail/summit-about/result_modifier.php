@@ -31,7 +31,7 @@
 
     $res = CIBlockElement::GetList(
     	['ID' => 'ASC'],
-    	['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => 'about', 'PROPERTY_SUMMIT' => $arResult['ID']],
+    	['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $arParams['PAGE_CODE'], 'PROPERTY_SUMMIT' => $arResult['ID']],
     	false,
     	false,
     	['ID', 'NAME', 'DETAIL_TEXT']

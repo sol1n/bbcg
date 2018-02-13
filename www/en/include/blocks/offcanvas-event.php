@@ -27,25 +27,35 @@
             </div>
             <ul class="main-offcanvas-menu">
                 <? $APPLICATION->IncludeFile('/en/include/blocks/summit-about-pages.php'); ?>
-                <li>
-                    <a href="/en/summits/">
-                        Summit calendar
-                    </a>
+                <li 
+                    <? if (CSite::InDir("/en/$summitCode/events/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/events/">Events</a>
                 </li>
-                <li>
-                    <a href="/en/academy/">
-                        Academy of Retail
-                    </a>
+                <li
+                    <? if (CSite::InDir("/en/$summitCode/speakers/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/speakers/">Speakers</a>
                 </li>
-                <li>
-                    <a href="/en/news/">
-                        News
-                    </a>
+                <li
+                    <? if (CSite::InDir("/en/$summitCode/participants/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/participants/">Participants</a>
                 </li>
-                <li>
-                    <a href="/en/contacts/">
-                        Contacts
-                    </a>
+                <li
+                    <? if (CSite::InDir("/en/$summitCode/partners/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/partners/">Partners</a>
+                </li>
+                <li
+                    <? if (CSite::InDir("/en/$summitCode/news/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/news/">News</a>
+                </li>
+                <li
+                    <? if (CSite::InDir("/en/$summitCode/contacts/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/contacts/">Contacts</a>
                 </li>
             </ul>
 

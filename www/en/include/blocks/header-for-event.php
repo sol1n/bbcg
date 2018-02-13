@@ -28,6 +28,11 @@
                     <a href="/en/<?$APPLICATION->ShowProperty('code')?>/speakers/">Speakers</a>
                 </li>
                 <li
+                    <? if (CSite::InDir("/en/$summitCode/participants/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/en/<?=$summitCode?>/participants/">Participants</a>
+                </li>
+                <li
                     <? if (CSite::InDir("/en/$summitCode/partners/")): ?>class="acitve"<? endif ?>
                 >
                     <a href="/en/<?$APPLICATION->ShowProperty('code')?>/partners/">Partners</a>

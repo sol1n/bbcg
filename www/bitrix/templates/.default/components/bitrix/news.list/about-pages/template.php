@@ -3,7 +3,7 @@
         <? if ($arParams['LANG'] == 'en'): ?>
             <a href="/en/<?=$arParams['SUMMIT_CODE']?>/about/">About</a>
         <? else: ?>
-            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О саммите</a>
+            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О мероприятии</a>
         <? endif ?>
 
         <div class="main-header-submenu">
@@ -27,7 +27,7 @@
         <? if ($arParams['LANG'] == 'en'): ?>
             <a href="/en/<?=$arParams['SUMMIT_CODE']?>/about/">About</a>
         <? else: ?>
-            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О саммите</a>
+            <a href="/<?=$arParams['SUMMIT_CODE']?>/about/">О мероприятии</a>
         <? endif ?>
     </li>
 <? endif ?>

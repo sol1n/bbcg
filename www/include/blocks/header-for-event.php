@@ -28,6 +28,11 @@
                     <a href="/<?=$summitCode?>/speakers/">Спикеры</a>
                 </li>
                 <li
+                    <? if (CSite::InDir("/$summitCode/participants/")): ?>class="acitve"<? endif ?>
+                >
+                    <a href="/<?=$summitCode?>/participants/">Участники</a>
+                </li>
+                <li
                     <? if (CSite::InDir("/$summitCode/partners/")): ?>class="acitve"<? endif ?>
                 >
                     <a href="/<?=$summitCode?>/partners/">Партнеры</a>
