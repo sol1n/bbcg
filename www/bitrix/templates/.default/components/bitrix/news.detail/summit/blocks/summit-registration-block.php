@@ -133,7 +133,10 @@
                     <div class="summit-registration-block-card-value">
                         <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a>
                     </div>
-                    <?=Loc::GetMessage('DOWNLOAD_AND_SEND_REQUEST', [], $arParams['LANG'])?>
+                    <? if ($arResult['PROPERTIES']['REQUEST_FILE']['VALUE']): ?>
+                        <? $file = CFile::GetPath($arResult['PROPERTIES']['REQUEST_FILE']['VALUE']); ?>
+                        <?=Loc::GetMessage('DOWNLOAD_AND_SEND_REQUEST', ['FILE' => $file], $arParams['LANG'])?>
+                    <? endif ?>
                 </div>
             </div>
         </div>

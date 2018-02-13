@@ -12,5 +12,5 @@
 	$MESS["ALTERNATIVE_REGISTRATION"] = "Альтернативные способы регистрации";
 	$MESS["OR"] = "или";
 	$MESS["CONTACT_PERSON"] = "контактное лицо Ирина Чиннова";
-	$MESS["DOWNLOAD_AND_SEND_REQUEST"] = "Скачать заявку и отправить на указанную почту";
+	$MESS["DOWNLOAD_AND_SEND_REQUEST"] = "<a href=\"FILE\" target=\"_blank\">Скачать заявку</a> и отправить на указанную почту";
 ?>
