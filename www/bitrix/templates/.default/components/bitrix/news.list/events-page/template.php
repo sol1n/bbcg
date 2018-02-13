@@ -163,7 +163,7 @@
             <? endif ?>
             "
         >
-            <a href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" class="program-table-mobile-event-content">
+            <a href="/<?=$arParams['SUMMIT']?>/events/<?=$event['ID']?>/" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     <?=$event['NAME']?>
                 </div>
