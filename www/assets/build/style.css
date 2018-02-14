@@ -597,6 +597,9 @@ template {
 .ff-gilroy-extrabold {
   font-family: 'GilroyExtraBold', Tahoma, sans-serif;
 }
+.ul-inline li {
+  display: inline-block;
+}
 .ul-reset {
   margin: 0;
   padding: 0;
@@ -699,7 +702,6 @@ h3,
 .h3 {
   font-size: 24px;
   line-height: 32px;
-  text-transform: uppercase;
 }
 h4,
 .h4 {
@@ -7823,24 +7825,25 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1000;
+  overflow-x: hidden;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 300ms 300ms, left 0ms 600ms;
-  transition: opacity 300ms 300ms, left 0ms 600ms;
+  -webkit-transition: opacity 200ms 200ms, left 0ms 400ms;
+  transition: opacity 200ms 200ms, left 0ms 400ms;
 }
 .side-modal-overlay.active {
   left: 0;
   opacity: 1;
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
 }
 .side-modal-overlay.active .side-modal {
-  -webkit-transform: perspective(600px) rotateY(0deg);
-          transform: perspective(600px) rotateY(0deg);
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 .side-modal {
   position: absolute;
@@ -7849,12 +7852,12 @@ body {
   width: 430px;
   min-height: 100%;
   background-color: #fff;
-  -webkit-transform: perspective(600px) rotateY(-90deg);
-          transform: perspective(600px) rotateY(-90deg);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transform-origin: right center;
           transform-origin: right center;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 @media (max-width: 575px) {
   .side-modal {
@@ -10555,6 +10558,10 @@ body {
 .summit-registration-block-form .form-input:focus,
 .summit-registration-block-form .form-select:focus {
   border-color: #49b5e8;
+}
+.summit-registration-block-form .form-input.error,
+.summit-registration-block-form .form-select.error {
+  border-color: #ad1b34;
 }
 .summit-registration-block-form .form-label {
   font-size: 14px;
