@@ -12,6 +12,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <link rel="stylesheet" href="/assets/build/style.min.css">
 	    <meta name="theme-color" content="#1b1b1b">
 	    <link rel="icon" type="image/png" href="/favicon.png">
+
+	    <meta property="og:title" content="<?$APPLICATION->ShowTitle();?>" />
+	    <meta property="og:description" content="<?$APPLICATION->ShowProperty("description");?>">
+	    <meta property="og:image" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
+   		<meta property="og:image:url" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
 	</head>
 	<? if (CSite::InDir('/summits/') || CSite::InDir('/en/summits/')): ?>
 		<body class="b-smoke-white">

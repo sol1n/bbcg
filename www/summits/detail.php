@@ -22,7 +22,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_META_KEYWORDS" => "Y",
         "META_KEYWORDS" => "-",
         "SET_META_DESCRIPTION" => "Y",
-        "META_DESCRIPTION" => "-",
+        "META_DESCRIPTION" => "PREVIEW_TEXT",
         "SET_STATUS_404" => "Y",
         "SET_LAST_MODIFIED" => "Y",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
