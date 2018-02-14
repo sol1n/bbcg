@@ -91,17 +91,12 @@
                     </div>
                     <div class="submit-registration-block-form-footer">
                         <div class="row">
-                            <? if ($arResult['CONTACT']): ?>
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="submit-registration-block-form-manager">
-                                        <div class="submit-registration-block-form-manager-photo">
-                                            <? $img = CFile::ResizeImageGet($arResult['CONTACT']['PREVIEW_PICTURE'], ['width' => 96*2, 'height' => 96*2], BX_RESIZE_IMAGE_EXACT); ?>
-                                            <img src="<?=$img['src']?>" alt="<?=$arResult['CONTACT']['PROPERTY_FIO_VALUE']?>">
-                                        </div>
-                                        <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', ['NAME' => $arResult['CONTACT']['PROPERTY_FIO_VALUE']], $arParams['LANG'])?>
-                                    </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="submit-registration-block-form-hint">
+                                    <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', ['NAME' => $arResult['CONTACT']['PROPERTY_FIO_VALUE']], $arParams['LANG'])?>
                                 </div>
-                            <? endif ?>
+                            </div>
+   
                             <div class="col-xs-12 col-sm-6">
                                 <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
                                     <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>

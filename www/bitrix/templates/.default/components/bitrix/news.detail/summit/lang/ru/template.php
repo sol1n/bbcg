@@ -8,9 +8,9 @@
 	$MESS["EMAIL"] = "E-mail";
 	$MESS["COMPANY"] = "Компания";
 	$MESS["POSITION"] = "Должность";
-	$MESS["WE_WILL_CONTACT_YOU"] = "С вами свяжется NAME, для уточнения деталей в течение 2-х дней";
+	$MESS["WE_WILL_CONTACT_YOU"] = "Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.";
 	$MESS["ALTERNATIVE_REGISTRATION"] = "Альтернативные способы регистрации";
 	$MESS["OR"] = "или";
-	$MESS["CONTACT_PERSON"] = "контактное лицо Ирина Чиннова";
+	$MESS["CONTACT_PERSON"] = "Контактное лицо Ирина Чиннова";
 	$MESS["DOWNLOAD_AND_SEND_REQUEST"] = "<a href=\"FILE\" target=\"_blank\">Скачать заявку</a> и отправить на указанную почту";
 ?>
