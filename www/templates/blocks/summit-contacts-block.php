@@ -104,8 +104,7 @@
                 </div>
 
                 <div class="download-app-block-title">
-                    Скачать приложение
-                    «Online retail Russia»
+                    Скачать приложение «BBCG»
                 </div>
             </div>
         </div>

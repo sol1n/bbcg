@@ -770,6 +770,13 @@
     </div>
 </main>
 
+<style>
+    .program-table {
+        --program-table-hour-height: 160px;
+        --program-table-hour-height-large: 300px;
+    }
+</style>
+
 <?php include "blocks/footer.php"; ?>
 
 <script src="../assets/build/scripts.min.js"></script>

@@ -9,6 +9,13 @@
 @program-table-min-height-large: @program-table-hour-height-large/60;
 @program-table-border-color: #E0E0E0;
 
+.program-table {
+  --program-table-hour-height: @program-table-hour-height;
+  --program-table-hour-height-large: @program-table-hour-height-large;
+  --program-table-min-height: calc(~"var(--program-table-hour-height) / 60");
+  --program-table-min-height-large: calc(~"var(--program-table-hour-height-large) / 60");
+}
+
 .program-table-main-heading {
   @media (max-width: @breakpoint-s) {
     padding: 0;
@@ -166,6 +173,7 @@
   padding-left: 20px;
   padding-right: 20px;
   height: @program-table-hour-height;
+  height: var(--program-table-hour-height);
 }
 
 .program-table-timeline-hour-title {
@@ -183,6 +191,7 @@
   bottom: -0.45rem;
   font-size: 0.8rem;
   height: @program-table-hour-height / 4;
+  height: calc(~"var(--program-table-hour-height) / 4");
   color: #999999;
 }
 
@@ -194,18 +203,22 @@
   bottom: -0.45rem;
   font-size: 0.8rem;
   height: @program-table-hour-height / 6;
+  height: calc(~"var(--program-table-hour-height) / 6");
   color: #999999;
 }
 
 .program-table-timeline-hour-large {
   height: @program-table-hour-height-large;
+  height: var(--program-table-hour-height-large);
 
   .program-table-timeline-hour-quarter {
     height: @program-table-hour-height-large / 4;
+    height: calc(~"var(--program-table-hour-height-large) / 4");
   }
 
   .program-table-timeline-hour-sixth {
     height: @program-table-hour-height-large / 6;
+    height: calc(~"var(--program-table-hour-height-large) / 6");
   }
 }
 
@@ -358,21 +371,27 @@
   position: relative;
   border-bottom: 1px solid #E0E0E0;
   height: @program-table-hour-height;
+  height: var(--program-table-hour-height);
 }
 
 .program-table-column-hour-large {
   height: @program-table-hour-height-large;
+  height: var(--program-table-hour-height-large);
 }
 
 .generate-heights(@n, @i: 5) when (@i =< @n) {
   .program-table-event-height-@{i} {
     min-height: @program-table-min-height*@i - 1;
+    min-height: calc(~"(var(--program-table-min-height) * " @i ~") - 1px");
     max-height: @program-table-min-height*@i - 1;
+    max-height: calc(~"(var(--program-table-min-height) * " @i ~") - 1px");
   }
 
   .program-table-column-hour-large .program-table-event-height-@{i} {
     min-height: @program-table-min-height-large * @i - 1;
+    min-height: calc(~"(var(--program-table-min-height-large) * " @i ~") - 1px");
     max-height: @program-table-min-height-large * @i - 1;
+    max-height: calc(~"(var(--program-table-min-height-large) * " @i ~") - 1px");
   }
 
   .generate-heights(@n, (@i + 5));
@@ -382,10 +401,12 @@
 .generate-offsets(@n, @i: 5) when (@i =< @n) {
   .program-table-event-offset-@{i} {
     transform: translateY( (@program-table-min-height * @i) - 1 );
+    transform: translateY( calc(~"(var(--program-table-min-height) * " @i ~") - 1px") );
   }
 
   .program-table-column-hour-large .program-table-event-offset-@{i} {
     transform: translateY( (@program-table-min-height-large * @i) - 1 );
+    transform: translateY( calc(~"(var(--program-table-min-height-large) * " @i ~") - 1px") );
   }
 
   .generate-offsets(@n, (@i + 5));
