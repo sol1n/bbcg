@@ -18,7 +18,7 @@
 
 <main class="main-container main-container-with-header">
     <?php include "blocks/about-summit-block.php"; ?>
-    <?php include "blocks/summit-text-block.php"; ?>
+    <?php include "blocks/summit-text-block-2.php"; ?>
     <?php include "blocks/sessions-block.php"; ?>
     <?php include "blocks/speakers-block-blue.php"; ?>
     <?php include "blocks/partners-block-blue.php"; ?>
