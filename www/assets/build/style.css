@@ -8534,6 +8534,14 @@ body {
 .summit-text-block-content {
   line-height: 20px;
 }
+.summit-text-block-content h2,
+.summit-text-block-content h3,
+.summit-text-block-content h4,
+.summit-text-block-content h5,
+.summit-text-block-content h6 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
 .main-heading {
   position: relative;
   z-index: 10;
