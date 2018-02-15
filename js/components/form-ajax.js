@@ -45,6 +45,13 @@
                               'callback' : verifyCallback,
                               'size' : 'invisible'
                             });
+                        } else {
+                            $('body').append('<div id="recaptcha-placeholder-' + window.captchaID + '"></div>');
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder-' + window.captchaID, { 
+                              'sitekey' : key, 
+                              'callback' : verifyCallback,
+                              'size' : 'invisible'
+                            });
                         }
                         grecaptcha.execute(window.captchaID);
                     } else {
