@@ -100,6 +100,7 @@
                                             <? foreach ($cell[$k] as $event): ?>
                                                 <a
                                                     <? if ($event['open']): ?>
+                                                        id="program-table-event-<?=$event['id']?>"
                                                         href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
                                                         data-side-modal-class="side-modal-wide side-modal-event" 
                                                         data-side-modal 
