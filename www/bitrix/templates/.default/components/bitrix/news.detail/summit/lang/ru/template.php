@@ -11,6 +11,6 @@
 	$MESS["WE_WILL_CONTACT_YOU"] = "Нажимая кнопку «Регистрация», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.";
 	$MESS["ALTERNATIVE_REGISTRATION"] = "Альтернативные способы регистрации";
 	$MESS["OR"] = "или";
-	$MESS["CONTACT_PERSON"] = "Контактное лицо Ирина Чиннова";
+	$MESS["CONTACT_PERSON"] = "Контактное лицо: Ирина Чиннова";
 	$MESS["DOWNLOAD_AND_SEND_REQUEST"] = "<a href=\"FILE\" target=\"_blank\">Скачать заявку</a> и отправить на указанную почту";
 ?>
