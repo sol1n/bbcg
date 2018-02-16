@@ -154,10 +154,19 @@
         } else {
             if ($item['speakers'] && count($item['speakers'])) {
                 $speakersLocal = $item['speakers'];
-                $item['speakers'] = [[],[],[]];
-                foreach($speakersLocal as $k => $speaker) {
-                    $index = $k % 3;
-                    $item['speakers'][$index][] = $speaker;
+                if ($item['PROPERTIES']['SPEAKERS_COLUMN']['VALUE'] == 'Y') {
+                    $item['speakers'] = [];
+                    $item['column-view'] = true;
+                    foreach($speakersLocal as $speaker) {
+                        $item['speakers'][] = $speaker;
+                    }
+                } else {
+                    $item['speakers'] = [[],[],[]];
+                    $item['column-view'] = false;
+                    foreach($speakersLocal as $k => $speaker) {
+                        $index = $k % 3;
+                        $item['speakers'][$index][] = $speaker;
+                    }
                 }
             }
             $arResult['GLOBALS']['ITEMS'][] = $item;
@@ -203,7 +212,8 @@
             'width' => $item['width'],
             'color' => $item['color'],
             'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
-            'subtitle' => $item['subtitle']
+            'subtitle' => $item['subtitle'],
+            'column-view' => $item['column-view'],
         ];
     }
 

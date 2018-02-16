@@ -79,19 +79,29 @@
                                                         </div>
 
                                                         <? if ($event['speakers']): ?>
-                                                            <div class="row">
-                                                                <? foreach($event['speakers'] as $row): ?>
-                                                                    <div class="col-xs-12 col-sm-4">
-                                                                        <div class="program-table-event-speakers">
-                                                                            <? foreach ($row as $speaker): ?>
-                                                                            <p>
-                                                                                <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
-                                                                            </p>
-                                                                            <? endforeach ?>
+                                                            <? if ($event['column-view'] == true): ?>
+                                                                <div class="program-table-event-speakers">
+                                                                    <? foreach ($event['speakers'] as $speaker): ?>
+                                                                        <p>
+                                                                            <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                        </p>
+                                                                    <? endforeach ?>
+                                                                </div>
+                                                            <? else: ?>
+                                                                <div class="row">
+                                                                    <? foreach($event['speakers'] as $row): ?>
+                                                                        <div class="col-xs-12 col-sm-4">
+                                                                            <div class="program-table-event-speakers">
+                                                                                <? foreach ($row as $speaker): ?>
+                                                                                <p>
+                                                                                    <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                                </p>
+                                                                                <? endforeach ?>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                <? endforeach ?>
-                                                            </div>
+                                                                    <? endforeach ?>
+                                                                </div>
+                                                            <? endif ?>
                                                         <? endif ?>
                                                     </a>
                                                 <? endforeach ?>
