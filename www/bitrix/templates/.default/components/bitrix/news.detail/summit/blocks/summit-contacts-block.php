@@ -16,7 +16,7 @@ $APPLICATION->IncludeComponent(
         "FIELD_CODE" => array(),
         "IBLOCK_ID" => CONTACTS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "3",
+        "NEWS_COUNT" => "15",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
