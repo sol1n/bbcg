@@ -116,7 +116,6 @@
                     </div>
                     <div class="summit-registration-block-card-value">
                         <a href="tel:+74957852206">+7 (495) 785-22-06</a> <br>
-                        <?=Loc::GetMessage('OR', [], $arParams['LANG'])?> <a href="tel:7811134">781-11-34</a>
                     </div>
                     <?=Loc::GetMessage('CONTACT_PERSON', [], $arParams['LANG'])?>
                 </div>
