@@ -115,7 +115,7 @@
     </div>
     <div class="registration-form-submit">
         <button type="submit" class="button button-old-gold">
-            <?=Loc::GetMessage('DO_REGISTER', [], $arParams['LANG'])?>
+            <span class="c-text"><?=Loc::GetMessage('DO_REGISTER', [], $arParams['LANG'])?></span>
         </button>
     </div>
 </form>
