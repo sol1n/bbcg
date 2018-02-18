@@ -26,7 +26,7 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "SORT",
         "SORT_ORDER1" => "ASC",
-        "NAME" => $arResult['NAME'],
+        "NAME" => "BBCG",
         "ANDROID_APP_LINK" => $arResult['PROPERTIES']['ANDROID_APP_LINK']['VALUE'],
         "IOS_APP_LINK" => $arResult['PROPERTIES']['IOS_APP_LINK']['VALUE'],
         "LANG" => $arParams['LANG'],

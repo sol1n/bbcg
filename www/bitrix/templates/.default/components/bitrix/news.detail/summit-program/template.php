@@ -1,3 +1,11 @@
+<? if (is_numeric($arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE'])): ?>
+    <style> 
+        .program-table { 
+            --program-table-hour-height: <?=$arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE']?>px; 
+        } 
+    </style> 
+<? endif ?>
+
 <div class="main-heading main-heading-<?=$arResult['COLOR']?> program-table-main-heading">
     <div class="wrapper">
         <h1 class="main-heading-title">Программа</h1>
