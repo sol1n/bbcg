@@ -19,6 +19,29 @@
 		$arResult['AREA'] = null;
 	}
 
+	if (is_array($arResult['PROPERTIES']['SPEAKERS']['VALUE']) && count($arResult['PROPERTIES']['SPEAKERS']['VALUE'])) {
+		$res = CIBlockElement::GetList(
+			['SORT' => 'ASC'],
+			['IBLOCK_ID' => SPEAKERS_IBLOCK, 'ID' => $arResult['PROPERTIES']['SPEAKERS']['VALUE'], 'ACTIVE' => 'Y'],
+			false,
+			false,
+			['ID', 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PAGE_URL']
+		);
+		while ($speaker = $res->GetNext()) {
+			if (empty($speaker['PREVIEW_PICTURE'])) {
+				$exploded = explode(' ', $speaker['NAME']);
+				if (is_array($exploded) && count($exploded) == 2) {
+					$speaker['LETTERS'] = mb_substr($exploded[0], 0, 1) . mb_substr($exploded[1], 0, 1);
+				} else {
+					$speaker['LETTERS'] = '?';
+				}
+				$speaker['COLOR'] = $colors[array_rand($colors)];
+			}
+
+		    $arResult['SPEAKERS'][] = $speaker;
+		}
+	}
+
 	if ($arParams['LANG'] == 'en') {
         $arResult['NAME'] = !empty($arResult['PROPERTIES']['EN_NAME']['VALUE']) ? $arResult['PROPERTIES']['EN_NAME']['VALUE'] : $arResult['NAME']; 
         $arResult['~DETAIL_TEXT'] = !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) 
