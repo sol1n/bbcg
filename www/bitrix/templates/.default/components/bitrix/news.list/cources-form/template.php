@@ -7,7 +7,7 @@
             <?=$arParams['TITLE']?>
         </div>
 
-        <? $user = user(); ?>
+        <? $user = $arParams['USER']; ?>
 
         <div class="summit-registration-block-row">
             <div class="summit-registration-block-left">

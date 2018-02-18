@@ -8062,6 +8062,9 @@ body {
   text-transform: uppercase;
   color: #2b2a29;
 }
+.side-modal-news-buttons {
+  margin-top: 25px;
+}
 .registration-modal {
   position: static;
   width: 600px;

@@ -43,3 +43,17 @@
         </ul>
     </div>
 <? endif ?>
+
+<div class="side-modal-news-buttons">
+	<a 
+		href="#" 
+		data-side-modal 
+		data-side-modal-url="/include/academy/modal-registration.php?id=<?=$arResult['ID']?>" 
+		data-side-modal-class="registration-modal"
+		data-side-modal-prevent-overlay-close 
+		data-side-modal-prevent-esc-close
+		class="button button-old-gold"
+	>
+        <span class="c-text">Регистрация</span>
+    </a>
+</div>
