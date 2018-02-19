@@ -39,6 +39,17 @@ $(document).ready(function () {
         }, 200);
     });
 
+    $('.program-table-event[data-side-modal]').click(function() {
+        var hash = $(this).attr('id');
+
+        if (window.history.pushState) {
+            window.history.pushState(null, null, "#" + hash);
+        }
+        else {
+            window.location.hash = hash;
+        }
+    });
+
     $('.program-table-timeline-date')
         .css('height', $('.program-table-heading').height())
         .css('margin-bottom', $('.program-table-scroll').height());
