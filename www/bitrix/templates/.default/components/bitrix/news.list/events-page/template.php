@@ -84,6 +84,9 @@
                                                                     <? foreach ($event['speakers'] as $speaker): ?>
                                                                         <p>
                                                                             <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                            <? if ($speaker['theme']): ?>
+                                                                                <br/><i><?=$speaker['theme']?></i>
+                                                                            <? endif ?>
                                                                         </p>
                                                                     <? endforeach ?>
                                                                 </div>
@@ -95,6 +98,9 @@
                                                                                 <? foreach ($row as $speaker): ?>
                                                                                 <p>
                                                                                     <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                                    <? if ($speaker['theme']): ?>
+                                                                                        <br/><i><?=$speaker['theme']?></i>
+                                                                                    <? endif ?>
                                                                                 </p>
                                                                                 <? endforeach ?>
                                                                             </div>
@@ -144,6 +150,9 @@
                                                             <? foreach ($event['speakers'] as $speaker): ?>
                                                                 <p>
                                                                     <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
+                                                                    <? if ($speaker['theme']): ?>
+                                                                        <br/><i><?=$speaker['theme']?></i>
+                                                                    <? endif ?>
                                                                 </p>
                                                             <? endforeach ?>
                                                         </div>

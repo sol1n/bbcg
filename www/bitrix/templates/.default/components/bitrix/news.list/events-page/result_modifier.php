@@ -44,6 +44,17 @@
         $speakers[$speaker['ID']] = $speaker;
     }
 
+    foreach ($arResult['ITEMS'] as $k => $item) {
+        if (count($item['PROPERTIES']['THEMES']['VALUE'])) {
+            foreach ($item['PROPERTIES']['THEMES']['VALUE'] as $index => $theme) {
+                if (isset($item['PROPERTIES']['THEMES']['DESCRIPTION'][$index])) {
+                    $speakerID = $item['PROPERTIES']['THEMES']['DESCRIPTION'][$index];
+                    $arResult['ITEMS'][$k]['themes'][$speakerID] = $theme;
+                }
+            }
+        }
+    }
+
     //Gets areas
     $arResult['AREAS'] = $areaSequence = [];
 
@@ -112,7 +123,11 @@
         if (is_array($item['PROPERTIES']['SPEAKERS']['VALUE']) && count($item['PROPERTIES']['SPEAKERS']['VALUE'])) {
             foreach ($item['PROPERTIES']['SPEAKERS']['VALUE'] as $speaker) {
                 if (isset($speakers[$speaker])) {
-                    $item['speakers'][] = $speakers[$speaker];
+                    $speakerElement = $speakers[$speaker];
+                    if (isset($item['themes'][$speaker])) {
+                        $speakerElement['theme'] = $item['themes'][$speaker];
+                    }
+                    $item['speakers'][] = $speakerElement;
                 }
             }
         }

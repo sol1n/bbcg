@@ -15,6 +15,14 @@
 		$arResult['AREA'] = null;
 	}
 
+	$themes = [];
+	foreach ($arResult['PROPERTIES']['THEMES']['VALUE'] as $k => $theme) {
+		if (isset($arResult['PROPERTIES']['THEMES']['DESCRIPTION'][$k])) {
+			$index = $arResult['PROPERTIES']['THEMES']['DESCRIPTION'][$k];
+			$themes[$index] = $theme;
+		}
+	}
+
 	if (is_array($arResult['PROPERTIES']['SPEAKERS']['VALUE']) && count($arResult['PROPERTIES']['SPEAKERS']['VALUE'])) {
 		$res = CIBlockElement::GetList(
 			['SORT' => 'ASC'],
@@ -33,6 +41,11 @@
 				}
 				$speaker['COLOR'] = $colors[array_rand($colors)];
 			}
+
+			if (isset($themes[$speaker['ID']])) {
+				$speaker['theme'] = $themes[$speaker['ID']];
+			}
+
 		    $arResult['SPEAKERS'][] = $speaker;
 		}
 	}

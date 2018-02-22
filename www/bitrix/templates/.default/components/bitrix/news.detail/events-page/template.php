@@ -47,6 +47,11 @@
                                             <div class="speakers-list-item-subtitle">
                                                 <?=$speaker['PREVIEW_TEXT']?>
                                             </div>
+                                            <? if ($speaker['theme']): ?>
+                                                <div class="speakers-list-item-event">
+                                                    <?=$speaker['theme']?>
+                                                </div>
+                                            <? endif ?>
                                         </div>
                                     </a>
                                 </li>
