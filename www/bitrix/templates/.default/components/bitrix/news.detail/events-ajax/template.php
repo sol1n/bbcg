@@ -43,7 +43,9 @@
                             <div class="speakers-list-item-title">
                                 <?=$speaker['NAME']?>
                             </div>
-                            <?=$speaker['PREVIEW_TEXT']?>
+                            <div class="speakers-list-item-subtitle">
+                                <?=$speaker['PREVIEW_TEXT']?>
+                            </div>
                         </div>
                     </a>
                 </li>

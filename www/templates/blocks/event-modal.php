@@ -43,7 +43,12 @@
                     <div class="speakers-list-item-title">
                         Марита Коскинен
                     </div>
-                    Генеральный директор, Prisma
+                    <div class="speakers-list-item-subtitle">
+                        Генеральный директор, Prisma
+                    </div>
+                    <div class="speakers-list-item-event">
+                        Вступительная речь
+                    </div>
                 </div>
             </a>
         </li>
@@ -59,6 +64,12 @@
                     <div class="speakers-list-item-title">
                         Алексей Токлович
                     </div>
+                    <div class="speakers-list-item-subtitle">
+                        Web-мастер
+                    </div>
+                    <div class="speakers-list-item-event">
+                        Ознакомление с курсом дела
+                    </div>
                 </div>
             </a>
         </li>
@@ -72,7 +83,9 @@
                     <div class="speakers-list-item-title">
                         Марита Коскинен
                     </div>
-                    Генеральный директор, Prisma
+                    <div class="speakers-list-item-subtitle">
+                        Генеральный директор, Prisma
+                    </div>
                 </div>
             </a>
         </li>
