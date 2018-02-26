@@ -20,7 +20,7 @@
         "PROPERTY_CODE" => array("*"),
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
-        "SORT_BY1" => "SORT",
+        "SORT_BY1" => "PROPERTY_MAINPAGE_SORT",
         "SORT_ORDER1" => "ASC",
         "SORT_BY2" => "PROPERTY_LASTNAME",
         "SORT_ORDER2" => "ASC",
