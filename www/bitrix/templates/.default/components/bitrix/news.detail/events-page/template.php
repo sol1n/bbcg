@@ -3,7 +3,7 @@
         <div class="news-item m-t-xl m-b-xl">
             <div class="news-item-content">
                 <h1 class="news-item-title"><?=$arResult['NAME']?></h1>
-                <p class="text-highlight m-b-xl"><?=$arResult['PREVIEW_TEXT']?></p>
+                <?=$arResult['~DETAIL_TEXT']?>
 
                 <div class="news-item-meta-2 m-b-lg">
                     <span class="news-item-meta-2-date">
@@ -17,8 +17,6 @@
                         </span>
                     <? endif ?>
                 </div>
-
-                <?=$arResult['~DETAIL_TEXT']?>
 
                 <? if ($arResult['SPEAKERS']): ?>
                     <h4 class="tt-uppercase">Спикеры</h4>
