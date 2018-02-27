@@ -91,7 +91,7 @@ $APPLICATION->IncludeComponent(
         "PROPERTY_CODE" => array("*"),
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
-        "SORT_BY1" => "ID",
+        "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
         "DATE" => $arParams['DATE'],
         "SUMMIT" => $arResult['CODE']
