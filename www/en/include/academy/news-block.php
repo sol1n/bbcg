@@ -26,9 +26,9 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "N",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
-        "LANG" => "ru",
-        "INDEX_PAGE_URL" => "/academy/news/",
-        "TITLE" => "НОВОСТИ И СОБЫТИЯ РИТЕЙЛА",
-        "SUBTITLE" => "Узнайте эксклюзивную информацию о рынке до появления в СМИ",
+        "LANG" => "en",
+        "INDEX_PAGE_URL" => "/en/academy/news/",
+        "TITLE" => "News and events in retail",
+        "SUBTITLE" => "Learn exclusive information about the market before appearing in the media",
     )
 );?>

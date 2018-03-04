@@ -27,8 +27,14 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? $user = user(); ?>
 
 		<? if (SITE_LANGUAGE == 'en'): ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
-			<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas.php"; ?>
+			<? if (CSite::InDir('/en/academy/')): ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header-global.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header-for-academy.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas-for-academy.php"; ?>
+			<? else: ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/offcanvas.php"; ?>
+			<? endif ?>
 		<? else: ?>
 			
 			<? if (CSite::InDir('/academy/')): ?>

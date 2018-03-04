@@ -1,11 +1,12 @@
 <?
-global $filter;
-$filter = ['PROPERTY_ACADEMY_VALUE' => 'Y'];
-$APPLICATION->IncludeComponent(
+define('STOP_STATISTICS', true);
+require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
+?>
+
+<?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "news-block",
+    "cources-modal-form",
     Array(
-        "FILTER_NAME" => "filter",
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
         "CACHE_GROUPS" => "N",
@@ -14,9 +15,9 @@ $APPLICATION->IncludeComponent(
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => NEWS_IBLOCK,
+        "IBLOCK_ID" => COURCES_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-        "NEWS_COUNT" => "30",
+        "NEWS_COUNT" => "64",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => "main",
         "PARENT_SECTION" => "",
@@ -24,11 +25,11 @@ $APPLICATION->IncludeComponent(
         "PROPERTY_CODE" => array("*"),
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "N",
-        "SORT_BY1" => "ACTIVE_FROM",
-        "SORT_ORDER1" => "DESC",
-        "LANG" => "ru",
-        "INDEX_PAGE_URL" => "/academy/news/",
-        "TITLE" => "НОВОСТИ И СОБЫТИЯ РИТЕЙЛА",
-        "SUBTITLE" => "Узнайте эксклюзивную информацию о рынке до появления в СМИ",
+        "SORT_BY1" => "NAME",
+        "SORT_ORDER1" => "ASC",
+        "TITLE" => "Registration",
+        "USER" => user(),
+        "LANG" => 'en',
+        "SELECTED" => $_REQUEST['id']
     )
 );?>

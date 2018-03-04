@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <? if ($arResult['PREVIEW_PICTURE']): ?>
     <div class="side-modal-news-image">
         <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arResult['NAME']?>">
@@ -12,7 +15,9 @@
 </div>
 
 <? if ($arResult['SPEAKERS']): ?>
-    <h4 class="tt-uppercase">Спикеры</h4>
+    <h4 class="tt-uppercase">
+        <?=Loc::GetMessage('SPEAKERS', [], $arParams['LANG'])?>    
+    </h4>
 
     <div class="m-t-md m-b-md">
         <ul class="speakers-list">
@@ -50,12 +55,14 @@
 	<a 
 		href="#" 
 		data-side-modal 
-		data-side-modal-url="/include/academy/modal-registration.php?id=<?=$arResult['ID']?>" 
+		data-side-modal-url="<?=$arResult['REGISTRATION_URL']?>" 
 		data-side-modal-class="registration-modal"
 		data-side-modal-prevent-overlay-close 
 		data-side-modal-prevent-esc-close
 		class="button button-old-gold"
 	>
-        <span class="c-text">Регистрация</span>
+        <span class="c-text">
+            <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+        </span>
     </a>
 </div>

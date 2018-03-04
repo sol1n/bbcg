@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"About academy", 
+		"/academy/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Members", 
+		"/academy/speakers/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Learning programs", 
+		"/academy/programs/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Graduates", 
+		"/academy/graduates/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"News", 
+		"/academy/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Contacts", 
+		"/academy/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

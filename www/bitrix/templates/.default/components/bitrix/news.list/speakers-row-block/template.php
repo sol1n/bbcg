@@ -34,7 +34,7 @@
                             <?=$item['NAME']?>
                         </div>
                         <div class="speakers-block-card-title">
-                            <?=$item['~PREVIEW_TEXT']?>
+                            <?=$item['PREVIEW_TEXT']?>
                         </div>
                     </div>
                 </a>
