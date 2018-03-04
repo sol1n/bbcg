@@ -5,8 +5,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <div class="main-heading main-heading-black">
     <div class="wrapper">
         <h1 class="main-heading-title">
-            <a href="/speakers/">
-                Спикеры
+            <a href="/en/speakers/">
+                Speakers
             </a>
         </h1>
 
@@ -58,7 +58,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_TOP_PAGER" => "N",
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
-        "SHOW_404" => "Y",     
+        "SHOW_404" => "Y",
+        "LANG" => "en"
     ),
 false
 );

@@ -5,17 +5,17 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <div class="main-heading main-heading-black">
     <div class="wrapper">
         <h1 class="main-heading-title">
-            <a href="/academy/news/">
-                Новости
+            <a href="/en/academy/news/">
+                News
             </a>
         </h1>
 
-        <form method="GET" action="/news/" class="main-heading-search-form" data-suggest-search="/api/search/news/">
+        <form method="GET" action="/en/news/" class="main-heading-search-form" data-suggest-search="/api/search/news/?lang=en">
             <input 
                 type="search" 
                 name="search" 
                 class="main-heading-search-input" 
-                placeholder="Поиск" 
+                placeholder="Search" 
                 value="<?=htmlspecialchars($_GET['search'])?>"
             >
             <input type="submit" value="" class="main-heading-search-submit">
@@ -48,6 +48,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
+        "LANG" => "en"
     ), false);
 ?>
 

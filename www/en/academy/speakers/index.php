@@ -6,16 +6,16 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     <div class="wrapper">
         <h1 class="main-heading-title">
             <a href="/academy/speakers/">
-                Состав академии ритейла
+                Members of the academy of retail
             </a>
         </h1>
 
-        <form method="GET" action="/speakers/" class="main-heading-search-form" data-suggest-search="/api/search/speakers/">
+        <form method="GET" action="/en/speakers/" class="main-heading-search-form" data-suggest-search="/api/search/speakers/?lang=en">
             <input 
                 type="search" 
                 name="search" 
                 class="main-heading-search-input" 
-                placeholder="Поиск" 
+                placeholder="Search" 
                 value="<?=htmlspecialchars($_GET['search'])?>"
             >
             <input type="submit" value="" class="main-heading-search-submit">
@@ -50,6 +50,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "CACHE_GROUPS" => "N",
         "SORT_BY1" => "PROPERTY_ACADEMY_SORT",
         "SORT_ORDER1" => "ASC",
+        "LANG" => "en"
     ), false);
 ?>
 

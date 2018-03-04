@@ -2,42 +2,42 @@
 $aMenuLinks = Array(
 	Array(
 		"About academy", 
-		"/academy/about/", 
+		"/en/academy/about/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Members", 
-		"/academy/speakers/", 
+		"/en/academy/speakers/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Learning programs", 
-		"/academy/programs/", 
+		"/en/academy/programs/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Graduates", 
-		"/academy/graduates/", 
+		"/en/academy/graduates/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"News", 
-		"/academy/news/", 
+		"/en/academy/news/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Contacts", 
-		"/academy/contacts/", 
+		"/en/academy/contacts/", 
 		Array(), 
 		Array(), 
 		"" 

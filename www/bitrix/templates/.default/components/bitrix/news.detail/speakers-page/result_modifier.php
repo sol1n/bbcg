@@ -23,9 +23,9 @@
 
     if ($arParams['LANG'] == 'en') {
         $arResult['NAME'] = !empty($arResult['PROPERTIES']['EN_NAME']['VALUE']) ? $arResult['PROPERTIES']['EN_NAME']['VALUE'] : $arResult['NAME']; 
-        $arResult['~PREVIEW_TEXT'] = !empty($arResult['PROPERTIES']['EN_PREVIEW_TEXT']['~VALUE']['TEXT']) 
-        	? $arResult['PROPERTIES']['EN_PREVIEW_TEXT']['~VALUE']['TEXT'] 
-        	: $arResult['~PREVIEW_TEXT'];
+        $arResult['PREVIEW_TEXT'] = !empty($arResult['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE']['TEXT']) 
+        	? $arResult['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE']['TEXT'] 
+        	: $arResult['PREVIEW_TEXT'];
         $arResult['~DETAIL_TEXT'] = !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) 
         	? $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'] 
         	: $arResult['~DETAIL_TEXT'];
