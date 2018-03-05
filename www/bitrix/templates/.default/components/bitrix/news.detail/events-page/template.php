@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="wrapper">
     <div class="news-item-wrapper">
         <div class="news-item m-t-xl m-b-xl">
@@ -19,7 +22,9 @@
                 </div>
 
                 <? if ($arResult['SPEAKERS']): ?>
-                    <h4 class="tt-uppercase">Спикеры</h4>
+                    <h4 class="tt-uppercase">
+                        <?=Loc::GetMessage('SPEAKERS', [], $arParams['LANG'])?>
+                    </h4>
 
                     <div class="m-t-md m-b-md">
                         <ul class="speakers-list">
@@ -60,7 +65,7 @@
 
                 <div class="news-item-share m-t-lg">
                     <div class="news-item-share-title">
-                        Поделиться
+                        <?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
                     </div>
                     <div class="share-block">
                         <a href="#" target="_blank" data-share="vk" class="share-block-item">
