@@ -6,9 +6,14 @@
 	$arResult['SECTIONS'] = [];
 	$res = CIBlockSection::GetList(
 		['SORT' => 'ASC'],
-		['IBLOCK_ID' => PARTNERS_IBLOCK, 'ACTIVE' => 'Y']
+		['IBLOCK_ID' => PARTNERS_IBLOCK, 'ACTIVE' => 'Y'],
+		false,
+		['ID', 'NAME', 'UF_EN_NAME']
 	);
 	while ($section = $res->Fetch()) {
+		if ($arParams['LANG'] == 'en') {
+			$section['NAME'] = !empty($section['UF_EN_NAME']) ? $section['UF_EN_NAME'] : $section['NAME'];
+		}
 		$arResult['SECTIONS'][$section['ID']] = [
 			'NAME' => $section['NAME'],
 			'ITEMS' => []

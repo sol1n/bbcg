@@ -5,7 +5,7 @@
                 <a
                     <? if ($arParams['OPEN_MODAL']): ?>
                         data-side-modal 
-                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=ru"
+                        data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                     <? endif ?>
                     href="<?=$item['DETAIL_PAGE_URL']?>" 

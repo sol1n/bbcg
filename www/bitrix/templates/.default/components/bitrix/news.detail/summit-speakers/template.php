@@ -13,7 +13,7 @@
                 type="search" 
                 name="search" 
                 class="main-heading-search-input" 
-                placeholder="Поиск"
+                placeholder="<?=Loc::GetMessage('SEARCH', [], $arParams['LANG'])?>"
             >
             <input type="submit" value="" class="main-heading-search-submit">
         </form>
@@ -57,7 +57,8 @@
             "SORT_ORDER1" => "ASC",
             "SORT_BY2" => "PROPERTY_LASTNAME",
             "SORT_ORDER2" => "ASC",
-            "OPEN_MODAL" => 1
+            "OPEN_MODAL" => 1,
+            "LANG" => $arParams['LANG']
         )
     );?>
 <? endif ?>

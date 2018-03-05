@@ -39,7 +39,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
         "SEARCH" => $_GET['search'],
-        "PAGE" => isset($_GET['PAGEN_2']) ? $_GET['PAGEN_2'] : false
+        "PAGE" => isset($_GET['PAGEN_2']) ? $_GET['PAGEN_2'] : false,
+        "LANG" => 'ru'
     ), false);
 ?>
 
