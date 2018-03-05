@@ -16,7 +16,7 @@
 
 <? if ($arResult['SPEAKERS']): ?>
     <h4 class="tt-uppercase">
-        <?=Loc::GetMessage('SPEAKERS', [], $arParams['LANG'])?>    
+        <?=Loc::GetMessage('SPEAKERS', [], $arParams['LANG'])?>
     </h4>
 
     <div class="m-t-md m-b-md">

@@ -28,7 +28,7 @@
                                 href="events/<?=$item['ID']?>/"
                                 data-side-modal-class="side-modal-wide side-modal-event" 
                                 data-side-modal 
-                                data-side-modal-url="/api/events/element/?id=<?=$item['ID']?>"
+                                data-side-modal-url="/api/events/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                                 data-side-modal-prevent-mobile 
                                 class="sessions-block-item"
                             >

@@ -58,5 +58,5 @@
 	} else {
 		$arResult['REGISTRATION_URL'] = '/include/academy/modal-registration.php?id=' . $arResult['ID'];
 		$arResult['DATE'] = mb_strtolower(FormatDate('j F', MakeTimeStamp($arResult["ACTIVE_FROM"], "DD.MM.YYYY HH:MI:SS")));
-	}	
+	}
 ?>

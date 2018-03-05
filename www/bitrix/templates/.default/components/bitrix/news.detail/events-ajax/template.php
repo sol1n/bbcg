@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="side-modal-event-title">
     <?=$arResult['NAME']?>
 </div>
@@ -20,7 +23,9 @@
 </div>
 
 <? if ($arResult['SPEAKERS']): ?>
-    <h4 class="tt-uppercase">Спикеры</h4>
+    <h4 class="tt-uppercase">
+        <?=Loc::GetMessage('SPEAKERS', [], $arParams['LANG'])?>
+    </h4>
 
     <div class="m-t-md m-b-md">
         <ul class="speakers-list">

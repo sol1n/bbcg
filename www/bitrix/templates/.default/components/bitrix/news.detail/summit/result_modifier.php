@@ -4,21 +4,35 @@
     
     if ($begin == $end) {
         //One-day summit
-        $arResult['DURATION'] = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+        if ($arParams['LANG'] == 'en') {
+            $arResult['DURATION'] = mb_strtolower(PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'j F'));
+        } else {
+            $arResult['DURATION'] = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+        }
     } else {
         $end = FormatDate('m', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
         $begin = FormatDate('m', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
 
         if ($begin == $end) {
             //Start and end dates are in one month
-            $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-            $beginDay = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-            $arResult['DURATION'] = "$beginDay – $endDay";
+            if ($arParams['LANG'] == 'en') {
+                $endDay = PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'j F');
+                $beginDay = PHPFormatDateTime($arResult["PROPERTIES"]['BEGIN']['VALUE'], 'j');
+            } else {
+                $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $beginDay = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+            }
+            $arResult['DURATION'] = mb_strtolower("$beginDay – $endDay");
         } else {
             //Start and end dates are in different months
-            $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-            $beginDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-            $arResult['DURATION'] = "$beginDay – $endDay";
+            if ($arParams['LANG'] == 'en') {
+                $endDay = PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'j F');
+                $beginDay = PHPFormatDateTime($arResult["PROPERTIES"]['BEGIN']['VALUE'], 'j F');
+            } else {
+                $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $beginDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+            }
+            $arResult['DURATION'] = mb_strtolower("$beginDay – $endDay");
         }
     }
 
@@ -70,9 +84,15 @@
         ];
     }
 
-
     foreach ($headers as $key => $default) {
-    	if (!empty($arResult['PROPERTIES'][$key]['VALUE'])) {
+        if ($arParams['LANG'] == 'en' && !empty($arResult['PROPERTIES']["EN_$key"]['VALUE'])) {
+            $arResult[$key] = [
+                'title' => $arResult['PROPERTIES']["EN_$key"]['VALUE'],
+                'subtitle' => $arResult['PROPERTIES']["EN_$key"]['DESCRIPTION'],
+                'link' => $default['link']
+            ];
+        }
+    	elseif (!empty($arResult['PROPERTIES'][$key]['VALUE'])) {
     		$arResult[$key] = [
     			'title' => $arResult['PROPERTIES'][$key]['VALUE'],
     			'subtitle' => $arResult['PROPERTIES'][$key]['DESCRIPTION'],
@@ -95,5 +115,21 @@
         $arResult['CONTACT'] = $contact;
     } else {
         $arResult['CONTACT'] = null;
+    }
+
+    if ($arParams['LANG'] == 'en') {
+        $arResult['NAME'] = !empty($arResult['PROPERTIES']['EN_NAME']['VALUE']) ? $arResult['PROPERTIES']['EN_NAME']['VALUE'] : $arResult['NAME'];
+        $arResult['PREVIEW_TEXT'] = !empty($arResult['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE'])
+            ? $arResult['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE']['TEXT']
+            : $arResult['PREVIEW_TEXT'];
+        $arResult['~DETAIL_TEXT'] = !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) 
+            ? $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'] 
+            : $arResult['~DETAIL_TEXT'];
+
+        foreach ($arResult['PROPERTIES'] as $code => $property) {
+            if (isset($arResult['PROPERTIES']['EN_' . $code]['VALUE']) && !empty($arResult['PROPERTIES']['EN_' . $code]['VALUE'])) {
+                $arResult['PROPERTIES'][$code]['VALUE'] = $arResult['PROPERTIES']['EN_' . $code]['VALUE'];
+            }
+        }
     }
 ?>
