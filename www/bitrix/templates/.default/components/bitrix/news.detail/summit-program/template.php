@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <? if (is_numeric($arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE'])): ?>
     <style> 
         .program-table { 
@@ -8,7 +11,9 @@
 
 <div class="main-heading main-heading-<?=$arResult['COLOR']?> program-table-main-heading">
     <div class="wrapper">
-        <h1 class="main-heading-title">Программа</h1>
+        <h1 class="main-heading-title">
+            <?=Loc::GetMessage('PROGRAM', [], $arParams['LANG'])?>
+        </h1>
 
         <div>
             <div class="main-heading-tabs">
@@ -45,7 +50,9 @@
         <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-program-menu">
             <li class="subnav-list-item">
                 <a class="subnav-link">
-                    <span>Вся программа</span>
+                    <span>
+                        <?=Loc::GetMessage('ALL PROGRAM', [], $arParams['LANG'])?>
+                    </span>
                 </a>
             </li>
         </ul>
@@ -57,7 +64,7 @@
                     data-suggest-search="/api/search/events/?lang=<?=$arParams['LANG']?>&summit=<?=$arResult['ID']?>" 
                     class="program-table-search"
                 >
-                    <input type="text" class="program-table-search-input" placeholder="Поиск событий" name="search">
+                    <input type="text" class="program-table-search-input" placeholder="<?=Loc::GetMessage('EVENTS SEARCH', [], $arParams['LANG'])?>" name="search">
                     <button type="submit" class="program-table-search-button"></button>
                 </form>
             </li>
@@ -94,7 +101,8 @@ $APPLICATION->IncludeComponent(
         "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
         "DATE" => $arParams['DATE'],
-        "SUMMIT" => $arResult['CODE']
+        "SUMMIT" => $arResult['CODE'],
+        "LANG" => $arParams['LANG']
     )
 );?>
 

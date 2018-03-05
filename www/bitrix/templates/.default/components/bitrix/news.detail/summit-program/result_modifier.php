@@ -9,7 +9,11 @@
 	$arResult['DATES'] = [];
 	do {
 		$date = $begin->format('d.m.Y');
-		$arResult['DATES'][$date] = FormatDate('j F', $begin->getTimestamp());
+		if ($arParams['LANG'] == 'en') {
+			$arResult['DATES'][$date] = mb_strtolower($begin->format('j F'));
+		} else {
+			$arResult['DATES'][$date] = mb_strtolower(FormatDate('j F', $begin->getTimestamp()));
+		}
 		$begin->modify('+1 day');
 	} while ($begin <= $end);
 

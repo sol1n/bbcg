@@ -2,6 +2,22 @@
     define('EVENTS_STEP', 10);
     CModule::IncludeModule('iblock');
 
+    if ($arParams['LANG'] == 'en') {
+        foreach ($arResult['ITEMS'] as $k => $item) {
+            $arResult['ITEMS'][$k]['NAME'] = !empty($item['PROPERTIES']['EN_NAME']['VALUE'])
+                ? $item['PROPERTIES']['EN_NAME']['VALUE']
+                : $item['NAME'];
+            $arResult['ITEMS'][$k]['PREVIEW_TEXT'] = !empty($item['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE'])
+                ? $item['PROPERTIES']['EN_PREVIEW_TEXT']['VALUE']['TEXT']
+                : $item['PREVIEW_TEXT'];
+            foreach ($item['PROPERTIES'] as $code => $property) {
+                if (isset($item['PROPERTIES']["EN_$code"]['VALUE']) && !empty($item['PROPERTIES']["EN_$code"]['VALUE'])) {
+                    $arResult['ITEMS'][$k]['PROPERTIES'][$code] = $item['PROPERTIES']["EN_$code"];
+                }
+            }
+        }
+    }
+
     //Gets colors
     $tags = $colors = [];
     foreach ($arResult['ITEMS'] as $item) {
@@ -37,10 +53,18 @@
         ['IBLOCK_ID' => SPEAKERS_IBLOCK, 'ID' => $speakers, 'ACTIVE' => 'Y'],
         false,
         false,
-        ['ID', 'NAME', 'PREVIEW_TEXT']
+        ['ID', 'NAME', 'PREVIEW_TEXT', 'PROPERTY_EN_NAME', 'PROPERTY_EN_PREVIEW_TEXT']
     );
     $speakers = [];
     while ($speaker = $res->Fetch()) {
+        if ($arParams['LANG'] == 'en') {
+            $speaker['NAME'] = !empty($speaker['PROPERTY_EN_NAME_VALUE'])
+                ? $speaker['PROPERTY_EN_NAME_VALUE']
+                : $speaker['NAME'];
+            $speaker['PREVIEW_TEXT'] = !empty($speaker['PROPERTY_EN_PREVIEW_TEXT_VALUE'])
+                ? $speaker['PROPERTY_EN_PREVIEW_TEXT_VALUE']['TEXT']
+                : $speaker['PREVIEW_TEXT'];
+        }
         $speakers[$speaker['ID']] = $speaker;
     }
 
@@ -63,11 +87,14 @@
         ['IBLOCK_ID' => AREAS_IBLOCK, 'ACTIVE' => 'Y'],
         false,
         false,
-        ['ID', 'NAME']
+        ['ID', 'NAME', 'PROPERTY_EN_NAME']
     );
 
     while ($area = $res->Fetch())
     {
+        if ($arParams['LANG'] == 'en') {
+            $area['NAME'] = !empty($area['PROPERTY_EN_NAME_VALUE']) ? $area['PROPERTY_EN_NAME_VALUE'] : $area['NAME'];
+        }
         if (empty($arResult['AREAS'])){
             $arResult['AREAS'][$area['ID']] = ['NAME' => $area['NAME'], 'ITEMS' => [], 'FIRST' => true];
         } else {
@@ -80,7 +107,11 @@
     $arParams['CELL_WIDTH'] = 600;
 
     $arResult['DAY'] = FormatDate('j', MakeTimeStamp($arParams['DATE'], "DD.MM.YYYY"));
-    $arResult['MONTH'] = FormatDate('F', MakeTimeStamp($arParams['DATE'], "DD.MM.YYYY"));
+    if ($arParams['LANG'] == 'en') {
+        $arResult['MONTH'] = mb_strtolower(PHPFormatDateTime($arParams['DATE'], 'F'));
+    } else {
+        $arResult['MONTH'] = mb_strtolower(FormatDate('F', MakeTimeStamp($arParams['DATE'], "DD.MM.YYYY")));
+    }
 
     //Sets first & last hours
     $arResult['FIRST_HOUR'] = 24;
@@ -229,6 +260,9 @@
             'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
             'subtitle' => $item['subtitle'],
             'column-view' => $item['column-view'],
+            'href' => $arParams['LANG'] == 'en' 
+                ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
+                : "/{$arParams['SUMMIT']}/events/{$item['ID']}/"
         ];
     }
 
@@ -264,7 +298,10 @@
                 'width' => $item['width'],
                 'color' => $item['color'],
                 'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
-                'subtitle' => $item['subtitle']
+                'subtitle' => $item['subtitle'],
+                'href' => $arParams['LANG'] == 'en' 
+                    ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
+                    : "/{$arParams['SUMMIT']}/events/{$item['ID']}/"
             ];
         }
 

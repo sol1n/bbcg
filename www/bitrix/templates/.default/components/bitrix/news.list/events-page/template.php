@@ -1,7 +1,10 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="program-table-wrapper js-program-table-scroll">
     <? if (! $arResult['ITEMS']): ?>
         <div class="text-center" style="margin: 140px 0">
-            Мероприятия не найдены
+            <?=Loc::GetMessage('NOT_FOUND', [], $arParams['LANG'])?>
         </div>
     <? else: ?>
         <div class="b-smoke-white"> 
@@ -49,10 +52,10 @@
                                                     <a
                                                         <? if ($event['open']): ?>
                                                             id="program-table-event-<?=$event['id']?>"
-                                                            href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/"
+                                                            href="<?=$event['href']?>"
                                                             data-side-modal-class="side-modal-wide side-modal-event" 
                                                             data-side-modal 
-                                                            data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                            data-side-modal-url="/api/events/element/?id=<?=$event['id']?>&lang=<?=$arParams['LANG']?>"
                                                         <? endif ?>
                                                         data-side-modal-prevent-mobile 
                                                         class="
@@ -117,10 +120,10 @@
                                                 <a
                                                     <? if ($event['open']): ?>
                                                         id="program-table-event-<?=$event['id']?>"
-                                                        href="/<?=$arParams['SUMMIT']?>/events/<?=$event['id']?>/" 
+                                                        href="<?=$event['href']?>" 
                                                         data-side-modal-class="side-modal-wide side-modal-event" 
                                                         data-side-modal 
-                                                        data-side-modal-url="/api/events/element/?id=<?=$event['id']?>"
+                                                        data-side-modal-url="/api/events/element/?id=<?=$event['id']?>&lang=<?=$arParams['LANG']?>"
                                                     <? endif ?>
                                                     data-side-modal-prevent-mobile 
                                                     class="
@@ -184,7 +187,7 @@
             <? endif ?>
             "
         >
-            <a href="/<?=$arParams['SUMMIT']?>/events/<?=$event['ID']?>/" class="program-table-mobile-event-content">
+            <a href="<?=$event['href']?>" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     <?=$event['NAME']?>
                 </div>
