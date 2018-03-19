@@ -4848,7 +4848,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: calc(100% - 2px);
-  height: 240px;
+  height: 260px;
   color: #2b2a29;
   background: #fff;
   text-decoration: none;
@@ -4861,7 +4861,7 @@ body {
 }
 .news-block-item-photo {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 52px);
 }
 .news-block-item-photo img {
   width: 100%;
