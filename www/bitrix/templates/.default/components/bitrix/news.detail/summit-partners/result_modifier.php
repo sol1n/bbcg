@@ -21,7 +21,7 @@
 	}
 
 	$res = CIBlockElement::GetList(
-    	['ID' => 'ASC'],
+    	['SORT' => 'ASC'],
     	['IBLOCK_ID' => PARTNERS_IBLOCK, 'ACTIVE' => 'Y', 'PROPERTY_SUMMIT' => $arResult['ID']],
     	false,
     	false,
