@@ -86,7 +86,7 @@
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
-        "LANG" => "en"
+        "LANG" => $arParams['LANG']
     ), false);
 ?>
 

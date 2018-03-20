@@ -49,7 +49,7 @@
 	
 	if (is_array($arResult['PROPERTIES']['SPEAKERS']['VALUE']) && count($arResult['PROPERTIES']['SPEAKERS']['VALUE'])) {
 		$res = CIBlockElement::GetList(
-			['SORT' => 'ASC'],
+			['NAME' => 'ASC'],
 			['IBLOCK_ID' => SPEAKERS_IBLOCK, 'ID' => $arResult['PROPERTIES']['SPEAKERS']['VALUE'], 'ACTIVE' => 'Y'],
 			false,
 			false,
