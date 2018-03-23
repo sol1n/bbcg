@@ -35,7 +35,7 @@
                                     Контактная информация
                                 </div>
                                 <div class="contacts-block-item-value">
-                                    Тел/факс: <a href="tel:+74957852206">(495) 785-22-06</a>, <a href="tel:+74957811134">(495) 781-11-34</a> <br>
+                                    Телефон: <a href="tel:+74957852206">(495) 785-22-06</a>, <a href="tel:+74957811134">(495) 781-11-34</a> <br>
                                     email: <a href="mailto:info@b2bcg.ru">info@b2bcg.ru</a>
                                 </div>
                             </div>
