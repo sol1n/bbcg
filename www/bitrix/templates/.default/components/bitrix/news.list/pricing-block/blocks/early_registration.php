@@ -2,7 +2,7 @@
     use \Bitrix\Main\Localization\Loc;
 ?>
 <? if ($arResult['ITEMS']): ?>
-    <section class="summit-price-block">
+    <section class="summit-price-block" id="summit-pricing-block">
         <div class="wrapper">
             <h3 class="summit-price-block-title">
                 <?=Loc::GetMessage('PARTICIPATE_PRICING', [], $arParams['LANG'])?>
