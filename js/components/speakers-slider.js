@@ -6,7 +6,7 @@
         slidesPerRow: 4,
         //slidesToShow: 4,
         rows: 2,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         appendArrows: ".speakers-block-header-arrows",
         prevArrow: '<button type="button" class="slick-arrow slick-arrow-white slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-arrow slick-arrow-white slick-next"></button>',

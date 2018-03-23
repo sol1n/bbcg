@@ -19,335 +19,665 @@
         </div>
 
         <div class="speakers-block-slider js-speakers-slider">
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
             <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
+                <a
+                        href="/speakers/246/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=246&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
                     <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Ковпак Игорь
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Основатель, ТС «Кировский»
-                            г. Екатеринбург
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Татьяна Луковецкая
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Глава, Рольф Retail
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Adam Elman
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Global Head of Delivery for Plan A, Marks & Spencer
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Adam Elman
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Global Head of Delivery for Plan A, Marks & Spencer
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Jay DeBlank
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Director of Reporting, Insights,
-                            & Analytics, 7-Eleven, Даллас
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-6.png" alt="Gianluca Montesano">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-6.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Gianluca Montesano
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Региональный менеджер компании, ILPRA SPA
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-7.png" alt="Кен Хьюз">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-7.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Кен Хьюз
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Директор, Glacier Consulting. Видеодоклад
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="speakers-block-slider-item">
-                <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                    <div class="speakers-block-card-photo">
-                        <img src="../assets/images/tmp/speakers/speaker-8.png" alt="Томислав Юкич">
-                        <div class="speakers-block-card-logo">
-                            <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speakers-block-card-desc">
-                        <div class="speakers-block-card-name">
-                            Томислав Юкич
-                        </div>
-                        <div class="speakers-block-card-title">
-                            Член совета директоров, mStart, Agrokor, Загреб
-                        </div>
-                        <div class="speakers-block-card-ask-question">
-                            Задать вопрос
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php endfor; ?>
-        </div>
+                        <img src="/assets/images/no-speaker.png" alt="Рубен Арутюнян">
 
-        <div class="speakers-block-compact">
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-1.png" alt="Ковпак Игорь">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Ковпак Игорь
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Рубен Арутюнян
+                        </div>
+                        <div class="speakers-block-card-title">
+                            президент, Henderson
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Основатель, ТС «Кировский»
-                        г. Екатеринбург
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/130/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=130&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Янсен Флориан">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Янсен Флориан
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, Lamoda Group
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-2.png" alt="Татьяна Луковецкая">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-2.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/131/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=131&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Дэвид Уилкинсон ">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Татьяна Луковецкая
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Дэвид Уилкинсон
+                        </div>
+                        <div class="speakers-block-card-title">
+                            исполнительный директор, Au Pont Rouge
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Глава, Рольф Retail
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/132/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=132&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Михаил Кучмент">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Михаил Кучмент
+                        </div>
+                        <div class="speakers-block-card-title">
+                            совладелец и вице-президент, Hoff
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-3.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/135/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=135&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Марк Завадский">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Adam Elman
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Марк Завадский
+                        </div>
+                        <div class="speakers-block-card-title">
+                            глава, Alibaba Russia
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Global Head of Delivery for Plan A, Marks & Spencer
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/134/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=134&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Соломон Кунин">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Соломон Кунин
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, Goods
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo" >
-                    <img src="../assets/images/tmp/speakers/speaker-3.png" alt="Adam Elman">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-4.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/136/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=136&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Михаил Уржумцев ">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Adam Elman
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Михаил Уржумцев
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, Melon Fashion Group
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Global Head of Delivery for Plan A, Marks & Spencer
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/137/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=137&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Константин Надеждин ">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Константин Надеждин
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, Familia
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-5.png" alt="Jay DeBlank">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-5.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/287/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=287&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Ареш Аламир">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Jay DeBlank
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Ареш Аламир
+                        </div>
+                        <div class="speakers-block-card-title">
+                            АШАН
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Director of Reporting, Insights,
-                        & Analytics, 7-Eleven, Даллас
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/377/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=377&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Инна Базанкова">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Инна Базанкова
+                        </div>
+                        <div class="speakers-block-card-title">
+                            менеджер по развитию бизнеса, Goods
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-6.png" alt="Gianluca Montesano">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-6.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/311/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=311&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Вадим Байков">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Gianluca Montesano
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Вадим Байков
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, TCC
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Региональный менеджер компании, ILPRA SPA
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/232/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=232&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Андрей Байков ">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Андрей Байков
+                        </div>
+                        <div class="speakers-block-card-title">
+                            проректор МГИМО
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-7.png" alt="Кен Хьюз">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-7.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/261/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=261&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Екатерина Балыкина">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Кен Хьюз
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Екатерина Балыкина
+                        </div>
+                        <div class="speakers-block-card-title">
+                            начальник отдела обучения, «Евросеть»
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Директор, Glacier Consulting. Видеодоклад
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/181/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=181&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Максим Бахтин">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Максим Бахтин
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, «Утконос»
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="data/speakers/speaker-1.php" class="speakers-block-card" data-side-modal data-side-modal-class="side-modal-wide side-modal-speaker">
-                <div class="speakers-block-card-photo">
-                    <img src="../assets/images/tmp/speakers/speaker-8.png" alt="Томислав Юкич">
-                    <div class="speakers-block-card-logo">
-                        <img src="../assets/images/tmp/speakers/speakers-logo-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/239/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=239&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Сергей Беляков">
+
                     </div>
-                </div>
-                <div class="speakers-block-card-desc">
-                    <div class="speakers-block-card-name">
-                        Томислав Юкич
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Сергей Беляков
+                        </div>
+                        <div class="speakers-block-card-title">
+                            Дикси
+                        </div>
                     </div>
-                    <div class="speakers-block-card-title">
-                        Член совета директоров, mStart, Agrokor, Загреб
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/570/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=570&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Татьяна Бирнова">
+
                     </div>
-                    <div class="speakers-block-card-ask-question">
-                        Задать вопрос
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Татьяна Бирнова
+                        </div>
+                        <div class="speakers-block-card-title">
+                            директор по лояльностит, ГК «Дикси», сеть «Виктория»
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/278/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=278&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Андрей Болдырев">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Андрей Болдырев
+                        </div>
+                        <div class="speakers-block-card-title">
+                            Панорама
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/282/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=282&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Олег Болычёв">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Олег Болычёв
+                        </div>
+                        <div class="speakers-block-card-title">
+                            Вестер
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/235/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=235&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Александр Борисов">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Александр Борисов
+                        </div>
+                        <div class="speakers-block-card-title">
+                            председатель Комитета ТПП РФ по развитию потребительского рынка
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/276/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=276&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Максим Вайнберг">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Максим Вайнберг
+                        </div>
+                        <div class="speakers-block-card-title">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/184/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=184&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Артём Ведяев">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Артём Ведяев
+                        </div>
+                        <div class="speakers-block-card-title">
+                            категорийный директор СТМ, Дикси
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/234/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=234&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Николай Власенко">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Николай Власенко
+                        </div>
+                        <div class="speakers-block-card-title">
+                            член Совета Федерации
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/675/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=675&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Анастасия Войнолович">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Анастасия Войнолович
+                        </div>
+                        <div class="speakers-block-card-title">
+                            управляющий партнер, Snow Media
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/197/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=197&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Дмитрий Волков">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Дмитрий Волков
+                        </div>
+                        <div class="speakers-block-card-title">
+                            директор по развитию образовательных технологий, «Корпоративный университет Сбербанка»
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/636/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=636&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Антон Володькин">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Антон Володькин
+                        </div>
+                        <div class="speakers-block-card-title">
+                            операционный директор по маркетингу, «М.видео»
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/240/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=240&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Олег Высоцкий">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Олег Высоцкий
+                        </div>
+                        <div class="speakers-block-card-title">
+                            генеральный директор, Верный
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/285/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=285&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Максим Генке">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Максим Генке
+                        </div>
+                        <div class="speakers-block-card-title">
+                            HOFF
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/409/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=409&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Наталья Глух">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Наталья Глух
+                        </div>
+                        <div class="speakers-block-card-title">
+                            старший консультант отдела исследований потребительской панели, GfK Rus
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/410/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=410&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Александра Гнускина">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Александра Гнускина
+                        </div>
+                        <div class="speakers-block-card-title">
+                            руководитель сектора FMCG отдела качественных исследований, GfK Rus
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="speakers-block-slider-item">
+                <a
+                        href="/speakers/571/"
+                        class="speakers-block-card"
+                        data-side-modal
+                        data-side-modal-url="/api/speakers/element/?id=571&lang=ru"
+                        data-side-modal-class="side-modal-wide side-modal-speaker"
+                >
+                    <div class="speakers-block-card-photo">
+                        <img src="/assets/images/no-speaker.png" alt="Андрей Голубков">
+
+                    </div>
+                    <div class="speakers-block-card-desc">
+                        <div class="speakers-block-card-name">
+                            Андрей Голубков
+                        </div>
+                        <div class="speakers-block-card-title">
+                            руководитель Пресс-службы, Азбука Вкуса
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
