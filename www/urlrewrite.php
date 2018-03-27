@@ -1,6 +1,16 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/events/([0-9a-zA-Z_-]*)/.*#",
+		"RULE" => "code=\$1",
+		"PATH" => "/events/redirect.php",
+	),
+	array(
+		"CONDITION" => "#^/en/events/([0-9a-zA-Z_-]*)/.*#",
+		"RULE" => "code=\$1",
+		"PATH" => "/en/events/redirect.php",
+	),
+	array(
 		"CONDITION" => "#^/summits/(.*)/.*#",
 		"RULE" => "section=\$1",
 		"PATH" => "/summits/index.php",
