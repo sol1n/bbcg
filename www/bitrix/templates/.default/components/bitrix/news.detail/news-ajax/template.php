@@ -20,7 +20,7 @@
     <?=$arResult['~DETAIL_TEXT']?>
 </div>
 
-<div class="news-item-share m-t-lg" data-url="<?=$_SERVER['HTTP_REFERER'] . $arResult["DETAIL_PAGE_URL"];?>">
+<div class="news-item-share m-t-lg" data-url="<?=$arResult["DETAIL_PAGE_URL"];?>">
 	<div class="news-item-share-title">
 		<?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
 	</div>

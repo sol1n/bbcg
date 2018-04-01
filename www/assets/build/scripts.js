@@ -18232,11 +18232,12 @@ $(function(){
     function getData() {
       var img = $('.side-modal-overflow').find('img');//выбираем все элементы <img> внутри модалки
       var imgUrl = '';//инициализация переменной для url изображения
-      var page_url = $('.news-item-share').data('url');//получаем значения аттрибута data у блока с кнопками шаринга
+      var detail_page_url = $('.news-item-share').data('url');//получаем значения аттрибута data у блока с кнопками шаринга
+      var page_url = document.location.protocol+'//'+document.location.hostname+detail_page_url;//формируем адрес новостной страницы
       var title = $('.side-modal-news-title').text().trim();//получаем заголовок модалки
       var description = $('.side-modal-news-hidden').text().trim();//получаем анонс модалки
 
-      if ( page_url == undefined || page_url == false){//если аттрибута data-url у блока с кнопками шаринга нет или он равен false(значит это не модалка)
+      if ( detail_page_url == undefined || detail_page_url == false){//если аттрибута data-url у блока с кнопками шаринга нет или он равен false(значит это не модалка)
         page_url = document.location.href;//меняем значение на адрес текущей страницы
         img = $('body').find('img');//получаем все элементы <img> внутри модалки
         title = $('head > title').text();//получаем значение title из секции head
