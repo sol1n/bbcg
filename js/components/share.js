@@ -1,12 +1,13 @@
 $(function(){
   var share = function () {
-    $('[data-share="vk"]').on('click', handlerShareVk);
-    $('[data-share="fb"]').on('click', handlerShareFacebook);
-    $('[data-share="tw"]').on('click', handlerShareTwitter);
+    $(document).on('click', '[data-share="vk"]', handlerShareVk);
+    $(document).on('click', '[data-share="fb"]', handlerShareFacebook);
+    $(document).on('click', '[data-share="tw"]', handlerShareTwitter);
 
     function handlerShareVk(e) {
       e.preventDefault();
       var data = getData();
+		//console.log(data);
       var url = 'http://vkontakte.ru/share.php?';
       url += 'url=' + data.url;
       url += '&title=' + data.title;
@@ -38,8 +39,18 @@ $(function(){
     }
 
     function getData() {
-      var img = $('body').find('img'),
-          imgUrl = '';
+      var img = $('.side-modal-overflow').find('img');
+      var imgUrl = '';
+	  var page_url = $('.news-item-share').data('url');
+	  var title = $('.side-modal-news-title').text();
+	  var description = $('#preview').text();
+
+	  if ( page_url == undefined || page_url == false){
+		page_url = document.location.href;
+		img = $('body').find('img');
+		title = $('head > title').text();
+		description: $('[name="description"]').attr('content');
+	  }
 
       for (var i = 0; i < img.length; i++) {
         if (!imgUrl && img[i].naturalHeight > 100 && img[i].naturalWidth > 100) {
@@ -48,9 +59,9 @@ $(function(){
       }
 
       return {
-        url: document.location.href,
-        title: $('head > title').text(),
-        description: $('[name="description"]').attr('content'),
+        url: page_url,
+        title: title,
+        description: description,
         img: imgUrl
       };
     }
