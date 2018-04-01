@@ -7,7 +7,6 @@ $(function(){
     function handlerShareVk(e) {
       e.preventDefault();
       var data = getData();
-		//console.log(data);
       var url = 'http://vkontakte.ru/share.php?';
       url += 'url=' + data.url;
       url += '&title=' + data.title;
@@ -41,16 +40,16 @@ $(function(){
     function getData() {
       var img = $('.side-modal-overflow').find('img');//выбираем все элементы <img> внутри модалки
       var imgUrl = '';//инициализация переменной для url изображения
-	  var page_url = $('.news-item-share').data('url');//получаем значения аттрибута data у блока с кнопками шаринга
-	  var title = $('.side-modal-news-title').text();//получаем заголовок модалки
-	  var description = $('#preview').text();//получаем анонс модалки
+      var page_url = $('.news-item-share').data('url');//получаем значения аттрибута data у блока с кнопками шаринга
+      var title = $('.side-modal-news-title').text().trim();//получаем заголовок модалки
+      var description = $('.side-modal-news-hidden').text().trim();//получаем анонс модалки
 
-	  if ( page_url == undefined || page_url == false){//если аттрибута data-url у блока с кнопками шаринга нет или он равен false(значит это не модалка)
-		page_url = document.location.href;//меняем значение на адрес текущей страницы
-		img = $('body').find('img');//получаем все элементы <img> внутри модалки
-		title = $('head > title').text();//получаем значение title из секции head
-		description: $('[name="description"]').attr('content');//получаем значение аттрибута content у метатега description
-	  }
+      if ( page_url == undefined || page_url == false){//если аттрибута data-url у блока с кнопками шаринга нет или он равен false(значит это не модалка)
+        page_url = document.location.href;//меняем значение на адрес текущей страницы
+        img = $('body').find('img');//получаем все элементы <img> внутри модалки
+        title = $('head > title').text();//получаем значение title из секции head
+        description = $('[name="description"]').attr('content');//получаем значение аттрибута content у метатега description
+      }
 
       for (var i = 0; i < img.length; i++) {//цикл по всем элементам img
         if (!imgUrl && img[i].naturalHeight > 100 && img[i].naturalWidth > 100) {//выбираем первый img с оригинальной высотой и шириной больше 100px

@@ -13,14 +13,14 @@
 <div class="side-modal-news-title">
     <?=$arResult['NAME']?>
 </div>
-<div id="preview" hidden>
+<div class="side-modal-news-hidden">
     <?=$arResult['~PREVIEW_TEXT']?>
 </div>
 <div class="side-modal-news-description">
     <?=$arResult['~DETAIL_TEXT']?>
 </div>
 
-<div class="news-item-share" data-url="<?='http://'. $_SERVER['HTTP_HOST']. $arResult["DETAIL_PAGE_URL"];?>">
+<div class="news-item-share m-t-lg" data-url="<?=$_SERVER['HTTP_REFERER'] . $arResult["DETAIL_PAGE_URL"];?>">
 	<div class="news-item-share-title">
 		<?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
 	</div>
