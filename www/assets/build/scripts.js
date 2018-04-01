@@ -18230,31 +18230,31 @@ $(function(){
     }
 
     function getData() {
-      var img = $('.side-modal-overflow').find('img');//выбираем все элементы <img> внутри модалки
-      var imgUrl = '';//инициализация переменной для url изображения
-      var detail_page_url = $('.news-item-share').data('url');//получаем значения аттрибута data у блока с кнопками шаринга
-      var page_url = document.location.protocol+'//'+document.location.hostname+detail_page_url;//формируем адрес новостной страницы
-      var title = $('.side-modal-news-title').text().trim();//получаем заголовок модалки
-      var description = $('.side-modal-news-hidden').text().trim();//получаем анонс модалки
+      var img = $('.side-modal-overflow').find('img');
+      var imgUrl = '';
+      var detail_page_url = $('.news-item-share').data('url');
+      var page_url = document.location.protocol+'//'+document.location.hostname+detail_page_url;
+      var title = $('.side-modal-news-title').text().trim();
+      var description = $('.side-modal-news-hidden').text().trim();
 
-      if ( detail_page_url == undefined || detail_page_url == false){//если аттрибута data-url у блока с кнопками шаринга нет или он равен false(значит это не модалка)
-        page_url = document.location.href;//меняем значение на адрес текущей страницы
-        img = $('body').find('img');//получаем все элементы <img> внутри модалки
-        title = $('head > title').text();//получаем значение title из секции head
-        description = $('[name="description"]').attr('content');//получаем значение аттрибута content у метатега description
+      if ( detail_page_url == undefined || detail_page_url == false){
+        page_url = document.location.href;
+        img = $('body').find('img');
+        title = $('head > title').text();
+        description = $('[name="description"]').attr('content');
       }
 
-      for (var i = 0; i < img.length; i++) {//цикл по всем элементам img
-        if (!imgUrl && img[i].naturalHeight > 100 && img[i].naturalWidth > 100) {//выбираем первый img с оригинальной высотой и шириной больше 100px
-          imgUrl = img[i].currentSrc;//получаем его url
+      for (var i = 0; i < img.length; i++) {
+        if (!imgUrl && img[i].naturalHeight > 100 && img[i].naturalWidth > 100) {
+          imgUrl = img[i].currentSrc;
         }
       }
 
-      return {//возвращаем значения
-        url: page_url,//адрес страницы с новостью которой делимся
-        title: title,//заголовок
-        description: description,//описание
-        img: imgUrl//url изображения
+      return {
+        url: page_url,
+        title: title,
+        description: description,
+        img: imgUrl
       };
     }
 
