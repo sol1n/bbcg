@@ -40,6 +40,7 @@ var jsFiles = [
         './node_modules/jquery-validation/dist/jquery.validate.js',
         './node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js',
         './node_modules/baron/baron.min.js',
+        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
         './js/components/**/*.js',
         './js/scripts.js'
     ],

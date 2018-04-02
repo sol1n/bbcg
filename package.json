@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.2.5",
     "animate.css": "^3.5.2",
     "autoprefixer": "^7.1.6",
     "baron": "^3.0.3",
