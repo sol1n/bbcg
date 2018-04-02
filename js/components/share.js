@@ -1,8 +1,8 @@
 $(function(){
   var share = function () {
-    $('[data-share="vk"]').on('click', handlerShareVk);
-    $('[data-share="fb"]').on('click', handlerShareFacebook);
-    $('[data-share="tw"]').on('click', handlerShareTwitter);
+    $(document).on('click', '[data-share="vk"]', handlerShareVk);
+    $(document).on('click', '[data-share="fb"]', handlerShareFacebook);
+    $(document).on('click', '[data-share="tw"]', handlerShareTwitter);
 
     function handlerShareVk(e) {
       e.preventDefault();
@@ -38,8 +38,19 @@ $(function(){
     }
 
     function getData() {
-      var img = $('body').find('img'),
-          imgUrl = '';
+      var img = $('.side-modal-overflow').find('img');
+      var imgUrl = '';
+      var detail_page_url = $('.news-item-share').data('url');
+      var page_url = document.location.protocol+'//'+document.location.hostname+detail_page_url;
+      var title = $('.side-modal-news-title').text().trim();
+      var description = $('.side-modal-news-hidden').text().trim();
+
+      if ( detail_page_url == undefined || detail_page_url == false){
+        page_url = document.location.href;
+        img = $('body').find('img');
+        title = $('head > title').text();
+        description = $('[name="description"]').attr('content');
+      }
 
       for (var i = 0; i < img.length; i++) {
         if (!imgUrl && img[i].naturalHeight > 100 && img[i].naturalWidth > 100) {
@@ -48,9 +59,9 @@ $(function(){
       }
 
       return {
-        url: document.location.href,
-        title: $('head > title').text(),
-        description: $('[name="description"]').attr('content'),
+        url: page_url,
+        title: title,
+        description: description,
         img: imgUrl
       };
     }

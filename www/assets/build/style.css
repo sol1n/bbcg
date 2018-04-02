@@ -8072,6 +8072,9 @@ body {
 .side-modal-news-buttons {
   margin-top: 25px;
 }
+.side-modal-news-hidden {
+  display: none;
+}
 .registration-modal {
   position: static;
   width: 600px;

@@ -98,6 +98,10 @@ echo 'export PATH="$PATH:/usr/local/bin"' >> ~/.bashrc
 echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
 source ~/.bashrc
 
+## Node JS install
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 ## Init scripts
 # Create default MySQL user & database.
 mysql -u root -p$MYSQL_ROOT_PWD < ./vagrant/startup/init-mysql.sql
