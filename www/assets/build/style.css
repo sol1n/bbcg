@@ -6884,6 +6884,9 @@ body {
   margin-left: -5px;
   margin-right: -5px;
 }
+.partners-block-slide {
+  vertical-align: middle;
+}
 .partners-block-row {
   margin-left: -5px;
   margin-right: -5px;

@@ -23251,14 +23251,17 @@ function initContactsMap(ymaps) {
     var $slider = $(".js-partners-slider");
     $slider.slick({
         infinite: true,
-        slidesToShow: 4,
+        //slidesToShow: 4,
+        slidesPerRow: 4,
         rows: 2,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         appendArrows: ".partners-block-header-arrows",
         responsive: [
             {
                 breakpoint: 1080,
                 settings: {
+                    rows: 1,
+                    slidesPerRow: 1,
                     slidesToShow: 3,
                     slidesToScroll: 3
                 }
@@ -23268,6 +23271,8 @@ function initContactsMap(ymaps) {
                 settings: {
                     arrows: false,
                     dots: true,
+                    rows: 1,
+                    slidesPerRow: 1,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
@@ -23275,10 +23280,11 @@ function initContactsMap(ymaps) {
             {
                 breakpoint: 520,
                 settings: {
-                    arrows: false,
+                    rows: 1,
                     dots: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesPerRow: 1,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]
@@ -23298,8 +23304,9 @@ function initContactsMap(ymaps) {
     var $slider = $(".js-programs-slider");
     $slider.slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        //slidesToShow: 4,
+        slidesPerRow: 4,
+        slidesToScroll: 1,
         rows: 2,
         arrows: true,
         dots: false,
@@ -23308,6 +23315,8 @@ function initContactsMap(ymaps) {
             {
                 breakpoint: 1170,
                 settings: {
+                    rows: 1,
+                    slidesPerRow: 1,
                     slidesToShow: 3,
                     slidesToScroll: 3
                 }
@@ -23315,8 +23324,9 @@ function initContactsMap(ymaps) {
             {
                 breakpoint: 767,
                 settings: {
-                    dots: true,
                     rows: 1,
+                    dots: true,
+                    slidesPerRow: 1,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
@@ -23324,8 +23334,9 @@ function initContactsMap(ymaps) {
             {
                 breakpoint: 580,
                 settings: {
-                    dots: true,
                     rows: 1,
+                    dots: true,
+                    slidesPerRow: 1,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
