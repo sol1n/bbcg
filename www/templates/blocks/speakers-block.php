@@ -28,7 +28,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Рубен Арутюнян">
+                        <img src="../assets/images/no-speaker.png" alt="Рубен Арутюнян">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -50,7 +50,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Янсен Флориан">
+                        <img src="../assets/images/no-speaker.png" alt="Янсен Флориан">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -72,7 +72,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Дэвид Уилкинсон ">
+                        <img src="../assets/images/no-speaker.png" alt="Дэвид Уилкинсон ">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -94,7 +94,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Михаил Кучмент">
+                        <img src="../assets/images/no-speaker.png" alt="Михаил Кучмент">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -116,7 +116,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Марк Завадский">
+                        <img src="../assets/images/no-speaker.png" alt="Марк Завадский">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -138,7 +138,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Соломон Кунин">
+                        <img src="../assets/images/no-speaker.png" alt="Соломон Кунин">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -160,7 +160,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Михаил Уржумцев ">
+                        <img src="../assets/images/no-speaker.png" alt="Михаил Уржумцев ">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -182,7 +182,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Константин Надеждин ">
+                        <img src="../assets/images/no-speaker.png" alt="Константин Надеждин ">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -204,7 +204,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Ареш Аламир">
+                        <img src="../assets/images/no-speaker.png" alt="Ареш Аламир">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -226,7 +226,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Инна Базанкова">
+                        <img src="../assets/images/no-speaker.png" alt="Инна Базанкова">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -248,7 +248,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Вадим Байков">
+                        <img src="../assets/images/no-speaker.png" alt="Вадим Байков">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -270,7 +270,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Андрей Байков ">
+                        <img src="../assets/images/no-speaker.png" alt="Андрей Байков ">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -292,7 +292,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Екатерина Балыкина">
+                        <img src="../assets/images/no-speaker.png" alt="Екатерина Балыкина">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -314,7 +314,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Максим Бахтин">
+                        <img src="../assets/images/no-speaker.png" alt="Максим Бахтин">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -336,7 +336,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Сергей Беляков">
+                        <img src="../assets/images/no-speaker.png" alt="Сергей Беляков">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -358,7 +358,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Татьяна Бирнова">
+                        <img src="../assets/images/no-speaker.png" alt="Татьяна Бирнова">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -380,7 +380,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Андрей Болдырев">
+                        <img src="../assets/images/no-speaker.png" alt="Андрей Болдырев">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -402,7 +402,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Олег Болычёв">
+                        <img src="../assets/images/no-speaker.png" alt="Олег Болычёв">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -424,7 +424,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Александр Борисов">
+                        <img src="../assets/images/no-speaker.png" alt="Александр Борисов">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -446,7 +446,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Максим Вайнберг">
+                        <img src="../assets/images/no-speaker.png" alt="Максим Вайнберг">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -467,7 +467,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Артём Ведяев">
+                        <img src="../assets/images/no-speaker.png" alt="Артём Ведяев">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -489,7 +489,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Николай Власенко">
+                        <img src="../assets/images/no-speaker.png" alt="Николай Власенко">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -511,7 +511,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Анастасия Войнолович">
+                        <img src="../assets/images/no-speaker.png" alt="Анастасия Войнолович">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -533,7 +533,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Дмитрий Волков">
+                        <img src="../assets/images/no-speaker.png" alt="Дмитрий Волков">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -555,7 +555,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Антон Володькин">
+                        <img src="../assets/images/no-speaker.png" alt="Антон Володькин">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -577,7 +577,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Олег Высоцкий">
+                        <img src="../assets/images/no-speaker.png" alt="Олег Высоцкий">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -599,7 +599,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Максим Генке">
+                        <img src="../assets/images/no-speaker.png" alt="Максим Генке">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -621,7 +621,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Наталья Глух">
+                        <img src="../assets/images/no-speaker.png" alt="Наталья Глух">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -643,7 +643,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Александра Гнускина">
+                        <img src="../assets/images/no-speaker.png" alt="Александра Гнускина">
 
                     </div>
                     <div class="speakers-block-card-desc">
@@ -665,7 +665,7 @@
                         data-side-modal-class="side-modal-wide side-modal-speaker"
                 >
                     <div class="speakers-block-card-photo">
-                        <img src="/assets/images/no-speaker.png" alt="Андрей Голубков">
+                        <img src="../assets/images/no-speaker.png" alt="Андрей Голубков">
 
                     </div>
                     <div class="speakers-block-card-desc">

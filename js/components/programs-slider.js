@@ -2,8 +2,9 @@
     var $slider = $(".js-programs-slider");
     $slider.slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        //slidesToShow: 4,
+        slidesPerRow: 4,
+        slidesToScroll: 1,
         rows: 2,
         arrows: true,
         dots: false,
@@ -12,6 +13,8 @@
             {
                 breakpoint: 1170,
                 settings: {
+                    rows: 1,
+                    slidesPerRow: 1,
                     slidesToShow: 3,
                     slidesToScroll: 3
                 }
@@ -19,8 +22,9 @@
             {
                 breakpoint: 767,
                 settings: {
-                    dots: true,
                     rows: 1,
+                    dots: true,
+                    slidesPerRow: 1,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
@@ -28,8 +32,9 @@
             {
                 breakpoint: 580,
                 settings: {
-                    dots: true,
                     rows: 1,
+                    dots: true,
+                    slidesPerRow: 1,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
