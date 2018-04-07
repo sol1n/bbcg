@@ -40,15 +40,15 @@
                             submitForm();
                         }
                         if (!('captchaID' in window)) {
-                            window.captchaID = grecaptcha.render('recaptcha-placeholder', { 
-                              'sitekey' : key, 
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder', {
+                              'sitekey' : key,
                               'callback' : verifyCallback,
                               'size' : 'invisible'
                             });
                         } else {
                             $('body').append('<div id="recaptcha-placeholder-' + window.captchaID + '"></div>');
-                            window.captchaID = grecaptcha.render('recaptcha-placeholder-' + window.captchaID, { 
-                              'sitekey' : key, 
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder-' + window.captchaID, {
+                              'sitekey' : key,
                               'callback' : verifyCallback,
                               'size' : 'invisible'
                             });
@@ -61,7 +61,6 @@
 
                 function submitForm() {
                     showOverlay();
-
                     $.ajax({
                         url: url,
                         type: method,
@@ -72,6 +71,7 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
+                            console.log(data);/*!*/
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {

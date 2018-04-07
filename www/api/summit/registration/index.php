@@ -1,4 +1,4 @@
-<?
+<?define("LOG_FILENAME", "log_ne.txt");
 define('STOP_STATISTICS', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
@@ -37,7 +37,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     ]));
     $result = curl_exec($curl);
     curl_close($curl);
-    
+
     $parsed = json_decode($result);
     if (!isset($parsed->success) || !$parsed->success) {
         {
@@ -62,7 +62,8 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                     'LAST_NAME' => $_REQUEST['surname'],
                     'POSITION' => $_REQUEST['title'],
                     'COMPANY' => $_REQUEST['company'],
-                    'SUMMIT' => $summit['ID']
+                    'SUMMIT' => $summit['ID'],
+                    'PROMO_CODE' => $_REQUEST['promocode']
                 ]
             ]);
             echo json_encode([
@@ -81,10 +82,25 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'phone' => $_REQUEST['phone'],
                 'company' => $_REQUEST['company'],
                 'position' => $_REQUEST['title'],
-                'summit' => $summit['NAME']
+                'summit' => $summit['NAME'],
+                //'promocode' => $_REQUEST['promocode'],
             ];
-            
+            //AddMessage2Log('$data '.print_r($data, true),'');
+            //AddMessage2Log('ADMINISTRATION_EMAIL '.print_r(ADMINISTRATION_EMAIL, true),'');
+            AddMessage2Log('works0');
+            $message = "Line 1\r\nLine 2\r\nLine 3";
+
+            // На случай если какая-то строка письма длиннее 70 символов мы используем wordwrap()
+            $message = wordwrap($message, 70, "\r\n");
+
+            // Отправляем
+            mail('dr.nightingale@mail.ru', 'My Subject', $message);
+            AddMessage2Log('works1');
+
             $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
+
+            AddMessage2Log('$result '.print_r($result, true),'');
+            AddMessage2Log('works2');
         } else {
             echo json_encode([
                 'success' => false,
@@ -94,7 +110,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     }
 }
 else
-{  
+{
     echo json_encode([
         'success' => false,
         'message' => $messages['empty']
