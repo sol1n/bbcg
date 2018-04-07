@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 <section id="summit-registration-block" class="summit-registration-block">
@@ -88,6 +88,16 @@
                                 <? endif ?>
                             </div>
                         </div>
+                        <? if ($arResult['ID'] == 1): ?>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="m-b">
+                                    <label class="form-label">
+                                        <?=Loc::GetMessage('PROMO_CODE', [], $arParams['LANG'])?>
+                                    </label>
+                                    <input type="text" name="promocode" class="form-input">
+                                </div>
+                            </div>
+                        <? endif ?>
                     </div>
                     <div class="submit-registration-block-form-footer">
                         <div class="row">
@@ -96,7 +106,7 @@
                                     <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', ['NAME' => $arResult['CONTACT']['PROPERTY_FIO_VALUE']], $arParams['LANG'])?>
                                 </div>
                             </div>
-   
+
                             <div class="col-xs-12 col-sm-6">
                                 <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
                                     <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
