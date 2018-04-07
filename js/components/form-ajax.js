@@ -71,7 +71,6 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            console.log(data);/*!*/
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {

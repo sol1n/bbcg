@@ -1,4 +1,4 @@
-<?define("LOG_FILENAME", "log_ne.txt");
+<?
 define('STOP_STATISTICS', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
@@ -85,10 +85,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'summit' => $summit['NAME'],
                 'promocode' => $_REQUEST['promocode'],
             ];
-            //AddMessage2Log('$data '.print_r($data, true),'');
-            //AddMessage2Log('ADMINISTRATION_EMAIL '.print_r(ADMINISTRATION_EMAIL, true),'');
             $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
-            AddMessage2Log('$result '.print_r($result, true),'');
         } else {
             echo json_encode([
                 'success' => false,
