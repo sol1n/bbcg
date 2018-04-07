@@ -83,24 +83,12 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'company' => $_REQUEST['company'],
                 'position' => $_REQUEST['title'],
                 'summit' => $summit['NAME'],
-                //'promocode' => $_REQUEST['promocode'],
+                'promocode' => $_REQUEST['promocode'],
             ];
             //AddMessage2Log('$data '.print_r($data, true),'');
             //AddMessage2Log('ADMINISTRATION_EMAIL '.print_r(ADMINISTRATION_EMAIL, true),'');
-            AddMessage2Log('works0');
-            $message = "Line 1\r\nLine 2\r\nLine 3";
-
-            // На случай если какая-то строка письма длиннее 70 символов мы используем wordwrap()
-            $message = wordwrap($message, 70, "\r\n");
-
-            // Отправляем
-            mail('dr.nightingale@mail.ru', 'My Subject', $message);
-            AddMessage2Log('works1');
-
             $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
-
             AddMessage2Log('$result '.print_r($result, true),'');
-            AddMessage2Log('works2');
         } else {
             echo json_encode([
                 'success' => false,
