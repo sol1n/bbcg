@@ -70,6 +70,15 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
     <div class="form-group">
         <div class="form-control form-control-checkbox">
+            <input name="mailing" type="checkbox" id="registration-form-mailing">
+            <label for="registration-form-mailing">
+                Подписаться на почтовую рассылку
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-control form-control-checkbox">
             <label for="registration-form-agreement">
                 Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href="/eula/" target="_blank">Пользовательского&nbsp;соглашения</a> и даю согласие на обработку персональных данных.
             </label>

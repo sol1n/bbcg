@@ -93,12 +93,12 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                 $USER->Logout();
                 $u = new CUser;
 
-
                 $fields = [
                     'SECOND_NAME' => $_POST['middle_name'],
                     'PERSONAL_PHONE' => $_POST['phone'],
                     'WORK_COMPANY' => $_POST['organisation'],
                     'WORK_POSITION' => $_POST['title'],
+                    'UF_SUBSCRIBE' => (isset($_POST['mailing']) && $_POST['mailing'] == 'on') ? 1 : 0
                 ];
 
                 $u->Update($id, $fields);
@@ -108,13 +108,22 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                     'message' => $messages['success']
                 ]);
 
-                fastcgi_finish_request();
+                if (function_exists('fastcgi_finish_request')) {
+                    fastcgi_finish_request();
+                }
+
                 $data = [
                     'name' => $_POST['first_name'],
                     'email' => $_POST['email'],
                     'password' => $password,
+                    'firstname' => $_POST['first_name'],
+                    'lastname' => $_POST['last_name'],
+                    'phone' => $_POST['phone'],
+                    'company' => $_POST['organisation'] ?? '',
+                    'position' => $_POST['title'] ?? ''
                 ];
                 sendEmail($_POST['email'], $messages['theme'], $messages['template'], $data);
+                sendEmail(ADMINISTRATION_EMAIL, 'Регистрация пользователя', 'user/register-to-admin', $data);
             }   
         }
     }
