@@ -31,7 +31,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
         "USE_PERMISSIONS" => "N",
         "GROUP_PERMISSIONS" => Array(),
-        "CACHE_TYPE" => "A",
+        "CACHE_TYPE" => "N",
         "CACHE_TIME" => "360",
         "CACHE_GROUPS" => "Y",
         "DISPLAY_TOP_PAGER" => "N",

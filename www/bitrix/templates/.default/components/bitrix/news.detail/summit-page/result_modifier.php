@@ -5,7 +5,7 @@
 
 	$end = FormatDate('d.m', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
     $begin = FormatDate('d.m', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-    
+
     if ($begin == $end) {
         //One-day summit
         $arResult['DAYS'] = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
@@ -34,10 +34,12 @@
     	['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $arParams['PAGE'], 'PROPERTY_SUMMIT' => $arResult['ID']],
     	false,
     	false,
-    	['ID', 'NAME', 'DETAIL_TEXT']
+    	['ID', 'NAME', 'DETAIL_TEXT', 'PROPERTY_ACCESS_CODE']
     );
     if ($page = $res->Fetch()) {
+    	$arResult['PAGE_ID'] = $page['ID'];
     	$arResult['NAME'] = $page['NAME'];
     	$arResult['~DETAIL_TEXT'] = $page['DETAIL_TEXT'];
+    	$arResult['ACCESS_CODE'] = $page['PROPERTY_ACCESS_CODE_VALUE'];
     }
 ?>

@@ -9,6 +9,8 @@
                     formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
+                $form.find('.js-form-messages').removeClass('active');
+
                 if (validation && $form.valid()) {
                     checkCaptcha();
                 } else if (!validation) {
@@ -40,15 +42,15 @@
                             submitForm();
                         }
                         if (!('captchaID' in window)) {
-                            window.captchaID = grecaptcha.render('recaptcha-placeholder', { 
-                              'sitekey' : key, 
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder', {
+                              'sitekey' : key,
                               'callback' : verifyCallback,
                               'size' : 'invisible'
                             });
                         } else {
                             $('body').append('<div id="recaptcha-placeholder-' + window.captchaID + '"></div>');
-                            window.captchaID = grecaptcha.render('recaptcha-placeholder-' + window.captchaID, { 
-                              'sitekey' : key, 
+                            window.captchaID = grecaptcha.render('recaptcha-placeholder-' + window.captchaID, {
+                              'sitekey' : key,
                               'callback' : verifyCallback,
                               'size' : 'invisible'
                             });
@@ -61,7 +63,6 @@
 
                 function submitForm() {
                     showOverlay();
-
                     $.ajax({
                         url: url,
                         type: method,
@@ -70,12 +71,18 @@
                         contentType: false,
                         cache: false,
                         dataType: 'json'
-                    }).done(function (data) {
+                    }).done(function (data) {console.log(data);
                         if (data && data.success) {
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
+                            if(data.reload){
+                                setTimeout(function() {window.location.reload();}, 5000);
+                            }
                         } else if (data && data.message) {
                             $form.find('.js-form-messages').addClass('active').html(data.message);
+                            if(data.denied){
+                                $form.find('button[type="submit"]').prop('disabled', true);
+                            }
                             if (data.errors) {
                                 data.errors.forEach(function (error) {
                                     var $field = $('[name="' + error.name + '"]');
