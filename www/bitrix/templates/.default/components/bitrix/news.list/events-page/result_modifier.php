@@ -191,7 +191,9 @@
 
             $areasPull = [];
             foreach ($item['PROPERTIES']['AREA']['VALUE'] as $area) {
-                $areasPull[] = $arResult['AREAS'][$area]['NAME'];
+                if (trim($arResult['AREAS'][$area]['NAME'])) {
+                    $areasPull[] = $arResult['AREAS'][$area]['NAME'];
+                }
             }
             $item['area'] = implode(', ', $areasPull);
 
@@ -217,6 +219,10 @@
             }
             $arResult['GLOBALS']['ITEMS'][] = $item;
         }
+
+        $item['href'] = $arParams['LANG'] == 'en' 
+                ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
+                : "/{$arParams['SUMMIT']}/events/{$item['ID']}/";
 
         $arResult['MOBILE_ITEMS'][] = $item;
     }
