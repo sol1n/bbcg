@@ -40,6 +40,10 @@
     	$arResult['PAGE_ID'] = $page['ID'];
     	$arResult['NAME'] = $page['NAME'];
     	$arResult['~DETAIL_TEXT'] = $page['DETAIL_TEXT'];
-    	$arResult['ACCESS_CODE'] = $page['PROPERTY_ACCESS_CODE_VALUE'];
+    	$arResult['ACCESS_CODE'] = $page['PROPERTY_ACCESS_CODE_VALUE'];//код доступа к странице
     }
+
+	$arResult['SESSION_ACCESS'] = $arParams['SESSION_ACCESS'];
+	$arResult['CACHE_ACCESS'] = $arParams['CACHE_ACCESS'];
+
 ?>

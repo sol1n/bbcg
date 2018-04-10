@@ -22779,8 +22779,6 @@ return $;
                     formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
-                $form.find('.js-form-messages').removeClass('active');
-
                 if (validation && $form.valid()) {
                     checkCaptcha();
                 } else if (!validation) {
@@ -22833,6 +22831,7 @@ return $;
 
                 function submitForm() {
                     showOverlay();
+
                     $.ajax({
                         url: url,
                         type: method,
@@ -22841,18 +22840,12 @@ return $;
                         contentType: false,
                         cache: false,
                         dataType: 'json'
-                    }).done(function (data) {console.log(data);
+                    }).done(function (data) {
                         if (data && data.success) {
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
-                            if(data.reload){
-                                setTimeout(function() {window.location.reload();}, 5000);
-                            }
                         } else if (data && data.message) {
                             $form.find('.js-form-messages').addClass('active').html(data.message);
-                            if(data.denied){
-                                $form.find('button[type="submit"]').prop('disabled', true);
-                            }
                             if (data.errors) {
                                 data.errors.forEach(function (error) {
                                     var $field = $('[name="' + error.name + '"]');

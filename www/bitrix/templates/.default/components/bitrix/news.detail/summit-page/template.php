@@ -6,45 +6,11 @@
         <h1 class="main-heading-title">О саммите</h1>
     </div>
 </div>
-<?
-function getRealIP() {
-  $ip = false;
-  if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-     $ips = explode (', ', $_SERVER['HTTP_X_FORWARDED_FOR']);
-     for ($i = 0; $i < count($ips); $i++) {
-        if (!preg_match("/^(10|172\\.16|192\\.168)\\./", $ips[$i])) {
-           $ip = $ips[$i];
-           break;
-        }
-     }
-  }
-  return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
-}
 
-$user_ip = getRealIP();
-print_r('IP '.$user_ip);
-$cacheTime = 3600;
-$cacheId = 'History_page_' . $arResult['PAGE_ID'] . '_' . $user_ip;
-$cachePath = '/';
-$obCache = new CPHPCache();
-
-if ($obCache->InitCache($cacheTime, $cacheId, $cachePath)) {
-    $cache_result = $obCache->GetVars();
-    $cache_try = $cache_result['TRY'];
-    $cache_access = $cache_result['ACCESS'];
-}
-
-print_r($cache_result);
-print_r($cache_access);
-
-//$obCache->Clean($cacheId, $cachePath);
-//unset($_SESSION['history-page']);
-print_r($_SESSION['history-page']);
-?>
 <div class="wrapper">
     <div class="news-item-wrapper">
         <div class="news-item m-t-xl m-b-xl">
-            <? if (empty($arResult['ACCESS_CODE']) || ($_SESSION['history-page'][$arResult['PAGE_ID']]['access'] == 'Y') || ($cache_access == 'Y')): ?>
+            <? if (empty($arResult['ACCESS_CODE']) || (($arResult['SESSION_ACCESS'] == 'Y') && ($arResult['CACHE_ACCESS'] == 'Y'))): ?>
                 <div class="news-item-content">
                     <h2 class="news-item-title">
                         <?=$arResult['NAME']?>
