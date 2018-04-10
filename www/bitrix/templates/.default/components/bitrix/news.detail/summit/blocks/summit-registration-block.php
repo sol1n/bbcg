@@ -88,16 +88,14 @@
                                 <? endif ?>
                             </div>
                         </div>
-                        <? if ($arResult['ID'] == 1): ?>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="m-b">
-                                    <label class="form-label">
-                                        <?=Loc::GetMessage('PROMO_CODE', [], $arParams['LANG'])?>
-                                    </label>
-                                    <input type="text" name="promocode" class="form-input">
-                                </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="m-b">
+                                <label class="form-label">
+                                    <?=Loc::GetMessage('PROMO_CODE', [], $arParams['LANG'])?>
+                                </label>
+                                <input type="text" name="promocode" class="form-input">
                             </div>
-                        <? endif ?>
+                        </div>
                     </div>
                     <div class="submit-registration-block-form-footer">
                         <div class="row">
