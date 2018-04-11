@@ -37,7 +37,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     ]));
     $result = curl_exec($curl);
     curl_close($curl);
-    
+
     $parsed = json_decode($result);
     if (!isset($parsed->success) || !$parsed->success) {
         {
@@ -62,7 +62,8 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                     'LAST_NAME' => $_REQUEST['surname'],
                     'POSITION' => $_REQUEST['title'],
                     'COMPANY' => $_REQUEST['company'],
-                    'SUMMIT' => $summit['ID']
+                    'SUMMIT' => $summit['ID'],
+                    'PROMO_CODE' => $_REQUEST['promocode']
                 ]
             ]);
             echo json_encode([
@@ -81,9 +82,9 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'phone' => $_REQUEST['phone'],
                 'company' => $_REQUEST['company'],
                 'position' => $_REQUEST['title'],
-                'summit' => $summit['NAME']
+                'summit' => $summit['NAME'],
+                'promocode' => $_REQUEST['promocode'],
             ];
-            
             $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
         } else {
             echo json_encode([
@@ -94,7 +95,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     }
 }
 else
-{  
+{
     echo json_encode([
         'success' => false,
         'message' => $messages['empty']

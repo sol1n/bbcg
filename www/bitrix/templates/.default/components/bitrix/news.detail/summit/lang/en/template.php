@@ -8,6 +8,7 @@
 	$MESS["EMAIL"] = "E-mail";
 	$MESS["COMPANY"] = "Company";
 	$MESS["POSITION"] = "Position";
+	$MESS["PROMO_CODE"] = "Promo code";
 	$MESS["WE_WILL_CONTACT_YOU"] = "By clicking the «Registration» button, I accept the <a href=\"/en/eula/\" target=\"_blank\">terms of the User Agreement</a> and consent to the processing of personal data.";
 	$MESS["ALTERNATIVE_REGISTRATION"] = "Alternative ways of registration";
 	$MESS["OR"] = "or";
