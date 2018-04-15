@@ -10,7 +10,7 @@
 <div class="wrapper">
     <div class="news-item-wrapper">
         <div class="news-item m-t-xl m-b-xl">
-            <? if (empty($arResult['ACCESS_CODE']) || (($arResult['SESSION_ACCESS'] == 'Y') && ($arResult['CACHE_ACCESS'] == 'Y'))): ?>
+            <? if (empty($arResult['ACCESS_CODE']) || ($arResult['SESSION_ACCESS'] == 'Y')): ?>
                 <div class="news-item-content">
                     <h2 class="news-item-title">
                         <?=$arResult['NAME']?>

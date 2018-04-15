@@ -4,21 +4,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 header('Content-type:application/json;charset=utf-8');
 
-/* функция для определения IP-aдреса */
-function getRealIP() {
-  $ip = false;
-  if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-     $ips = explode (', ', $_SERVER['HTTP_X_FORWARDED_FOR']);
-     for ($i = 0; $i < count($ips); $i++) {
-        if (!preg_match("/^(10|172\\.16|192\\.168)\\./", $ips[$i])) {
-           $ip = $ips[$i];
-           break;
-        }
-     }
-  }
-  return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
-}
-
 if ($_REQUEST['lang'] == 'en')
 {
     $messages = [
@@ -63,7 +48,7 @@ if ($_POST['code'] && $_POST['page'] && $_POST['g-token'])
         }
     } else {
         /* инициализация кэша */
-        $user_ip = getRealIP();
+        $user_ip = $_SERVER['REMOTE_ADDR'];
         $cacheTime = 3600;
         $cacheId = 'access-to-page-' . $_POST['page'] . '-' . $user_ip;
         $cachePath = '/';
@@ -84,7 +69,7 @@ if ($_POST['code'] && $_POST['page'] && $_POST['g-token'])
         if (($_SESSION['page-access'][$_POST['page']]['try'] > SESSION_TRY-1) || ($cache_try > IP_TRY-1)){
             echo json_encode([
                 'success' => false,
-                'message' => $messages['denied'],
+                'message' => $messages['denied']
             ]);
         } else {
             CModule::IncludeModule('iblock');
@@ -102,7 +87,7 @@ if ($_POST['code'] && $_POST['page'] && $_POST['g-token'])
                 if ($db_code == $_POST['code']) {
                     $_SESSION['page-access'][$_POST['page']]['access'] = 'Y';
                     $_SESSION['page-access'][$_POST['page']]['try'] = 0;
-                    $obCache->EndDataCache(array("TRY" => 0, "ACCESS" => 'Y'));
+                    $obCache->EndDataCache(array("TRY" => $cache_try));
                     echo json_encode([
                         'reload' => true
                     ]);
@@ -110,10 +95,10 @@ if ($_POST['code'] && $_POST['page'] && $_POST['g-token'])
                     $_SESSION['page-access'][$_POST['page']]['access'] = 'N';
                     $_SESSION['page-access'][$_POST['page']]['try']++;
                     $cache_try++;
-                    $obCache->EndDataCache(array("TRY" => $cache_try, "ACCESS" => 'N'));
+                    $obCache->EndDataCache(array("TRY" => $cache_try));
                     echo json_encode([
                         'success' => false,
-                        'message' => $messages['failure'],
+                        'message' => $messages['failure']
                     ]);
                 }
             } else{

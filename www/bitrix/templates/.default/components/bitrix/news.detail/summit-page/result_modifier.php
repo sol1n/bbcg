@@ -44,6 +44,4 @@
     }
 
 	$arResult['SESSION_ACCESS'] = $arParams['SESSION_ACCESS'];
-	$arResult['CACHE_ACCESS'] = $arParams['CACHE_ACCESS'];
-
 ?>
