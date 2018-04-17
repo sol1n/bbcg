@@ -1,6 +1,26 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/en/(.*)/about/(.*)/.*#",
+		"RULE" => "summit=\$1&page=\$2",
+		"PATH" => "/en/summits/page.php",
+	),
+	array(
+		"CONDITION" => "#^/en/(.*)/about/.*#",
+		"RULE" => "summit=\$1",
+		"PATH" => "/en/summits/about.php",
+	),
+	array(
+		"CONDITION" => "#^/en/(.*)/participants/.*#",
+		"RULE" => "summit=\$1",
+		"PATH" => "/en/summits/participants.php",
+	),
+	array(
+		"CONDITION" => "#^/en/(.*)/contacts/.*#",
+		"RULE" => "summit=\$1",
+		"PATH" => "/en/summits/contacts.php",
+	),
+	array(
 		"CONDITION" => "#^/events/([0-9a-zA-Z_-]*)/.*#",
 		"RULE" => "code=\$1",
 		"PATH" => "/events/redirect.php",
@@ -69,7 +89,7 @@ $arUrlRewrite = array(
 		"CONDITION" => "#^/en/(.*)/events/([0-9]+)/.*#",
 		"RULE" => "summit=\$1&id=\$2",
 		"PATH" => "/en/summits/events/detail.php",
-	),	
+	),
 	array(
 		"CONDITION" => "#^/en/(.*)/events/(.*)/.*#",
 		"RULE" => "summit=\$1&date=\$2",
@@ -89,7 +109,7 @@ $arUrlRewrite = array(
 		"CONDITION" => "#^/(.*)/events/([0-9]+)/.*#",
 		"RULE" => "summit=\$1&id=\$2",
 		"PATH" => "/summits/events/detail.php",
-	),	
+	),
 	array(
 		"CONDITION" => "#^/(.*)/events/(.*)/.*#",
 		"RULE" => "summit=\$1&date=\$2",
