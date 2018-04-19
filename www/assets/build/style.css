@@ -3917,6 +3917,9 @@ body {
   color: #2b2a29;
 }
 /* MARGINS & PADDINGS */
+.p-none {
+  padding: 0 !important;
+}
 .p-xxs {
   padding: 5px;
 }

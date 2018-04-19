@@ -5,6 +5,26 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 <?
+    if ($USER->IsAdmin()) {
+        $session_access = 'Y';
+    } else {
+        CModule::IncludeModule('iblock');
+        $res = CIBlockElement::GetList(
+            ['ID' => 'ASC'],
+            ['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $_REQUEST['page']],
+            false,
+            false,
+            ['ID']
+        );
+        if ($page = $res->Fetch()) {
+            $result_page['PAGE_ID'] = $page['ID'];
+        }
+
+        if (isset($_SESSION['page-access'][$result_page['PAGE_ID']])){
+            $session_access = $_SESSION['page-access'][$result_page['PAGE_ID']]['access'];
+        }
+    }
+
     $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-page', Array (
         "USE_SHARE" => "N",
         "AJAX_MODE" => "N",
@@ -38,7 +58,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
-        "PAGE" => $_REQUEST['page']
+        "PAGE" => $_REQUEST['page'],
+        "SESSION_ACCESS" => $session_access,
     ), false);
 ?>
 
