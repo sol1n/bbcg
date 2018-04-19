@@ -36,7 +36,12 @@ mysql-password.txt
 /www/bitrix/managed_cache
 /www/bitrix/backup
 /www/bitrix/cache
-/www/bitrix/php_interface
+/www/bitrix/php_interface/after_connect.php
+/www/bitrix/php_interface/after_connect_d7.php
+/www/bitrix/php_interface/dbconn.php
+/www/bitrix/php_interface/init.php
+/www/bitrix/php_interface/redirects.php
+/www/bitrix/php_interface/sessions.php
 /www/bitrix/templates/.default/ajax
 /www/bitrix/templates/.default/lang
 /www/bitrix/templates/.default/page_templates
@@ -57,3 +62,4 @@ mysql-password.txt
 **/.access.php
 **/.DS_Store
 **/*.log
+**/.htaccess

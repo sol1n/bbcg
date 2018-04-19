@@ -17,8 +17,8 @@
         <?$APPLICATION->IncludeComponent("bitrix:menu", "main-header-menu", Array("ROOT_MENU_TYPE" => "top"), false);?>
 
         <div class="main-header-lang">
-            <a href="/" class="main-header-lang-item">Рус</a>
-            <a href="/en/" class="main-header-lang-item active">Eng</a>
+            <a href="<?=localizeUrl($_SERVER['REQUEST_URI'], 'ru'); ?>" class="main-header-lang-item">Рус</a>
+            <a href="<?=localizeUrl($_SERVER['REQUEST_URI'], 'en'); ?>" class="main-header-lang-item active">Eng</a>
         </div>
 
         <? if ($USER->IsAuthorized()): ?>
