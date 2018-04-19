@@ -1,3 +1,6 @@
+<? 
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="main-heading main-heading-<?=$arResult['COLOR']?> program-table-main-heading">
     <div class="wrapper">
         <h1 class="main-heading-title"><?=$arResult['NAME']?></h1>
@@ -19,7 +22,7 @@
 
                 <div class="news-item-share">
                     <div class="news-item-share-title">
-                        Поделиться
+                        <?=Loc::GetMessage('SHARE', [], $arParams['LANG'])?>
                     </div>
                     <div class="share-block">
                         <a href="#" target="_blank" data-share="vk" class="share-block-item">

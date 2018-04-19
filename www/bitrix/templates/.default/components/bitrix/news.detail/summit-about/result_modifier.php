@@ -9,7 +9,10 @@
     if ($begin == $end) {
         //One-day summit
         $arResult['DAYS'] = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-        $arResult['MONTH'] = FormatDate('F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+        $arResult['MONTH'] = ($arParams['LANG'] == 'en') 
+            ? mb_strtolower(PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'F'))
+            : mb_strtolower(FormatDate('F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
     } else {
         $end = FormatDate('m', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
         $begin = FormatDate('m', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
@@ -19,12 +22,14 @@
             $endDay = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             $beginDay = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             $arResult['DAYS'] = "$beginDay – $endDay";
-            $arResult['MONTH'] = FormatDate('F', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+            $arResult['MONTH'] = ($arParams['LANG'] == 'en')
+                ? mb_strtolower(PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'F'))
+                : mb_strtolower(FormatDate('F', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
         } else {
             //Start and end dates are in different months
             $endDay = FormatDate('j.M', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             $beginDay = FormatDate('j.M', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
-            $arResult['DAYS'] = "$beginDay – $endDay";
+            $arResult['DAYS'] = mb_strtolower("$beginDay – $endDay");
             $arResult['MONTH'] = '';
         }
     }
@@ -34,10 +39,21 @@
     	['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $arParams['PAGE_CODE'], 'PROPERTY_SUMMIT' => $arResult['ID']],
     	false,
     	false,
-    	['ID', 'NAME', 'DETAIL_TEXT']
+    	['ID', 'NAME', 'DETAIL_TEXT', 'PROPERTY_EN_NAME', 'PROPERTY_EN_DETAIL_TEXT']
     );
     if ($override = $res->Fetch()) {
-    	$arResult['NAME'] = $override['NAME'];
-    	$arResult['~DETAIL_TEXT'] = $override['DETAIL_TEXT'];
+    	$arResult['NAME'] = ($arParams['LANG'] == 'en' and !empty($override['PROPERTY_EN_NAME_VALUE'])) 
+            ? $override['PROPERTY_EN_NAME_VALUE'] 
+            : $override['NAME'];
+        $arResult['~DETAIL_TEXT'] = ($arParams['LANG'] == 'en' and !empty($override['PROPERTY_EN_DETAIL_TEXT_VALUE'])) 
+            ? $override['PROPERTY_EN_DETAIL_TEXT_VALUE']['TEXT']
+            : $override['DETAIL_TEXT'];
+    } else {
+        if (isset($arResult['PROPERTIES']['EN_NAME']['VALUE']) and !empty($arResult['PROPERTIES']['EN_NAME']['VALUE'])) {
+            $arResult['NAME'] = $arResult['PROPERTIES']['EN_NAME']['VALUE'];
+        }
+        if (isset($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) and !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'])) {
+            $arResult['~DETAIL_TEXT'] = $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'];
+        }
     }
 ?>

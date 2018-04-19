@@ -20,7 +20,7 @@
 
     if ($summit) {
     	    global $aboutPages;
-			$aboutPages = ['PROPERTY_SUMMIT' => $summit['ID'], '!CODE' => 'about'];
+			$aboutPages = ['PROPERTY_SUMMIT' => $summit['ID'], '!CODE' => ['about', 'participants']];
 			$APPLICATION->IncludeComponent(
 			    "bitrix:news.list",
 			    "about-pages",

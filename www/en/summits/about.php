@@ -39,6 +39,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
         "PAGE_CODE" => "about",
+        "LANG" => "en"
     ), false);
 ?>
 

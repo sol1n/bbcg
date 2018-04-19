@@ -5,7 +5,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 <?
-    $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-about', Array (
+    $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-page', Array (
         "USE_SHARE" => "N",
         "AJAX_MODE" => "N",
         "IBLOCK_TYPE" => "content",
@@ -39,6 +39,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
         "PAGE_CODE" => "participants",
+        "LANG" => "en"
     ), false);
 ?>
 

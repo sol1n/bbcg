@@ -38,6 +38,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "DISPLAY_BOTTOM_PAGER" => "N",
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
+        "LANG" => "en",
         "PAGE" => $_REQUEST['page']
     ), false);
 ?>
