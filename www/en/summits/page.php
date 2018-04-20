@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         CModule::IncludeModule('iblock');
         $res = CIBlockElement::GetList(
             ['ID' => 'ASC'],
-            ['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $_REQUEST['page']],
+            ['IBLOCK_ID' => PAGES_IBLOCK, 'ACTIVE' => 'Y', '=CODE' => $_REQUEST['page'], 'PROPERTY_SUMMIT' => $summit['ID']],
             false,
             false,
             ['ID']
