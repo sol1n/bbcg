@@ -98,7 +98,10 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                     'PERSONAL_PHONE' => $_POST['phone'],
                     'WORK_COMPANY' => $_POST['organisation'],
                     'WORK_POSITION' => $_POST['title'],
-                    'UF_SUBSCRIBE' => (isset($_POST['mailing']) && $_POST['mailing'] == 'on') ? 1 : 0
+                    'UF_SUBSCRIBE' => (isset($_POST['mailing']) && $_POST['mailing'] == 'on') ? 1 : 0,
+                    'WORK_PROFILE' => $_POST['work'],
+                    'WORK_DEPARTMENT' => $_POST['type'],
+
                 ];
 
                 $u->Update($id, $fields);
@@ -120,7 +123,9 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                     'lastname' => $_POST['last_name'],
                     'phone' => $_POST['phone'],
                     'company' => $_POST['organisation'] ?? '',
-                    'position' => $_POST['title'] ?? ''
+                    'position' => $_POST['title'] ?? '',
+                    'work' => $_POST['work'] ?? '',
+                    'type' => $_POST['type'] ?? '',
                 ];
                 sendEmail($_POST['email'], $messages['theme'], $messages['template'], $data);
                 sendEmail(ADMINISTRATION_EMAIL, 'Регистрация пользователя', 'user/register-to-admin', $data);
