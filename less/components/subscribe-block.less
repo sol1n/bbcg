@@ -1,0 +1,50 @@
+.subscribe-block {
+  background: linear-gradient(122deg,#fff,#fff 72%,#f6f8f9 0,#fafafa);
+  
+  & > .wrapper {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media (max-width: 800px) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+}
+
+.subscribe-block-downarrow {
+  & > .wrapper {
+    .block-triangle(#fff);
+  }
+}
+
+.subscribe-block-title {
+  .ff-gilroy-extrabold;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+.subscribe-block-subtitle {
+  margin-top: 10px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.43;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.subscribe-block-button {
+  padding-top: 30px;
+}

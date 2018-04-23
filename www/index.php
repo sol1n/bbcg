@@ -1,8 +1,12 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?> 
-
 	<? $APPLICATION->IncludeFile('/include/blocks/events-block.php'); ?>
+
+	<? if (is_null($user) or !isset($user['UF_SUBSCRIBE']) or ($user['UF_SUBSCRIBE'] != 1)): ?>
+		<? include($_SERVER['DOCUMENT_ROOT'] . '/include/blocks/subscribe-block.php'); ?>
+	<? endif ?>
+
 	<? $APPLICATION->IncludeFile('/include/blocks/about-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/summits-block.php'); ?>
 	<? $APPLICATION->IncludeFile('/include/blocks/speakers-block.php'); ?>

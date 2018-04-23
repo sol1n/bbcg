@@ -7,7 +7,7 @@
           return null;
       }
 
-      $rsUsers = CUser::GetList(($by="id"), ($order="desc"), ["ID" => $id], ['FIELDS' => ['ID', 'NAME', 'LAST_NAME', 'SECOND_NAME', 'LOGIN', 'EMAIL', 'PERSONAL_PHONE', 'PERSONAL_STREET', 'PERSONAL_BIRTHDAY', 'PERSONAL_STATE', 'PERSONAL_CITY', 'PERSONAL_GENDER', 'PERSONAL_PHOTO', 'WORK_POSITION', 'WORK_COMPANY', 'WORK_PROFILE'], 'SELECT' => []]);
+      $rsUsers = CUser::GetList(($by="id"), ($order="desc"), ["ID" => $id], ['FIELDS' => ['ID', 'NAME', 'LAST_NAME', 'SECOND_NAME', 'LOGIN', 'EMAIL', 'PERSONAL_PHONE', 'PERSONAL_STREET', 'PERSONAL_BIRTHDAY', 'PERSONAL_STATE', 'PERSONAL_CITY', 'PERSONAL_GENDER', 'PERSONAL_PHOTO', 'WORK_POSITION', 'WORK_COMPANY', 'WORK_PROFILE'], 'SELECT' => ['UF_SUBSCRIBE']]);
       if($user = $rsUsers->Fetch()){
         if (strlen($user['NAME']) > 0){
           $user['DISPLAY_NAME'] = trim($user['LAST_NAME'] . ' ' . $user['NAME']);
