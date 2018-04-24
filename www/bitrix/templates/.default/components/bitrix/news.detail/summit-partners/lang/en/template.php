@@ -1,3 +1,3 @@
 <?
-	$MESS["PARTNERS"] = "Parters";
+	$MESS["PARTNERS"] = "Partners";
 ?>
