@@ -21,6 +21,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? endif ?>
 
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/yandex-metrika.php"; ?>
 		
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 	</body>
