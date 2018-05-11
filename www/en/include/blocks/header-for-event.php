@@ -105,7 +105,7 @@
                     <a href="/en/login/" data-side-modal data-side-modal-url="/en/include/blocks/modal-login.php" data-side-modal-class="login-modal" data-side-modal-class="login-modal">
                         Login
                     </a>
-                    <a href="/en/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/en/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                    <a href="/en/<?=$summitCode?>/#summit-registration-block">
                         Registration
                     </a>
                 </div>

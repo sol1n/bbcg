@@ -13,7 +13,7 @@
                         <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                             Войти
                         </a>
-                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                        <a href="/<?=$summitCode?>/#summit-registration-block" onclick="$('.main-header-toggler').trigger('click')">
                             Регистрация
                         </a>
                     </div>
