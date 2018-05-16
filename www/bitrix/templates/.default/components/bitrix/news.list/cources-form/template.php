@@ -49,9 +49,9 @@
                                     <?=Loc::GetMessage('PHONE', [], $arParams['LANG'])?>
                                 </label>
                                 <? if (isset($arParams['USER']['PERSONAL_PHONE'])): ?>
-                                    <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" data-masked-input="+7 (000) 000-00-00" data-masked-input-placeholder="+7 (___) ___-__-__" data-masked-input-clearifnotmatch value="<?=$arParams['USER']['PERSONAL_PHONE']?>" required>
+                                    <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" value="<?=$arParams['USER']['PERSONAL_PHONE']?>" required>
                                 <? else: ?>
-                                    <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" data-masked-input="+7 (000) 000-00-00" data-masked-input-placeholder="+7 (___) ___-__-__" data-masked-input-clearifnotmatch required>
+                                    <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" required>
                                 <? endif ?>
                             </div>
                         </div>
