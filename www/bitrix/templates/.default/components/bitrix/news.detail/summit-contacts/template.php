@@ -17,7 +17,7 @@
                             </div>
                             <div class="contacts-block-item-content">
                                 <div class="contacts-block-item-title">
-                                    Наш новый физический адрес
+                                    Физический адрес
                                 </div>
                                 <div class="contacts-block-item-value">
                                     115114, г. Москва, Дербеневская наб., д. 11, БЦ «Полларс», корпус Б, офис Б-504

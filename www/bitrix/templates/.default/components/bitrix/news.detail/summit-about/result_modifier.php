@@ -49,10 +49,10 @@
             ? $override['PROPERTY_EN_DETAIL_TEXT_VALUE']['TEXT']
             : $override['DETAIL_TEXT'];
     } else {
-        if (isset($arResult['PROPERTIES']['EN_NAME']['VALUE']) and !empty($arResult['PROPERTIES']['EN_NAME']['VALUE'])) {
+        if ($arParams['LANG'] == 'en' and isset($arResult['PROPERTIES']['EN_NAME']['VALUE']) and !empty($arResult['PROPERTIES']['EN_NAME']['VALUE'])) {
             $arResult['NAME'] = $arResult['PROPERTIES']['EN_NAME']['VALUE'];
         }
-        if (isset($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) and !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'])) {
+        if ($arParams['LANG'] == 'en' and isset($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']) and !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'])) {
             $arResult['~DETAIL_TEXT'] = $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'];
         }
     }

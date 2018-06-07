@@ -5,7 +5,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 <?
-    $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-page', Array (
+    $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-about', Array (
         "USE_SHARE" => "N",
         "AJAX_MODE" => "N",
         "IBLOCK_TYPE" => "content",

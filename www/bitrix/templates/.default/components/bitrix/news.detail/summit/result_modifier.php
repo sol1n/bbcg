@@ -5,7 +5,7 @@
     if ($begin == $end) {
         //One-day summit
         if ($arParams['LANG'] == 'en') {
-            $arResult['DURATION'] = mb_strtolower(PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'j F'));
+            $arResult['DURATION'] = PHPFormatDateTime($arResult["PROPERTIES"]['END']['VALUE'], 'j F');
         } else {
             $arResult['DURATION'] = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
         }
@@ -22,7 +22,7 @@
                 $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
                 $beginDay = FormatDate('j', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             }
-            $arResult['DURATION'] = mb_strtolower("$beginDay – $endDay");
+            $arResult['DURATION'] = "$beginDay – $endDay";
         } else {
             //Start and end dates are in different months
             if ($arParams['LANG'] == 'en') {
@@ -32,7 +32,7 @@
                 $endDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
                 $beginDay = FormatDate('j F', MakeTimeStamp($arResult["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
             }
-            $arResult['DURATION'] = mb_strtolower("$beginDay – $endDay");
+            $arResult['DURATION'] = "$beginDay – $endDay";
         }
     }
 

@@ -20,7 +20,7 @@
                 <li 
                     <? if (CSite::InDir("/en/$summitCode/events/")): ?>class="acitve"<? endif ?>
                 >
-                    <a href="/en/<?$APPLICATION->ShowProperty('code')?>/events/">Program</a>
+                    <a href="/en/<?$APPLICATION->ShowProperty('code')?>/events/">Programme</a>
                 </li>
                 <li
                     <? if (CSite::InDir("/en/$summitCode/speakers/")): ?>class="acitve"<? endif ?>
