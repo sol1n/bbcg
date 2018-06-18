@@ -18,7 +18,7 @@
                     "FIELD_CODE" => array(),
                     "IBLOCK_ID" => SPEAKERS_IBLOCK,
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                    "NEWS_COUNT" => "6",
+                    "NEWS_COUNT" => "33",
                     "PAGER_SHOW_ALWAYS" => "N",
                     "PAGER_TEMPLATE" => "main",
                     "PARENT_SECTION" => "",
