@@ -13606,3 +13606,9 @@ body {
   line-height: 16px;
   color: #872742;
 }
+.team-block .speakers-block-card-title {
+  opacity: .9;
+}
+.team-block .speakers-block-card-title a {
+  color: #fff;
+}

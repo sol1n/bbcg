@@ -56,6 +56,7 @@ mysql-password.txt
 /www/include/academy/description-block.php
 /www/include/academy/promo-block.php
 /www/include/academy/recourse-block.php
+/www/include/team/text.php
 /www/en/.top.menu.php
 /www/en/.bottom.menu.php
 **/.section.php
