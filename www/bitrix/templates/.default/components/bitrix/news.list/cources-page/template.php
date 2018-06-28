@@ -1,15 +1,10 @@
 <? 
     use \Bitrix\Main\Localization\Loc;
 ?>
-<section id="academy-programm" class="programs-block p-b-xl">
     <div class="wrapper">
         <h3 class="programs-block-title">
-            <?=$arParams['TITLE']?>
+            <?=$arParams['NAME']?>
         </h3>
-        <div class="programs-block-subtitle">
-            <?=$arParams['SUBTITLE']?>
-        </div>
-
         <div class="programs-block-cards m-t-md">
             <? foreach ($arResult['ITEMS'] as $item): ?>
                 <? $hot = $item['PROPERTIES']['HOT']['VALUE'] ? 'programs-block-card-hot' : '' ?>
@@ -48,4 +43,3 @@
             </div>
         <? endif ?>
     </div>
-</section>
