@@ -4,11 +4,11 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
 <? $APPLICATION->IncludeFile('/include/academy/promo-block.php'); ?>
 
-<section id="academy-programm" class="programs-block p-b-xl">
+<section id="academy-program" class="programs-block p-b-xl">
 
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.section.list", 
-        "academy-programm",
+        "academy-program",
         Array(
             "VIEW_MODE" => "TEXT",
             "SHOW_PARENT_NAME" => "N",
