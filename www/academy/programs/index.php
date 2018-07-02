@@ -2,8 +2,6 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
-<? $APPLICATION->IncludeFile('/include/academy/promo-block.php'); ?>
-
 <section id="academy-program" class="programs-block p-b-xl">
 
     <?$APPLICATION->IncludeComponent(
@@ -34,11 +32,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     </div>
 
 </section>
-
-<? $APPLICATION->IncludeFile('/include/academy/speakers-academy-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/news-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/registration-block.php'); ?>
-<? $APPLICATION->IncludeFile('/include/academy/contacts-block.php'); ?>
 
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
