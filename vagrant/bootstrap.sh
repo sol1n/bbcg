@@ -60,6 +60,9 @@ sudo apt-get install php7.0-zip -y
 sudo pecl channel-update pecl.php.net
 sudo pecl install zip
 
+sudo pear install Mail
+sudo pear install Net_SMTP
+
 # PHPUnit for testing our code.
 wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
