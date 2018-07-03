@@ -8,7 +8,7 @@
       array(
         "IBLOCK_ID" => $arParams['IBLOCK_ID'],
         "NEWS_COUNT" => "30",
-        "SORT_BY1" => "SORT",
+        "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
         "FIELD_CODE" => array('DATE_CREATE', 'DATE_ACTIVE_FROM'),
         "PROPERTY_CODE" => array("*"),
