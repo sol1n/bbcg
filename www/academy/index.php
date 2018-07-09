@@ -26,6 +26,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             "CACHE_TIME" => "360000",
             "CACHE_NOTES" => "",
             "CACHE_GROUPS" => "Y",
+            "LANG" => 'ru'
         )       
     );?>
 
