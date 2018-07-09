@@ -12,6 +12,25 @@
 </div>
 <div class="side-modal-news-description">
     <?=$arResult['~DETAIL_TEXT']?>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="side-modal-news-buttons">
+            <a 
+                href="#" 
+                data-side-modal 
+                data-side-modal-url="<?=$arResult['REGISTRATION_URL']?>" 
+                data-side-modal-class="registration-modal"
+                data-side-modal-prevent-overlay-close 
+                data-side-modal-prevent-esc-close
+                class="button button-old-gold button-large-academy"
+            >
+                <span class="c-text">
+                    <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
 </div>
 
 <? if ($arResult['SPEAKERS']): ?>
@@ -50,19 +69,3 @@
         </ul>
     </div>
 <? endif ?>
-
-<div class="side-modal-news-buttons">
-	<a 
-		href="#" 
-		data-side-modal 
-		data-side-modal-url="<?=$arResult['REGISTRATION_URL']?>" 
-		data-side-modal-class="registration-modal"
-		data-side-modal-prevent-overlay-close 
-		data-side-modal-prevent-esc-close
-		class="button button-old-gold"
-	>
-        <span class="c-text">
-            <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
-        </span>
-    </a>
-</div>
