@@ -5335,6 +5335,7 @@ body {
 .programs-block-description {
   text-align: center;
   margin-top: 30px;
+  font-size: 19px;
 }
 .programs-block-cards {
   display: -webkit-box;
@@ -9429,6 +9430,9 @@ body {
   .about-academy-block-logo {
     display: block;
   }
+}
+.button-large-academy {
+  padding: 14px 90px;
 }
 .summit-text-block {
   background: linear-gradient(122deg, #ffffff 0%, #ffffff 72%, #f6f8f9 72%, #fafafa 100%);
