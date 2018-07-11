@@ -31,7 +31,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     );?>
 
     <div class="programs-block-description">
-        Вы можете скачать <a target="_blank" href="/upload/retail-academy-cources-2018.pdf">список программ на 2018 год</a> в формате pdf            
+        Вы можете скачать <a target="_blank" href="/upload/retail-academy-cources-2018.pdf">список ближайших программ на 2018 год</a> в формате pdf            
     </div>
 
 </section>

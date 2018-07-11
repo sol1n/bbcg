@@ -27,6 +27,7 @@
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
         'NAME' => $section['NAME'],
+        "LANG" => $arParams['LANG']
       ),
       false
     );?>
