@@ -1,5 +1,5 @@
 <?
-	$MESS["REGISTRATION"] = "Регистрация";
+	$MESS["REGISTRATION"] = "Заявка на участие";
 	$MESS["SELECT_NOMINATION"] = "Выберите номинацию";
 	$MESS["COMPANY"] = "Компания";
 	$MESS["CONTACTS"] = "Контактная информация";

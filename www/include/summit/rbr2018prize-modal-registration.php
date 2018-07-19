@@ -27,7 +27,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         "SET_TITLE" => "N",
         "SORT_BY1" => "NAME",
         "SORT_ORDER1" => "ASC",
-        "TITLE" => "Премия RBR 2018",
+        "TITLE" => "RETAIL BUSINESS RUSSIA AWARDS 2018",
         "USER" => user(),
         "LANG" => "ru",
     )

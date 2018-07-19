@@ -1,5 +1,5 @@
 <?
-	$MESS["REGISTRATION"] = "Registration";
+	$MESS["REGISTRATION"] = "Application for participation";
 	$MESS["SELECT_NOMINATION"] = "Select nomination";
 	$MESS["COMPANY"] = "Company";
 	$MESS["CONTACTS"] = "Contact details";

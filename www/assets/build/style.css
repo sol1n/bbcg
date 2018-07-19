@@ -13616,6 +13616,9 @@ body {
 .team-block .speakers-block-card-title a {
   color: #fff;
 }
+.rbr2018-modal {
+  width: 700px;
+}
 .rbr2018-modal .registration-modal-title {
   margin: 0 0 10px 0;
 }
