@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "rbr2018prize",
+    "rbr2018awards",
     Array(
         "ADD_SECTIONS_CHAIN" => "N",
         "CACHE_FILTER" => "N",
@@ -15,7 +15,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         "DISPLAY_BOTTOM_PAGER" => "N",
         "DISPLAY_TOP_PAGER" => "N",
         "FIELD_CODE" => array(),
-        "IBLOCK_ID" => RBR2018PRIZE_REQUESTS_IBLOCK,
+        "IBLOCK_ID" => RBR2018AWARDS_REQUESTS_IBLOCK,
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "NEWS_COUNT" => "64",
         "PAGER_SHOW_ALWAYS" => "N",

@@ -16,7 +16,7 @@
 </div>
 
 <form action="<?=$arResult['REGISTRATION_URL']?>" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
-    <input type="hidden" name="from" value="rbr2018prize">
+    <input type="hidden" name="from" value="rbr2018awards">
     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
 
     <div class="row">
@@ -60,26 +60,12 @@
                 <textarea name="why_deserves" class="form-input" required></textarea>
             </div>
         </div>
-        <?/*
-        <div class="col-xs-12 col-sm-6">
-            <div class="m-b">
-                <label class="form-label"><?=Loc::GetMessage('FILE', [], $arParams['LANG'])?></label>
-                <input type="file" name="file" id="file" class="rbr2018-inputfile" />
-                <label for="file"><?=Loc::GetMessage('CHOOSE_FILE', [], $arParams['LANG'])?></label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <p>
-                Вы можете загрузить файл размером до 5 Mb и расширением ...
-            </p>
-        </div>*/?>
         <div class="col-xs-12 col-sm-12">
             <div class="submit-registration-block-form-hint">
                 <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', [], $arParams['LANG'])?>
             </div>
         </div>
     </div>
-
 
     <div class="registration-form-submit">
         <button type="submit" class="button button-old-gold">
