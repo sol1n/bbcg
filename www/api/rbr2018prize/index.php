@@ -95,7 +95,7 @@ if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['w
             'CONTACTS' => $_REQUEST['contacts'],
             'WHY_DESERVES' => $_REQUEST['why_deserves'],
         ];
-        $result = sendEmail(TEST_EMAIL, 'Заявка на сайте', 'rbr2018prize/administration', $data, [], ['sol1n@mail.ru']);
+        $result = sendEmail(TEST_EMAIL, 'Заявка на сайте', 'rbr2018prize/administration', $data, [], []);
     }
 }
 else
