@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 
@@ -15,7 +15,7 @@
 <form action="<?=$arResult['REGISTRATION_URL']?>" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
     <input type="hidden" name="from" value="retail-academy">
     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-    
+
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="m-b">
