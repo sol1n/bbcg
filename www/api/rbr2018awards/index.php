@@ -24,7 +24,7 @@ else
 }
 
 $from = [
-    'rbr2018prize' => 'Премия RBR 2018',
+    'rbr2018awards' => 'Премия RBR 2018',
 ];
 
 if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['why_deserves'] && $_POST['g-token'])
@@ -70,7 +70,7 @@ if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['w
 
         $el = new CIblockElement;
         $result = $el->Add([
-            'IBLOCK_ID' => RBR2018PRIZE_REQUESTS_IBLOCK,
+            'IBLOCK_ID' => RBR2018AWARDS_REQUESTS_IBLOCK,
             'NAME' => 'Заявка на участие в Премии RBR 2018',
             'PREVIEW_TEXT' => $_REQUEST['contacts'],
             'DETAIL_TEXT' => $_REQUEST['why_deserves'],
@@ -95,7 +95,7 @@ if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['w
             'CONTACTS' => $_REQUEST['contacts'],
             'WHY_DESERVES' => $_REQUEST['why_deserves'],
         ];
-        $result = sendEmail(TEST_EMAIL, 'Заявка на сайте', 'rbr2018prize/administration', $data, [], []);
+        $result = sendEmail(RBR2018AWARDS_EMAIL, 'Заявка на сайте', 'rbr2018awards/administration', $data, [], ['sol1n@mail.ru', 'dr.nightingale@mail.ru']);
     }
 }
 else
