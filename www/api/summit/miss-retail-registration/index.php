@@ -97,7 +97,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             'position' => $_REQUEST['title'],
             'program' => $program
         ];
-        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'academy/administration', $data, [], ['sol1n@mail.ru']);
+        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'academy/administration', $data, [], []);
     }
 }
 else
