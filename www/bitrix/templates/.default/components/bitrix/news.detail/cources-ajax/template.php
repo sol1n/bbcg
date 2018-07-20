@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 <? if ($arResult['PREVIEW_PICTURE']): ?>
@@ -20,10 +20,10 @@
     <? if (!empty($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"])): ?>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="side-modal-news-buttons">
-        
-                <a 
-                    href="<?=CFile::GetPath($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"]);?>" 
-                    class="button button-old-gold button-large-academy"               
+
+                <a
+                    href="<?=CFile::GetPath($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"]);?>"
+                    class="button button-old-gold button-large-academy"
                 >
                     <span class="c-text">
                        Полный курс
@@ -35,12 +35,12 @@
 
    <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="side-modal-news-buttons">
-            <a 
-                href="#" 
-                data-side-modal 
-                data-side-modal-url="<?=$arResult['REGISTRATION_URL']?>" 
+            <a
+                href="#"
+                data-side-modal
+                data-side-modal-url="<?=$arResult['REGISTRATION_URL']?>"
                 data-side-modal-class="registration-modal"
-                data-side-modal-prevent-overlay-close 
+                data-side-modal-prevent-overlay-close
                 data-side-modal-prevent-esc-close
                 class="button button-old-gold button-large-academy"
             >
