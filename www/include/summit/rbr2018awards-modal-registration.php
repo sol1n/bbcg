@@ -1,29 +1,26 @@
 <?
-    use \Bitrix\Main\Localization\Loc;
+define('STOP_STATISTICS', true);
+require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 ?>
-
-<? $user = $arParams['USER']; ?>
 
 <div class="registration-modal-logo">
     <img src="/assets/images/summits-logo/retail-business-russia-label.svg" alt="RETAIL BUSINESS RUSSIA">
 </div>
-
 <div class="registration-modal-title ">
-    <?=$arParams['TITLE']?>
+    RETAIL BUSINESS RUSSIA AWARDS 2018
 </div>
 <div class="registration-modal-subtitle ">
-    <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+    Заявка на участие
 </div>
 
-<form action="<?=$arResult['REGISTRATION_URL']?>" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
+<form action="/api/rbr2018awards/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
     <input type="hidden" name="from" value="rbr2018awards">
     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-
     <div class="row">
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    <?=Loc::GetMessage('SELECT_NOMINATION', [], $arParams['LANG'])?>
+                    Выберите номинацию
                 </label>
                 <div class="form-select">
                     <select name="nomination">
@@ -39,7 +36,7 @@
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    <?=Loc::GetMessage('COMPANY', [], $arParams['LANG'])?>
+                    Компания
                 </label>
                 <input type="text" name="company" class="form-input" required>
             </div>
@@ -47,7 +44,7 @@
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    <?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?>
+                    Контактная информация
                 </label>
                 <textarea name="contacts" class="form-input" required></textarea>
             </div>
@@ -55,21 +52,20 @@
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    <?=Loc::GetMessage('WHY_DESERVES', [], $arParams['LANG'])?>
+                    Объясните, почему ваша компания заслуживает этой награды
                 </label>
                 <textarea name="why_deserves" class="form-input" required></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12">
             <div class="submit-registration-block-form-hint">
-                <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', [], $arParams['LANG'])?>
+                Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
             </div>
         </div>
     </div>
-
     <div class="registration-form-submit">
         <button type="submit" class="button button-old-gold">
-            <span class="c-text"><?=Loc::GetMessage('DO_REGISTER', [], $arParams['LANG'])?></span>
+            <span class="c-text">Зарегистрироваться</span>
         </button>
     </div>
 </form>
