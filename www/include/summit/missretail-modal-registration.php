@@ -168,7 +168,7 @@ $arParams['USER'] = user();
     </div>
     <div class="registration-form-submit">
         <button type="submit" class="button button-red">
-            <span class="c-text">Подать заявку</span>
+            Подать заявку
         </button>
     </div>
 </form>
