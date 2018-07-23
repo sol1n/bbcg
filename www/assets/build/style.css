@@ -13659,23 +13659,13 @@ body {
 .contestform-modal input[type="file"].bg-red + label:hover {
   background-color: #ad1b34;
   color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .contestform-modal input[type="file"] + label.error {
   border-color: #ad1b34;
-}
-.noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
 }
 .w700 {
   width: 700px;
