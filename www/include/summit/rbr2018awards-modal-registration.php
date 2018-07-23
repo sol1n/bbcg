@@ -9,7 +9,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 <div class="registration-modal-title ">
     RETAIL BUSINESS RUSSIA AWARDS 2018
 </div>
-<div class="registration-modal-subtitle ">
+<div class="registration-modal-subtitle">
     Заявка на участие
 </div>
 
@@ -64,8 +64,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         </div>
     </div>
     <div class="registration-form-submit">
-        <button type="submit" class="button button-old-gold">
-            <span class="c-text">Зарегистрироваться</span>
+        <button type="submit" class="button button-red">
+            <span class="c-text">Подать заявку</span>
         </button>
     </div>
 </form>
