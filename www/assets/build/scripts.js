@@ -22843,7 +22843,7 @@ return $;
                         if (data && data.success) {
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
-                        } else if (data && data.message) {
+                        } else if (data && data.message) {console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
                             if (data.errors) {
                                 data.errors.forEach(function (error) {
