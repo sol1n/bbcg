@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 
     if ($arResult['DETAIL_PICTURE']) {
@@ -20,9 +20,15 @@
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
             <div class="about-summit-block-button">
-                <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
-                    <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
-                </a>
+                <?
+                    $now_date = date('d.m.Y');
+                    $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
+                ?>
+                <? if(strtotime($now_date) < strtotime($end_date)): ?>
+                    <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
+                        <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                    </a>
+                <? endif; ?>
             </div>
         </div>
     </div>
