@@ -21,11 +21,11 @@
 	}
 
 	if ($arParams['LANG'] == 'en') {
-		$arResult['NAME'] = !empty($arResult['PROPERTIES']['EN_NAME']['VALUE']) 
-			? $arResult['PROPERTIES']['EN_NAME']['VALUE'] 
+		$arResult['NAME'] = !empty($arResult['PROPERTIES']['EN_NAME']['VALUE'])
+			? $arResult['PROPERTIES']['EN_NAME']['VALUE']
 			: $arResult['NAME'];
-		$arResult['~DETAIL_TEXT'] = !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']) 
-        	? $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'] 
+		$arResult['~DETAIL_TEXT'] = !empty($arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE'])
+        	? $arResult['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']
         	: $arResult['~DETAIL_TEXT'];
         if (count($arResult['PROPERTIES']['EN_THEMES'])) {
 			$arResult['PROPERTIES']['THEMES'] = $arResult['PROPERTIES']['EN_THEMES'];
@@ -46,7 +46,7 @@
 			$themes[$index] = $theme;
 		}
 	}
-	
+
 	if (is_array($arResult['PROPERTIES']['SPEAKERS']['VALUE']) && count($arResult['PROPERTIES']['SPEAKERS']['VALUE'])) {
 		$res = CIBlockElement::GetList(
 			['PROPERTY_LASTNAME' => 'ASC'],
@@ -83,4 +83,5 @@
 		    $arResult['SPEAKERS'][] = $speaker;
 		}
 	}
+    $arResult['HALL'] =  $arResult['PROPERTIES']['HALL']['VALUE'];
 ?>

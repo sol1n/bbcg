@@ -220,7 +220,7 @@
             $arResult['GLOBALS']['ITEMS'][] = $item;
         }
 
-        $item['href'] = $arParams['LANG'] == 'en' 
+        $item['href'] = $arParams['LANG'] == 'en'
                 ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
                 : "/{$arParams['SUMMIT']}/events/{$item['ID']}/";
 
@@ -238,6 +238,7 @@
     foreach ($arResult['GLOBALS']['ITEMS'] as $j => $item) {
         $begin = new DateTime($item['PROPERTIES']['BEGIN']['VALUE']);
         $end = new DateTime($item['PROPERTIES']['END']['VALUE']);
+        $hall = $item['PROPERTIES']['HALL']['VALUE'];
 
         $morning = new DateTime($arParams['DATE']);
         $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
@@ -260,13 +261,14 @@
             'offset' => $offset,
             'begin' => $item['begin'],
             'end' => $item['end'],
+            'hall' => $hall,
             'url' => $item['DETAIL_PAGE_URL'],
             'width' => $item['width'],
             'color' => $item['color'],
             'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
             'subtitle' => $item['subtitle'],
             'column-view' => $item['column-view'],
-            'href' => $arParams['LANG'] == 'en' 
+            'href' => $arParams['LANG'] == 'en'
                 ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
                 : "/{$arParams['SUMMIT']}/events/{$item['ID']}/"
         ];
@@ -278,6 +280,7 @@
         foreach ($area['ITEMS'] as $j => $item) {
             $begin = new DateTime($item['PROPERTIES']['BEGIN']['VALUE']);
             $end = new DateTime($item['PROPERTIES']['END']['VALUE']);
+            $hall = $item['PROPERTIES']['HALL']['VALUE'];
 
             $morning = new DateTime($arParams['DATE']);
             $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
@@ -300,12 +303,13 @@
                 'offset' => $offset,
                 'begin' => $item['begin'],
                 'end' => $item['end'],
+                'hall' => $hall,
                 'url' => $item['DETAIL_PAGE_URL'],
                 'width' => $item['width'],
                 'color' => $item['color'],
                 'open' => $item['PROPERTIES']['NOT_OPEN']['VALUE'] != 'Y',
                 'subtitle' => $item['subtitle'],
-                'href' => $arParams['LANG'] == 'en' 
+                'href' => $arParams['LANG'] == 'en'
                     ? "/en/{$arParams['SUMMIT']}/events/{$item['ID']}/"
                     : "/{$arParams['SUMMIT']}/events/{$item['ID']}/"
             ];
