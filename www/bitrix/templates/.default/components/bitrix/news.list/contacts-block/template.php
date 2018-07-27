@@ -1,10 +1,15 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
+?>
+<?
+    $title_add_padding = "";
+    if(strtotime($now_date) >= strtotime($end_date))//variables from about-summit-block.php(summit news.detail)
+        $title_add_padding = "p-t-xl";
 ?>
 <? if ($arResult["ITEMS"]): ?>
     <section class="summit-contacts-block">
         <div class="wrapper">
-            <h3 class="summit-contacts-block-title">
+            <h3 class="summit-contacts-block-title <?=$title_add_padding;?>">
                 <?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?>
             </h3>
 
