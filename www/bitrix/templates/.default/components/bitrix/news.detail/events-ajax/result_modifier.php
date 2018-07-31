@@ -83,5 +83,11 @@
 		    $arResult['SPEAKERS'][] = $speaker;
 		}
 	}
-    $arResult['HALL'] =  $arResult['PROPERTIES']['HALL']['VALUE'];
+    if ($arParams['LANG'] == 'en') {
+        $arResult['HALL'] = !empty($arResult['PROPERTIES']['EN_HALL']['VALUE'])
+            ? $arResult['PROPERTIES']['EN_HALL']['VALUE']
+            : $arResult['PROPERTIES']['HALL']['VALUE'];
+    } else {
+        $arResult['HALL'] = $arResult['PROPERTIES']['HALL']['VALUE'];
+    }
 ?>

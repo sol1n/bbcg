@@ -238,8 +238,13 @@
     foreach ($arResult['GLOBALS']['ITEMS'] as $j => $item) {
         $begin = new DateTime($item['PROPERTIES']['BEGIN']['VALUE']);
         $end = new DateTime($item['PROPERTIES']['END']['VALUE']);
-        $hall = $item['PROPERTIES']['HALL']['VALUE'];
-
+        if ($arParams['LANG'] == 'en') {
+            $hall = !empty($item['PROPERTIES']['EN_HALL']['VALUE'])
+                ? $item['PROPERTIES']['EN_HALL']['VALUE']
+                : $item['PROPERTIES']['HALL']['VALUE'];
+        } else {
+            $hall = $item['PROPERTIES']['HALL']['VALUE'];
+        }
         $morning = new DateTime($arParams['DATE']);
         $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
         $offset = $begin->format('i');
@@ -280,8 +285,13 @@
         foreach ($area['ITEMS'] as $j => $item) {
             $begin = new DateTime($item['PROPERTIES']['BEGIN']['VALUE']);
             $end = new DateTime($item['PROPERTIES']['END']['VALUE']);
-            $hall = $item['PROPERTIES']['HALL']['VALUE'];
-
+            if ($arParams['LANG'] == 'en') {
+                $hall = !empty($item['PROPERTIES']['EN_HALL']['VALUE'])
+                    ? $item['PROPERTIES']['EN_HALL']['VALUE']
+                    : $item['PROPERTIES']['HALL']['VALUE'];
+            } else {
+                $hall = $item['PROPERTIES']['HALL']['VALUE'];
+            }
             $morning = new DateTime($arParams['DATE']);
             $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
             $offset = $begin->format('i');
