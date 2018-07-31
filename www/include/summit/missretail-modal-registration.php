@@ -34,6 +34,28 @@ $arParams['USER'] = user();
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">
+                        Контактные данные
+                    </label>
+                    <input type="text" name="contacts" class="form-input" required>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+                <div class="m-b">
+                    <label class="form-label">
+                        Компания
+                    </label>
+                    <? if (isset($arParams['USER']['WORK_COMPANY'])): ?>
+                        <input type="text" name="company" class="form-input" value="<?=$arParams['USER']['WORK_COMPANY']?>" required>
+                    <? else: ?>
+                        <input type="text" name="company" class="form-input" required>
+                    <? endif ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-12">
+                <div class="m-b">
+                    <label class="form-label">
                         Дата рождения
                     </label>
                     <? if (isset($arParams['USER']['PERSONAL_BIRTHDAY'])): ?>
@@ -50,20 +72,6 @@ $arParams['USER'] = user();
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">
-                        Должность
-                    </label>
-                    <? if (isset($arParams['USER']['WORK_POSITION'])): ?>
-                        <input type="text" name="position" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
-                    <? else: ?>
-                        <input type="text" name="position" class="form-input" required>
-                    <? endif ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <div class="col-xs-12 col-sm-12">
-                <div class="m-b">
-                    <label class="form-label">
                         Образование
                     </label>
                     <input type="text" name="education" class="form-input" required>
@@ -72,21 +80,13 @@ $arParams['USER'] = user();
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">
-                        Компания
+                        Должность
                     </label>
-                    <? if (isset($arParams['USER']['WORK_COMPANY'])): ?>
-                        <input type="text" name="company" class="form-input" value="<?=$arParams['USER']['WORK_COMPANY']?>" required>
+                    <? if (isset($arParams['USER']['WORK_POSITION'])): ?>
+                        <input type="text" name="position" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
                     <? else: ?>
-                        <input type="text" name="company" class="form-input" required>
+                        <input type="text" name="position" class="form-input" required>
                     <? endif ?>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12">
-                <div class="m-b">
-                    <label class="form-label">
-                        Стаж работы в компании
-                    </label>
-                    <input type="text" name="work_experience" class="form-input" required>
                 </div>
             </div>
         </div>
