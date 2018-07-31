@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 header('Content-type:application/json;charset=utf-8');
 
-define('MAX_SIZE', 5242880);//max file size (byte)
+define('MAX_SIZE', 15728640);//max file size (byte)
 
 $messages = [
     'summit' => "Запись на событие невозможна. Пожалуйста, свяжитесь с администрацией сайта",

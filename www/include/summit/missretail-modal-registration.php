@@ -140,14 +140,14 @@ $arParams['USER'] = user();
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">Ваше фото</label>
-                    <input class="bg-red" type="file" name="file" id="file" required data-rule-maxFileSize='{"unit": "MB", "size": "5"}' accept="image/x-png,image/bmp,image/jpeg"/>
+                    <input class="bg-red" type="file" name="file" id="file" required data-rule-maxFileSize='{"unit": "MB", "size": "15"}' accept="image/x-png,image/bmp,image/jpeg"/>
                     <label for="file">Выберите файл</label>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <p class="m-t-md">
-                        Вы можете загрузить файл размером до 5 MB и расширением .jpg .png .bmp
+                        Вы можете загрузить файл размером до 15 MB и расширением .jpg .png .bmp
                     </p>
                 </div>
             </div>
