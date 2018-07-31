@@ -18,7 +18,7 @@ $messages = [
 $from = [
     'miss-retail' => 'Мисс Ритейл 2018',
 ];
-if ($_POST['fullname'] && $_POST['birthdate'] && $_POST['position'] && $_POST['education'] && $_POST['company'] && $_POST['work_experience']
+if ($_POST['fullname'] && $_POST['birthdate'] && $_POST['position'] && $_POST['education'] && $_POST['company'] && $_POST['contacts']
  && $_POST['profession_choice'] && $_POST['dreams'] && $_POST['work_for_you'] && $_POST['hobby'] && $_POST['g-token']) {
     if (($_FILES['file']['error'] == '1') || ($_FILES['file']['size'] > MAX_SIZE)){
         echo json_encode([
@@ -80,7 +80,7 @@ if ($_POST['fullname'] && $_POST['birthdate'] && $_POST['position'] && $_POST['e
                         'COMPANY' => $_REQUEST['company'],
                         'POSITION' => $_REQUEST['position'],
                         'EDUCATION' => $_REQUEST['education'],
-                        'WORK_EXPERIENCE' => $_REQUEST['work_experience'],
+                        'CONTACTS' => $_REQUEST['contacts'],
                         'WORK_FOR_YOU' => $work_for_you,
                         'HOBBY' => $hobby,
                     ]
@@ -96,17 +96,27 @@ if ($_POST['fullname'] && $_POST['birthdate'] && $_POST['position'] && $_POST['e
                     fastcgi_finish_request();
                 }
 
+                $arSelect = Array("IBLOCK_ID", "ID", "NAME", "PREVIEW_PICTURE");
+                $arFilter = Array("IBLOCK_ID"=>MISSRETAIL_REQUESTS_IBLOCK, "ID"=>$result);
+                $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+                if($ob = $res->GetNextElement())
+                {
+                   $arFields = $ob->GetFields();
+                   $photo_link = "http://www.b2bcg.ru".CFile::GetPath($arFields["PREVIEW_PICTURE"]);
+                }
+
                 $data = [
                     'FULLNAME' => $_REQUEST['fullname'],
                     'BIRTHDATE' => $birthdate,
                     'COMPANY' => $_REQUEST['company'],
                     'POSITION' => $_REQUEST['position'],
                     'EDUCATION' => $_REQUEST['education'],
-                    'WORK_EXPERIENCE' => $_REQUEST['work_experience'],
+                    'CONTACTS' => $_REQUEST['contacts'],
                     'PROFESSION_CHOICE' => $_REQUEST['profession_choice'],
                     'DREAMS' => $_REQUEST['dreams'],
                     'WORK_FOR_YOU' => $_REQUEST['work_for_you'],
                     'HOBBY' => $_REQUEST['hobby'],
+                    'PHOTO' => $photo_link
                 ];
                 $result = sendEmail(RBR2018AWARDS_EMAIL, 'Заявка на сайте', 'missretail2018/administration', $data, [], ['sol1n@mail.ru', 'dr.nightingale@mail.ru']);
 
