@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 <? if ($arResult['ITEMS']): ?>
@@ -24,10 +24,10 @@
             <div class="speakers-block-slider js-speakers-slider">
                 <? foreach ($arResult['ITEMS'] as $item): ?>
                     <div class="speakers-block-slider-item">
-                        <a 
-                            href="<?=$item['DETAIL_PAGE_URL']?>" 
-                            class="speakers-block-card" 
-                            data-side-modal 
+                        <a
+                            href="<?=$item['DETAIL_PAGE_URL']?>"
+                            class="speakers-block-card"
+                            data-side-modal
                             data-side-modal-url="/api/speakers/element/?id=<?=$item['ID']?>&lang=<?=$arParams['LANG']?>"
                             data-side-modal-class="side-modal-wide side-modal-speaker"
                         >
@@ -50,7 +50,7 @@
                                     <?=$item['NAME']?>
                                 </div>
                                 <div class="speakers-block-card-title">
-                                    <?=$item['~PREVIEW_TEXT']?>
+                                    <?=$item['PREVIEW_TEXT']?>
                                 </div>
                             </div>
                         </a>
