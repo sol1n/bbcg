@@ -1,12 +1,13 @@
 <?
     use \Bitrix\Main\Localization\Loc;
 ?>
+<?/*
 <? if ($arResult['PREVIEW_PICTURE']): ?>
     <div class="side-modal-news-image">
         <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arResult['NAME']?>">
     </div>
 <? endif ?>
-
+*/?>
 <div class="side-modal-news-date">
     <?=$arResult['DATE']?>
 </div>
