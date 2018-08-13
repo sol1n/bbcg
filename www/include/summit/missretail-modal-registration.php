@@ -34,7 +34,7 @@ $arParams['USER'] = user();
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">
-                        Контактные данные
+                        Контактные данные (email, телефон)
                     </label>
                     <input type="text" name="contacts" class="form-input" required>
                 </div>
