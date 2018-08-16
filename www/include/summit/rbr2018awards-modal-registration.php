@@ -44,7 +44,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    Контактная информация
+                    Контактные данные (email, телефон)
                 </label>
                 <textarea name="contacts" class="form-input" required></textarea>
             </div>
