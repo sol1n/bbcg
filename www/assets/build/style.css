@@ -13667,6 +13667,14 @@ body {
 .contestform-modal input[type="file"] + label.error {
   border-color: #ad1b34;
 }
+.partners-button {
+  text-align: center;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 60px;
+}
 .w700 {
   width: 700px;
 }
