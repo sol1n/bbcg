@@ -49,6 +49,20 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     } else {
         CModule::IncludeModule('iblock');
 
+        $options = [
+            "o_already" => "Уже посещал(а) мероприятие",
+            "o_call" => "Звонок менеджера",
+            "o_recommendation" => "По рекомендации друзей и коллег",
+            "o_email" => "Email-рассылка", "o_facebook" => "Facebook",
+            "o_advertising" => "Реклама",
+            "o_massmedia" => "СМИ"
+        ];
+
+        if ($_POST['summit_reg_select'] == 'o_other') {
+            $hear_about_us = $_POST['other'];
+        } else {
+            $hear_about_us = $options[$_POST['summit_reg_select']];
+        };
         $summit = CIBlockElement::GetByID($_REQUEST['summit'])->Fetch();
         if ($summit) {
             $el = new CIblockElement;
@@ -63,7 +77,8 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                     'POSITION' => $_REQUEST['title'],
                     'COMPANY' => $_REQUEST['company'],
                     'SUMMIT' => $summit['ID'],
-                    'PROMO_CODE' => $_REQUEST['promocode']
+                    'PROMO_CODE' => $_REQUEST['promocode'],
+                    'HEAR_ABOUT_US' => $hear_about_us
                 ]
             ]);
             echo json_encode([
@@ -84,8 +99,9 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'position' => $_REQUEST['title'],
                 'summit' => $summit['NAME'],
                 'promocode' => $_REQUEST['promocode'],
+                'hear_about_us' => $hear_about_us
             ];
-            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru']);
+            $result = sendEmail('dr.nightingale@mail.ru', 'Заявка на сайте', 'summit/administration', $data, [], ['dr.nightingale@mail.ru']);
         } else {
             echo json_encode([
                 'success' => false,

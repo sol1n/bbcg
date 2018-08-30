@@ -22771,6 +22771,16 @@ return $;
 (function( $ ) {
     $.fn.formAjax = function() {
         this.each(function() {
+
+            $('[name=summit_reg_select]').on('change', function() {//показываем поле "Другое" если этот пункт выбран
+                if ( this.value === "o_other" ) {
+                    $('[name=other_container]').show();
+                } else {
+                    $('[name=other_container]').hide();
+                    $('input[name=other]').val('');
+                }
+            });
+
             $(this).on('submit', function () {
                 var $form = $(this),
                     url = $form.attr('action'),
@@ -22842,6 +22852,8 @@ return $;
                     }).done(function (data) {
                         if (data && data.success) {
                             $form[0].reset();
+                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
+                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
