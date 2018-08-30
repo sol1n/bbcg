@@ -1,5 +1,6 @@
 <?
     use \Bitrix\Main\Localization\Loc;
+    $options = Array("O_ALREADY", "O_CALL", "O_RECOMMENDATION", "O_EMAIL", "O_FACEBOOK", "O_ADVERTISING", "O_MASSMEDIA", "O_OTHER");
 ?>
 <? if(strtotime($now_date) < strtotime($end_date))://variables from about-summit-block.php(summit news.detail) ?>
     <section id="summit-registration-block" class="summit-registration-block">
@@ -95,6 +96,28 @@
                                         <?=Loc::GetMessage('PROMO_CODE', [], $arParams['LANG'])?>
                                     </label>
                                     <input type="text" name="promocode" class="form-input">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="m-b">
+                                    <label class="form-label">
+                                        <?=Loc::GetMessage('HOW_DID_YOU_HEAR_ABOUT_US', [], $arParams['LANG'])?>
+                                    </label>
+                                    <div class="form-select">
+                                        <select name="summit_reg_select">
+                                            <? foreach($options as $option): ?>
+                                                <option value="<?=strtolower($option);?>"><?=Loc::GetMessage($option, [], $arParams['LANG'])?></option>
+                                            <? endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-xs-offset-6 col-sm-offset-6 hidden" name="other_container">
+                                <div class="m-b">
+                                    <label class="form-label">
+                                        <?=Loc::GetMessage('OTHER', [], $arParams['LANG'])?>
+                                    </label>
+                                    <input type="text" name="other" class="form-input" required>
                                 </div>
                             </div>
                         </div>
