@@ -101,7 +101,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'promocode' => $_REQUEST['promocode'],
                 'hear_about_us' => $hear_about_us
             ];
-            $result = sendEmail('dr.nightingale@mail.ru', 'Заявка на сайте', 'summit/administration', $data, [], ['dr.nightingale@mail.ru']);
+            $result = sendEmail(ADMINISTRATION_EMAIL, 'Заявка на сайте', 'summit/administration', $data, [], ['sol1n@mail.ru', 'dr.nightingale@mail.ru']);
         } else {
             echo json_encode([
                 'success' => false,
