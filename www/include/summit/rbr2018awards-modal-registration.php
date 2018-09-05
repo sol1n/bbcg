@@ -25,7 +25,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
                 <div class="form-select">
                     <select name="nomination">
                         <option value="team_z">Команда Z</option>
-                        <option value="pioneer_of_innovation">Пионер инноваций</option>
                         <option value="open_mind">Открытое сознание</option>
                         <option value="big_heart">Большое сердце</option>
                         <option value="true_omni">&laquo;Тру омни&raquo;</option>
