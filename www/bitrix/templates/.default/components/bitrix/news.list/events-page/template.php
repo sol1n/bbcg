@@ -73,7 +73,7 @@
                                                     >
                                                         <div class="program-table-event-meta">
                                                             <span class="program-table-event-meta-date">
-                                                                <?=$event['begin']?> — <?=$event['end']?> ТУТ 1
+                                                                <?=$event['begin']?> — <?=$event['end']?>
                                                             </span>
                                                             <? if(!empty($event['hall'])): ?>
                                                                 <span class="c-text m-l-sm"><?=$event['hall']?></span>
