@@ -1,5 +1,8 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+
+global $USER;
+if ($USER->IsAuthorized()) LocalRedirect("/");
 ?>
 
 <div class="wrapper">
