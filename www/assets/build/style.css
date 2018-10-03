@@ -8469,6 +8469,10 @@ body {
   margin-top: 30px;
   text-align: center;
 }
+.login-form {
+  max-width: 380px;
+  margin: 0 auto;
+}
 .socials-block {
   display: inline-block;
 }
