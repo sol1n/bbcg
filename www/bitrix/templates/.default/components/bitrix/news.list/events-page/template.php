@@ -1,6 +1,12 @@
 <?
     use \Bitrix\Main\Localization\Loc;
+
+function cmp($a, $b){
+    return strcasecmp($a["PROPERTY_LASTNAME_VALUE"], $b["PROPERTY_LASTNAME_VALUE"]);
+}
 ?>
+
+
 <div class="program-table-wrapper js-program-table-scroll">
     <? if (! $arResult['ITEMS']): ?>
         <div class="text-center" style="margin: 140px 0">
@@ -156,6 +162,7 @@
 
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
+                                                            <?usort($event['speakers'], "cmp"); //сортировка спикеров в алфавитном порядке?>
                                                             <? foreach ($event['speakers'] as $speaker): ?>
                                                                 <p>
                                                                     <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>
