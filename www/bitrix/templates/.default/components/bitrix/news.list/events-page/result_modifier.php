@@ -53,7 +53,7 @@
         ['IBLOCK_ID' => SPEAKERS_IBLOCK, 'ID' => $speakers, 'ACTIVE' => 'Y'],
         false,
         false,
-        ['ID', 'NAME', 'PREVIEW_TEXT', 'PROPERTY_EN_NAME', 'PROPERTY_EN_PREVIEW_TEXT']
+        ['ID', 'NAME', 'PREVIEW_TEXT', 'PROPERTY_EN_NAME', 'PROPERTY_EN_LASTNAME', 'PROPERTY_LASTNAME', 'PROPERTY_EN_PREVIEW_TEXT']
     );
     $speakers = [];
     while ($speaker = $res->Fetch()) {
