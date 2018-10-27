@@ -20,6 +20,7 @@
                     validation = $form.is('[data-validate]');
 
                 if (validation && $form.valid()) {
+                    $('.submit-registration-block-form-footer button').prop( "disabled", true );
                     checkCaptcha();
                 } else if (!validation) {
                     checkCaptcha();
@@ -111,6 +112,7 @@
                         console.log(jqXHR);
                         console.log(errorThrown);
                     }).always(function () {
+                        $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         hideOverlay();
                     });
                 }
