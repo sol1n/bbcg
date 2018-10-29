@@ -16,6 +16,10 @@
             <div class="about-summit-block-date">
                 <?=$arResult['DURATION']?>
             </div>
+            <br />
+            <div class="about-summit-block-date">
+                <?=$arResult['PROPERTIES']['ADDRESS']['VALUE']?>
+            </div>
             <div class="about-summit-block-desc">
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
