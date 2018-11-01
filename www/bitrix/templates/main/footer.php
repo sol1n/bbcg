@@ -8,8 +8,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? else: ?>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
 		<? endif ?>
-
-        <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/banners/banner.php"; ?>
+        <? if (!CSite::InDir('/exclusive/')): ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/banners/banner.php"; ?>
+        <? endif ?>
 
 		<div id="recaptcha-placeholder"></div>
 
