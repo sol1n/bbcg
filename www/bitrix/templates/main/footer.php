@@ -9,6 +9,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
 		<? endif ?>
 
+        <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/banners/banner.php"; ?>
+
 		<div id="recaptcha-placeholder"></div>
 
 		<script src="/assets/build/scripts.min.js"></script>

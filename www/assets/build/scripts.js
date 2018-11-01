@@ -22722,6 +22722,21 @@ return $;
 
 }( document, window, window.jQuery || jQuery ));
 
+$(".banner-close").click(function() {
+    $(this).closest('.banner').fadeOut('slow');
+    $('.horizontal-banner').addClass('closed');
+});
+
+$(window).resize(function() {
+    if ($(window).width() < 1024) {
+        $('.horizontal-banner').hide();
+    } else {
+        if(!$('.horizontal-banner').hasClass('closed')){
+            $('.horizontal-banner').fadeIn('slow');
+        }
+    }
+});
+
 (function() {
     var $slider = $(".js-events-slider");
 
@@ -23798,6 +23813,10 @@ $(document).ready(function() {
     $('[data-form-ajax]').formAjax();
     $('[data-validate]').formValidation();
     $('[data-suggest-search]').suggestSearch();
+
+    if ($(window).width() > 1024){
+        $('.horizontal-banner').delay(10000).fadeIn('slow');
+    }
 });
 
 var gCapthaInit = function() {
