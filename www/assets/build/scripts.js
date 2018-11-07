@@ -22722,6 +22722,21 @@ return $;
 
 }( document, window, window.jQuery || jQuery ));
 
+$(".banner-close").click(function() {
+    $(this).closest('.banner').fadeOut('slow');
+    $('.horizontal-banner').addClass('closed');
+});
+
+$(window).resize(function() {
+    if ($(window).width() < 1024) {
+        $('.horizontal-banner').hide();
+    } else {
+        if(!$('.horizontal-banner').hasClass('closed')){
+            $('.horizontal-banner').fadeIn('slow');
+        }
+    }
+});
+
 (function() {
     var $slider = $(".js-events-slider");
 
@@ -22771,6 +22786,16 @@ return $;
 (function( $ ) {
     $.fn.formAjax = function() {
         this.each(function() {
+
+            $('[name=summit_reg_select]').on('change', function() {//показываем поле "Другое" если этот пункт выбран
+                if ( this.value === "o_other" ) {
+                    $('[name=other_container]').show();
+                } else {
+                    $('[name=other_container]').hide();
+                    $('input[name=other]').val('');
+                }
+            });
+
             $(this).on('submit', function () {
                 var $form = $(this),
                     url = $form.attr('action'),
@@ -22780,6 +22805,7 @@ return $;
                     validation = $form.is('[data-validate]');
 
                 if (validation && $form.valid()) {
+                    $('.submit-registration-block-form-footer button').prop( "disabled", true );
                     checkCaptcha();
                 } else if (!validation) {
                     checkCaptcha();
@@ -22842,8 +22868,10 @@ return $;
                     }).done(function (data) {
                         if (data && data.success) {
                             $form[0].reset();
+                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
+                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             initSideModal(data.message, 'message-modal', false, false);
-                        } else if (data && data.message) {
+                        } else if (data && data.message) {console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
                             if (data.errors) {
                                 data.errors.forEach(function (error) {
@@ -22869,6 +22897,7 @@ return $;
                         console.log(jqXHR);
                         console.log(errorThrown);
                     }).always(function () {
+                        $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         hideOverlay();
                     });
                 }
@@ -22946,7 +22975,7 @@ return $;
         },
         function (params, el) {
             return formatter(
-                "File cannot be larger than {0}{1}.",
+                "Файл больше чем {0}{1}",
                 [params.size || 100, params.unit || "KB"]
             );
         }
@@ -22959,21 +22988,58 @@ return $;
     $.fn.formValidation = function() {
         this.each(function() {
             $(this).validate({
+                rules: {//file required field
+                  file: {
+                    required: true,
+                  }
+                },
+                messages: {//error-message if file not selected
+                  file: {
+                    required: "Файл не выбран!",
+                  }
+                },
+                success: function(label,element) {//if valid show file name and size
+                    if ($('input[type=file]').length > 0) {
+                        if($('input[type=file]').val()!== ""){
+                            function conv_size(b){//convert bytes for kb/mb
+                                fsizekb = b / 1024;
+                                fsizemb = fsizekb / 1024;
+                                if (fsizekb <= 1024) {
+                                 fsize = fsizekb.toFixed(3) + ' KB';
+                                } else if (fsizekb >= 1024 && fsizemb <= 1024) {
+                                	fsize = fsizemb.toFixed(3) + ' MB';
+                                }
+                                return fsize;
+                            };
+                            $('[name=selected-file]').html("Выбран файл: "+$('input[type=file]').val().split('\\').pop()+" <br>Размер: "+conv_size($("input[type=file]")[0].files[0].size));
+                        }
+                    }
+                },
                 errorPlacement: function(error, element) {},
                 highlight: function(element, errorClass, validClass) {
                     $(element).closest('.form-group').find('.form-label').addClass('form-label-error').removeClass('form-label-valid');
                     $(element).closest('.form-control').addClass(errorClass).removeClass(validClass);
                     $(element).addClass(errorClass).removeClass(validClass);
+                    if($(element).attr('name') == 'file'){//if file not valid highlight element and hide file-info
+                        $('[for=file]').addClass('error');
+                        $('[name=selected-file]').hide();
+                    }
                 },
                 unhighlight: function(element, errorClass, validClass) {
                     $(element).closest('.form-group').find('.form-label').removeClass('form-label-error').addClass('form-label-valid');
                     $(element).closest('.form-control').removeClass(errorClass).addClass(validClass);
                     $(element).removeClass(errorClass).addClass(validClass);
+                    if($(element).attr('name') == 'file'){//if file valid unhighlight element and show file-info
+                        $('[for=file]').removeClass('error');
+                        $('[name=selected-file]').show();
+                        $('[for=file]').html("Файл выбран").show();
+                    }
                 }
             });
         });
     };
 }( jQuery ));
+
 (function() {
     var $slider = $(".js-gallery-slider");
 
@@ -23747,6 +23813,10 @@ $(document).ready(function() {
     $('[data-form-ajax]').formAjax();
     $('[data-validate]').formValidation();
     $('[data-suggest-search]').suggestSearch();
+
+    if ($(window).width() > 1024){
+        $('.horizontal-banner').delay(10000).fadeIn('slow');
+    }
 });
 
 var gCapthaInit = function() {

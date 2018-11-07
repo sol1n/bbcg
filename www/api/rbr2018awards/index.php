@@ -57,7 +57,6 @@ if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['w
 
         $nominations = [
             'team_z' => 'Команда Z',
-            'pioneer_of_innovation' => 'Пионер инноваций',
             'open_mind' => 'Открытое сознание',
             'big_heart' => 'Большое сердце',
             'true_omni' => '«Тру омни»'

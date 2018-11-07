@@ -1,4 +1,4 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 <div class="side-modal-event-title">
@@ -14,8 +14,12 @@
         <span class="news-item-meta-2-place">
             <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-map-mark.svg'); ?>
             <?=$arResult['AREA']?>
+            <? if (!empty($arResult['HALL'])): ?>
+                <span class="m-l-sm"><?=$arResult['HALL']?></span>
+            <? endif ?>
         </span>
     <? endif ?>
+
 </div>
 
 <div class="side-modal-event-description">

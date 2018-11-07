@@ -1,0 +1,69 @@
+.contestform-modal .registration-modal-title{
+    margin: 0 0 10px 0;
+}
+
+.contestform-modal .registration-modal-subtitle{
+    font-size: 23px;
+    text-align: center;
+}
+
+.contestform-modal input[type="date"]{
+    height: 43px;
+}
+
+.contestform-modal textarea{
+    height: 120px;
+}
+
+.contestform-modal input[type="file"]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.contestform-modal input[type="file"] + label {
+    height: 43px;
+    width: 100%;
+    border-radius: 2px;
+    color: #2b2a29;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.38;
+    background-color: #edf1f3;
+    border: 1px solid #ccd3d7;
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+    padding: 9px 40px;
+    cursor: pointer;
+}
+
+.contestform-modal input[type="file"].bg-red:focus + label,
+.contestform-modal input[type="file"].bg-red + label:hover {
+    background-color: @c-red;
+    color: white;
+    user-select: none;
+}
+
+.contestform-modal input[type="file"] + label.error {
+    border-color: @c-red;
+}
+
+.partners-button{
+    text-align: center;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom: 60px;
+}
+
+.w700{
+    width: 700px;
+}
+.w900{
+    width: 900px;
+}

@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <div class="main-heading main-heading-black">
     <div class="wrapper">
@@ -27,6 +27,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 <? else: ?>
     <?
         global $filter;
+        $filter['!PROPERTY_SUMMIT'] = false;
         if ($_REQUEST['letter'])
         {
             $filter['PROPERTY_LASTNAME'] = $_REQUEST['letter'] . '%';

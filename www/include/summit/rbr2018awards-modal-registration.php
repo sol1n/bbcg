@@ -9,7 +9,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 <div class="registration-modal-title ">
     RETAIL BUSINESS RUSSIA AWARDS 2018
 </div>
-<div class="registration-modal-subtitle ">
+<div class="registration-modal-subtitle">
     Заявка на участие
 </div>
 
@@ -25,7 +25,6 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
                 <div class="form-select">
                     <select name="nomination">
                         <option value="team_z">Команда Z</option>
-                        <option value="pioneer_of_innovation">Пионер инноваций</option>
                         <option value="open_mind">Открытое сознание</option>
                         <option value="big_heart">Большое сердце</option>
                         <option value="true_omni">&laquo;Тру омни&raquo;</option>
@@ -44,7 +43,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         <div class="col-xs-12 col-sm-12">
             <div class="m-b">
                 <label class="form-label">
-                    Контактная информация
+                    Контактные данные (email, телефон)
                 </label>
                 <textarea name="contacts" class="form-input" required></textarea>
             </div>
@@ -64,8 +63,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         </div>
     </div>
     <div class="registration-form-submit">
-        <button type="submit" class="button button-old-gold">
-            <span class="c-text">Зарегистрироваться</span>
+        <button type="submit" class="button button-red">
+            Подать заявку
         </button>
     </div>
 </form>

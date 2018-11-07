@@ -1,14 +1,20 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
+
+function cmp($a, $b){
+    return strcasecmp($a["PROPERTY_LASTNAME_VALUE"], $b["PROPERTY_LASTNAME_VALUE"]);
+}
 ?>
+
+
 <div class="program-table-wrapper js-program-table-scroll">
     <? if (! $arResult['ITEMS']): ?>
         <div class="text-center" style="margin: 140px 0">
             <?=Loc::GetMessage('NOT_FOUND', [], $arParams['LANG'])?>
         </div>
     <? else: ?>
-        <div class="b-smoke-white"> 
-            <div class="wrapper"> 
+        <div class="b-smoke-white">
+            <div class="wrapper">
                 <div class="program-table" data-program-table-cell-width="<?=$arParams['CELL_WIDTH']?>">
                     <div class="program-table-scrollable js-program-table-scrollable">
                         <div class="program-table-timeline">
@@ -53,11 +59,11 @@
                                                         <? if ($event['open']): ?>
                                                             id="program-table-event-<?=$event['id']?>"
                                                             href="<?=$event['href']?>"
-                                                            data-side-modal-class="side-modal-wide side-modal-event" 
-                                                            data-side-modal 
+                                                            data-side-modal-class="side-modal-wide side-modal-event"
+                                                            data-side-modal
                                                             data-side-modal-url="/api/events/element/?id=<?=$event['id']?>&lang=<?=$arParams['LANG']?>"
                                                         <? endif ?>
-                                                        data-side-modal-prevent-mobile 
+                                                        data-side-modal-prevent-mobile
                                                         class="
                                                             program-table-event
                                                             program-table-event-global
@@ -75,6 +81,9 @@
                                                             <span class="program-table-event-meta-date">
                                                                 <?=$event['begin']?> — <?=$event['end']?>
                                                             </span>
+                                                            <? if(!empty($event['hall'])): ?>
+                                                                <span class="c-text m-l-sm"><?=$event['hall']?></span>
+                                                            <? endif ?>
                                                         </div>
 
                                                         <div class="program-table-event-subtitle">
@@ -120,12 +129,12 @@
                                                 <a
                                                     <? if ($event['open']): ?>
                                                         id="program-table-event-<?=$event['id']?>"
-                                                        href="<?=$event['href']?>" 
-                                                        data-side-modal-class="side-modal-wide side-modal-event" 
-                                                        data-side-modal 
+                                                        href="<?=$event['href']?>"
+                                                        data-side-modal-class="side-modal-wide side-modal-event"
+                                                        data-side-modal
                                                         data-side-modal-url="/api/events/element/?id=<?=$event['id']?>&lang=<?=$arParams['LANG']?>"
                                                     <? endif ?>
-                                                    data-side-modal-prevent-mobile 
+                                                    data-side-modal-prevent-mobile
                                                     class="
                                                         program-table-event
                                                         program-table-event-offset-<?=$event['offset']?>
@@ -142,6 +151,9 @@
                                                         <span class="program-table-event-meta-date">
                                                             <?=$event['begin']?> — <?=$event['end']?>
                                                         </span>
+                                                        <? if(!empty($event['hall'])): ?>
+                                                            <span class="c-text m-l-sm"><?=$event['hall']?></span>
+                                                        <? endif ?>
                                                     </div>
 
                                                     <div class="program-table-event-subtitle">
@@ -150,6 +162,7 @@
 
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
+                                                            <?usort($event['speakers'], "cmp"); //сортировка спикеров в алфавитном порядке?>
                                                             <? foreach ($event['speakers'] as $speaker): ?>
                                                                 <p>
                                                                     <b><?=$speaker['NAME']?></b>, <?=$speaker['PREVIEW_TEXT']?>

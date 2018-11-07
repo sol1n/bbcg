@@ -14,4 +14,14 @@
 	$MESS["OR"] = "or";
 	$MESS["CONTACT_PERSON"] = "Contact person: Irina Chinnova";
 	$MESS["DOWNLOAD_AND_SEND_REQUEST"] = "<a href=\"FILE\" target=\"_blank\">Download the application</a> and send to the specified mail";
+	$MESS["HOW_DID_YOU_HEAR_ABOUT_US"] = "How did you hear about us?";
+	$MESS["O_ALREADY"] = "Already visited an event";
+	$MESS["O_CALL"] = "Call from manager";
+	$MESS["O_RECOMMENDATION"] = "On the recommendation of friends and colleagues";
+	$MESS["O_EMAIL"] = "Email distribution";
+	$MESS["O_FACEBOOK"] = "Facebook";
+	$MESS["O_ADVERTISING"] = "Advertising";
+	$MESS["O_MASSMEDIA"] = "Mass media";
+	$MESS["O_OTHER"] = "Other";
+	$MESS["OTHER"] = "Your option";
 ?>

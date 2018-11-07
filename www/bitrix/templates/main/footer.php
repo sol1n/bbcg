@@ -8,6 +8,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? else: ?>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/blocks/footer.php"; ?>
 		<? endif ?>
+        <? if (!CSite::InDir('/exclusive/')): ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/banners/banner.php"; ?>
+        <? endif ?>
 
 		<div id="recaptcha-placeholder"></div>
 
@@ -20,9 +23,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<? endif ?>
 		<? endif ?>
 
+		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
+
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/yandex-metrika.php"; ?>
-		
-		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/facebook-pixel.php"; ?>
 	</body>
 </html>
