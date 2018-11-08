@@ -36,7 +36,8 @@
                     </div>
                 <? endforeach ?>
             </div>
-            <a
+			<a
+				id="partners-form"
             	href="#"
             	data-side-modal
             	data-side-modal-url="/include/partners/partners-modal-registration.php"
