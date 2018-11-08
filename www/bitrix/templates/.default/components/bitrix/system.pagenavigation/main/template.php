@@ -14,8 +14,6 @@ if (!$arResult["NavShowAlways"]) {
 }
 
 
-$letter = ($_REQUEST['letter'] != "" ? '&letter='.$_REQUEST['letter'] : ""); //add letter parameter for speaker filtration
-
 $strNavQueryString = ($arResult["NavQueryString"] != "" ? $arResult["NavQueryString"]."&amp;" : "");
 $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["NavQueryString"] : "");
 ?>
@@ -24,7 +22,7 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
     <ul class="pagination-list">
       <? if ($arResult["NavPageNomer"] > 1): ?>
         <li class="pagination-list-item">
-            <a href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"] - 1?><?=$letter?>" class="pagination-link pagination-link-prev">
+            <a href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"] - 1?>" class="pagination-link pagination-link-prev">
               <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-pagination-prev.svg"); ?>
             </a>
         </li>
@@ -44,7 +42,7 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
           </li>
         <? else: ?>
           <li class="pagination-list-item">
-              <a href="<?=$arResult["sUrlPath"]?>?PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["nStartPage"]?><?=$letter?>" class="pagination-link"><?=$arResult["nStartPage"]?></a>
+              <a href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["nStartPage"]?>" class="pagination-link"><?=$arResult["nStartPage"]?></a>
           </li>
         <? endif ?>
         <? $arResult["nStartPage"]++ ?>
@@ -52,7 +50,7 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
 
       <? if ($arResult["NavPageNomer"] < $arResult["NavPageCount"]): ?>
         <li class="pagination-list-item">
-            <a href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"] + 1 ?><?=$letter?>" class="pagination-link pagination-link-next">
+            <a href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"] + 1 ?>" class="pagination-link pagination-link-next">
                 <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-pagination-next.svg"); ?>
             </a>
         </li>
