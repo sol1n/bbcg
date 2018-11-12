@@ -11,11 +11,12 @@ $db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true, $arSelec
 if($ar_event_result = $db_list->GetNext()):
     $btnClass = $ar_event_result['UF_BTN_CLASS'] != "" ? $ar_event_result['UF_BTN_CLASS'] : "button-red";
 ?>
-
-    <div class="registration-modal-logo">
-        <? $img = CFile::ResizeImageGet($ar_event_result['PICTURE'], ['width' => 357*2, 'height' => 238*2], BX_RESIZE_IMAGE_PROPORTIONAL); ?>
-        <img src="<?=$img['src']?>" alt="<?=$ar_event_result['NAME']?>">
-    </div>
+    <? if(!empty($ar_event_result['PICTURE'])): ?>
+        <div class="registration-modal-logo">
+            <? $img = CFile::ResizeImageGet($ar_event_result['PICTURE'], ['width' => 357*2, 'height' => 238*2], BX_RESIZE_IMAGE_PROPORTIONAL); ?>
+            <img src="<?=$img['src']?>" alt="<?=$ar_event_result['NAME']?>">
+        </div>
+    <? endif ?>
     <div class="registration-modal-title ">
         <?=$ar_event_result['NAME']?>
     </div>
