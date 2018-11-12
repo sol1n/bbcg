@@ -2,10 +2,10 @@
 define('STOP_STATISTICS', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
-$currEventId = 19; //section ID summit events request
+//DTF_GAME_EVENT_ID -- section ID summit events request
 
 CModule::IncludeModule("iblock");
-$arFilter = Array('IBLOCK_ID'=>SUMMIT_EVENTS_REQEST_IBLOCK, 'ACTIVE'=>'Y', 'ID'=>$currEventId);
+$arFilter = Array('IBLOCK_ID'=>SUMMIT_EVENTS_REQEST_IBLOCK, 'ACTIVE'=>'Y', 'ID'=>DTF_GAME_EVENT_ID);
 $arSelect = array("UF_*");
 $db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true, $arSelect);
 if($ar_event_result = $db_list->GetNext()):
@@ -26,7 +26,7 @@ if($ar_event_result = $db_list->GetNext()):
     <form action="/api/summit/summit-event-reg/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
         <input type="hidden" name="from" value="<?=$ar_event_result["CODE"]?>">
         <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-        <input type="text" name="id" class="hidden" value="<?=$currEventId?>">
+        <input type="text" name="id" class="hidden" value="<?=DTF_GAME_EVENT_ID?>">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
