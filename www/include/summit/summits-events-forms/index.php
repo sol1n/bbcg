@@ -2,7 +2,7 @@
 define('STOP_STATISTICS', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
-//$currEventId = 19; //section ID summit events request
+$currEventId = 19; //section ID summit events request
 
 CModule::IncludeModule("iblock");
 $arFilter = Array('IBLOCK_ID'=>SUMMIT_EVENTS_REQEST_IBLOCK, 'ACTIVE'=>'Y', 'ID'=>$currEventId);
