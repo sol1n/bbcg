@@ -21,6 +21,7 @@
 
                 if (validation && $form.valid()) {
                     $('.submit-registration-block-form-footer button').prop( "disabled", true );
+                    $('.registration-form-submit button').prop( "disabled", true );
                     checkCaptcha();
                 } else if (!validation) {
                     checkCaptcha();
@@ -113,6 +114,7 @@
                         console.log(errorThrown);
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
+                        $('.registration-form-submit button').prop( "disabled", false );
                         hideOverlay();
                     });
                 }
