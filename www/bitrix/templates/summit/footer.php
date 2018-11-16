@@ -24,6 +24,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<? if (defined('NEED_EVENTS_TABLE')): ?>
 			<script src="/assets/build/program-table.min.js"></script>
 		<? endif ?>
+		<? if (defined('NEED_CRM')): ?>
+            <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+            <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+		<? endif ?>
 
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 

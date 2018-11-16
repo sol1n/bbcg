@@ -83,6 +83,7 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
+                            landing.createObjectFromLanding(crm_config);// отправляем данные в CRM
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
