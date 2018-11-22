@@ -21,24 +21,12 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="m-b">
                                     <label class="form-label">
-                                        <?=Loc::GetMessage('SURNAME', [], $arParams['LANG'])?>
+                                        <?=Loc::GetMessage('FULL_NAME', [], $arParams['LANG'])?>
                                     </label>
-                                    <? if (isset($arParams['USER']['LAST_NAME'])): ?>
-                                        <input type="text" name="surname" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?>" required>
+                                    <? if ((isset($arParams['USER']['LAST_NAME']))&&(isset($arParams['USER']['NAME']))): ?>
+                                        <input type="text" name="full_name" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?> <?=$arParams['USER']['NAME']?> <?=$arParams['USER']['SECOND_NAME']?>" required>
                                     <? else: ?>
-                                        <input type="text" name="surname" class="form-input" required>
-                                    <? endif ?>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="m-b">
-                                    <label class="form-label">
-                                        <?=Loc::GetMessage('NAME', [], $arParams['LANG'])?>
-                                    </label>
-                                    <? if (isset($arParams['USER']['NAME'])): ?>
-                                        <input type="text" name="name" class="form-input" value="<?=$arParams['USER']['NAME']?>" required>
-                                    <? else: ?>
-                                        <input type="text" name="name" class="form-input" required>
+                                        <input type="text" name="full_name" class="form-input" required>
                                     <? endif ?>
                                 </div>
                             </div>
@@ -112,7 +100,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6 col-sm-6 col-xs-offset-6 col-sm-offset-6 hidden" name="other_container">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="m-t-md">
+                                    <div class="submit-registration-block-form-hint">
+                                        <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', ['NAME' => $arResult['CONTACT']['PROPERTY_FIO_VALUE']], $arParams['LANG'])?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 hidden" name="other_container">
                                 <div class="m-b">
                                     <label class="form-label">
                                         <?=Loc::GetMessage('OTHER', [], $arParams['LANG'])?>
@@ -120,17 +115,11 @@
                                     <input type="text" name="other" class="form-input" required>
                                 </div>
                             </div>
-                            <input type="hidden" id="selected_value" />
+                            <input type="hidden" id="summit_name" value="<?=$arResult['NAME']?>"/>
                         </div>
                         <div class="submit-registration-block-form-footer">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="submit-registration-block-form-hint">
-                                        <?=Loc::GetMessage('WE_WILL_CONTACT_YOU', ['NAME' => $arResult['CONTACT']['PROPERTY_FIO_VALUE']], $arParams['LANG'])?>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6">
+                                <div class="col-xs-12 col-sm-6 col-xs-offset-6 col-sm-offset-6">
                                     <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
                                         <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
                                     </button>

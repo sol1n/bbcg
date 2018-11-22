@@ -9,10 +9,6 @@ $(document).ready(function() {
         $('.horizontal-banner').delay(10000).fadeIn('slow');
     }
 
-    if ($('[data-crm-token]').length > 0) {// отпрвляем данные формы регистрации на саммит в CRM
-         $('[data-crm-token]').formCRM();
-    }
-
 });
 
 var gCapthaInit = function() {

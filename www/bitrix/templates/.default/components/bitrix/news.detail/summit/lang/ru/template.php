@@ -2,6 +2,7 @@
 	$MESS["LOCATION"] = "Место проведения";
 	$MESS["REGISTRATION"] = "Регистрация";
 	$MESS["REGISTRATION_FOR_SUMMIT"] = "Форма регистрации на саммите";
+	$MESS["FULL_NAME"] = "ФИО";
 	$MESS["SURNAME"] = "Фамилия";
 	$MESS["NAME"] = "Имя";
 	$MESS["PHONE"] = "Номер телефона";
