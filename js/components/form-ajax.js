@@ -93,7 +93,7 @@
                                     "Job": "#summit-registration-block [name=title]", // должность посетителя
                                     "Event": "#summit_name", // должность посетителя
                                 },
-                                landingId: "6a7962b3-6bbb-4f5b-b1d4-52f8dc0b4de6",
+                                landingId: "62430a1e-9908-4ab5-be6e-1b47e5fdb0d4",
                                 serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                                 redirectUrl: ""
                             };
