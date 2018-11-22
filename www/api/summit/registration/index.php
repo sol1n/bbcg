@@ -23,7 +23,7 @@ else
     ];
 }
 
-if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] && $_POST['company'] && $_POST['title'] && $_POST['summit'] && $_POST['g-token'])
+if ($_POST['full_name'] && $_POST['phone'] && $_POST['email'] && $_POST['company'] && $_POST['title'] && $_POST['summit'] && $_POST['g-token'])
 {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
@@ -65,6 +65,12 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
         };
         $summit = CIBlockElement::GetByID($_REQUEST['summit'])->Fetch();
         if ($summit) {
+            $full_name = trim($_REQUEST['full_name']);
+            $parts = explode(" ", $full_name, 3);
+            $last_name = $parts[0];
+            $first_name = $parts[1];
+            $second_name = $parts[2];
+
             $el = new CIblockElement;
             $result = $el->Add([
                 'IBLOCK_ID' => REQUESTS_IBLOCK,
@@ -72,8 +78,10 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'PROPERTY_VALUES' => [
                     'EMAIL' => $_REQUEST['email'],
                     'PHONE' => $_REQUEST['phone'],
-                    'NAME' => $_REQUEST['name'],
-                    'LAST_NAME' => $_REQUEST['surname'],
+                    'NAME' => $first_name,
+                    'LAST_NAME' => $last_name,
+                    'SECOND_NAME' => $second_name,
+                    'FULL_NAME' => $full_name,
                     'POSITION' => $_REQUEST['title'],
                     'COMPANY' => $_REQUEST['company'],
                     'SUMMIT' => $summit['ID'],
@@ -91,8 +99,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 fastcgi_finish_request();
             }
             $data = [
-                'name' => $_REQUEST['name'],
-                'surname' => $_REQUEST['surname'],
+                'full_name' => $full_name,
                 'email' => $_REQUEST['email'],
                 'phone' => $_REQUEST['phone'],
                 'company' => $_REQUEST['company'],

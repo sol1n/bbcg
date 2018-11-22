@@ -30,8 +30,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "FILTER_NAME" => "filter",
         "IBLOCK_ID" => SPEAKERS_IBLOCK,
         "NEWS_COUNT" => "16",
-        "SORT_BY1" => "ACTIVE_FROM",
-        "SORT_ORDER1" => "DESC",
+        "SORT_BY1" => "SORT",
+        "SORT_ORDER1" => "ASC",
+        "SORT_BY2" => "PROPERTY_LASTNAME",
+        "SORT_ORDER2" => "ASC",
         "FIELD_CODE" => array("ACTIVE_FROM"),
         "PROPERTY_CODE" => array("*"),
         "SET_TITLE" => "N",
@@ -48,8 +50,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
-        "SORT_BY1" => "PROPERTY_ACADEMY_SORT",
-        "SORT_ORDER1" => "ASC",
     ), false);
 ?>
 

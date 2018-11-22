@@ -2,6 +2,7 @@
 	$MESS["LOCATION"] = "Location";
 	$MESS["REGISTRATION"] = "Registration";
 	$MESS["REGISTRATION_FOR_SUMMIT"] = "Form of registration at the summit";
+	$MESS["FULL_NAME"] = "Full name";
 	$MESS["SURNAME"] = "Surname";
 	$MESS["NAME"] = "Name";
 	$MESS["PHONE"] = "Phone";

@@ -83,12 +83,29 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            landing.createObjectFromLanding(crm_config);// отправляем данные в CRM
+                            //передача данных в CRM
+                            var crm_config = {
+                                fields: {
+                                    "Name": "#summit-registration-block [name=full_name]", // ФИО посетителя, заполнившего форму
+                                    "Email": "#summit-registration-block [name=email]", // E-mail посетителя
+                                    "MobilePhone": "#summit-registration-block [name=phone]", // телефон посетителя
+                                    "Company": "#summit-registration-block [name=company]", // название компании
+                                    "Job": "#summit-registration-block [name=title]", // должность посетителя
+                                    "Event": "#summit_name", // должность посетителя
+                                },
+                                landingId: "6a7962b3-6bbb-4f5b-b1d4-52f8dc0b4de6",
+                                serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                redirectUrl: ""
+                            };
+                            landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                            landing.initLanding(crm_config); //отправляем данные
+
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             initSideModal(data.message, 'message-modal', false, false);
-                        } else if (data && data.message) {console.log(data.message);
+                        } else if (data && data.message) {
+                            console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
                             if (data.errors) {
                                 data.errors.forEach(function (error) {
