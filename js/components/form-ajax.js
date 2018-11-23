@@ -83,7 +83,8 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            if($('[data-crm-token]').length > 0){
+                            if($form.data('crm-token') === 'Y'){
+                                console.log('summit-reg-form');
                                 //передача данных в CRM
                                 var crm_config = {
                                     fields: {
