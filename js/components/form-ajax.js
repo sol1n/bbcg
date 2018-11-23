@@ -95,6 +95,8 @@
                                 },
                                 landingId: "62430a1e-9908-4ab5-be6e-1b47e5fdb0d4",
                                 serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                //landingId: "8a679bd1-861f-46f9-8207-12e3842ec1f7",
+                                //serviceUrl: "https://038954-crm-bundle.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                                 redirectUrl: ""
                             };
                             landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
