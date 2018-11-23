@@ -119,7 +119,7 @@
                         </div>
                         <div class="submit-registration-block-form-footer">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-xs-offset-6 col-sm-offset-6">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
                                     <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
                                         <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
                                     </button>

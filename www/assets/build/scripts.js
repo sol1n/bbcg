@@ -22868,25 +22868,24 @@ $(window).resize(function() {
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            //передача данных в CRM
-                            var crm_config = {
-                                fields: {
-                                    "Name": "#summit-registration-block [name=full_name]", // ФИО посетителя, заполнившего форму
-                                    "Email": "#summit-registration-block [name=email]", // E-mail посетителя
-                                    "MobilePhone": "#summit-registration-block [name=phone]", // телефон посетителя
-                                    "Company": "#summit-registration-block [name=company]", // название компании
-                                    "Job": "#summit-registration-block [name=title]", // должность посетителя
-                                    "Event": "#summit_name", // название саммита
-                                },
-                                landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
-                                serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-                                //landingId: "62430a1e-9908-4ab5-be6e-1b47e5fdb0d4",
-                                //serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-                                redirectUrl: ""
-                            };
-                            landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
-                            landing.initLanding(crm_config); //отправляем данные
-
+                            if($('[data-crm-token]').length > 0){
+                                //передача данных в CRM
+                                var crm_config = {
+                                    fields: {
+                                        "Name": "#summit-registration-block [name=full_name]", // ФИО посетителя, заполнившего форму
+                                        "Email": "#summit-registration-block [name=email]", // E-mail посетителя
+                                        "MobilePhone": "#summit-registration-block [name=phone]", // телефон посетителя
+                                        "Company": "#summit-registration-block [name=company]", // название компании
+                                        "Job": "#summit-registration-block [name=title]", // должность посетителя
+                                        "Event": "#summit_name", // название саммита
+                                    },
+                                    landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
+                                    serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                    redirectUrl: ""
+                                };
+                                landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                                landing.initLanding(crm_config); //отправляем данные
+                            }
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
