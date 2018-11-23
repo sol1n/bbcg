@@ -91,12 +91,13 @@
                                     "MobilePhone": "#summit-registration-block [name=phone]", // телефон посетителя
                                     "Company": "#summit-registration-block [name=company]", // название компании
                                     "Job": "#summit-registration-block [name=title]", // должность посетителя
-                                    "Event": "#summit_name", // должность посетителя
+                                    "Event": "#summit_name", // название саммита
                                 },
-                                landingId: "62430a1e-9908-4ab5-be6e-1b47e5fdb0d4",
-                                serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-                                //landingId: "8a679bd1-861f-46f9-8207-12e3842ec1f7",
-                                //serviceUrl: "https://038954-crm-bundle.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                landingId: "fc46880f-4372-46ce-9b7c-9e34da64b369",
+                                serviceUrl: "https://038954-crm-bundle.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                //landingId: "62430a1e-9908-4ab5-be6e-1b47e5fdb0d4",
+                                //serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+
                                 redirectUrl: ""
                             };
                             landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
