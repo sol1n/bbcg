@@ -31,6 +31,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 
+        <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/yandex-metrika.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/facebook-pixel.php"; ?>
