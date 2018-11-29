@@ -94,6 +94,7 @@
                                         "Company": "#summit-registration-block [name=company]", // название компании
                                         "Job": "#summit-registration-block [name=title]", // должность посетителя
                                         "Event": "#summit_name", // название саммита
+                                        "Website": "#summit-registration-block [name=promocode]", // промокод
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
