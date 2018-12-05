@@ -14,6 +14,7 @@
     "autoprefixer": "^7.1.6",
     "baron": "^3.0.3",
     "cssnano": "^3.10.0",
+    "datalist-polyfill": "^1.22.2",
     "devbridge-autocomplete": "^1.4.7",
     "flexboxgrid": "^6.3.1",
     "gulp": "^3.9.1",

@@ -22870,6 +22870,7 @@ $(window).resize(function() {
                         if (data && data.success) {
                             if($form.data('crm-token') === 'Y'){
                                 console.log('summit-reg-form');
+
                                 //передача данных в CRM
                                 var crm_config = {
                                     fields: {
@@ -22893,6 +22894,7 @@ $(window).resize(function() {
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {
+                            initSideModal('Ошибка: '+data.message, 'message-modal', false, false);
                             console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
                             if (data.errors) {
