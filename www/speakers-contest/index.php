@@ -1,7 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 define('STOP_STATISTICS', true);
-define('SPEAKERS_CONTEST_2018_EVENT_ID', 20);
 
 //SPEAKERS_CONTEST_2018_EVENT_ID -- section ID summit events request
 
@@ -13,9 +12,9 @@ if($ar_event_result = $db_list->GetNext()):
     $btnClass = $ar_event_result['UF_BTN_CLASS'] != "" ? $ar_event_result['UF_BTN_CLASS'] : "button-red";
 ?>
     <div class="wrapper">
-        <form action="/api/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax style="max-width: 1140px;" >
+        <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax style="max-width: 1140px;" >
             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-            <input name="summit" value="<?=$arResult['ID']?>" type="hidden">
+            <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
             <h1>Голосование за лучшего спикера 2018</h1>
             <p style="font-size: 18px;">
             Мечтали выиграть 1 000 000 рублей? Потратьте его на образование!
@@ -32,9 +31,9 @@ if($ar_event_result = $db_list->GetNext()):
                             ФИО
                         </label>
                         <? if ((isset($arParams['USER']['LAST_NAME']))&&(isset($arParams['USER']['NAME']))): ?>
-                            <input type="text" name="full_name" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?> <?=$arParams['USER']['NAME']?> <?=$arParams['USER']['SECOND_NAME']?>" required>
+                            <input type="text" name="fullname" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?> <?=$arParams['USER']['NAME']?> <?=$arParams['USER']['SECOND_NAME']?>" required>
                         <? else: ?>
-                            <input type="text" name="full_name" class="form-input" required>
+                            <input type="text" name="fullname" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -80,9 +79,9 @@ if($ar_event_result = $db_list->GetNext()):
                             Должность
                         </label>
                         <? if (isset($arParams['USER']['WORK_POSITION'])): ?>
-                            <input type="text" name="title" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
+                            <input type="text" name="position" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
                         <? else: ?>
-                            <input type="text" name="title" class="form-input" required>
+                            <input type="text" name="position" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -93,7 +92,6 @@ if($ar_event_result = $db_list->GetNext()):
                         </div>
                     </div>
                 </div>
-                <input type="hidden" id="summit_name" value="<?=$arResult['NAME']?>"/>
             </div>
 
             <div class="m-b-xl">
@@ -157,7 +155,7 @@ if($ar_event_result = $db_list->GetNext()):
                         <label class="form-label">
                             Почему?
                         </label>
-                        <textarea  name="why_this_word" class="form-input" rows="5"></textarea>
+                        <textarea  name="word_description" class="form-input" rows="5"></textarea>
                     </div>
                 </div>
             </div>

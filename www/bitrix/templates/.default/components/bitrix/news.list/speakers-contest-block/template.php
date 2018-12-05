@@ -16,9 +16,12 @@
                         background-color: #ad1c34;
                         transition: all .2s;
                     }
+                    .speakers-block-header input.error{
+                        border-color: #ad1b34;
+                    }
                 </style>
                 <label class="form-label">Кто, по вашему мнению, я вляеться лучшим спикером 2018 года:</label>
-                <input placeholder="Например: Иванов Иван" calss="speakers-contest-input" style="width: 100%; font-size: 1.1rem; background: #fff; padding: 15px 15px;" type="text" name="speakers-contest-options" id="speakers-contest-options" value="" list="optionslist">
+                <input required placeholder="Например: Иванов Иван" calss="speakers-contest-input" style="width: 100%; font-size: 1.1rem; background: #fff; padding: 15px 15px;" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
                 <datalist id="optionslist" title="Выберите спикера">
                     <!--[if lte IE 9]><select><![endif]-->
                     <? foreach ($arResult['ITEMS'] as $item): ?>
