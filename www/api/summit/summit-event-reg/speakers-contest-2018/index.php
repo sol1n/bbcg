@@ -81,6 +81,15 @@ if ($_POST['id'] && $_POST['fullname'] && $_POST['phone'] && $_POST['email'] && 
                     'WORD_DESCRIPTION' => array("TEXT"=>$_REQUEST['word_description'], "TYPE"=>"html")
                 ]
             ]);
+
+            $curr_votes = $arProps['VOTES']['VALUE'];
+            if(empty($curr_votes)){
+                $curr_votes = 0;
+            }
+            $new_votes = $curr_votes + 1;
+
+            CIBlockElement::SetPropertyValuesEx($arFields['ID'], false, array("VOTES" => $new_votes));
+
             echo json_encode([
                 'success' => true,
                 'message' => $messages['success'],

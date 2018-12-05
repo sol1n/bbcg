@@ -12,11 +12,11 @@ if($ar_event_result = $db_list->GetNext()):
     $btnClass = $ar_event_result['UF_BTN_CLASS'] != "" ? $ar_event_result['UF_BTN_CLASS'] : "button-red";
 ?>
     <div class="wrapper">
-        <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax style="max-width: 1140px;" >
+        <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
             <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
             <h1>Голосование за лучшего спикера 2018</h1>
-            <p style="font-size: 18px;">
+            <p class="speakers-contest-text">
             Мечтали выиграть 1 000 000 рублей? Потратьте его на образование!
             Примите участие в конкурсе Вездеход 2019 и выиграйте бесплатный именной пропуск на все мероприятия BBCG и Академии Ритейла. Это 7 профильных конференций и 15 образовательных программ в сфере розничной торговли, встречи только с первыми лицами ритейла и производственных компаний на одной площадке*.
             Победитель станет известен совсем скоро на Рождественском ужине BBCG и Академии Ритейла. Разыграем главный приз уходящего года 20 декабря 2018 года в прямом эфире в нашей группе на Facebook. Успейте сейчас или будете жалеть весь год!
@@ -88,19 +88,19 @@ if($ar_event_result = $db_list->GetNext()):
                 <div class="col-xs-12 col-sm-6">
                     <div class="m-t-md">
                         <div class="submit-registration-block-form-hint">
-                            Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
+                            Нажимая кнопку «Хочу победить», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="m-b-xl">
-                <h4 class="m-b-n" style="text-decoration: underline;">Шаг 1</h4>
+                <h4 class="m-b-n speakers-contest-step">Шаг 1</h4>
                 <h2>КТО ЛУЧШИЙ СПИКЕР 2018?</h2>
-                <p style="font-size: 19px;">
+                <p class="speakers-contest-text">
                     Каждый год мы приглашаем на наши мероприятия топ-спикеров поделиться успешными кейсами, лучшими практиками и решениями, которые меняют современный ритейл.
                 </p>
-                <p style="font-size: 19px;">
+                <p class="speakers-contest-text">
                     Кто станет лучшим спикером 2018 года, решаете только вы.
                 </p>
             </div>
@@ -134,9 +134,9 @@ if($ar_event_result = $db_list->GetNext()):
             ?>
 
             <div class="m-b-xl">
-                <h4 class="m-b-n" style="text-decoration: underline;">Шаг 2</h4>
+                <h4 class="m-b-n speakers-contest-step">Шаг 2</h4>
                 <h2>КАКОЕ ГЛАВНОЕ СЛОВО 2018 ГОДА В РИТЕЙЛЕ?</h2>
-                <p style="font-size: 19px;">
+                <p class="speakers-contest-text">
                     Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали fake news — фейковые новости, в 2016-м — Brexit.
                 </p>
             </div>

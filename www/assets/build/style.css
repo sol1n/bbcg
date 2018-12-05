@@ -13767,3 +13767,40 @@ body {
 .banner-close:hover {
   background-color: #fff;
 }
+.speakers-contest-form {
+  max-width: 1140px;
+}
+.speakers-contest-form .speakers-block-header-left {
+  width: 74%;
+}
+.speakers-contest-form .speakers-block-header-right a {
+  color: #2b2a29;
+}
+.speakers-contest-form .slick-arrow {
+  background-color: #872742;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.speakers-contest-form .slick-arrow:hover {
+  background-color: #ad1c34;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.speakers-contest-step {
+  text-decoration: underline;
+}
+.speakers-contest-text {
+  font-size: 18px;
+}
+#speakers-contest-options {
+  width: 100%;
+  font-size: 1.1rem;
+  background: #fff;
+  padding: 15px 15px;
+}
+#speakers-contest-options.error {
+  border-color: #ad1b34;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}

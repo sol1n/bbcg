@@ -3,25 +3,9 @@
 ?>
 <? if ($arResult['ITEMS']): ?>
         <div class="speakers-block-header m-t-md">
-            <div class="speakers-block-header-left" style="width: 74%;">
-                <style type="text/css">
-                    input::-webkit-calendar-picker-indicator {
-                        display: none;
-                    }
-                    .slick-arrow {
-                        background-color: #872742;
-                        transition: all .2s;
-                    }
-                    .slick-arrow:hover {
-                        background-color: #ad1c34;
-                        transition: all .2s;
-                    }
-                    .speakers-block-header input.error{
-                        border-color: #ad1b34;
-                    }
-                </style>
+            <div class="speakers-block-header-left">
                 <label class="form-label">Кто, по вашему мнению, я вляеться лучшим спикером 2018 года:</label>
-                <input required placeholder="Например: Иванов Иван" calss="speakers-contest-input" style="width: 100%; font-size: 1.1rem; background: #fff; padding: 15px 15px;" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
+                <input required placeholder="Например: Иванов Иван" calss="speakers-contest-input" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
                 <datalist id="optionslist" title="Выберите спикера">
                     <!--[if lte IE 9]><select><![endif]-->
                     <? foreach ($arResult['ITEMS'] as $item): ?>
@@ -38,7 +22,7 @@
                 </datalist>
             </div>
             <div class="speakers-block-header-right">
-                <a href="<?=$arResult['INDEX_PAGE_URL']?>" class="no-wrap" style="color: #2b2a29;" target="_blank">
+                <a href="<?=$arResult['INDEX_PAGE_URL']?>" class="no-wrap" target="_blank">
                     <?=Loc::GetMessage('ALL_SPEAKERS', [], $arParams['LANG'])?>
                 </a>
                 <div class="speakers-block-header-arrows m-b-xs"></div>
