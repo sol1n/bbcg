@@ -126,8 +126,8 @@ if($ar_event_result = $db_list->GetNext()):
                     "DISPLAY_BOTTOM_PAGER" => "N",
                     "PAGER_SHOW_ALWAYS" => "N",
                     "PAGER_TEMPLATE" => "main",
-                    "CACHE_TYPE" => "A",
-                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "N",
+                    "CACHE_TIME" => "300",
                     "CACHE_FILTER" => "Y",
                     "CACHE_GROUPS" => "N",
                 ), false);
