@@ -11,18 +11,25 @@ $db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true, $arSelec
 if($ar_event_result = $db_list->GetNext()):
     $btnClass = $ar_event_result['UF_BTN_CLASS'] != "" ? $ar_event_result['UF_BTN_CLASS'] : "button-red";
 ?>
-    <div class="wrapper">
+
+<section class="about-summit-block" style="min-height:640px;background-image: url('/upload/documents/img/bbcg_tr_02_05.jpg')">
+</section>
+<div>
+
+    <div class="wrapper" style="margin-bottom:40px">
         <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
             <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
-            <h1>Голосование за лучшего спикера 2018</h1>
+            <h1>УСЛОВИЯ КОНКУРСА ВЕЗДЕХОД 2019</h1>
             <p class="speakers-contest-text">
-            Мечтали выиграть 1 000 000 рублей? Потратьте его на образование!
-            Примите участие в конкурсе Вездеход 2019 и выиграйте бесплатный именной пропуск на все мероприятия BBCG и Академии Ритейла. Это 7 профильных конференций и 15 образовательных программ в сфере розничной торговли, встречи только с первыми лицами ритейла и производственных компаний на одной площадке*.
-            Победитель станет известен совсем скоро на Рождественском ужине BBCG и Академии Ритейла. Разыграем главный приз уходящего года 20 декабря 2018 года в прямом эфире в нашей группе на Facebook. Успейте сейчас или будете жалеть весь год!
+                Мечтали выиграть 1 000 000 рублей? Потратьте его на образование!</p>
+            <p class="speakers-contest-text">
+                Примите участие в конкурсе Вездеход 2019 и выиграйте бесплатный именной пропуск на все мероприятия BBCG и Академии Ритейла. Это 7 профильных конференций и 15 образовательных программ в сфере розничной торговли, встречи только с первыми лицами ритейла и производственных компаний на одной площадке*.</p>
+            <p class="speakers-contest-text">
+                Победитель станет известен совсем скоро на Рождественском ужине BBCG и Академии Ритейла. Разыграем главный приз уходящего года 20 декабря 2018 года в прямом эфире в нашей группе на Facebook. Успейте сейчас или будете жалеть весь год!
             </p>
             <div class="summit-registration-block-form-title">
-                Давайте познакомимся с вами
+                Давайте познакомимся с Вами
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
@@ -31,9 +38,9 @@ if($ar_event_result = $db_list->GetNext()):
                             ФИО
                         </label>
                         <? if ((isset($arParams['USER']['LAST_NAME']))&&(isset($arParams['USER']['NAME']))): ?>
-                            <input type="text" name="fullname" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?> <?=$arParams['USER']['NAME']?> <?=$arParams['USER']['SECOND_NAME']?>" required>
+                        <input type="text" name="fullname" class="form-input" value="<?=$arParams['USER']['LAST_NAME']?> <?=$arParams['USER']['NAME']?> <?=$arParams['USER']['SECOND_NAME']?>" required>
                         <? else: ?>
-                            <input type="text" name="fullname" class="form-input" required>
+                        <input type="text" name="fullname" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -43,9 +50,9 @@ if($ar_event_result = $db_list->GetNext()):
                             Мобильный телефон
                         </label>
                         <? if (isset($arParams['USER']['PERSONAL_PHONE'])): ?>
-                            <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" value="<?=$arParams['USER']['PERSONAL_PHONE']?>" required>
+                        <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" value="<?=$arParams['USER']['PERSONAL_PHONE']?>" required>
                         <? else: ?>
-                            <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" required>
+                        <input type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -55,9 +62,9 @@ if($ar_event_result = $db_list->GetNext()):
                             E-mail
                         </label>
                         <? if (isset($arParams['USER']['EMAIL'])): ?>
-                            <input type="email" name="email" class="form-input" value="<?=$arParams['USER']['EMAIL']?>" required>
+                        <input type="email" name="email" class="form-input" value="<?=$arParams['USER']['EMAIL']?>" required>
                         <? else: ?>
-                            <input type="email" name="email" class="form-input" required>
+                        <input type="email" name="email" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -67,9 +74,9 @@ if($ar_event_result = $db_list->GetNext()):
                             Компания
                         </label>
                         <? if (isset($arParams['USER']['WORK_COMPANY'])): ?>
-                            <input type="text" name="company" class="form-input" value="<?=$arParams['USER']['WORK_COMPANY']?>" required>
+                        <input type="text" name="company" class="form-input" value="<?=$arParams['USER']['WORK_COMPANY']?>" required>
                         <? else: ?>
-                            <input type="text" name="company" class="form-input" required>
+                        <input type="text" name="company" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
@@ -79,31 +86,34 @@ if($ar_event_result = $db_list->GetNext()):
                             Должность
                         </label>
                         <? if (isset($arParams['USER']['WORK_POSITION'])): ?>
-                            <input type="text" name="position" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
+                        <input type="text" name="position" class="form-input" value="<?=$arParams['USER']['WORK_POSITION']?>" required>
                         <? else: ?>
-                            <input type="text" name="position" class="form-input" required>
+                        <input type="text" name="position" class="form-input" required>
                         <? endif ?>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="m-t-md">
                         <div class="submit-registration-block-form-hint">
-                            Нажимая кнопку «Хочу победить», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
+                            Заполняя форму, я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
                         </div>
                     </div>
                 </div>
             </div>
+    </div>
 
-            <div class="m-b-xl">
-                <h4 class="m-b-n speakers-contest-step">Шаг 1</h4>
-                <h2>КТО ЛУЧШИЙ СПИКЕР 2018?</h2>
-                <p class="speakers-contest-text">
-                    Каждый год мы приглашаем на наши мероприятия топ-спикеров поделиться успешными кейсами, лучшими практиками и решениями, которые меняют современный ритейл.
-                </p>
-                <p class="speakers-contest-text">
-                    Кто станет лучшим спикером 2018 года, решаете только вы.
-                </p>
-            </div>
+    <section class="speakers-block speakers-block-downarrow">
+
+        <div class="wrapper">
+            <h4 class="m-b-n speakers-contest-step">Шаг 1</h4>
+            <h2>КТО ЛУЧШИЙ СПИКЕР 2018?</h2>
+            <p class="speakers-contest-text">
+                Каждый год мы приглашаем на наши мероприятия топ-спикеров поделиться успешными кейсами, лучшими практиками и решениями, которые меняют современный ритейл.
+            </p>
+            <p class="speakers-contest-text">
+                Кто станет лучшим спикером 2018 года, решаете только вы.
+            </p>
+
 
             <?
                 $APPLICATION->IncludeComponent("bitrix:news.list", "speakers-contest-block", array(
@@ -132,14 +142,16 @@ if($ar_event_result = $db_list->GetNext()):
                     "CACHE_GROUPS" => "N",
                 ), false);
             ?>
+        </div>
 
-            <div class="m-b-xl">
-                <h4 class="m-b-n speakers-contest-step">Шаг 2</h4>
-                <h2>КАКОЕ ГЛАВНОЕ СЛОВО 2018 ГОДА В РИТЕЙЛЕ?</h2>
-                <p class="speakers-contest-text">
-                    Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали fake news — фейковые новости, в 2016-м — Brexit.
-                </p>
-            </div>
+    </section>
+    <section class="sessions-block">
+        <div class="wrapper">
+            <h4 class="m-b-n speakers-contest-step">Шаг 2</h4>
+            <h2>КАКОЕ ГЛАВНОЕ СЛОВО 2018 ГОДА В РИТЕЙЛЕ?</h2>
+            <p class="speakers-contest-text">
+                Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали fake news — фейковые новости, в 2016-м — Brexit.
+            </p>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
@@ -155,7 +167,7 @@ if($ar_event_result = $db_list->GetNext()):
                         <label class="form-label">
                             Почему?
                         </label>
-                        <textarea  name="word_description" class="form-input" rows="5"></textarea>
+                        <textarea name="word_description" class="form-input" rows="5"></textarea>
                     </div>
                 </div>
             </div>
@@ -163,7 +175,7 @@ if($ar_event_result = $db_list->GetNext()):
             <div class="col-xs-12 col-sm-12">
                 <div class="submit-registration-block-form-hint">
                     <p>
-                        *Нажимая кнопку «Хочу победить», я принимаю условия <a href=\"/eula/\" target=\"_blank\">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
+                        *Нажимая кнопку «Хочу участвовать в конкурсе Вездеход2019», я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
                     </p>
                     <p>
                         *Пропуск конкурса «Вездеход2019» является именным и не может передаваться третьим лицам. Действителен для всех мероприятий BBCG и Академии Ритейла до 31.12.2019. <b>Денежный эквивалент пропуска не выдается</b>.
@@ -173,15 +185,18 @@ if($ar_event_result = $db_list->GetNext()):
 
             <div class="submit-registration-block-form-footer">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
                         <button type="submit" class="button <?=$btnClass?>">
-                            Хочу победить
+                            Хочу участвовать в конкурсе Вездеход2019
                         </button>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </section>
+    </form>
+</div>
+
 <?endif;?>
 
 <?
