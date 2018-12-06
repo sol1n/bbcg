@@ -13776,6 +13776,9 @@ body {
 .speakers-contest-form-submit-container {
   text-align: center;
 }
+.speakers-contest-form .speakers-block-header-left {
+  width: 470px;
+}
 .speakers-contest-form-submit-container .button {
   float: none;
 }
@@ -13806,4 +13809,7 @@ body {
 }
 input::-webkit-calendar-picker-indicator {
   display: none;
+}
+.speakers-contest-word .form-input {
+  background-color: #fff;
 }
