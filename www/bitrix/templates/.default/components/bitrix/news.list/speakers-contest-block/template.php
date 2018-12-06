@@ -4,7 +4,7 @@
 <? if ($arResult['ITEMS']): ?>
         <div class="speakers-block-header m-t-md">
             <div class="speakers-block-header-left">
-                <label class="form-label">Кто, по вашему мнению, я вляеться лучшим спикером 2018 года:</label>
+                <label class="form-label">Кто, по вашему мнению, является лучшим спикером 2018 года:</label>
                 <input required placeholder="Например: Иванов Иван" calss="speakers-contest-input" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
                 <datalist id="optionslist" title="Выберите спикера">
                     <!--[if lte IE 9]><select><![endif]-->

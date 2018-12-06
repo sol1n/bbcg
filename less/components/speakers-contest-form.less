@@ -1,23 +1,30 @@
+.speakers-contest-wrapper{
+    margin-bottom:40px
+}
+
 .speakers-contest-form{
     max-width: 1140px;
+    padding: 0;
 }
 
-.speakers-contest-form .speakers-block-header-left{
-    width: 74%;
+.speakers-contest-form-submit-container {
+    text-align: center;
 }
 
-.speakers-contest-form .speakers-block-header-right a{
-    color: #2b2a29;
+.speakers-contest-form-submit-container .button{
+    float: none;
 }
 
-.speakers-contest-form .slick-arrow {
-    background-color: #872742;
-    transition: all .2s;
+@media only screen and (max-width: 950px){
+    .mainimage-speakers-contest{
+        display:none;
+    }
 }
 
-.speakers-contest-form .slick-arrow:hover {
-    background-color: #ad1c34;
-    transition: all .2s;
+.mainimage-speakers-contest{
+    height: 640px;
+    background: url(/upload/documents/img/bbcg_tr_02_05.jpg) no-repeat 50%;
+    background-size: cover;
 }
 
 .speakers-contest-step{
@@ -25,7 +32,7 @@
 }
 
 .speakers-contest-text{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #speakers-contest-options{

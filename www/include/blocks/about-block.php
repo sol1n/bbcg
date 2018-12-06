@@ -41,7 +41,7 @@
             <? if (! $USER->IsAuthorized()): ?>
                 <div class="about-block-button">
                     <a href="registration.php" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
-                        Регистрация
+                        Создать личный кабинет
                     </a>
 
                     <div class="about-block-button-desc">

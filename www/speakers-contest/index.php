@@ -15,7 +15,7 @@ if($ar_event_result = $db_list->GetNext()):
 </section>
 <div>
 
-    <div class="wrapper" style="margin-bottom:40px">
+    <div class="wrapper speakers-contest-wrapper">
         <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
             <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
@@ -184,7 +184,7 @@ if($ar_event_result = $db_list->GetNext()):
 
             <div class="submit-registration-block-form-footer">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12" style="text-align:center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 speakers-contest-form-submit-container">
                         <button type="submit" class="button <?=$btnClass?>">
                             Хочу победить
                         </button>
