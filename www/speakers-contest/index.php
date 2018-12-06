@@ -151,7 +151,7 @@ if($ar_event_result = $db_list->GetNext()):
                     Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали <b>fake news</b> — фейковые новости, в 2016-м — <b>Brexit</b>.
                 </p>
 
-                <div class="row">
+                <div class="row speakers-contest-word">
                     <div class="col-xs-12 col-sm-12">
                         <div class="m-b">
                             <label class="form-label">

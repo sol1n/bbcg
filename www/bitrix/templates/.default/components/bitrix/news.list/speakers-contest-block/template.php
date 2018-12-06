@@ -4,19 +4,18 @@
 <? if ($arResult['ITEMS']): ?>
         <div class="speakers-block-header m-t-md">
             <div class="speakers-block-header-left">
-                <label class="form-label">Кто, по вашему мнению, является лучшим спикером 2018 года:</label>
-                <input required placeholder="Например: Иванов Иван" calss="speakers-contest-input" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
+                <input required placeholder="Имя Фамилия" calss="speakers-contest-input" type="text" name="speaker" id="speakers-contest-options" value="" list="optionslist">
                 <datalist id="optionslist" title="Выберите спикера">
                     <!--[if lte IE 9]><select><![endif]-->
                     <? foreach ($arResult['ITEMS'] as $item): ?>
-                        <?
+                        <?/*
                         if(!empty($item['PROPERTIES']['VOTES']['VALUE'])){
                             $votes = $item['PROPERTIES']['VOTES']['VALUE'];
                         } else {
                             $votes = 0;
-                        }
+                        }*/
                         ?>
-                        <option value="<?=$item['NAME']?>" data-value="<?=$item['ID']?>"><?=$votes?></option>
+                        <option value="<?=$item['NAME']?>" data-value="<?=$item['ID']?>"></option>
                     <? endforeach ?>
                     <!--[if lte IE 9]></select><![endif]-->
                 </datalist>
