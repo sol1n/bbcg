@@ -12,7 +12,7 @@
             <? if (! $USER->IsAuthorized()): ?>
                 <div class="register-iphone-block-button">
                     <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
-                        Регистрация
+                        Регистрация на сайте
                     </a>
                 </div>
             <? endif ?>

@@ -13,7 +13,7 @@
                 <img src="/assets/images/retail-academy-horizontal.svg" alt="Академия Ритейла — BBCG" height="34">
             </a>
         </div>
-        
+
         <?$APPLICATION->IncludeComponent("bitrix:menu", "main-header-menu", Array("ROOT_MENU_TYPE" => "academy"), false);?>
 
         <? if ($USER->IsAuthorized()): ?>
@@ -72,7 +72,7 @@
                         Войти
                     </a>
                     <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
-                        Регистрация
+                        Регистрация на сайте
                     </a>
                 </div>
             </div>

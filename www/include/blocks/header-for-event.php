@@ -17,7 +17,7 @@
         <nav class="main-header-menu">
             <ul>
                 <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
-                <li 
+                <li
                     <? if (CSite::InDir("/$summitCode/events/")): ?>class="acitve"<? endif ?>
                 >
                     <a href="/<?=$summitCode?>/events/">Программа</a>
@@ -106,7 +106,7 @@
                         Войти
                     </a>
                     <a href="/<?=$summitCode?>/#summit-registration-block">
-                        Регистрация
+                        Регистрация на сайте
                     </a>
                 </div>
             </div>
