@@ -11,14 +11,14 @@ $db_list = CIBlockSection::GetList(Array($by=>$order), $arFilter, true, $arSelec
 if($ar_event_result = $db_list->GetNext()):
     $btnClass = $ar_event_result['UF_BTN_CLASS'] != "" ? $ar_event_result['UF_BTN_CLASS'] : "button-red";
 ?>
-<section class="mainimage-speakers-contest">
-</section>
-<div>
 
-    <div class="wrapper speakers-contest-wrapper">
-        <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
-            <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-            <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
+<section class="mainimage-speakers-contest"></section>
+
+<div>
+    <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
+        <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
+        <input name="id" value="<?=$ar_event_result['ID']?>" type="hidden">
+        <div class="wrapper speakers-contest-wrapper">
             <h1>УСЛОВИЯ КОНКУРСА ВЕЗДЕХОД 2019</h1>
             <p class="speakers-contest-text">
                 Мечтали выиграть 1 000 000 рублей? Потратьте его на образование!</p>
@@ -99,100 +99,98 @@ if($ar_event_result = $db_list->GetNext()):
                     </div>
                 </div>
             </div>
-    </div>
-
-    <section class="speakers-block speakers-block-downarrow">
-
-        <div class="wrapper">
-            <h4 class="m-b-n speakers-contest-step">Шаг 1</h4>
-            <h2>КТО ЛУЧШИЙ СПИКЕР 2018?</h2>
-            <p class="speakers-contest-text">
-                Каждый год мы приглашаем на наши мероприятия топ-спикеров поделиться успешными кейсами, лучшими практиками и решениями, которые меняют современный ритейл.
-            </p>
-            <p class="speakers-contest-text">
-                Кто станет лучшим спикером 2018 года, решаете только вы.
-            </p>
-
-
-            <?
-                $APPLICATION->IncludeComponent("bitrix:news.list", "speakers-contest-block", array(
-                    "FILTER_NAME" => "",
-                    "IBLOCK_ID" => SPEAKERS_IBLOCK,
-                    "NEWS_COUNT" => "1000",
-                    "SORT_BY1" => "PROPERTY_VOTES",
-                    "SORT_ORDER1" => "DESC",
-                    "SORT_BY2" => "PROPERTY_LASTNAME",
-                    "SORT_ORDER2" => "ASC",
-                    "FIELD_CODE" => array(""),
-                    "PROPERTY_CODE" => array("*"),
-                    "SET_TITLE" => "N",
-                    "SET_STATUS_404" => "N",
-                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                    "ADD_SECTIONS_CHAIN" => "N",
-                    "PARENT_SECTION" => "",
-                    "PARENT_SECTION_CODE" => "",
-                    "DISPLAY_TOP_PAGER" => "N",
-                    "DISPLAY_BOTTOM_PAGER" => "N",
-                    "PAGER_SHOW_ALWAYS" => "N",
-                    "PAGER_TEMPLATE" => "main",
-                    "CACHE_TYPE" => "N",
-                    "CACHE_TIME" => "300",
-                    "CACHE_FILTER" => "Y",
-                    "CACHE_GROUPS" => "N",
-                ), false);
-            ?>
         </div>
 
-    </section>
-    <section class="sessions-block">
-        <div class="wrapper">
-            <h4 class="m-b-n speakers-contest-step">Шаг 2</h4>
-            <h2>КАКОЕ ГЛАВНОЕ СЛОВО 2018 ГОДА В РИТЕЙЛЕ?</h2>
-            <p class="speakers-contest-text">
-                Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали fake news — фейковые новости, в 2016-м — Brexit.
-            </p>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <div class="m-b">
-                        <label class="form-label">
-                            Какое слово стало для вас главным в нашей сфере в 2018 году?
-                        </label>
-                        <input type="text" name="word" class="form-input" required>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12">
-                    <div class="m-b">
-                        <label class="form-label">
-                            Почему?
-                        </label>
-                        <textarea name="word_description" class="form-input" rows="5"></textarea>
-                    </div>
-                </div>
+        <section class="speakers-block speakers-block-downarrow">
+            <div class="wrapper">
+                <h4 class="m-b-n speakers-contest-step">Шаг 1</h4>
+                <h2>КТО ЛУЧШИЙ СПИКЕР 2018?</h2>
+                <p class="speakers-contest-text">
+                    Каждый год мы приглашаем на наши мероприятия топ-спикеров поделиться успешными кейсами, лучшими практиками и решениями, которые меняют современный ритейл.
+                </p>
+                <p class="speakers-contest-text">
+                    Кто станет лучшим спикером 2018 года, решаете только вы.
+                </p>
+                <?
+                    $APPLICATION->IncludeComponent("bitrix:news.list", "speakers-contest-block", array(
+                        "FILTER_NAME" => "",
+                        "IBLOCK_ID" => SPEAKERS_IBLOCK,
+                        "NEWS_COUNT" => "1000",
+                        "SORT_BY1" => "PROPERTY_VOTES",
+                        "SORT_ORDER1" => "DESC",
+                        "SORT_BY2" => "PROPERTY_LASTNAME",
+                        "SORT_ORDER2" => "ASC",
+                        "FIELD_CODE" => array(""),
+                        "PROPERTY_CODE" => array("*"),
+                        "SET_TITLE" => "N",
+                        "SET_STATUS_404" => "N",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "PARENT_SECTION" => "",
+                        "PARENT_SECTION_CODE" => "",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "PAGER_SHOW_ALWAYS" => "N",
+                        "PAGER_TEMPLATE" => "main",
+                        "CACHE_TYPE" => "N",
+                        "CACHE_TIME" => "300",
+                        "CACHE_FILTER" => "Y",
+                        "CACHE_GROUPS" => "N",
+                    ), false);
+                ?>
             </div>
+        </section>
 
-            <div class="col-xs-12 col-sm-12">
-                <div class="submit-registration-block-form-hint">
-                    <p>
-                        *Нажимая кнопку «Хочу победить», я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
-                    </p>
-                    <p>
-                        *Пропуск конкурса «Вездеход2019» является именным и не может передаваться третьим лицам. Действителен для всех мероприятий BBCG и Академии Ритейла до 31.12.2019. <b>Денежный эквивалент пропуска не выдается</b>.
-                    </p>
-                </div>
-            </div>
+        <section class="sessions-block">
+            <div class="wrapper">
+                <h4 class="m-b-n speakers-contest-step">Шаг 2</h4>
+                <h2>КАКОЕ ГЛАВНОЕ СЛОВО 2018 ГОДА В РИТЕЙЛЕ?</h2>
+                <p class="speakers-contest-text">
+                    Недавно составители словаря Collins выбрали словом года <b>single-use</b> — «одноразовый». Это термин, используемый для обозначения предметов, которые наносят вред окружающей среде и негативно влияют на пищевую цепь. В прошлом году словом года назвали fake news — фейковые новости, в 2016-м — Brexit.
+                </p>
 
-            <div class="submit-registration-block-form-footer">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 speakers-contest-form-submit-container">
-                        <button type="submit" class="button <?=$btnClass?>">
-                            Хочу победить
-                        </button>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="m-b">
+                            <label class="form-label">
+                                Какое слово стало для вас главным в нашей сфере в 2018 году?
+                            </label>
+                            <input type="text" name="word" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="m-b">
+                            <label class="form-label">
+                                Почему?
+                            </label>
+                            <textarea name="word_description" class="form-input" rows="5"></textarea>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-12">
+                    <div class="submit-registration-block-form-hint">
+                        <p>
+                            *Нажимая кнопку «Хочу победить», я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
+                        </p>
+                        <p>
+                            *Пропуск конкурса «Вездеход2019» является именным и не может передаваться третьим лицам. Действителен для всех мероприятий BBCG и Академии Ритейла до 31.12.2019. <b>Денежный эквивалент пропуска не выдается</b>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="submit-registration-block-form-footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 speakers-contest-form-submit-container">
+                            <button type="submit" class="button <?=$btnClass?>">
+                                Хочу победить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
     </form>
 </div>
 
