@@ -14,6 +14,7 @@ if($ar_event_result = $db_list->GetNext()):
 
 <section class="mainimage-speakers-contest"></section>
 
+
 <div>
     <form action="/api/summit/summit-event-reg/speakers-contest-2018/" method="POST" class="summit-registration-block-form speakers-contest-form" data-validate data-form-ajax>
         <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
@@ -29,6 +30,9 @@ if($ar_event_result = $db_list->GetNext()):
                 Победитель станет известен совсем скоро на Рождественском ужине BBCG и Академии Ритейла. Разыграем главный приз уходящего года <b>20 декабря 2018</b> года в прямом эфире в нашей группе на Facebook. 
             </p><p>Успейте сейчас или будете жалеть весь год!
             </p>
+            
+            <script src="http://megatimer.ru/s/1b7c5f8f51584053a61c30d3e0a2ce2d.js"></script>
+            
             <div class="summit-registration-block-form-title">
                 Давайте познакомимся с вами
             </div>
