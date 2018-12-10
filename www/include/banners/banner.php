@@ -3,7 +3,7 @@
     <div class="wrapper">
         <div class="row">
             <div class="col-md-2 col-sm-2 banner-left">
-                <a href="/exclusive/makeretailgreatagain/" target="_blank">
+                <a href="/speakers-contest/" target="_blank">
                     <img src="/assets/images/banner-element-speakers.jpg"/>
                 </a>
             </div>
