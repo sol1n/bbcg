@@ -3,7 +3,7 @@
     <div class="wrapper">
         <div class="row">
             <div class="col-md-2 col-sm-2 banner-left">
-                <a href="/speakers-contest/" target="_blank">
+                <a href="/speakers-contest/?utm_source=Vezdehod&utm_medium=Banner&utm_campaign=10_12" target="_blank">
                     <img src="/assets/images/banner-element-speakers.jpg"/>
                 </a>
             </div>
@@ -11,7 +11,7 @@
                 <img src="/assets/images/banner-central-speakers.jpg"/>
             </div>
             <div class="col-md-2 col-sm-2 banner-right">
-                <a class="banner-button button button-light-burgundy" href="/speakers-contest/" target="_blank">ХОЧУ ПОБЕДИТЬ!</a>
+                <a class="banner-button button button-light-burgundy" href="/speakers-contest/?utm_source=Vezdehod&utm_medium=Banner&utm_campaign=10_12" target="_blank">ХОЧУ ПОБЕДИТЬ!</a>
             </div>
         </div>
     </div>
