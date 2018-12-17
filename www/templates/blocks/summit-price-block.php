@@ -86,7 +86,7 @@
                             <th>&nbsp;</th>
                             <td colspan="2">
                                 <div class="summit-price-block-table-charge">
-                                    Цены указаны с учетом НДС 18%.
+                                    Цены указаны с учетом НДС 20%.
                                 </div>
                             </td>
                         </tr>
