@@ -11,7 +11,7 @@
 
             <div class="summit-registration-block-row">
                 <div class="summit-registration-block-left">
-                    <form action="/api/summit/registration/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax data-crm-token="Y">
+                    <form action="/api/summit/registration/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax data-crm-token="summit-reg-form">
                         <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
                         <input name="summit" value="<?=$arResult['ID']?>" type="hidden">
                         <div class="summit-registration-block-form-title">

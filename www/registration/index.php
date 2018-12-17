@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <div class="wrapper">
     <div class="m-t-lg">
@@ -8,8 +8,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             Регистрация
         </div>
 
-        <form action="/api/registration/" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
+        <form action="/api/registration/" method="POST" enctype="multipart/form-data" class="main-reg-form registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay" data-crm-token="main-reg-form">
             <div id="registration-form-overlay" class="form-overlay"></div>
+            <input type="text" name="full_name" class="form-input hidden">
+            <input type="text" name="event" class="form-input hidden" value="Регистрация на сайте">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
                     <div class="form-group">
@@ -49,8 +51,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group">
-                        <label class="form-label" for="registration-form-title">Организация</label>
-                        <input id="registration-form-title" type="text" name="title" class="form-input">
+                        <label class="form-label" for="registration-form-organisation">Организация</label>
+                        <input id="registration-form-organisation" type="text" name="organisation" class="form-input">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
