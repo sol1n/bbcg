@@ -83,8 +83,8 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            if($form.data('crm-token') === 'Y'){
-                                console.log('summit-reg-form');
+                            if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
+                                console.log('summit-reg-form to CRM');
 
                                 //передача данных в CRM
                                 var crm_config = {
@@ -96,6 +96,50 @@
                                         "Job": "#summit-registration-block [name=title]", // должность посетителя
                                         "Event": "#summit_name", // название саммита
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
+                                    },
+                                    landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
+                                    serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                    redirectUrl: ""
+                                };
+                                landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                                landing.initLanding(crm_config); //отправляем данные
+                            }else if($form.data('crm-token') === 'main-reg-form'){ //форма регистрации на сайте
+                                console.log('main-reg-form to CRM');
+
+                                var fio = $(".main-reg-form [name=last_name]").val()+" "+$(".main-reg-form [name=first_name]").val()+" "+$(".main-reg-form [name=middle_name]").val();
+                                $(".main-reg-form [name=full_name]").val(fio); // ФИО посетителя
+
+                                //передача данных в CRM
+                                var crm_config = {
+                                    fields: {
+                                        "Name": ".main-reg-form [name=full_name]", // ФИО посетителя, заполнившего форму
+                                        "Email": ".main-reg-form [name=email]", // E-mail посетителя
+                                        "MobilePhone": ".main-reg-form [name=phone]", // телефон посетителя
+                                        "Company": ".main-reg-form [name=organisation]", // название компании
+                                        "Job": ".main-reg-form [name=title]", // должность посетителя
+                                        "Event": ".main-reg-form [name=event]", // событие
+                                    },
+                                    landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
+                                    serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                    redirectUrl: ""
+                                };
+                                landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                                landing.initLanding(crm_config); //отправляем данные
+                            }else if($form.data('crm-token') === 'subscribe-form'){ //форма подписки на рассылку
+                                console.log('subscribe-form to CRM');
+
+                                var fio = $(".subscribe-form [name=last_name]").val()+" "+$(".subscribe-form [name=first_name]").val()+" "+$(".subscribe-form [name=middle_name]").val();
+                                $(".subscribe-form [name=full_name]").val(fio); // ФИО посетителя
+
+                                //передача данных в CRM
+                                var crm_config = {
+                                    fields: {
+                                        "Name": ".subscribe-form [name=full_name]", // ФИО посетителя, заполнившего форму
+                                        "Email": ".subscribe-form [name=email]", // E-mail посетителя
+                                        "MobilePhone": ".subscribe-form [name=phone]", // телефон посетителя
+                                        "Company": ".subscribe-form [name=organisation]", // название компании
+                                        "Job": ".subscribe-form [name=title]", // должность посетителя
+                                        "Event": ".subscribe-form [name=event]", // событие
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",

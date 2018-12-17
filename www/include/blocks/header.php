@@ -77,9 +77,11 @@
                     <a href="/login/" data-side-modal data-side-modal-url="/include/blocks/modal-login.php" data-side-modal-class="login-modal">
                         Войти
                     </a>
-                    <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
-                        Регистрация на сайте
-                    </a>
+                    <? if (!CSite::InDir('/registration/')): ?>
+                        <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close>
+                            Регистрация на сайте
+                        </a>
+                    <? endif ?>
                 </div>
             </div>
 

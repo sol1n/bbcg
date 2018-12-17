@@ -1,7 +1,6 @@
 <?
 define('NEED_MAP', true);
 define('SUMMIT_TEMPLATE', true);
-define('NEED_CRM', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
