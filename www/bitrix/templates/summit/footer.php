@@ -27,6 +27,16 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
         <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
         <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+        <script type="text/javascript">
+        (function (d, s, i, r) {
+        if (d.getElementById(i)) { return; }
+        var n = d.createElement(s);
+            e = d.getElementsByTagName(s)[0];
+            n.id = i;
+            n.src = "https://webtracking-v01.bpmonline.com/Src/tracking_" + r + ".js"; e.parentNode.insertBefore(n, e);
+        })
+        (document, "script", "bpmTracking", "pnG0fD5nH4SNuJNt2WlGZy7WAPusX2EPiOb5Nd1S");
+        </script>
 
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 
