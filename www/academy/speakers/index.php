@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <div class="main-heading main-heading-black m-b-lg">
     <div class="wrapper">
@@ -11,11 +11,11 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         </h1>
 
         <form method="GET" action="/speakers/" class="main-heading-search-form" data-suggest-search="/api/search/speakers/">
-            <input 
-                type="search" 
-                name="search" 
-                class="main-heading-search-input" 
-                placeholder="Поиск" 
+            <input
+                type="search"
+                name="search"
+                class="main-heading-search-input"
+                placeholder="Поиск"
                 value="<?=htmlspecialchars($_GET['search'])?>"
             >
             <input type="submit" value="" class="main-heading-search-submit">
@@ -30,8 +30,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "FILTER_NAME" => "filter",
         "IBLOCK_ID" => SPEAKERS_IBLOCK,
         "NEWS_COUNT" => "16",
-        "SORT_BY1" => "ACTIVE_FROM",
-        "SORT_ORDER1" => "DESC",
+        "SORT_BY1" => "PROPERTY_LASTNAME",
+        "SORT_ORDER1" => "ASC",
         "FIELD_CODE" => array("ACTIVE_FROM"),
         "PROPERTY_CODE" => array("*"),
         "SET_TITLE" => "N",
@@ -48,8 +48,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
-        "SORT_BY1" => "PROPERTY_ACADEMY_SORT",
-        "SORT_ORDER1" => "ASC",
     ), false);
 ?>
 
