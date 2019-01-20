@@ -1,12 +1,12 @@
-<? 
+<?
     use \Bitrix\Main\Localization\Loc;
 ?>
 <? if (is_numeric($arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE'])): ?>
-    <style> 
-        .program-table { 
-            --program-table-hour-height: <?=$arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE']?>px; 
-        } 
-    </style> 
+    <style>
+        .program-table {
+            --program-table-hour-height: <?=$arResult['PROPERTIES']['EVENTS_ROW_HEIGHT']['VALUE']?>px;
+        }
+    </style>
 <? endif ?>
 
 <div class="main-heading main-heading-<?=$arResult['COLOR']?> program-table-main-heading">
@@ -57,11 +57,20 @@
             </li>
         </ul>
 
+        <? if(!empty($arResult['PROPERTIES']['PROGRAM_FOR_DOWNLOAD']['VALUE'])):?>
+            <? $download_link = CFile::GetPath($arResult['PROPERTIES']['PROGRAM_FOR_DOWNLOAD']['VALUE']); ?>
+            <li class="program-table-pagination-item program-download-button">
+                <a href="<?=$download_link?>" target="_blank" download="invoice">
+                    <?=Loc::GetMessage('DOWNLOAD PROGRAM', [], $arParams['LANG'])?>
+                </a>
+            </li>
+        <? endif ?>
+
         <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-right">
             <li class="subnav-list-item">
-                <form 
-                    method="GET" 
-                    data-suggest-search="/api/search/events/?lang=<?=$arParams['LANG']?>&summit=<?=$arResult['ID']?>" 
+                <form
+                    method="GET"
+                    data-suggest-search="/api/search/events/?lang=<?=$arParams['LANG']?>&summit=<?=$arResult['ID']?>"
                     class="program-table-search"
                 >
                     <input type="text" class="program-table-search-input" placeholder="<?=Loc::GetMessage('EVENTS SEARCH', [], $arParams['LANG'])?>" name="search">
