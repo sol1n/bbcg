@@ -59,7 +59,7 @@
 
         <? if(!empty($arResult['PROPERTIES']['PROGRAM_FOR_DOWNLOAD']['VALUE'])):?>
             <? $download_link = CFile::GetPath($arResult['PROPERTIES']['PROGRAM_FOR_DOWNLOAD']['VALUE']); ?>
-            <li class="program-table-pagination-item program-download-button">
+            <li class="program-table-pagination-item active program-download-button">
                 <a href="<?=$download_link?>" target="_blank" download="<?=$arResult['NAME']?>">
                     <?=Loc::GetMessage('DOWNLOAD PROGRAM', [], $arParams['LANG'])?>
                 </a>
