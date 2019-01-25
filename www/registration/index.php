@@ -51,14 +51,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group">
-                        <label class="form-label" for="registration-form-organisation">Организация</label>
-                        <input id="registration-form-organisation" type="text" name="organisation" class="form-input">
+                        <label class="form-label" for="registration-form-organisation">Организация *</label>
+                        <input id="registration-form-organisation" type="text" name="organisation" class="form-input" required>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group">
-                        <label class="form-label" for="registration-form-title">Должность</label>
-                        <input id="registration-form-title" type="text" name="title" class="form-input">
+                        <label class="form-label" for="registration-form-title">Должность *</label>
+                        <input id="registration-form-title" type="text" name="title" class="form-input" required>
                     </div>
                 </div>
             </div>
