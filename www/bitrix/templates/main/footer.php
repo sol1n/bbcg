@@ -23,9 +23,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<? endif ?>
 		<? endif ?>
 
-        <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-        <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript">
             (function (d, s, i, r) {
                 if (d.getElementById(i)) { return; }
