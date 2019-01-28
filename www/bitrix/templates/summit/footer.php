@@ -21,11 +21,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 			<? endif ?>
 		<? endif ?>
+
 		<? if (defined('NEED_EVENTS_TABLE')): ?>
 			<script src="/assets/build/program-table.min.js"></script>
 		<? endif ?>
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript">
             (function (d, s, i, r) {
                 if (d.getElementById(i)) { return; }
