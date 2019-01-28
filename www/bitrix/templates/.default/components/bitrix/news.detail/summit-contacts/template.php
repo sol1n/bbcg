@@ -1,6 +1,9 @@
+<?
+    use \Bitrix\Main\Localization\Loc;
+?>
 <div class="main-heading main-heading-<?=$arResult['COLOR']?> program-table-main-heading">
     <div class="wrapper">
-        <h1 class="main-heading-title">Контакты</h1>
+        <h1 class="main-heading-title"><?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?></h1>
     </div>
 </div>
 
@@ -17,10 +20,10 @@
                             </div>
                             <div class="contacts-block-item-content">
                                 <div class="contacts-block-item-title">
-                                    Физический адрес
+                                    <?=Loc::GetMessage('PHYSICAL_ADDRESS', [], $arParams['LANG'])?>
                                 </div>
                                 <div class="contacts-block-item-value">
-                                    115114, г. Москва, Дербеневская наб., д. 11, БЦ «Полларс», корпус Б, офис Б-504
+                                    <?=Loc::GetMessage('ADDRESS', [], $arParams['LANG'])?>
                                 </div>
                             </div>
                         </div>
@@ -32,10 +35,10 @@
                             </div>
                             <div class="contacts-block-item-content">
                                 <div class="contacts-block-item-title">
-                                    Контактная информация
+                                    <?=Loc::GetMessage('CONTACT_INFORMATION', [], $arParams['LANG'])?>
                                 </div>
                                 <div class="contacts-block-item-value">
-                                    Тел/факс: <a href="tel:+74957852206">(495) 785-22-06</a>, <a href="tel:+74957811134">(495) 781-11-34</a> <br>
+                                    <?=Loc::GetMessage('CONTACT_PHONE', [], $arParams['LANG'])?>: <a href="tel:+74957852206">(495) 785-22-06</a>, <a href="tel:+74957811134">(495) 781-11-34</a> <br>
                                     email: <a href="mailto:info@b2bcg.ru">info@b2bcg.ru</a>
                                 </div>
                             </div>
@@ -48,7 +51,7 @@
                             </div>
                             <div class="contacts-block-item-content">
                                 <div class="contacts-block-item-title">
-                                    Предложения о сотрудничестве
+                                    <?=Loc::GetMessage('COOPERATION', [], $arParams['LANG'])?>
                                 </div>
                                 <div class="contacts-block-item-value">
                                     <span class="contacts-block-item-value-title">email:</span> <a href="mailto:info@b2bcg.ru">info@b2bcg.ru</a>
@@ -60,7 +63,13 @@
         </div>
     </div>
 
-    <? $APPLICATION->IncludeFile('/include/blocks/contacts-map.php'); ?>
+    <?
+        $lang = "";
+        if($arParams['LANG'] == 'en'){
+            $lang = "/en";
+        }
+    ?>
+    <? $APPLICATION->IncludeFile($lang.'/include/blocks/contacts-map.php'); ?>
 
     <div class="feedback-block">
         <div class="wrapper">
@@ -68,18 +77,18 @@
                 <input name="summit" value="<?=$arResult['ID']?>" type="hidden" >
                 <input name="from" value="<?=$arResult['NAME']?>" type="hidden" >
                 <div class="feedback-block-title">
-                    Обратная связь
+                    <?=Loc::GetMessage('FEEDBACK', [], $arParams['LANG'])?>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="feedback-form-name" class="form-label">Фамилия и имя *</label>
+                            <label for="feedback-form-name" class="form-label"><?=Loc::GetMessage('NAME_AND_SURNAME', [], $arParams['LANG'])?> *</label>
                             <? if (isset($arParams['USER']['NAME']) || isset($arParams['USER']['LAST_NAME'])): ?>
                                 <? $username = trim($arParams['USER']['LAST_NAME'] . ' ' . $arParams['USER']['NAME']); ?>
                                 <input id="feedback-form-name" type="text" class="form-input" name="name" value="<?=$username?>" required placeholder="Иван Иванов">
                             <? else: ?>
-                                <input id="feedback-form-name" type="text" class="form-input" name="name" required placeholder="Иван Иванов">
+                                <input id="feedback-form-name" type="text" class="form-input" name="name" required placeholder="<?=Loc::GetMessage('NAME_AND_SURNAME_PLACEHOLDER', [], $arParams['LANG'])?>">
                             <? endif ?>
                         </div>
                     </div>
@@ -97,15 +106,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="feedback-form-message" class="form-label">Ваше сообщение *</label>
-                    <textarea id="feedback-form-message" class="form-textarea" name="message" cols="30" rows="10" placeholder="Напишите ваше сообщение" required></textarea>
+                    <label for="feedback-form-message" class="form-label"><?=Loc::GetMessage('YOUR_MESSAGE', [], $arParams['LANG'])?> *</label>
+                    <textarea id="feedback-form-message" class="form-textarea" name="message" cols="30" rows="10" placeholder="<?=Loc::GetMessage('YOUR_MESSAGE_PLACEHOLDER', [], $arParams['LANG'])?>" required></textarea>
                 </div>
 
                 <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-                
+
                 <div class="feedback-block-submit">
                     <button type="submit" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>">
-                        Отправить
+                        <?=Loc::GetMessage('SEND', [], $arParams['LANG'])?>
                     </button>
                 </div>
             </form>

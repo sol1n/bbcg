@@ -39,5 +39,5 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "map-json", array(
 	"CACHE_TIME" => "3600",
 	"CACHE_FILTER" => "N",
 	"CACHE_GROUPS" => "N",
-    "LANG" => 'ru',
+    "LANG" => 'en',
 ), false);
