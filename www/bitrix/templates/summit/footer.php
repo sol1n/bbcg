@@ -26,6 +26,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<script src="/assets/build/program-table.min.js"></script>
 		<? endif ?>
 
+        <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+        <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
         <script type="text/javascript">
             (function (d, s, i, r) {
                 if (d.getElementById(i)) { return; }
@@ -38,8 +40,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </script>
 
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
-
-        <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
 
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/yandex-metrika.php"; ?>
