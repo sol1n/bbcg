@@ -10,8 +10,10 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     Subscribe to newsletter
 </div>
 
-<form action="/api/registration/" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
+<form action="/api/registration/" method="POST" enctype="multipart/form-data" class="subscribe-form registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay" data-crm-token="subscribe-form">
     <div id="registration-form-overlay" class="form-overlay"></div>
+    <input type="text" name="full_name" class="form-input hidden">
+    <input type="text" name="event" class="form-input hidden" value="Подписка на рассылку">
     <div class="row">
         <div class="col-xs-12 col-sm-4">
             <div class="form-group">

@@ -172,7 +172,7 @@
                                 };
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
-                            }else if($form.data('crm-token') === 'academy-form-modal'){ //форма академии ритейла
+                            }else if($form.data('crm-token') === 'academy-form-modal'){ //модальная форма академии ритейла
                                 console.log('academy-form-modal to CRM');
 
                                 var fi = $(".academy-form-modal [name=surname]").val()+" "+$(".academy-form-modal [name=name]").val();
