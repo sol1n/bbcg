@@ -147,6 +147,28 @@
                                 };
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
+                            }else if($form.data('crm-token') === 'academy-form'){ //форма академии ритейла
+                                console.log('academy-form to CRM');
+
+                                var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
+                                $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
+
+                                //передача данных в CRM
+                                var crm_config = {
+                                    fields: {
+                                        "Name": ".academy-form [name=full_name]", // Фамилия и имя посетителя, заполнившего форму
+                                        "Email": ".academy-form [name=email]", // E-mail посетителя
+                                        "MobilePhone": ".academy-form [name=phone]", // телефон посетителя
+                                        "Company": ".academy-form [name=company]", // название компании
+                                        "Job": ".academy-form [name=title]", // должность посетителя
+                                        "Event": ".academy-form [name=event]", // событие
+                                    },
+                                    landingId: "6fb1ca54-067b-435f-b2a8-8342c6e13269",
+                                    serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                    redirectUrl: ""
+                                };
+                                landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                                landing.initLanding(crm_config); //отправляем данные
                             }
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
