@@ -152,6 +152,8 @@
 
                                 var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
                                 $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
+                                var program_selected = $form.find($(".academy-form [name=program] option:selected"));
+                                $(".academy-form [name=event]").val($(".academy-form [name=event]").val()+" - "+program_selected.text());
 
                                 //передача данных в CRM
                                 var crm_config = {
