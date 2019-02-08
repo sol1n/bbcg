@@ -22937,8 +22937,9 @@ $(window).resize(function() {
 
                                 var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
                                 $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
-                                var program_selected = $form.find($(".academy-form [name=program] option:selected"));
-                                $(".academy-form [name=event]").val($(".academy-form [name=event]").val()+" - "+program_selected.text());
+                                var program_selected = $(".academy-form [name=program] option:selected").text();
+                                var event = $(".academy-form [name=event]").val();
+                                $(".academy-form [name=event]").val(event+" - "+program_selected);
 
                                 //передача данных в CRM
                                 var crm_config = {
@@ -22949,6 +22950,31 @@ $(window).resize(function() {
                                         "Company": ".academy-form [name=company]", // название компании
                                         "Job": ".academy-form [name=title]", // должность посетителя
                                         "Event": ".academy-form [name=event]", // событие
+                                    },
+                                    landingId: "6fb1ca54-067b-435f-b2a8-8342c6e13269",
+                                    serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                                    redirectUrl: ""
+                                };
+                                landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
+                                landing.initLanding(crm_config); //отправляем данные
+                            }else if($form.data('crm-token') === 'academy-form-modal'){ //форма академии ритейла
+                                console.log('academy-form-modal to CRM');
+
+                                var fi = $(".academy-form-modal [name=surname]").val()+" "+$(".academy-form-modal [name=name]").val();
+                                $(".academy-form-modal [name=full_name]").val(fi); // Фамилия и имя посетителя
+                                var program_selected = $(".academy-form-modal [name=program] option:selected").text();
+                                var event = $(".academy-form-modal [name=event]").val();
+                                $(".academy-form-modal [name=event]").val(event+" - "+program_selected);
+
+                                //передача данных в CRM
+                                var crm_config = {
+                                    fields: {
+                                        "Name": ".academy-form-modal [name=full_name]", // Фамилия и имя посетителя, заполнившего форму
+                                        "Email": ".academy-form-modal [name=email]", // E-mail посетителя
+                                        "MobilePhone": ".academy-form-modal [name=phone]", // телефон посетителя
+                                        "Company": ".academy-form-modal [name=company]", // название компании
+                                        "Job": ".academy-form-modal [name=title]", // должность посетителя
+                                        "Event": ".academy-form-modal [name=event]", // событие
                                     },
                                     landingId: "6fb1ca54-067b-435f-b2a8-8342c6e13269",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",

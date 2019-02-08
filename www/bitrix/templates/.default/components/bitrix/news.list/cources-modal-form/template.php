@@ -12,7 +12,7 @@
     <?=$arParams['TITLE']?>
 </div>
 
-<form action="<?=$arResult['REGISTRATION_URL']?>" method="POST" class="academy-form summit-registration-block-form" data-validate data-form-ajax data-crm-token="academy-form">
+<form action="<?=$arResult['REGISTRATION_URL']?>" method="POST" class="academy-form-modal summit-registration-block-form" data-validate data-form-ajax data-crm-token="academy-form-modal">
     <input type="hidden" name="from" value="retail-academy">
     <input type="text" name="full_name" class="form-input hidden">
     <input type="text" name="event" class="form-input hidden" value="Академия ритейла">
