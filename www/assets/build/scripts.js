@@ -22933,8 +22933,8 @@ $(window).resize(function() {
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
                             }else if($form.data('crm-token') === 'academy-form'){ //форма академии ритейла
-                                console.log('academy-form to CRM');
-
+                                var lang = $(".academy-form [name=lang]").val();
+                                console.log('academy-form to CRM '+lang);
                                 var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
                                 $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
                                 var program_selected = $(".academy-form [name=program] option:selected").text();
@@ -22942,6 +22942,11 @@ $(window).resize(function() {
                                 $(".academy-form [name=event]").val(event+" - "+program_selected);
 
                                 //передача данных в CRM
+                                if(lang == 'ru'){
+                                    landing_Id = "6fb1ca54-067b-435f-b2a8-8342c6e13269";
+                                } else if(lang == 'en'){
+                                    landing_Id = "91bd85e6-e2ca-442d-9d81-9ed1dbd795ce";
+                                }
                                 var crm_config = {
                                     fields: {
                                         "Name": ".academy-form [name=full_name]", // Фамилия и имя посетителя, заполнившего форму
@@ -22951,15 +22956,15 @@ $(window).resize(function() {
                                         "Job": ".academy-form [name=title]", // должность посетителя
                                         "Event": ".academy-form [name=event]", // событие
                                     },
-                                    landingId: "6fb1ca54-067b-435f-b2a8-8342c6e13269",
+                                    landingId: landing_Id,
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                                     redirectUrl: ""
                                 };
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
                             }else if($form.data('crm-token') === 'academy-form-modal'){ //модальная форма академии ритейла
-                                console.log('academy-form-modal to CRM');
-
+                                var lang = $(".academy-form-modal [name=lang]").val();
+                                console.log('academy-form-modal to CRM '+lang);
                                 var fi = $(".academy-form-modal [name=surname]").val()+" "+$(".academy-form-modal [name=name]").val();
                                 $(".academy-form-modal [name=full_name]").val(fi); // Фамилия и имя посетителя
                                 var program_selected = $(".academy-form-modal [name=program] option:selected").text();
@@ -22967,6 +22972,12 @@ $(window).resize(function() {
                                 $(".academy-form-modal [name=event]").val(event+" - "+program_selected);
 
                                 //передача данных в CRM
+
+                                if(lang == 'ru'){
+                                    landing_Id = "6fb1ca54-067b-435f-b2a8-8342c6e13269";
+                                } else if(lang == 'en'){
+                                    landing_Id = "91bd85e6-e2ca-442d-9d81-9ed1dbd795ce";
+                                }
                                 var crm_config = {
                                     fields: {
                                         "Name": ".academy-form-modal [name=full_name]", // Фамилия и имя посетителя, заполнившего форму
@@ -22976,7 +22987,7 @@ $(window).resize(function() {
                                         "Job": ".academy-form-modal [name=title]", // должность посетителя
                                         "Event": ".academy-form-modal [name=event]", // событие
                                     },
-                                    landingId: "6fb1ca54-067b-435f-b2a8-8342c6e13269",
+                                    landingId: landing_Id,
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                                     redirectUrl: ""
                                 };

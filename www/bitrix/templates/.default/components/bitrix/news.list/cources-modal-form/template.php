@@ -16,6 +16,7 @@
     <input type="hidden" name="from" value="retail-academy">
     <input type="text" name="full_name" class="form-input hidden">
     <input type="text" name="event" class="form-input hidden" value="Академия ритейла">
+    <input type="text" name="lang" class="form-input hidden" value="<?=$arParams['LANG']?>">
     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
 
     <div class="row">
