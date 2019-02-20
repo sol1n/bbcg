@@ -28,7 +28,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             (document, "script", "bpmTracking", "2x0FkbAH5pSraa43iDn21mAzzm7xZ7WFISnxiCKJ");
         </script>
 
-        <script src="/assets/build/scripts.min.js"></script>
+        <script src="/assets/build/scripts.min.js?new"></script>
 		<? if (defined('NEED_MAP')): ?>
 			<? if (SITE_LANGUAGE == 'en'): ?>
 				<script src="//api-maps.yandex.ru/2.1/?lang=en_US&onload=initContactsMap"></script>
