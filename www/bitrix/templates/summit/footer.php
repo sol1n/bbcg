@@ -13,18 +13,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<div id="recaptcha-placeholder"></div>
 
-		<script src="/assets/build/scripts.min.js"></script>
-		<? if (defined('NEED_MAP')): ?>
-			<? if (SITE_LANGUAGE == 'en'): ?>
-				<script src="//api-maps.yandex.ru/2.1/?lang=en_US&onload=initContactsMap"></script>
-			<? else: ?>
-				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
-			<? endif ?>
-		<? endif ?>
-
-		<? if (defined('NEED_EVENTS_TABLE')): ?>
-			<script src="/assets/build/program-table.min.js"></script>
-		<? endif ?>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
         <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
         <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
@@ -38,6 +27,19 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             })
             (document, "script", "bpmTracking", "2x0FkbAH5pSraa43iDn21mAzzm7xZ7WFISnxiCKJ");
         </script>
+
+        <script src="/assets/build/scripts.min.js"></script>
+		<? if (defined('NEED_MAP')): ?>
+			<? if (SITE_LANGUAGE == 'en'): ?>
+				<script src="//api-maps.yandex.ru/2.1/?lang=en_US&onload=initContactsMap"></script>
+			<? else: ?>
+				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
+			<? endif ?>
+		<? endif ?>
+
+		<? if (defined('NEED_EVENTS_TABLE')): ?>
+			<script src="/assets/build/program-table.min.js"></script>
+		<? endif ?>
 
 		<script src='https://www.google.com/recaptcha/api.js?onload=gCapthaInit&render=explicit'></script>
 
