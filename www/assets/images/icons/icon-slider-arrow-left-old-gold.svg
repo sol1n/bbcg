@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: SketchAPI 5.1.316 <https://api.sketch.io/> -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketchjs="https://sketch.io/dtd/" style="" sketchjs:metadata="eyJ0aXRsZSI6IkRyYXdpbmciLCJkZXNjcmlwdGlvbiI6Ik1hZGUgd2l0aCBTa2V0Y2hwYWQgLSBodHRwczovL3NrZXRjaC5pby9za2V0Y2hwYWQiLCJtZXRhZGF0YSI6e30sImNsaXBQYXRoIjp7ImVuYWJsZWQiOnRydWUsInN0eWxlIjp7InN0cm9rZVN0eWxlIjoiYmxhY2siLCJsaW5lV2lkdGgiOjF9fSwiZXhwb3J0RFBJIjo3MiwiZXhwb3J0Rm9ybWF0IjoicG5nIiwiZXhwb3J0UXVhbGl0eSI6MC45NSwidW5pdHMiOiJweCIsIndpZHRoIjo4Ljk1ODM0MzU0NiwiaGVpZ2h0IjoxNS42NzY1ODM4MTk4MDAwMDEsInBhZ2VzIjp7Imxlbmd0aCI6MSwiZGF0YSI6W3sid2lkdGgiOjguOTU4MzQzNTQ2LCJoZWlnaHQiOjE1LjY3NjU4MzgxOTgwMDAwMX1dfX0=" width="8.958343546" height="15.676583819800001" viewBox="0 0 8.958343546 15.676583819800001" sketchjs:version="5.1.316">
+<g sketchjs:tool="clipart" style="mix-blend-mode: source-over;" transform="matrix(1,0,0,1,-0.47841204700000095,0.12829190989999942)">
+	<g sketchjs:uid="1" style="fill: none; fill-rule: evenodd; stroke-width: 1;">
+		<g transform="matrix(1,0,0,1,-1,0)" sketchjs:uid="2" style="fill: #FFFFFF;">
+			<path d="M3.393,8 L9.701,1.692 C9.95144318,1.44155682 10.0492524,1.07652793 9.95758382,0.734416186 C9.86591526,0.392304438 9.59869556,0.125084745 9.25658381,0.0334161802 C8.91447207,-0.0582523845 8.54944318,0.0395568153 8.299,0.29 L1.29,7.3 C1.10386931,7.48539687 0.999240274,7.73728983 0.999240274,8 C0.999240274,8.26271017 1.10386931,8.51460313 1.29,8.7 L8.3,15.71 C8.68715161,16.0971516 9.31484839,16.0971516 9.702,15.71 C10.0891516,15.3228484 10.0891516,14.6951516 9.702,14.308 L9.7,14.308 L3.393,8 Z" sketchjs:uid="3" style="fill: #e7c54f; fill-rule: nonzero; fill-opacity: 1;"/>
+		</g>
+	</g>
+</g>
+</svg>
