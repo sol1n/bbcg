@@ -486,6 +486,10 @@
   border-left: 3px solid @c-program-navy;
 }
 
+.program-table-event-old-gold {
+  border-left: 3px solid @c-program-old-gold;
+}
+
 .program-table-event-green {
   border-left: 3px solid @c-program-green;
 }
@@ -719,6 +723,7 @@
 .program-table-filter-select-orange,
 .program-table-filter-select-blue,
 .program-table-filter-select-navy,
+.program-table-filter-select-old-gold,
 .program-table-filter-select-green,
 .program-table-filter-select-green-light {
   &::before {
@@ -754,6 +759,12 @@
 .program-table-filter-select-navy {
   &::before {
     background-color: @c-program-navy;
+  }
+}
+
+.program-table-filter-select-old-gold {
+  &::before {
+    background-color: @c-program-old-gold;
   }
 }
 
@@ -882,6 +893,12 @@
   }
 }
 
+.program-table-filter-item-old-gold {
+  &::before {
+    background-color: @c-program-old-gold;
+  }
+}
+
 .program-table-filter-item-green {
   &::before {
     background-color: @c-program-green;
@@ -941,6 +958,10 @@
 
 .program-table-mobile-event-navy {
   border-left-color: @c-program-navy;
+}
+
+.program-table-mobile-event-old-gold {
+  border-left-color: @c-program-old-gold;
 }
 
 .program-table-mobile-event-orange {
@@ -1059,6 +1080,11 @@
       color: @c-navy;
     });
 
+    .navy-theme({
+      border-color: @c-old-gold;
+      color: @c-old-gold;
+    });
+
     &:hover {
       background-color: @c-light-burgundy;
       color: #fff;
@@ -1112,6 +1138,11 @@
         background-color: @c-navy;
         color: #fff;
       });
+
+      .old-gold-theme({
+        background-color: @c-old-gold;
+        color: #fff;
+      });
     }
   }
 
@@ -1158,6 +1189,10 @@
 
       .navy-theme({
         background-color: @c-navy;
+      });
+
+      .old-gold-theme({
+        background-color: @c-old-gold;
       });
     }
   }
