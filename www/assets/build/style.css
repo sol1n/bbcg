@@ -11778,6 +11778,9 @@ body {
   margin-bottom: 4px;
   line-height: 21px;
 }
+.full-max-width {
+  max-width: 100%;
+}
 .summit-contacts-block {
   background: url("../images/backgrounds/black-pattern.png") repeat #000;
   background-size: 25%;
