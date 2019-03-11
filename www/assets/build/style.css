@@ -1262,6 +1262,12 @@ li.fancybox-thumbs-loading {
     max-width: calc(90%);
   }
 }
+.c-white {
+  color: #fff;
+}
+.b-twhitext {
+  background-color: #fff;
+}
 .c-text {
   color: #2b2a29;
 }
@@ -11777,9 +11783,6 @@ body {
   font-size: 17px;
   margin-bottom: 4px;
   line-height: 21px;
-}
-.full-max-width {
-  max-width: 100%;
 }
 .summit-contacts-block {
   background: url("../images/backgrounds/black-pattern.png") repeat #000;

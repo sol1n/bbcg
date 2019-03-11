@@ -13,7 +13,7 @@
                 <div class="summit-registration-block-left">
                     <? if(!empty($arResult['PROPERTIES']['TIMEPAD']['VALUE'])): ?>
                         <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/timepad/id-".$arResult['PROPERTIES']['TIMEPAD']['VALUE'].".php"; ?>
-                        <div class="about-summit-block-content full-max-width">
+                        <div class="c-white">
                             <h1 class="about-summit-block-title">
                                 <?=$arResult['NAME']?>
                             </h1>
