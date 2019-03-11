@@ -27,8 +27,8 @@
                 </div>
             </div>
             <ul class="main-offcanvas-menu">
-                <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php'); ?>
-                <li 
+                <? $APPLICATION->IncludeFile('/include/blocks/summit-about-pages.php', Array("offcanvas" => "Y")); ?>
+                <li
                     <? if (CSite::InDir("/$summitCode/events/")): ?>class="acitve"<? endif ?>
                 >
                     <a href="/<?=$summitCode?>/events/">Программа</a>
