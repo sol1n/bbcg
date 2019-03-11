@@ -46,7 +46,8 @@
 			        "SET_TITLE" => "N",
 			        "SORT_BY1" => "SORT",
 			        "SORT_ORDER1" => "ASC",
-			        "SUMMIT_CODE" => $summit['CODE']
+			        "SUMMIT_CODE" => $summit['CODE'],
+                    'offcanvas' => $offcanvas
 			    )
 			);
     }
