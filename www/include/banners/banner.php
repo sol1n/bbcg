@@ -1,4 +1,4 @@
-<!--<div class="horizontal-banner banner">
+<div class="horizontal-banner banner">
     <a class="banner-close"></a>
     <div class="wrapper">
         <div class="row">
@@ -16,4 +16,3 @@
         </div>
     </div>
 </div>
--->
