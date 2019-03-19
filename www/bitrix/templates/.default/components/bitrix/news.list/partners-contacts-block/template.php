@@ -1,14 +1,31 @@
 <?
     use \Bitrix\Main\Localization\Loc;
 
+/*
     $title_add_padding = "";
     if(strtotime($now_date) >= strtotime($end_date))//variables from about-summit-block.php(summit news.detail)
         $title_add_padding = "p-t-xxl";
+*/
+$color = "red";
+if(!empty($arParams['COLOR']))
+    $color = $arParams['COLOR'];
 ?>
 
 <? if ($arResult["ITEMS"]): ?>
         <div id="sticky_item" class="wrapper partners-contacts">
-            <h3 class="summit-contacts-block-title <?=$title_add_padding;?>">
+            <a
+                id="partners-form"
+                href="#"
+                data-side-modal
+                data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php"
+                data-side-modal-class="registration-modal contestform-modal"
+                data-side-modal-prevent-overlay-close
+                data-side-modal-prevent-esc-close
+                class="button button-<?=$color?> partners-button partners-button-left"
+            >
+                <?=Loc::GetMessage('BECOME_A_PARTNER', [], $arParams['LANG'])?>
+            </a>
+            <h3 class="summit-contacts-block-title <?//=$title_add_padding;?>">
                 <?=Loc::GetMessage('CONTACTS', [], $arParams['LANG'])?>
             </h3>
 
@@ -40,7 +57,7 @@
             </div>
 
             <? if (!$arParams['HIDE_APPS']): ?>
-                <div class="text-center m-t-xl">
+                <div class="text-center m-t-md">
                     <div class="partners-app">
                         <div class="download-app-block-title">
                             <?=Loc::GetMessage('DOWNLOAD_APP', [], $arParams['LANG'])?> «<?=$arParams['NAME']?>»

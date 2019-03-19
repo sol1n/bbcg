@@ -29,6 +29,7 @@ $APPLICATION->IncludeComponent(
         "TITLE" => $arResult['PARTNERS_TITLE']['title'],
         "SUBTITLE" => $arResult['PARTNERS_TITLE']['subtitle'],
         "INDEX_PAGE_URL" => $arResult['PARTNERS_TITLE']['link'],
-        "LANG" => $arParams['LANG']
+        "LANG" => $arParams['LANG'],
+        "COLOR" => $arResult['PROPERTIES']['COLOR']['VALUE'],
     )
 );?>

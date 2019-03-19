@@ -8,20 +8,8 @@ if($arParams['LANG'] == 'en'){
 ?>
 
 <div class="main-heading main-heading-black">
-    <div class="wrapper partners-heading-wrapper">
+    <div class="wrapper">
         <h1 class="main-heading-title">Партнеры</h1>
-        <a
-            id="partners-form"
-            href="#"
-            data-side-modal
-            data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php"
-            data-side-modal-class="registration-modal contestform-modal"
-            data-side-modal-prevent-overlay-close
-            data-side-modal-prevent-esc-close
-            class="button button-red partners-button partners-button-left"
-        >
-            <?=Loc::GetMessage('BECOME_A_PARTNER', [], $arParams['LANG'])?>
-        </a>
     </div>
 </div>
 
