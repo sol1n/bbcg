@@ -4,7 +4,9 @@ global $USER;
 if ($USER->IsAdmin()){
     $user_ID = $USER->GetID();
     if($user_ID=='182'){
-
+        echo '<pre>';
+        print_r($_SERVER);
+        echo '</pre>';
         $haystack = $_SERVER['DOCUMENT_URI'];
         $needle = '20';
         $pos = strripos($haystack, $needle);
