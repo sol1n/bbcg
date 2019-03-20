@@ -11,7 +11,7 @@ $haystack = $new_link_start;
 $needle = '20';
 $pos = strripos($haystack, $needle);
 
-if (($pos === false) && ($file_path[1] == 'summits') && ($new_link_start != 'login') && ($new_link_start != 'academy')) {
+if (($pos === false) && ($new_link_start != '') && ($file_path[1] == 'summits') && ($new_link_start != 'login') && ($new_link_start != 'academy')) {
     $new_link = "/".$new_link_start."-2019/".$new_link_end;
     LocalRedirect($new_link);
 }
