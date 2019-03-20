@@ -9,7 +9,7 @@ if($arParams['LANG'] == 'en'){
 
 <div class="main-heading main-heading-black">
     <div class="wrapper">
-        <h1 class="main-heading-title">Партнеры</h1>
+        <h1 class="main-heading-title"><?=Loc::GetMessage('PARTNERS', [], $arParams['LANG'])?></h1>
     </div>
 </div>
 
@@ -18,7 +18,15 @@ if($arParams['LANG'] == 'en'){
         <div class="col-xs-12 col-sm-12 col-md-9 m-b-md">
             <? foreach ($arResult['SECTIONS'] as $section): ?>
                 <? if ($section['ELEMENT_CNT']): ?>
-                    <h2 class="text-center"><?=$section['NAME']?></h2>
+                    <h2 class="text-center">
+                        <?
+                            if(($arParams['LANG'] == 'en') && (!empty($section["UF_EN_NAME"]))) {
+                                echo $section["UF_EN_NAME"];
+                            } else {
+                                echo $section['NAME'];
+                            }
+                        ?>
+                    </h2>
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:news.list",
                         "partners-row",
