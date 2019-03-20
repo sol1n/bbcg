@@ -2,6 +2,8 @@
 define('NEED_MAP', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+
+include "redirect.php";
 ?>
 
 <?

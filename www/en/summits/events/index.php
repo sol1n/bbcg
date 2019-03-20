@@ -2,6 +2,8 @@
 define('NEED_EVENTS_TABLE', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+
+include "redirect.php";
 ?>
 
 <?
@@ -39,7 +41,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
         "SET_STATUS_404" => "Y",
         "SHOW_404" => "Y",
         "DATE" => isset($_REQUEST['date']) ? $_REQUEST['date'] : null,
-        "LANG" => "en" 
+        "LANG" => "en"
     ), false);
 ?>
 
