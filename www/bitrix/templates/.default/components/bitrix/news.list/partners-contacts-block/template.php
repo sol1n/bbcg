@@ -6,6 +6,12 @@
     if(strtotime($now_date) >= strtotime($end_date))//variables from about-summit-block.php(summit news.detail)
         $title_add_padding = "p-t-xxl";
 */
+
+$lang = "";
+if($arParams['LANG'] == 'en'){
+    $lang = "/en";
+}
+
 $color = "red";
 if(!empty($arParams['COLOR']))
     $color = $arParams['COLOR'];
