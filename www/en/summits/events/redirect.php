@@ -11,7 +11,9 @@ $haystack = $new_link_start;
 $needle = '20';
 $pos = strripos($haystack, $needle);
 
-if (($pos === false) && ($new_link_start != '') && ($file_path[2] == 'summits') && ($new_link_start != 'login') && ($new_link_start != 'academy')) {
+if (($pos === false) && ($new_link_start != '') && ($file_path[2] == 'summits') && ($new_link_start != 'login')
+ && ($new_link_start != 'academy') && ($new_link_start != 'registration') && ($new_link_start != 'retail')
+  && ($new_link_start != 'about') && ($new_link_start != 'eula')) {
     $new_link = "/en/".$new_link_start."-2019/".$new_link_end;
     LocalRedirect($new_link);
 }
