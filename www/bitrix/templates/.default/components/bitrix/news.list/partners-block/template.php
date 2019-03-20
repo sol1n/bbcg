@@ -1,5 +1,9 @@
 <?
     use \Bitrix\Main\Localization\Loc;
+
+    $color = "red";
+    if(!empty($arParams['COLOR']))
+        $color = $arParams['COLOR'];
 ?>
 <? if ($arResult['ITEMS']): ?>
     <section class="partners-block partners-block-downarrow">
@@ -42,15 +46,15 @@
                     $lang = "/en";
                 }
             ?>
-			<a
-				id="partners-form"
-            	href="#"
-            	data-side-modal
-            	data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php"
-            	data-side-modal-class="registration-modal contestform-modal"
-            	data-side-modal-prevent-overlay-close
-            	data-side-modal-prevent-esc-close
-            	class="button button-red partners-button"
+            <a
+                id="partners-form"
+                href="#"
+                data-side-modal
+                data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php"
+                data-side-modal-class="registration-modal contestform-modal"
+                data-side-modal-prevent-overlay-close
+                data-side-modal-prevent-esc-close
+                class="button button-<?=$color?> partners-button"
             >
                 <?=Loc::GetMessage('BECOME_A_PARTNER', [], $arParams['LANG'])?>
             </a>

@@ -1,5 +1,6 @@
 <?
 define('STOP_STATISTICS', true);
+define('PARTNERS_OFFER', '/upload/documents/partners/partnership_offer.pdf');
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 
 header('Content-type:application/json;charset=utf-8');
@@ -16,8 +17,8 @@ else
 {
     $messages = [
         'error' => "Ошибка отправки запроса. Пожалуйста, свяжитесь с администрацией сайта",
-        'success' => "Запрос успешно отправлен",
-        'empty' => 'Вы не заполнили обязательные поля'
+        'success' => "Заявка успешно отправлена",
+        'empty' => "Вы не заполнили обязательные поля"
     ];
 }
 
@@ -67,7 +68,8 @@ if ($_POST['company'] && $_POST['fio'] && $_POST['email'] && $_POST['phone'] && 
         echo json_encode([
             'success' => true,
             'message' => $messages['success'],
-            'requestId' => $result
+            'requestId' => $result,
+            'file' => PARTNERS_OFFER
         ]);
 
         if (function_exists('fastcgi_finish_request')) {

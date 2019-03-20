@@ -212,6 +212,13 @@
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
+                            if(data.file){
+                                var link = document.createElement('a');
+                                link.setAttribute('href', data.file);
+                                link.setAttribute('target', '_blank');
+                                link.setAttribute('download','partnership_offer');
+                                link.click();
+                            }
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {
                             initSideModal('Ошибка: '+data.message, 'message-modal', false, false);

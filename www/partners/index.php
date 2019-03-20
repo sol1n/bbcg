@@ -1,12 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
-
-<div class="main-heading main-heading-black">
-    <div class="wrapper">
-        <h1 class="main-heading-title">Партнеры</h1>
-    </div>
-</div>
+?>
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
