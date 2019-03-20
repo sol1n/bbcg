@@ -8,6 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 </div>
 <form action="/api/partners/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
     <input type="hidden" name="from" value="partners">
+    <input type="hidden" name="lang" value="en">
     <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
@@ -50,7 +51,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     </div>
     <div class="registration-form-submit">
         <button type="submit" class="button button-red">
-            Send request
+            Download PDF
         </button>
     </div>
 </form>
