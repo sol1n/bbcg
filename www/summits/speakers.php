@@ -2,7 +2,9 @@
 define('NEED_MAP', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+
+include "redirect.php";
+?>
 
 <?
     $APPLICATION->IncludeComponent("bitrix:news.detail", 'summit-speakers', Array (
