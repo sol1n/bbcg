@@ -6,7 +6,7 @@ $new_link_start = $link[1];
 $new_link_end = $link[2];
 
 $haystack = $new_link_start;
-$needle = '2019';
+$needle = '20';
 $pos = strripos($haystack, $needle);
 
 if ($pos === false) {
