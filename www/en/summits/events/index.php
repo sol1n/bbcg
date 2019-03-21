@@ -3,7 +3,7 @@ define('NEED_EVENTS_TABLE', true);
 define('SUMMIT_TEMPLATE', true);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
-include "redirect.php";
+include $_SERVER['DOCUMENT_ROOT'].'/en/summits/redirect.php';
 ?>
 
 <?
