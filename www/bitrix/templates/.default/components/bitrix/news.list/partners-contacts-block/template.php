@@ -70,10 +70,10 @@ if(!empty($arParams['COLOR']))
                         </div>
                         <div class="download-app-block-links">
                             <a href="<?=$arResult['IOS_APP_LINK']?>" target="_blank">
-                                <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-appstore-white.svg"); ?>
+                                <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-appstore-black.svg"); ?>
                             </a>
                             <a href="<?=$arResult['ANDROID_APP_LINK']?>" target="_blank">
-                                <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-google-play-white.svg"); ?>
+                                <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-google-play-black.svg"); ?>
                             </a>
                         </div>
                     </div>
