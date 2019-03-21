@@ -7122,7 +7122,7 @@ body {
 .partners-contacts {
   padding-bottom: 20px;
   width: 100%;
-  background-color: black;
+  background-color: #fff;
   margin-top: -20px;
   padding-top: 15px;
 }
@@ -7133,9 +7133,14 @@ body {
   text-align: center;
   padding-top: 11px;
   margin-bottom: 0;
+  color: #000;
 }
 .partners-contacts .summit-contacts-block-card {
   margin-top: 10px;
+  border: 1px solid #ccd3d7;
+}
+.partners-contacts .partners-app {
+  color: #000;
 }
 .partners-contacts .download-app-block-links a {
   margin: 0;
