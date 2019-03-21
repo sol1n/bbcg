@@ -26,7 +26,9 @@
         "SORT_ORDER2" => "ASC",
         "LANG" => "en",
         "TITLE" => "300+ speakers",
+        /*
         "SUBTITLE" => "For registered users access to a unique service: <br/>\"knowledge on demand\", personal sessions with a number of speakers *",
         "DESCRIPTION" => "* Academics and BBCG speakers are in some cases ready to conduct personal sessions, share knowledge directly with market participants and help in developing business development strategies. Formats: interactive online sessions, business breakfasts, strategic sessions or coaching. The process is coordinated by Elizabeth Nosenko, the director of the educational programs of the Academy of Retail:  <a href=\"E.Nosenko@b2bcg.ru\">E.Nosenko@b2bcg.ru</a>, <a href=\"tel:+74957852206\">+74957852206</a>."
+        */
     )
 );?>
