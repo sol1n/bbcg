@@ -15,8 +15,8 @@
     <form-app :form="formData"></form-app>
     <form-error></form-error>
 </div>
-
-<script src="/assets/build/scripts.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../assets/build/scripts.min.js"></script>
 <script src="http://static.appercode.com/forms/forms2.bundle.js?cb99212363955355a3e5"></script>
 <script>
     $.ajax({
