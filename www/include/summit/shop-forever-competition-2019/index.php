@@ -76,7 +76,7 @@ if($ar_event_result = $db_list->GetNext()):
             </div>
         </div>
         <div class="registration-form-submit">
-            <button type="submit" class="button button-<?=$btnClass?>">
+            <button type="submit" class="button <?=$btnClass?>">
                 Подать заявку
             </button>
         </div>
