@@ -6,9 +6,9 @@ $(document).ready(function() {
     $('[data-suggest-search]').suggestSearch();
 
 
-    if ($(window).width() > 1024){// не показывать горизонтальный баннер на мобильных устройствах
+    /*if ($(window).width() > 1024){// не показывать горизонтальный баннер на мобильных устройствах
         $('.horizontal-banner').delay(10000).fadeIn('slow');
-    }
+    }*/
 
     $('.main-offcanvas-menu .parent').on('click', function () {
         $(this).children('.main-header-submenu').slideToggle();
@@ -63,17 +63,6 @@ $(document).ready(function() {
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
