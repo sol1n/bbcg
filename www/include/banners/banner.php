@@ -1,3 +1,4 @@
+<?/*
 <div class="horizontal-banner banner">
     <a class="banner-close"></a>
     <div class="wrapper">
@@ -16,3 +17,4 @@
         </div>
     </div>
 </div>
+*/?>
