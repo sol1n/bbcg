@@ -31,7 +31,8 @@
                             </div>
                         </div>
                     <? else: ?>
-                        <form action="/api/summit/registration/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax data-crm-token="summit-reg-form">
+                        <form action="/api/summit/registration/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax data-crm-token="summit-reg-form" data-form-ajax-overlay="#registration-form-overlay">
+                            <div id="registration-form-overlay" class="form-overlay"></div>
                             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
                             <input name="summit" value="<?=$arResult['ID']?>" type="hidden">
                             <div class="summit-registration-block-form-title">
