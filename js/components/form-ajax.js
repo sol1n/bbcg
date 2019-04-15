@@ -72,6 +72,7 @@
                 }
 
                 function submitForm() {
+                    $('form.summit-registration-block-form').spin(true);
                     showOverlay();
                     $.ajax({
                         url: url,
@@ -93,8 +94,9 @@
                                 link.setAttribute('download','partnership_offer');
                                 link.click();
                             }
+                            $('form.summit-registration-block-form').spin(false);
                             initSideModal(data.message, 'message-modal', false, false);
-                            
+
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
