@@ -30,6 +30,7 @@
     "jquery-modal": "^0.9.1",
     "jquery-validation": "^1.17.0",
     "merge-stream": "^1.0.1",
+    "natives": "^1.1.6",
     "normalize.css": "^7.0.0",
     "slick-carousel": "^1.8.1",
     "spin.js": "^2.3.2",

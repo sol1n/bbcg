@@ -11804,6 +11804,7 @@ body {
   color: #fff;
 }
 .summit-registration-block-form {
+  position: relative;
   background-color: #fff;
   border-radius: 2px;
   padding: 30px;

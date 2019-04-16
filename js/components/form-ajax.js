@@ -72,6 +72,7 @@
                 }
 
                 function submitForm() {
+                    $('form.summit-registration-block-form').spin(true);
                     showOverlay();
                     $.ajax({
                         url: url,
@@ -83,6 +84,19 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
+                            $form[0].reset();
+                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
+                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
+                            if(data.file){
+                                var link = document.createElement('a');
+                                link.setAttribute('href', data.file);
+                                link.setAttribute('target', '_blank');
+                                link.setAttribute('download','partnership_offer');
+                                link.click();
+                            }
+                            $('form.summit-registration-block-form').spin(false);
+                            initSideModal(data.message, 'message-modal', false, false);
+
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
@@ -209,17 +223,6 @@
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
                             }
-                            $form[0].reset();
-                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
-                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
-                            if(data.file){
-                                var link = document.createElement('a');
-                                link.setAttribute('href', data.file);
-                                link.setAttribute('target', '_blank');
-                                link.setAttribute('download','partnership_offer');
-                                link.click();
-                            }
-                            initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {
                             initSideModal('Ошибка: '+data.message, 'message-modal', false, false);
                             console.log(data.message);
