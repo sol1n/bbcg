@@ -19,6 +19,8 @@
                     formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
+                $form.spin(true);
+
                 if (validation && $form.valid()) {
                     $('.submit-registration-block-form-footer button').prop( "disabled", true );
                     $('.registration-form-submit button').prop( "disabled", true );
@@ -72,7 +74,6 @@
                 }
 
                 function submitForm() {
-                    $('form.summit-registration-block-form').spin(true);
                     showOverlay();
                     $.ajax({
                         url: url,
@@ -84,9 +85,6 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
-                            $form[0].reset();
-                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
-                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             if(data.file){
                                 var link = document.createElement('a');
                                 link.setAttribute('href', data.file);
@@ -200,7 +198,6 @@
                                 $(".academy-form-modal [name=event]").val(event+" - "+program_selected);
 
                                 //передача данных в CRM
-
                                 if(lang == 'ru'){
                                     landing_Id = "6fb1ca54-067b-435f-b2a8-8342c6e13269";
                                 } else if(lang == 'en'){
@@ -222,6 +219,9 @@
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
                             }
+                            $form[0].reset();
+                            $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
+                            $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                         } else if (data && data.message) {
                             initSideModal('Ошибка: '+data.message, 'message-modal', false, false);
                             console.log(data.message);
@@ -252,7 +252,7 @@
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
-                        $('form.summit-registration-block-form').spin(false);
+                        $form.spin(false);
                         hideOverlay();
                     });
                 }
