@@ -94,7 +94,6 @@
                                 link.setAttribute('download','partnership_offer');
                                 link.click();
                             }
-                            $('form.summit-registration-block-form').spin(false);
                             initSideModal(data.message, 'message-modal', false, false);
 
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
@@ -253,6 +252,7 @@
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
+                        $('form.summit-registration-block-form').spin(false);
                         hideOverlay();
                     });
                 }
