@@ -1,11 +1,11 @@
 <?
 define('NEED_MAP', 1);
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-?> 
+?>
 
 <div class="main-heading main-heading-black">
     <div class="wrapper">
-        <h1 class="main-heading-title">Контакты</h1>
+        <h1 class="main-heading-title">Контакты офиса bbcg</h1>
     </div>
 </div>
 
@@ -103,7 +103,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             </div>
 
             <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
-            
+
             <div class="feedback-block-submit">
                 <button type="submit" class="button button-light-burgundy">
                     Отправить

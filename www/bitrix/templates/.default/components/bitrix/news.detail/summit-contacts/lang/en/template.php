@@ -1,5 +1,5 @@
 <?
-    $MESS["CONTACTS"] = "Contacts";
+    $MESS["CONTACTS"] = "Bbcg office contacts";
     $MESS["PHYSICAL_ADDRESS"] = "Our new physical address";
     $MESS["ADDRESS"] = "115114, Moscow, Derbenevskaya nab., 11, BC Pollars, building B, office B-504";
     $MESS["CONTACT_INFORMATION"] = "Contact Information";
