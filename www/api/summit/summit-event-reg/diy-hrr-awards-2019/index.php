@@ -77,7 +77,7 @@ if ($_POST['nomination'] && $_POST['company'] && $_POST['contacts'] && $_POST['w
             'IBLOCK_ID' => SUMMIT_EVENTS_REQEST_IBLOCK,
             'IBLOCK_SECTION_ID' => $_POST['id'],
             'NAME' => 'Заявка на участие в '.$event,
-            'DETAIL_TEXT' => $_REQUEST['why_deserves'].' '.$ar_section['UF_EMAIL'],
+            'DETAIL_TEXT' => $_REQUEST['why_deserves'],
             'PROPERTY_VALUES' => [
                 'CONTACTS' => $_REQUEST['contacts'],
                 'COMPANY' => $_REQUEST['company'],
