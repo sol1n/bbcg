@@ -12550,7 +12550,7 @@ $(window).resize(function() {
                     formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
-                $form.spin(true);
+
 
                 if (validation && $form.valid()) {
                     $('.submit-registration-block-form-footer button').prop( "disabled", true );
@@ -12577,6 +12577,7 @@ $(window).resize(function() {
                 }
 
                 function checkCaptcha() {
+                    showOverlay();
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
@@ -12605,7 +12606,6 @@ $(window).resize(function() {
                 }
 
                 function submitForm() {
-                    showOverlay();
                     $.ajax({
                         url: url,
                         type: method,
@@ -12784,7 +12784,6 @@ $(window).resize(function() {
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
-                        $form.spin(false);
                         hideOverlay();
                     });
                 }

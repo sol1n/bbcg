@@ -19,7 +19,7 @@
                     formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
-                $form.spin(true);
+
 
                 if (validation && $form.valid()) {
                     $('.submit-registration-block-form-footer button').prop( "disabled", true );
@@ -46,6 +46,7 @@
                 }
 
                 function checkCaptcha() {
+                    showOverlay();
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
@@ -74,7 +75,6 @@
                 }
 
                 function submitForm() {
-                    showOverlay();
                     $.ajax({
                         url: url,
                         type: method,
@@ -253,7 +253,6 @@
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
-                        $form.spin(false);
                         hideOverlay();
                     });
                 }
