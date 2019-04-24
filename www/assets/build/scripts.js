@@ -12578,6 +12578,7 @@ $(window).resize(function() {
 
                 function checkCaptcha() {
                     showOverlay();
+                    $form.spin(true);
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
@@ -12784,6 +12785,7 @@ $(window).resize(function() {
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
+                        $form.spin(false);
                         hideOverlay();
                     });
                 }
