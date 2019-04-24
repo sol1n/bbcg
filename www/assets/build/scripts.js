@@ -12754,6 +12754,7 @@ $(window).resize(function() {
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                         } else if (data && data.message) {
+                            $form.spin(false);
                             initSideModal('Ошибка: '+data.message, 'message-modal', false, false);
                             console.log(data.message);
                             $form.find('.js-form-messages').addClass('active').html(data.message);
