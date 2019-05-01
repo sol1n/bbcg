@@ -13425,7 +13425,7 @@ $(function(){
 
 function initSideModalWrapper(classNames) {
     var $modalWrapper = $(
-        '<div class="side-modal-overlay">' +
+        '<div class="side-modal-overlay new">' +
             '<div class="side-modal ' + classNames + '">' +
                 '<a href="#" class="side-modal-close" data-side-modal-close></a>' +
                 '<div class="side-modal-overflow">' +
@@ -13434,15 +13434,19 @@ function initSideModalWrapper(classNames) {
         '</div>'
     );
 
-    var $overlay = $('body').children('.side-modal-overlay');
+    var $overlay = $('body').children('.side-modal-overlay.new').removeClass('new').addClass('old');
 
-    if ($overlay.length) {
-        $overlay.remove();
+    if($('body').children('.side-modal-overlay.old').length > 1){
+        $('body').children('.side-modal-overlay.old')[0].remove();  // удаляем старое модальное окно
     }
 
-    $('body').append($modalWrapper);
+    if ($overlay.length) {
+        $overlay.hide();    // скрываем текущее модальное окно перед выводом сообщения
+    }
 
-    return $('body').children('.side-modal-overlay');
+    $('body').append($modalWrapper);    // добавляем новое модальное окно
+
+    return $('body').children('.side-modal-overlay.new');
 }
 
 function initSideModal(content, classNames, preventOverlayClose, preventEscClose) {
@@ -13533,6 +13537,7 @@ $(document).on('click', '[data-side-modal]', function (e) {
 
     return false;
 });
+
 (function() {
     $('.js-smooth-scroll').click(function() {
         history.pushState(null, null, $(this).attr('href'));
