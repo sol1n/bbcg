@@ -1,10 +1,15 @@
 <? if (count($arResult['SECTIONS'])): ?>
 
   <? foreach ($arResult['SECTIONS'] as $section): ?>
-
+    <?
+        $section_name = $section['NAME'];
+        if($arParams['LANG'] != 'ru'){
+            $section_name = $section['DESCRIPTION'];
+        }
+    ?>
     <? $APPLICATION->IncludeComponent(
-      "bitrix:news.list", 
-      "cources-page", 
+      "bitrix:news.list",
+      "cources-page",
       array(
         "IBLOCK_ID" => $arParams['IBLOCK_ID'],
         "NEWS_COUNT" => "30",
@@ -26,12 +31,12 @@
         "CACHE_TIME" => "360000",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "N",
-        'NAME' => $section['NAME'],
+        'NAME' => $section_name,
         "LANG" => $arParams['LANG']
       ),
       false
     );?>
 
   <? endforeach ?>
-  
+
 <? endif ?>
