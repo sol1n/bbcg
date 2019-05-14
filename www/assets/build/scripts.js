@@ -13712,6 +13712,12 @@ $(document).ready(function() {
         $(this).children('a').toggleClass('rotate');
     });
 
+    if($('.horizontal-banner').length){
+        if ($(window).width() > 1024){// не показывать горизонтальный баннер на мобильных устройствах
+            $('.horizontal-banner').delay(10000).fadeIn('slow');
+        }
+    }
+
     if ($('.partners-contacts').length){// страница партнеров
         if ($(window).width() > 1023){// фиксировать блок контактов на декстопных устройствах
 
