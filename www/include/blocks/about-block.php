@@ -7,7 +7,7 @@
             <div class="about-block-stats">
                 <div class="about-block-stats-item">
                     <div class="about-block-stats-item-value">
-                        18
+                        19
                     </div>
                     <div class="about-block-stats-item-desc">
                         лет <br>
