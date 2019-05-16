@@ -8192,7 +8192,7 @@ body {
   overflow: hidden;
 }
 .form-select select {
-  width: 120%;
+  width: 95%;
   border: none;
   background: transparent;
   font-size: 1.1rem;
