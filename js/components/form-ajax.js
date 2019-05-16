@@ -105,7 +105,7 @@
                                         "Email": "#summit-registration-block [name=email]", // E-mail посетителя
                                         "MobilePhone": "#summit-registration-block [name=phone]", // телефон посетителя
                                         "Company": "#summit-registration-block [name=company]", // название компании
-                                        "Job": "#summit-registration-block [name=title]", // должность посетителя
+                                        "FullJobTitle": "#summit-registration-block [name=title]", // должность посетителя
                                         "Event": "#summit_name", // название саммита
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
                                     },
@@ -128,7 +128,7 @@
                                         "Email": ".main-reg-form [name=email]", // E-mail посетителя
                                         "MobilePhone": ".main-reg-form [name=phone]", // телефон посетителя
                                         "Company": ".main-reg-form [name=organisation]", // название компании
-                                        "Job": ".main-reg-form [name=title]", // должность посетителя
+                                        "FullJobTitle": ".main-reg-form [name=title]", // должность посетителя
                                         "Event": ".main-reg-form [name=event]", // событие
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
@@ -150,7 +150,7 @@
                                         "Email": ".subscribe-form [name=email]", // E-mail посетителя
                                         "MobilePhone": ".subscribe-form [name=phone]", // телефон посетителя
                                         "Company": ".subscribe-form [name=organisation]", // название компании
-                                        "Job": ".subscribe-form [name=title]", // должность посетителя
+                                        "FullJobTitle": ".subscribe-form [name=title]", // должность посетителя
                                         "Event": ".subscribe-form [name=event]", // событие
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
@@ -180,7 +180,7 @@
                                         "Email": ".academy-form [name=email]", // E-mail посетителя
                                         "MobilePhone": ".academy-form [name=phone]", // телефон посетителя
                                         "Company": ".academy-form [name=company]", // название компании
-                                        "Job": ".academy-form [name=title]", // должность посетителя
+                                        "FullJobTitle": ".academy-form [name=title]", // должность посетителя
                                         "Event": ".academy-form [name=event]", // событие
                                     },
                                     landingId: landing_Id,
@@ -210,7 +210,7 @@
                                         "Email": ".academy-form-modal [name=email]", // E-mail посетителя
                                         "MobilePhone": ".academy-form-modal [name=phone]", // телефон посетителя
                                         "Company": ".academy-form-modal [name=company]", // название компании
-                                        "Job": ".academy-form-modal [name=title]", // должность посетителя
+                                        "FullJobTitle": ".academy-form-modal [name=title]", // должность посетителя
                                         "Event": ".academy-form-modal [name=event]", // событие
                                     },
                                     landingId: landing_Id,
