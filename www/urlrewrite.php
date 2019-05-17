@@ -1,5 +1,10 @@
 <?
 $arUrlRewrite = array(
+    array(
+		"CONDITION" => "#^/academy/programs/program/(.*)/.*#",
+		"RULE" => "code=\$1",
+		"PATH" => "/academy/programs/program/index.php",
+	),
 	array(
 		"CONDITION" => "#^/en/(.*)/about/(.*)/.*#",
 		"RULE" => "summit=\$1&page=\$2",
@@ -160,7 +165,6 @@ $arUrlRewrite = array(
 		"RULE" => "summit=\$1",
 		"PATH" => "/summits/detail.php",
 	),
-
 );
 
 ?>
