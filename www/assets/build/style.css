@@ -8192,14 +8192,17 @@ body {
   overflow: hidden;
 }
 .form-select select {
-  width: 95%;
+  width: 100%;
   border: none;
   background: transparent;
   font-size: 1.1rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding: 12px 10px;
+  padding: 12px 40px 12px 10px !important;
+  -webkit-padding-end: 40px !important;
+  -webkit-padding-start: 10px !important;
+  cursor: pointer;
 }
 .form-select::after {
   content: '';
