@@ -17,13 +17,13 @@
 
 <div class="row">
 
-    <? if (!empty($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"])): ?>
+    <? if ((!empty($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"])) && (!empty($arResult["CODE"]))): ?>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="side-modal-news-buttons">
-
                 <a
-                    href="<?=CFile::GetPath($arResult["PROPERTIES"]["PROGRAM_LINK"]["VALUE"]);?>"
+                    href="/academy/programs/program/<?=$arResult['CODE']?>/"
                     class="button button-old-gold button-large-academy"
+                    target="_blank"
                 >
                     <span class="c-text">
                        Полный курс
