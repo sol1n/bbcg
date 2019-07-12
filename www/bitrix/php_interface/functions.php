@@ -75,7 +75,7 @@
     function localizeUrl($url, $lang) {
       switch ($lang) {
         case 'ru':
-          return strpos($url, '/en') === 0 
+          return strpos($url, '/en') === 0
             ? mb_substr($url, 3)
             : $url;
         case 'en':

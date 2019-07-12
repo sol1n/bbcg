@@ -100,10 +100,52 @@
                 <div class="form-select">
                     <select name="program">
                         <? foreach ($arResult['ITEMS'] as $item): ?>
+                            <?
+                            $end = FormatDate('d.m', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                            $begin = FormatDate('d.m', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+                            if ($begin == $end) {
+                                //One-day course
+                                if ($arParams['LANG'] == 'en') {
+                                    $day = PHPFormatDateTime($item["PROPERTIES"]['END']['VALUE'], 'j');
+                                    $month = mb_strtolower(PHPFormatDateTime($item["PROPERTIES"]['BEGIN']['VALUE'], 'F'));
+                                } else {
+                                    $day = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $month = mb_strtolower(FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                                }
+                                $year = mb_strtolower(FormatDate('Y', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                                $format_date = ' ('.$day.' '.$month.' '.$year.')';
+                            } else {
+                                $end = FormatDate('m', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                $begin = FormatDate('m', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+                                if ($begin == $end) {
+                                    //Start and end dates are in one month
+                                    $endDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $beginDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $days = "$beginDay – $endDay";
+                                    if ($arParams['LANG'] == 'en') {
+                                        $month = mb_strtolower(PHPFormatDateTime($item["PROPERTIES"]['BEGIN']['VALUE'], 'F'));
+                                    } else {
+                                        $month = mb_strtolower(FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                                    }
+                                    $year = mb_strtolower(FormatDate('Y', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                                    $format_date = ' ('.$days.' '.$month.' '.$year.')';
+                                } else {
+                                    //Start and end dates are in different months
+                                    $endDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $endMonth = FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $beginDay = FormatDate('j', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                                    $beginMonth = FormatDate('F', MakeTimeStamp($item["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+                                    $format_date = ' ('.$beginDay.' '.$beginMonth.' - '.$endDay.' '.$endMonth.' '.$year.')';
+                                }
+                            }
+                            ?>
                             <? if ($item['ID'] == $arParams['SELECTED']): ?>
-                                <option selected value="<?=$item['ID']?>"><?=$item['NAME']?></option>
+                                <option selected value="<?=$item['ID']?>"><?=$item['NAME'].$format_date?></option>
                             <? else: ?>
-                                <option value="<?=$item['ID']?>"><?=$item['NAME']?></option>
+                                <option value="<?=$item['ID']?>"><?=$item['NAME'].$format_date?></option>
                             <? endif ?>
                         <? endforeach ?>
                     </select>
