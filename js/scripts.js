@@ -12,7 +12,10 @@ $(document).ready(function() {
 
     if($('.horizontal-banner').length){
         if ($(window).width() > 1024){// не показывать горизонтальный баннер на мобильных устройствах
-            $('.horizontal-banner').delay(10000).fadeIn('slow');
+            $('.horizontal-banner').delay(10000).fadeIn('slow'); //show banner after 10 sec.
+            setTimeout(function() { //hide banner after 3 min.
+                $('.horizontal-banner').fadeOut('slow');
+            }, 3*60*1000);
         }
     }
 
