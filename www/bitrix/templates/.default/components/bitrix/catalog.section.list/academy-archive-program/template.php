@@ -2,7 +2,7 @@
     <?
         global $arrFilter;
         $arrFilter = Array(
-            "!PROPERTY_ARCHIVE_VALUE" => "Y"
+            "PROPERTY_ARCHIVE_VALUE" => "Y"
         );
     ?>
   <? foreach ($arResult['SECTIONS'] as $section): ?>
@@ -12,16 +12,18 @@
             $section_name = $section['DESCRIPTION'];
         }
     ?>
-    <? $APPLICATION->IncludeComponent(
+    <?
+      $APPLICATION->IncludeComponent(
       "bitrix:news.list",
-      "cources-page",
+      "cources-archive-page",
       array(
+        "AJAX_MODE" => "N",
         "IBLOCK_ID" => $arParams['IBLOCK_ID'],
         "NEWS_COUNT" => "30",
         "FILTER_NAME" => "arrFilter",
         "SORT_BY1" => "PROPERTY_BEGIN",
         "SORT_ORDER1" => "ASC",
-        "FIELD_CODE" => array('DATE_CREATE', 'DATE_ACTIVE_FROM'),
+        "FIELD_CODE" => array('DATE_CREATE', 'DATE_ACTIVE_FROM', 'ACTIVE'),
         "PROPERTY_CODE" => array("*"),
         "SET_TITLE" => "N",
         "SET_STATUS_404" => "N",
@@ -46,8 +48,3 @@
   <? endforeach ?>
 
 <? endif ?>
-<div class="archive-bitton-wrapper">
-    <? if(CSite::InDir('/academy/')) :?>
-        <a href="/academy/programs/archive/" target="_blank" class="button button-red m-r-md">Архив мероприятий</a>
-    <? endif ?>
-</div>
