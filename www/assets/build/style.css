@@ -13274,7 +13274,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-bottom: 3px;
 }
 .program-table-event-meta-icon {
@@ -13317,19 +13317,32 @@ body {
     font-size: 1rem;
   }
 }
-.program-table-event-subtitle {
+.program-table-event-subtitle-intermediate {
   color: #2b2a29;
   font-size: 1.05rem;
   margin-bottom: 3px;
 }
 @media (max-width: 1600px) {
-  .program-table-event-subtitle {
+  .program-table-event-subtitle-intermediate {
     font-size: 0.9rem;
+  }
+}
+.program-table-event-subtitle-main {
+  color: #2b2a29;
+  font-size: 18px;
+  margin-bottom: 3px;
+  line-height: 24px;
+  font-weight: bold;
+}
+@media (max-width: 1600px) {
+  .program-table-event-subtitle-main {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 .program-table-event-speakers {
   margin-top: 10px;
-  font-size: 0.85rem;
+  font-size: 14px;
   color: #858585;
 }
 .program-table-event-speakers b {
@@ -13338,7 +13351,7 @@ body {
 }
 @media (max-width: 1600px) {
   .program-table-event-speakers {
-    font-size: 0.8rem;
+    font-size: 12px;
   }
 }
 .program-table-event-speakers-icon {

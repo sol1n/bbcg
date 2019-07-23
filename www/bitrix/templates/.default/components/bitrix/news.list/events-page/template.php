@@ -86,9 +86,19 @@ function cmp($a, $b){
                                                             <? endif ?>
                                                         </div>
 
-                                                        <div class="program-table-event-subtitle">
+                                                        <?
+                                                        $intermediate_class = "-main";
+                                                        $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
+                                                        if($event['intermediate'] == "Y"){
+                                                            $intermediate_class = "-intermediate";
+                                                            $detail_text = "";
+                                                        }
+                                                        ?>
+                                                        <div class="program-table-event-subtitle<?=$intermediate_class?>">
                                                             <?=$event['name']?>
                                                         </div>
+
+                                                        <?=$detail_text?>
 
                                                         <? if ($event['speakers']): ?>
                                                             <? if ($event['column-view'] == true): ?>
@@ -155,10 +165,19 @@ function cmp($a, $b){
                                                             <span class="c-text m-l-sm"><?=$event['hall']?></span>
                                                         <? endif ?>
                                                     </div>
-
-                                                    <div class="program-table-event-subtitle">
+                                                    <?
+                                                    $intermediate_class = "-main";
+                                                    $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
+                                                    if($event['intermediate'] == "Y"){
+                                                        $intermediate_class = "-intermediate";
+                                                        $detail_text = "";
+                                                    }
+                                                    ?>
+                                                    <div class="program-table-event-subtitle<?=$intermediate_class?>">
                                                         <?=$event['name']?>
                                                     </div>
+
+                                                    <?=$detail_text?>
 
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
