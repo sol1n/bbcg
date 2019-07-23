@@ -3,9 +3,9 @@
     if(!empty($arResult['ITEMS'])):
 ?>
     <div class="wrapper">
-        <h3 class="programs-block-title">
+        <h2>
             <?=$arParams['NAME']?>
-        </h3>
+        </h2>
         <div class="programs-block-cards m-t-md">
             <? foreach ($arResult['ITEMS'] as $item): ?>
                 <? $hot = $item['PROPERTIES']['HOT']['VALUE'] ? 'programs-block-card-hot' : '' ?>
@@ -28,6 +28,9 @@
                                 <div class="programs-block-card-date-month">
                                     <?=$item['MONTH']?>
                                 </div>
+                                <div class="programs-block-card-date-month">
+                                    <?=$item['YEAR']?>
+                                </div>
                             </div>
                         </div>
                         <div class="programs-block-card-desc">
@@ -44,4 +47,4 @@
             </div>
         <? endif ?>
     </div>
-<? endif; ?>
+<? endif ?>

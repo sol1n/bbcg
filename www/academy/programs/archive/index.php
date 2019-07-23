@@ -3,10 +3,13 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 <section id="academy-program" class="programs-block p-b-xl">
-
+    <div class="wrapper">
+        <h3 class="programs-block-title archive-programs">
+            Архив мероприятий
+        </h3>
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.section.list",
-        "academy-program",
+        "academy-archive-program",
         Array(
             "VIEW_MODE" => "TEXT",
             "SHOW_PARENT_NAME" => "N",
@@ -15,7 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
             "SECTION_ID" => "",
             "SECTION_CODE" => "",
             "SECTION_URL" => "",
-            "COUNT_ELEMENTS" => "Y",
+            "COUNT_ELEMENTS" => "N",
             "TOP_DEPTH" => "1",
             "SECTION_FIELDS" => "",
             "SECTION_USER_FIELDS" => "",
@@ -30,7 +33,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
     <div class="programs-block-description">
 
     </div>
-
+</div>
 </section>
 
 <?
