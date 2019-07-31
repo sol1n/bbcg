@@ -12181,7 +12181,7 @@ body {
   display: none;
 }
 .program-table {
-  --program-table-hour-height: 160px;
+  --program-table-hour-height: 220px;
   --program-table-hour-height-large: 300px;
   --program-table-min-height: calc(var(--program-table-hour-height) / 60);
   --program-table-min-height-large: calc(var(--program-table-hour-height-large) / 60);
@@ -12352,7 +12352,7 @@ body {
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  height: 160px;
+  height: 220px;
   height: var(--program-table-hour-height);
 }
 .program-table-timeline-hour-title {
@@ -12374,7 +12374,7 @@ body {
   position: relative;
   bottom: -0.45rem;
   font-size: 0.8rem;
-  height: 40px;
+  height: 55px;
   height: calc(var(--program-table-hour-height) / 4);
   color: #999999;
 }
@@ -12391,7 +12391,7 @@ body {
   position: relative;
   bottom: -0.45rem;
   font-size: 0.8rem;
-  height: 26.66666667px;
+  height: 36.66666667px;
   height: calc(var(--program-table-hour-height) / 6);
   color: #999999;
 }
@@ -12557,7 +12557,7 @@ body {
 .program-table-column-hour {
   position: relative;
   border-bottom: 1px solid #E0E0E0;
-  height: 160px;
+  height: 220px;
   height: var(--program-table-hour-height);
 }
 .program-table-column-hour-large {
@@ -12565,9 +12565,9 @@ body {
   height: var(--program-table-hour-height-large);
 }
 .program-table-event-height-5 {
-  min-height: 12.33333333px;
+  min-height: 17.33333333px;
   min-height: calc((var(--program-table-min-height) *  5 ) - 1px);
-  max-height: 12.33333333px;
+  max-height: 17.33333333px;
   max-height: calc((var(--program-table-min-height) *  5 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-5 {
@@ -12577,9 +12577,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  5 ) - 1px);
 }
 .program-table-event-height-10 {
-  min-height: 25.66666667px;
+  min-height: 35.66666667px;
   min-height: calc((var(--program-table-min-height) *  10 ) - 1px);
-  max-height: 25.66666667px;
+  max-height: 35.66666667px;
   max-height: calc((var(--program-table-min-height) *  10 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-10 {
@@ -12589,9 +12589,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  10 ) - 1px);
 }
 .program-table-event-height-15 {
-  min-height: 39px;
+  min-height: 54px;
   min-height: calc((var(--program-table-min-height) *  15 ) - 1px);
-  max-height: 39px;
+  max-height: 54px;
   max-height: calc((var(--program-table-min-height) *  15 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-15 {
@@ -12601,9 +12601,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  15 ) - 1px);
 }
 .program-table-event-height-20 {
-  min-height: 52.33333333px;
+  min-height: 72.33333333px;
   min-height: calc((var(--program-table-min-height) *  20 ) - 1px);
-  max-height: 52.33333333px;
+  max-height: 72.33333333px;
   max-height: calc((var(--program-table-min-height) *  20 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-20 {
@@ -12613,9 +12613,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  20 ) - 1px);
 }
 .program-table-event-height-25 {
-  min-height: 65.66666667px;
+  min-height: 90.66666667px;
   min-height: calc((var(--program-table-min-height) *  25 ) - 1px);
-  max-height: 65.66666667px;
+  max-height: 90.66666667px;
   max-height: calc((var(--program-table-min-height) *  25 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-25 {
@@ -12625,9 +12625,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  25 ) - 1px);
 }
 .program-table-event-height-30 {
-  min-height: 79px;
+  min-height: 109px;
   min-height: calc((var(--program-table-min-height) *  30 ) - 1px);
-  max-height: 79px;
+  max-height: 109px;
   max-height: calc((var(--program-table-min-height) *  30 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-30 {
@@ -12637,9 +12637,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  30 ) - 1px);
 }
 .program-table-event-height-35 {
-  min-height: 92.33333333px;
+  min-height: 127.33333333px;
   min-height: calc((var(--program-table-min-height) *  35 ) - 1px);
-  max-height: 92.33333333px;
+  max-height: 127.33333333px;
   max-height: calc((var(--program-table-min-height) *  35 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-35 {
@@ -12649,9 +12649,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  35 ) - 1px);
 }
 .program-table-event-height-40 {
-  min-height: 105.66666667px;
+  min-height: 145.66666667px;
   min-height: calc((var(--program-table-min-height) *  40 ) - 1px);
-  max-height: 105.66666667px;
+  max-height: 145.66666667px;
   max-height: calc((var(--program-table-min-height) *  40 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-40 {
@@ -12661,9 +12661,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  40 ) - 1px);
 }
 .program-table-event-height-45 {
-  min-height: 119px;
+  min-height: 164px;
   min-height: calc((var(--program-table-min-height) *  45 ) - 1px);
-  max-height: 119px;
+  max-height: 164px;
   max-height: calc((var(--program-table-min-height) *  45 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-45 {
@@ -12673,9 +12673,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  45 ) - 1px);
 }
 .program-table-event-height-50 {
-  min-height: 132.33333333px;
+  min-height: 182.33333333px;
   min-height: calc((var(--program-table-min-height) *  50 ) - 1px);
-  max-height: 132.33333333px;
+  max-height: 182.33333333px;
   max-height: calc((var(--program-table-min-height) *  50 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-50 {
@@ -12685,9 +12685,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  50 ) - 1px);
 }
 .program-table-event-height-55 {
-  min-height: 145.66666667px;
+  min-height: 200.66666667px;
   min-height: calc((var(--program-table-min-height) *  55 ) - 1px);
-  max-height: 145.66666667px;
+  max-height: 200.66666667px;
   max-height: calc((var(--program-table-min-height) *  55 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-55 {
@@ -12697,9 +12697,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  55 ) - 1px);
 }
 .program-table-event-height-60 {
-  min-height: 159px;
+  min-height: 219px;
   min-height: calc((var(--program-table-min-height) *  60 ) - 1px);
-  max-height: 159px;
+  max-height: 219px;
   max-height: calc((var(--program-table-min-height) *  60 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-60 {
@@ -12709,9 +12709,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  60 ) - 1px);
 }
 .program-table-event-height-65 {
-  min-height: 172.33333333px;
+  min-height: 237.33333333px;
   min-height: calc((var(--program-table-min-height) *  65 ) - 1px);
-  max-height: 172.33333333px;
+  max-height: 237.33333333px;
   max-height: calc((var(--program-table-min-height) *  65 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-65 {
@@ -12721,9 +12721,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  65 ) - 1px);
 }
 .program-table-event-height-70 {
-  min-height: 185.66666667px;
+  min-height: 255.66666667px;
   min-height: calc((var(--program-table-min-height) *  70 ) - 1px);
-  max-height: 185.66666667px;
+  max-height: 255.66666667px;
   max-height: calc((var(--program-table-min-height) *  70 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-70 {
@@ -12733,9 +12733,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  70 ) - 1px);
 }
 .program-table-event-height-75 {
-  min-height: 199px;
+  min-height: 274px;
   min-height: calc((var(--program-table-min-height) *  75 ) - 1px);
-  max-height: 199px;
+  max-height: 274px;
   max-height: calc((var(--program-table-min-height) *  75 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-75 {
@@ -12745,9 +12745,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  75 ) - 1px);
 }
 .program-table-event-height-80 {
-  min-height: 212.33333333px;
+  min-height: 292.33333333px;
   min-height: calc((var(--program-table-min-height) *  80 ) - 1px);
-  max-height: 212.33333333px;
+  max-height: 292.33333333px;
   max-height: calc((var(--program-table-min-height) *  80 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-80 {
@@ -12757,9 +12757,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  80 ) - 1px);
 }
 .program-table-event-height-85 {
-  min-height: 225.66666667px;
+  min-height: 310.66666667px;
   min-height: calc((var(--program-table-min-height) *  85 ) - 1px);
-  max-height: 225.66666667px;
+  max-height: 310.66666667px;
   max-height: calc((var(--program-table-min-height) *  85 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-85 {
@@ -12769,9 +12769,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  85 ) - 1px);
 }
 .program-table-event-height-90 {
-  min-height: 239px;
+  min-height: 329px;
   min-height: calc((var(--program-table-min-height) *  90 ) - 1px);
-  max-height: 239px;
+  max-height: 329px;
   max-height: calc((var(--program-table-min-height) *  90 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-90 {
@@ -12781,9 +12781,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  90 ) - 1px);
 }
 .program-table-event-height-95 {
-  min-height: 252.33333333px;
+  min-height: 347.33333333px;
   min-height: calc((var(--program-table-min-height) *  95 ) - 1px);
-  max-height: 252.33333333px;
+  max-height: 347.33333333px;
   max-height: calc((var(--program-table-min-height) *  95 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-95 {
@@ -12793,9 +12793,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  95 ) - 1px);
 }
 .program-table-event-height-100 {
-  min-height: 265.66666667px;
+  min-height: 365.66666667px;
   min-height: calc((var(--program-table-min-height) *  100 ) - 1px);
-  max-height: 265.66666667px;
+  max-height: 365.66666667px;
   max-height: calc((var(--program-table-min-height) *  100 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-100 {
@@ -12805,9 +12805,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  100 ) - 1px);
 }
 .program-table-event-height-105 {
-  min-height: 279px;
+  min-height: 384px;
   min-height: calc((var(--program-table-min-height) *  105 ) - 1px);
-  max-height: 279px;
+  max-height: 384px;
   max-height: calc((var(--program-table-min-height) *  105 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-105 {
@@ -12817,9 +12817,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  105 ) - 1px);
 }
 .program-table-event-height-110 {
-  min-height: 292.33333333px;
+  min-height: 402.33333333px;
   min-height: calc((var(--program-table-min-height) *  110 ) - 1px);
-  max-height: 292.33333333px;
+  max-height: 402.33333333px;
   max-height: calc((var(--program-table-min-height) *  110 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-110 {
@@ -12829,9 +12829,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  110 ) - 1px);
 }
 .program-table-event-height-115 {
-  min-height: 305.66666667px;
+  min-height: 420.66666667px;
   min-height: calc((var(--program-table-min-height) *  115 ) - 1px);
-  max-height: 305.66666667px;
+  max-height: 420.66666667px;
   max-height: calc((var(--program-table-min-height) *  115 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-115 {
@@ -12841,9 +12841,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  115 ) - 1px);
 }
 .program-table-event-height-120 {
-  min-height: 319px;
+  min-height: 439px;
   min-height: calc((var(--program-table-min-height) *  120 ) - 1px);
-  max-height: 319px;
+  max-height: 439px;
   max-height: calc((var(--program-table-min-height) *  120 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-120 {
@@ -12853,9 +12853,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  120 ) - 1px);
 }
 .program-table-event-height-125 {
-  min-height: 332.33333333px;
+  min-height: 457.33333333px;
   min-height: calc((var(--program-table-min-height) *  125 ) - 1px);
-  max-height: 332.33333333px;
+  max-height: 457.33333333px;
   max-height: calc((var(--program-table-min-height) *  125 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-125 {
@@ -12865,9 +12865,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  125 ) - 1px);
 }
 .program-table-event-height-130 {
-  min-height: 345.66666667px;
+  min-height: 475.66666667px;
   min-height: calc((var(--program-table-min-height) *  130 ) - 1px);
-  max-height: 345.66666667px;
+  max-height: 475.66666667px;
   max-height: calc((var(--program-table-min-height) *  130 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-130 {
@@ -12877,9 +12877,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  130 ) - 1px);
 }
 .program-table-event-height-135 {
-  min-height: 359px;
+  min-height: 494px;
   min-height: calc((var(--program-table-min-height) *  135 ) - 1px);
-  max-height: 359px;
+  max-height: 494px;
   max-height: calc((var(--program-table-min-height) *  135 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-135 {
@@ -12889,9 +12889,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  135 ) - 1px);
 }
 .program-table-event-height-140 {
-  min-height: 372.33333333px;
+  min-height: 512.33333333px;
   min-height: calc((var(--program-table-min-height) *  140 ) - 1px);
-  max-height: 372.33333333px;
+  max-height: 512.33333333px;
   max-height: calc((var(--program-table-min-height) *  140 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-140 {
@@ -12901,9 +12901,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  140 ) - 1px);
 }
 .program-table-event-height-145 {
-  min-height: 385.66666667px;
+  min-height: 530.66666667px;
   min-height: calc((var(--program-table-min-height) *  145 ) - 1px);
-  max-height: 385.66666667px;
+  max-height: 530.66666667px;
   max-height: calc((var(--program-table-min-height) *  145 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-145 {
@@ -12913,9 +12913,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  145 ) - 1px);
 }
 .program-table-event-height-150 {
-  min-height: 399px;
+  min-height: 549px;
   min-height: calc((var(--program-table-min-height) *  150 ) - 1px);
-  max-height: 399px;
+  max-height: 549px;
   max-height: calc((var(--program-table-min-height) *  150 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-150 {
@@ -12925,9 +12925,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  150 ) - 1px);
 }
 .program-table-event-height-155 {
-  min-height: 412.33333333px;
+  min-height: 567.33333333px;
   min-height: calc((var(--program-table-min-height) *  155 ) - 1px);
-  max-height: 412.33333333px;
+  max-height: 567.33333333px;
   max-height: calc((var(--program-table-min-height) *  155 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-155 {
@@ -12937,9 +12937,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  155 ) - 1px);
 }
 .program-table-event-height-160 {
-  min-height: 425.66666667px;
+  min-height: 585.66666667px;
   min-height: calc((var(--program-table-min-height) *  160 ) - 1px);
-  max-height: 425.66666667px;
+  max-height: 585.66666667px;
   max-height: calc((var(--program-table-min-height) *  160 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-160 {
@@ -12949,9 +12949,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  160 ) - 1px);
 }
 .program-table-event-height-165 {
-  min-height: 439px;
+  min-height: 604px;
   min-height: calc((var(--program-table-min-height) *  165 ) - 1px);
-  max-height: 439px;
+  max-height: 604px;
   max-height: calc((var(--program-table-min-height) *  165 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-165 {
@@ -12961,9 +12961,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  165 ) - 1px);
 }
 .program-table-event-height-170 {
-  min-height: 452.33333333px;
+  min-height: 622.33333333px;
   min-height: calc((var(--program-table-min-height) *  170 ) - 1px);
-  max-height: 452.33333333px;
+  max-height: 622.33333333px;
   max-height: calc((var(--program-table-min-height) *  170 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-170 {
@@ -12973,9 +12973,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  170 ) - 1px);
 }
 .program-table-event-height-175 {
-  min-height: 465.66666667px;
+  min-height: 640.66666667px;
   min-height: calc((var(--program-table-min-height) *  175 ) - 1px);
-  max-height: 465.66666667px;
+  max-height: 640.66666667px;
   max-height: calc((var(--program-table-min-height) *  175 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-175 {
@@ -12985,9 +12985,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  175 ) - 1px);
 }
 .program-table-event-height-180 {
-  min-height: 479px;
+  min-height: 659px;
   min-height: calc((var(--program-table-min-height) *  180 ) - 1px);
-  max-height: 479px;
+  max-height: 659px;
   max-height: calc((var(--program-table-min-height) *  180 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-180 {
@@ -12997,9 +12997,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  180 ) - 1px);
 }
 .program-table-event-height-185 {
-  min-height: 492.33333333px;
+  min-height: 677.33333333px;
   min-height: calc((var(--program-table-min-height) *  185 ) - 1px);
-  max-height: 492.33333333px;
+  max-height: 677.33333333px;
   max-height: calc((var(--program-table-min-height) *  185 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-185 {
@@ -13009,9 +13009,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  185 ) - 1px);
 }
 .program-table-event-height-190 {
-  min-height: 505.66666667px;
+  min-height: 695.66666667px;
   min-height: calc((var(--program-table-min-height) *  190 ) - 1px);
-  max-height: 505.66666667px;
+  max-height: 695.66666667px;
   max-height: calc((var(--program-table-min-height) *  190 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-190 {
@@ -13021,9 +13021,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  190 ) - 1px);
 }
 .program-table-event-height-195 {
-  min-height: 519px;
+  min-height: 714px;
   min-height: calc((var(--program-table-min-height) *  195 ) - 1px);
-  max-height: 519px;
+  max-height: 714px;
   max-height: calc((var(--program-table-min-height) *  195 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-195 {
@@ -13033,9 +13033,9 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  195 ) - 1px);
 }
 .program-table-event-height-200 {
-  min-height: 532.33333333px;
+  min-height: 732.33333333px;
   min-height: calc((var(--program-table-min-height) *  200 ) - 1px);
-  max-height: 532.33333333px;
+  max-height: 732.33333333px;
   max-height: calc((var(--program-table-min-height) *  200 ) - 1px);
 }
 .program-table-column-hour-large .program-table-event-height-200 {
@@ -13045,8 +13045,8 @@ body {
   max-height: calc((var(--program-table-min-height-large) *  200 ) - 1px);
 }
 .program-table-event-offset-5 {
-  -webkit-transform: translateY(12.33333333px);
-          transform: translateY(12.33333333px);
+  -webkit-transform: translateY(17.33333333px);
+          transform: translateY(17.33333333px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  5 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  5 ) - 1px));
 }
@@ -13057,8 +13057,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  5 ) - 1px));
 }
 .program-table-event-offset-10 {
-  -webkit-transform: translateY(25.66666667px);
-          transform: translateY(25.66666667px);
+  -webkit-transform: translateY(35.66666667px);
+          transform: translateY(35.66666667px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  10 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  10 ) - 1px));
 }
@@ -13069,8 +13069,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  10 ) - 1px));
 }
 .program-table-event-offset-15 {
-  -webkit-transform: translateY(39px);
-          transform: translateY(39px);
+  -webkit-transform: translateY(54px);
+          transform: translateY(54px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  15 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  15 ) - 1px));
 }
@@ -13081,8 +13081,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  15 ) - 1px));
 }
 .program-table-event-offset-20 {
-  -webkit-transform: translateY(52.33333333px);
-          transform: translateY(52.33333333px);
+  -webkit-transform: translateY(72.33333333px);
+          transform: translateY(72.33333333px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  20 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  20 ) - 1px));
 }
@@ -13093,8 +13093,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  20 ) - 1px));
 }
 .program-table-event-offset-25 {
-  -webkit-transform: translateY(65.66666667px);
-          transform: translateY(65.66666667px);
+  -webkit-transform: translateY(90.66666667px);
+          transform: translateY(90.66666667px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  25 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  25 ) - 1px));
 }
@@ -13105,8 +13105,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  25 ) - 1px));
 }
 .program-table-event-offset-30 {
-  -webkit-transform: translateY(79px);
-          transform: translateY(79px);
+  -webkit-transform: translateY(109px);
+          transform: translateY(109px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  30 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  30 ) - 1px));
 }
@@ -13117,8 +13117,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  30 ) - 1px));
 }
 .program-table-event-offset-35 {
-  -webkit-transform: translateY(92.33333333px);
-          transform: translateY(92.33333333px);
+  -webkit-transform: translateY(127.33333333px);
+          transform: translateY(127.33333333px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  35 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  35 ) - 1px));
 }
@@ -13129,8 +13129,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  35 ) - 1px));
 }
 .program-table-event-offset-40 {
-  -webkit-transform: translateY(105.66666667px);
-          transform: translateY(105.66666667px);
+  -webkit-transform: translateY(145.66666667px);
+          transform: translateY(145.66666667px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  40 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  40 ) - 1px));
 }
@@ -13141,8 +13141,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  40 ) - 1px));
 }
 .program-table-event-offset-45 {
-  -webkit-transform: translateY(119px);
-          transform: translateY(119px);
+  -webkit-transform: translateY(164px);
+          transform: translateY(164px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  45 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  45 ) - 1px));
 }
@@ -13153,8 +13153,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  45 ) - 1px));
 }
 .program-table-event-offset-50 {
-  -webkit-transform: translateY(132.33333333px);
-          transform: translateY(132.33333333px);
+  -webkit-transform: translateY(182.33333333px);
+          transform: translateY(182.33333333px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  50 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  50 ) - 1px));
 }
@@ -13165,8 +13165,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  50 ) - 1px));
 }
 .program-table-event-offset-55 {
-  -webkit-transform: translateY(145.66666667px);
-          transform: translateY(145.66666667px);
+  -webkit-transform: translateY(200.66666667px);
+          transform: translateY(200.66666667px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  55 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  55 ) - 1px));
 }
@@ -13177,8 +13177,8 @@ body {
           transform: translateY(calc((var(--program-table-min-height-large) *  55 ) - 1px));
 }
 .program-table-event-offset-60 {
-  -webkit-transform: translateY(159px);
-          transform: translateY(159px);
+  -webkit-transform: translateY(219px);
+          transform: translateY(219px);
   -webkit-transform: translateY(calc((var(--program-table-min-height) *  60 ) - 1px));
           transform: translateY(calc((var(--program-table-min-height) *  60 ) - 1px));
 }
@@ -13327,7 +13327,15 @@ body {
     font-size: 0.9rem;
   }
 }
+.program-table-event-intermediate-background {
+  background-color: #f5f8fa;
+}
+.program-table-event-intermediate-background::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.01)), to(#f5f8fa));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), #f5f8fa);
+}
 .program-table-event-subtitle-main {
+  text-transform: uppercase;
   color: #2b2a29;
   font-size: 18px;
   margin-bottom: 3px;
@@ -13339,6 +13347,12 @@ body {
     font-size: 16px;
     line-height: 22px;
   }
+}
+.program-table-event-description {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #2b2a29;
 }
 .program-table-event-speakers {
   margin-top: 10px;
