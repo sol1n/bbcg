@@ -31,7 +31,7 @@
 
                 function showOverlay() {
                     if (formOverlay) {
-                        $(formOverlay).addClass('active').spin('large', '#000');
+                        $(formOverlay).addClass('active').spin('large', '#000').spin(true);
                     } else {
                         $('body').spin('large', '#000');
                     }
@@ -44,10 +44,12 @@
                     } else {
                         $('body').spin(false);
                     }
+                    $form.spin(false);
                 }
 
                 function checkCaptcha() {
                     showOverlay();
+                    //$form.spin(true);
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
@@ -254,7 +256,6 @@
                     }).always(function () {
                         $('.submit-registration-block-form-footer button').prop( "disabled", false );
                         $('.registration-form-submit button').prop( "disabled", false );
-                        $form.spin(false);
                         hideOverlay();
                     });
                 }
