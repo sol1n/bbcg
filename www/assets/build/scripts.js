@@ -12576,6 +12576,7 @@ $(window).resize(function() {
                     } else {
                         $('body').spin('large', '#000');
                     }
+                    $form.spin(true);
                 }
 
                 function hideOverlay() {
@@ -12588,7 +12589,6 @@ $(window).resize(function() {
 
                 function checkCaptcha() {
                     showOverlay();
-                    $form.spin(true);
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
