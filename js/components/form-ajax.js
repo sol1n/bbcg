@@ -32,8 +32,6 @@
                 function showOverlay() {
                     if (formOverlay) {
                         $(formOverlay).addClass('active').spin('large', '#000').spin(true);
-                    } else {
-                        $('body').spin('large', '#000');
                     }
                     $form.spin(true);
                 }
@@ -41,15 +39,12 @@
                 function hideOverlay() {
                     if (formOverlay) {
                         $(formOverlay).removeClass('active').spin(false);
-                    } else {
-                        $('body').spin(false);
                     }
                     $form.spin(false);
                 }
 
                 function checkCaptcha() {
                     showOverlay();
-                    //$form.spin(true);
                     if ($form.find('[data-recaptcha]').length) {
                         var key = $form.find('[data-recaptcha]').data('recaptcha');
                         var verifyCallback = function(token){
