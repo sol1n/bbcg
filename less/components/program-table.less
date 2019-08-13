@@ -3,7 +3,7 @@
 @program-table-cell-width: 33.3333%;
 @program-table-cell-width-min: 150px;
 @program-table-cell-width-breakpoint: 1600px;
-@program-table-hour-height: 160px;
+@program-table-hour-height: 220px;
 @program-table-min-height: @program-table-hour-height/60;
 @program-table-hour-height-large: 300px;
 @program-table-min-height-large: @program-table-hour-height-large/60;
@@ -500,7 +500,8 @@
 
 .program-table-event-meta {
   display: flex;
-  font-size: 0.9rem;
+  //font-size: 0.9rem;
+  font-size: 14px;
   margin-bottom: 3px;
 }
 
@@ -550,7 +551,7 @@
   }
 }
 
-.program-table-event-subtitle {
+.program-table-event-subtitle-intermediate {
   color: @c-text;
   font-size: 1.05rem;
   margin-bottom: 3px;
@@ -560,9 +561,41 @@
   }
 }
 
+.program-table-event-intermediate-background {
+  background-color: #f5f8fa;
+}
+
+.program-table-event-intermediate-background::after{
+  background: linear-gradient(180deg,hsla(0,0%,100%,.01),#f5f8fa);
+}
+
+.program-table-event-subtitle-main {
+  text-transform: uppercase;
+  color: @c-text;
+  //font-size: 1.05rem;
+  font-size: 18px;
+  margin-bottom: 3px;
+  line-height: 24px;
+  font-weight: bold;
+
+  @media (max-width: @program-table-cell-width-breakpoint) {
+    //font-size: 0.9rem;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.program-table-event-description {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: @c-text;
+}
+
 .program-table-event-speakers {
   margin-top: 10px;
-  font-size: 0.85rem;
+  //font-size: 0.85rem;
+  font-size: 14px;
   color: #858585;
 
   b {
@@ -571,7 +604,8 @@
   }
 
   @media (max-width: @program-table-cell-width-breakpoint) {
-    font-size: 0.8rem;
+    //font-size: 0.8rem;
+    font-size: 12px;
   }
 }
 
