@@ -175,7 +175,7 @@ function cmp($a, $b){
                                                         <?=$event['name']?>
                                                     </div>
                                                     <div class="program-table-event-description">
-                                                        <?//=$event['detail']?>
+                                                        
                                                     </div>
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
