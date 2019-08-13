@@ -208,15 +208,13 @@ function cmp($a, $b){
     <div class="program-table-mobile-date">
         <?=$arResult['DAY']?> <?=$arResult['MONTH']?>
     </div>
-
     <? foreach ($arResult['MOBILE_ITEMS'] as $event): ?>
-        <div class="
-            program-table-mobile-event
-            <? if ($event['color']): ?>
-                program-table-mobile-event-<?=$event['color']?>
-            <? endif ?>
-            "
-        >
+        <? $mobile_event_color_class = "";
+        if ($event['color']){
+            $mobile_event_color_class = "program-table-mobile-event-".$event['color']
+        }
+        ?>
+        <div class="program-table-mobile-event <?=$mobile_event_color_class?>">
             <a href="<?=$event['href']?>" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     <?=$event['NAME']?>
