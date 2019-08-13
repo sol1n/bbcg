@@ -211,7 +211,7 @@ function cmp($a, $b){
     <? foreach ($arResult['MOBILE_ITEMS'] as $event): ?>
         <? $mobile_event_color_class = "";
         if ($event['color']){
-            $mobile_event_color_class = "program-table-mobile-event-".$event['color']
+            $mobile_event_color_class = "program-table-mobile-event-".$event['color'];
         }
         ?>
         <div class="program-table-mobile-event <?=$mobile_event_color_class?>">
