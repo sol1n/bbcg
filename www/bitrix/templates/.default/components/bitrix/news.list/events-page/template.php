@@ -55,7 +55,7 @@ function cmp($a, $b){
                                                     if($event['intermediate'] == "Y"){
                                                         $intermediate_class = "-intermediate";
                                                         $event['duration'] = "30";
-                                                        $intermediate_background = "intermediate-background";
+                                                        $intermediate_background = "program-table-event-intermediate-background";
                                                     }
                                                     ?>
                                                     <a
@@ -78,7 +78,7 @@ function cmp($a, $b){
                                                             <? if ($event['color']): ?>
                                                                 program-table-event-<?=$event['color']?>
                                                             <? endif ?>
-                                                            program-table-event-<?=$intermediate_background?>
+                                                            <?=$intermediate_background?>
                                                         "
                                                     >
                                                         <div class="program-table-event-meta">
@@ -138,7 +138,7 @@ function cmp($a, $b){
                                                 if($event['intermediate'] == "Y"){
                                                     $intermediate_class = "-intermediate";
                                                     $event['duration'] = "30";
-                                                    $intermediate_background = "intermediate-background";
+                                                    $intermediate_background = "program-table-event-intermediate-background";
                                                 }
                                                 ?>
                                                 <a
@@ -160,7 +160,7 @@ function cmp($a, $b){
                                                         <? if ($event['color']): ?>
                                                             program-table-event-<?=$event['color']?>
                                                         <? endif ?>
-                                                        program-table-event-<?=$intermediate_background?>
+                                                        <?=$intermediate_background?>
                                                     "
                                                 >
                                                     <div class="program-table-event-meta">
