@@ -24,13 +24,7 @@ function cmp($a, $b){
                             </div>
                             <? foreach ($arResult['HOURS'] as $hour): ?>
                                 <div class="program-table-timeline-hour">
-                                    <? foreach ($hour['steps'] as $k => $step): ?>
-                                        <? if ($k): ?>
-                                            <div class="program-table-timeline-hour-sixth"><?=$step?></div>
-                                        <? else: ?>
-                                            <div class="program-table-timeline-hour-title"><?=$step?></div>
-                                        <? endif ?>
-                                    <? endforeach ?>
+                                    <div class="program-table-timeline-hour-title"><?=$hour['steps'][0]?></div>
                                 </div>
                             <? endforeach ?>
                         </div>
@@ -55,6 +49,17 @@ function cmp($a, $b){
                                         <div class="program-table-column-hour">
                                             <? if ($area['FIRST']): ?>
                                                 <? foreach ($cell['GLOBALS'] as $event): ?>
+                                                    <?
+                                                    $intermediate_background = "";
+                                                    $intermediate_class = "-main";
+                                                    $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
+                                                    if($event['intermediate'] == "Y"){
+                                                        $intermediate_class = "-intermediate";
+                                                        $detail_text = "";
+                                                        $event['duration'] = "30";
+                                                        $intermediate_background = "intermediate-background";
+                                                    }
+                                                    ?>
                                                     <a
                                                         <? if ($event['open']): ?>
                                                             id="program-table-event-<?=$event['id']?>"
@@ -75,6 +80,7 @@ function cmp($a, $b){
                                                             <? if ($event['color']): ?>
                                                                 program-table-event-<?=$event['color']?>
                                                             <? endif ?>
+                                                            program-table-event-<?=$intermediate_background?>
                                                         "
                                                     >
                                                         <div class="program-table-event-meta">
@@ -86,10 +92,12 @@ function cmp($a, $b){
                                                             <? endif ?>
                                                         </div>
 
-                                                        <div class="program-table-event-subtitle">
+                                                        <div class="program-table-event-subtitle<?=$intermediate_class?>">
                                                             <?=$event['name']?>
                                                         </div>
-
+                                                        <div class="program-table-event-description">
+                                                            <?=$event['detail']?>
+                                                        </div>
                                                         <? if ($event['speakers']): ?>
                                                             <? if ($event['column-view'] == true): ?>
                                                                 <div class="program-table-event-speakers">
@@ -126,6 +134,17 @@ function cmp($a, $b){
                                             <? endif ?>
 
                                             <? foreach ($cell[$k] as $event): ?>
+                                                <?
+                                                $intermediate_background = "";
+                                                $intermediate_class = "-main";
+                                                $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
+                                                if($event['intermediate'] == "Y"){
+                                                    $intermediate_class = "-intermediate";
+                                                    $detail_text = "";
+                                                    $event['duration'] = "30";
+                                                    $intermediate_background = "intermediate-background";
+                                                }
+                                                ?>
                                                 <a
                                                     <? if ($event['open']): ?>
                                                         id="program-table-event-<?=$event['id']?>"
@@ -145,6 +164,7 @@ function cmp($a, $b){
                                                         <? if ($event['color']): ?>
                                                             program-table-event-<?=$event['color']?>
                                                         <? endif ?>
+                                                        program-table-event-<?=$intermediate_background?>
                                                     "
                                                 >
                                                     <div class="program-table-event-meta">
@@ -155,11 +175,12 @@ function cmp($a, $b){
                                                             <span class="c-text m-l-sm"><?=$event['hall']?></span>
                                                         <? endif ?>
                                                     </div>
-
-                                                    <div class="program-table-event-subtitle">
+                                                    <div class="program-table-event-subtitle<?=$intermediate_class?>">
                                                         <?=$event['name']?>
                                                     </div>
-
+                                                    <div class="program-table-event-description">
+                                                        <?=$event['detail']?>
+                                                    </div>
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
                                                             <?usort($event['speakers'], "cmp"); //сортировка спикеров в алфавитном порядке?>
