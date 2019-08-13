@@ -52,10 +52,8 @@ function cmp($a, $b){
                                                     <?
                                                     $intermediate_background = "";
                                                     $intermediate_class = "-main";
-                                                    $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
                                                     if($event['intermediate'] == "Y"){
                                                         $intermediate_class = "-intermediate";
-                                                        $detail_text = "";
                                                         $event['duration'] = "30";
                                                         $intermediate_background = "intermediate-background";
                                                     }
@@ -96,7 +94,7 @@ function cmp($a, $b){
                                                             <?=$event['name']?>
                                                         </div>
                                                         <div class="program-table-event-description">
-                                                            123<?=$event['detail']?>
+                                                            <?=$event['detail']?>
                                                         </div>
                                                         <? if ($event['speakers']): ?>
                                                             <? if ($event['column-view'] == true): ?>
@@ -137,10 +135,8 @@ function cmp($a, $b){
                                                 <?
                                                 $intermediate_background = "";
                                                 $intermediate_class = "-main";
-                                                $detail_text = '<div class="program-table-event-speakers">'.$event['detail'].'</div>';
                                                 if($event['intermediate'] == "Y"){
                                                     $intermediate_class = "-intermediate";
-                                                    $detail_text = "";
                                                     $event['duration'] = "30";
                                                     $intermediate_background = "intermediate-background";
                                                 }
@@ -179,7 +175,7 @@ function cmp($a, $b){
                                                         <?=$event['name']?>
                                                     </div>
                                                     <div class="program-table-event-description">
-                                                        321<?=$event['detail']?>
+                                                        <?=$event['detail']?>
                                                     </div>
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
