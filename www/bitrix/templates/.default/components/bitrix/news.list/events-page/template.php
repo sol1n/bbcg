@@ -95,9 +95,9 @@ function cmp($a, $b){
                                                         <div class="program-table-event-subtitle<?=$intermediate_class?>">
                                                             <?=$event['name']?>
                                                         </div>
-
+                                                        <div class="program-table-event-description">
                                                             <?=$event['detail']?>
-
+                                                        </div>
                                                         <? if ($event['speakers']): ?>
                                                             <? if ($event['column-view'] == true): ?>
                                                                 <div class="program-table-event-speakers">
