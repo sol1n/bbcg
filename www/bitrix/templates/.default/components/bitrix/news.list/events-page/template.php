@@ -24,13 +24,6 @@ function cmp($a, $b){
                             </div>
                             <? foreach ($arResult['HOURS'] as $hour): ?>
                                 <div class="program-table-timeline-hour">
-                                    <?/* foreach ($hour['steps'] as $k => $step): ?>
-                                        <? if ($k): ?>
-                                            <div class="program-table-timeline-hour-sixth"><?=$step?></div>
-                                        <? else: ?>
-                                            <div class="program-table-timeline-hour-title"><?=$step?></div>
-                                        <? endif ?>
-                                    <? endforeach */?>
                                     <div class="program-table-timeline-hour-title"><?=$hour['steps'][0]?></div>
                                 </div>
                             <? endforeach ?>
@@ -100,7 +93,7 @@ function cmp($a, $b){
                                                         </div>
 
                                                         <div class="program-table-event-subtitle<?=$intermediate_class?>">
-                                                            <?=$event['name']?> <?=$event['duration']?>
+                                                            <?=$event['name']?>
                                                         </div>
                                                         <div class="program-table-event-description">
                                                             <?=$event['detail']?>
@@ -183,7 +176,7 @@ function cmp($a, $b){
                                                         <? endif ?>
                                                     </div>
                                                     <div class="program-table-event-subtitle<?=$intermediate_class?>">
-                                                        <?=$event['name']?> <?=$event['duration']?>
+                                                        <?=$event['name']?>
                                                     </div>
                                                     <div class="program-table-event-description">
                                                         <?=$event['detail']?>
