@@ -96,7 +96,7 @@ function cmp($a, $b){
                                                             <?=$event['name']?>
                                                         </div>
                                                         <div class="program-table-event-description">
-                                                            <?=$event['detail']?>
+                                                            123<?=$event['detail']?>
                                                         </div>
                                                         <? if ($event['speakers']): ?>
                                                             <? if ($event['column-view'] == true): ?>
@@ -179,7 +179,7 @@ function cmp($a, $b){
                                                         <?=$event['name']?>
                                                     </div>
                                                     <div class="program-table-event-description">
-                                                        <?=$event['detail']?>
+                                                        321<?=$event['detail']?>
                                                     </div>
                                                     <? if ($event['speakers']): ?>
                                                         <div class="program-table-event-speakers">
