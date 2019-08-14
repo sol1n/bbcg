@@ -159,9 +159,9 @@
                         </div>
                         <div class="summit-registration-block-card-value">
                             <? if(!empty($arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'])): ?>
-                                <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
+                                <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
                             <? else: ?>
-                                <a href="tel:+74957852206">+7 (495) 785-22-06</a> <br>
+                                <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');">+7 (495) 785-22-06</a> <br>
                             <? endif ?>
                         </div>
                         <?=Loc::GetMessage('CONTACT_PERSON', [], $arParams['LANG'])?>

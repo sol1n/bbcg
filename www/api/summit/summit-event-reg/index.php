@@ -23,7 +23,7 @@ else
     ];
 }
 
-if ($_POST['id'] && $_POST['fullname'] && $_POST['contacts'] && $_POST['company'] && $_POST['position'] && $_POST['g-token'])
+if ($_POST['id'] && $_POST['fullname'] && (($_POST['phone'] && $_POST['email'])|| $_POST['contacts']) && $_POST['company'] && $_POST['position'] && $_POST['g-token'])
 {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
@@ -65,6 +65,8 @@ if ($_POST['id'] && $_POST['fullname'] && $_POST['contacts'] && $_POST['company'
             'NAME' => 'Заявка на участие',
             'PROPERTY_VALUES' => [
                 'FULLNAME' => $_REQUEST['fullname'],
+                'PHONE' => $_REQUEST['phone'],
+                'EMAIL' => $_REQUEST['email'],
                 'CONTACTS' => $_REQUEST['contacts'],
                 'COMPANY' => $_REQUEST['company'],
                 'POSITION' => $_REQUEST['position'],
@@ -83,6 +85,8 @@ if ($_POST['id'] && $_POST['fullname'] && $_POST['contacts'] && $_POST['company'
         $data = [
             'EVENT'    => $ar_section['NAME'],
             'FULLNAME' => $_REQUEST['fullname'],
+            'PHONE' => $_REQUEST['phone'],
+            'EMAIL' => $_REQUEST['email'],
             'CONTACTS' => $_REQUEST['contacts'],
             'COMPANY'  => $_REQUEST['company'],
             'POSITION' => $_REQUEST['position'],
