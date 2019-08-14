@@ -76,7 +76,7 @@
                     <div class="register-block-contacts-icon">
                         <?php include "images/icons/icon-contacts-phone-white.svg"; ?>
                     </div>
-                    <a href="tel:+74957852206" class="register-block-contacts-val">
+                    <a href="tel:+74957852206" class="register-block-contacts-val" onclick="return gtag_report_conversion('tel:+74957852206');">
                         +7 (495) 785-22-06
                     </a>
                     <div class="register-block-contacts-desc">

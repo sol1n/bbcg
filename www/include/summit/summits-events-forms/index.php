@@ -24,7 +24,7 @@ if($ar_event_result = $db_list->GetNext()):
         <?=$ar_event_result['DESCRIPTION']?>
     </div>
 
-    <form action="/api/summit/summit-event-reg/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
+    <form action="/api/summit/summit-event-reg/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax data-form-type="summit-event-reg">
         <input type="hidden" name="from" value="<?=$ar_event_result["CODE"]?>">
         <div data-recaptcha="<?=RECAPTCHA_PUBLIC?>"></div>
         <input type="text" name="id" class="hidden" value="<?=DTF_GAME_EVENT_ID?>">
@@ -40,9 +40,17 @@ if($ar_event_result = $db_list->GetNext()):
             <div class="col-xs-12 col-sm-12">
                 <div class="m-b">
                     <label class="form-label">
-                        Контактные данные (email, телефон)
+                        Телефон
                     </label>
-                    <input type="text" name="contacts" class="form-input" required>
+                    <input type="text" name="phone" placeholder="+7 (999) 999-99-99" class="form-input">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+                <div class="m-b">
+                    <label class="form-label">
+                        Email
+                    </label>
+                    <input type="email" name="email" placeholder="example@mail.ru" class="form-input" required="">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12">

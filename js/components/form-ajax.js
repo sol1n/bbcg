@@ -95,6 +95,11 @@
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
+                                window.onload = function() {
+                                    yaCounter54086176.reachGoal("reg");
+                                    gtag('event', 'spasibo');
+                                }
+
                                 //передача данных в CRM
                                 var crm_config = {
                                     fields: {
@@ -114,6 +119,11 @@
                                 landing.initLanding(crm_config); //отправляем данные
                             }else if($form.data('crm-token') === 'main-reg-form'){ //форма регистрации на сайте
                                 console.log('main-reg-form to CRM');
+
+                                window.onload = function() {
+                                    yaCounter54086176.reachGoal("reg");
+                                    gtag('event', 'spasibo');
+                                }
 
                                 var fio = $(".main-reg-form [name=last_name]").val()+" "+$(".main-reg-form [name=first_name]").val()+" "+$(".main-reg-form [name=middle_name]").val();
                                 $(".main-reg-form [name=full_name]").val(fio); // ФИО посетителя
@@ -158,7 +168,14 @@
                                 landing.initLanding(crm_config); //отправляем данные
                             }else if($form.data('crm-token') === 'academy-form'){ //форма академии ритейла
                                 var lang = $(".academy-form [name=lang]").val();
+
                                 console.log('academy-form to CRM '+lang);
+
+                                window.onload = function() {
+                                    yaCounter54086176.reachGoal("reg");
+                                    gtag('event', 'spasibo');
+                                }
+
                                 var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
                                 $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
                                 var program_selected = $(".academy-form [name=program] option:selected").text();
@@ -188,7 +205,14 @@
                                 landing.initLanding(crm_config); //отправляем данные
                             }else if($form.data('crm-token') === 'academy-form-modal'){ //модальная форма академии ритейла
                                 var lang = $(".academy-form-modal [name=lang]").val();
+
                                 console.log('academy-form-modal to CRM '+lang);
+
+                                window.onload = function() {
+                                    yaCounter54086176.reachGoal("reg");
+                                    gtag('event', 'spasibo');
+                                }
+
                                 var fi = $(".academy-form-modal [name=surname]").val()+" "+$(".academy-form-modal [name=name]").val();
                                 $(".academy-form-modal [name=full_name]").val(fi); // Фамилия и имя посетителя
                                 var program_selected = $(".academy-form-modal [name=program] option:selected").text();
@@ -216,6 +240,12 @@
                                 };
                                 landing.createObjectFromLanding(crm_config); // создаем объект из данных формы
                                 landing.initLanding(crm_config); //отправляем данные
+                            }
+                            if($form.data('form-type') === 'summit-event-reg'){
+                                window.onload = function() {
+                                    yaCounter54086176.reachGoal("reg");
+                                    gtag('event', 'spasibo');
+                                }
                             }
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
