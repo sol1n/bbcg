@@ -17,17 +17,19 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <meta property="og:description" content="<?$APPLICATION->ShowProperty("description");?>">
 	    <meta property="og:image" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
    		<meta property="og:image:url" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
+        <?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/yandex-metrika.php"; ?>
 	</head>
 	<? if (CSite::InDir('/summits/') || CSite::InDir('/en/summits/')): ?>
 		<body class="b-smoke-white">
 	<? else: ?>
 		<body class="<?$APPLICATION->ShowProperty('color', 'red')?>-theme">
 	<? endif ?>
-	
+
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/summit/check-exists.php"; ?>
 
 		<? $user = user(); ?>
-		
+
 		<? if (is_null($summit)): ?>
 			<? if (SITE_LANGUAGE == 'en'): ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . "/en/include/blocks/header.php"; ?>
