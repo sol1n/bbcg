@@ -12613,6 +12613,13 @@ $(window).resize(function() {
                     }
                 }
 
+                function metrics() {
+                    window.onload = function() {
+                        ym(48656639, 'reachGoal', 'reg');
+                        gtag('event', 'spasibo');
+                    }
+                }
+
                 function submitForm() {
                     $.ajax({
                         url: url,
@@ -12636,10 +12643,7 @@ $(window).resize(function() {
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
-                                window.onload = function() {
-                                    yaCounter54086176.reachGoal("reg");
-                                    gtag('event', 'spasibo');
-                                }
+                                metrics();
 
                                 //передача данных в CRM
                                 var crm_config = {
@@ -12661,10 +12665,7 @@ $(window).resize(function() {
                             }else if($form.data('crm-token') === 'main-reg-form'){ //форма регистрации на сайте
                                 console.log('main-reg-form to CRM');
 
-                                window.onload = function() {
-                                    yaCounter54086176.reachGoal("reg");
-                                    gtag('event', 'spasibo');
-                                }
+                                metrics();
 
                                 var fio = $(".main-reg-form [name=last_name]").val()+" "+$(".main-reg-form [name=first_name]").val()+" "+$(".main-reg-form [name=middle_name]").val();
                                 $(".main-reg-form [name=full_name]").val(fio); // ФИО посетителя
@@ -12712,10 +12713,7 @@ $(window).resize(function() {
 
                                 console.log('academy-form to CRM '+lang);
 
-                                window.onload = function() {
-                                    yaCounter54086176.reachGoal("reg");
-                                    gtag('event', 'spasibo');
-                                }
+                                metrics();
 
                                 var fi = $(".academy-form [name=surname]").val()+" "+$(".academy-form [name=name]").val();
                                 $(".academy-form [name=full_name]").val(fi); // Фамилия и имя посетителя
@@ -12749,10 +12747,7 @@ $(window).resize(function() {
 
                                 console.log('academy-form-modal to CRM '+lang);
 
-                                window.onload = function() {
-                                    yaCounter54086176.reachGoal("reg");
-                                    gtag('event', 'spasibo');
-                                }
+                                metrics();
 
                                 var fi = $(".academy-form-modal [name=surname]").val()+" "+$(".academy-form-modal [name=name]").val();
                                 $(".academy-form-modal [name=full_name]").val(fi); // Фамилия и имя посетителя
@@ -12783,10 +12778,7 @@ $(window).resize(function() {
                                 landing.initLanding(crm_config); //отправляем данные
                             }
                             if($form.data('form-type') === 'summit-event-reg'){
-                                window.onload = function() {
-                                    yaCounter54086176.reachGoal("reg");
-                                    gtag('event', 'spasibo');
-                                }
+                                metrics();
                             }
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
