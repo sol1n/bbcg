@@ -73,10 +73,11 @@
                 }
 
                 function metrics() {
-                    window.onload = function() {
+                    //window.onload = function() {
                         ym(48656639, 'reachGoal', 'reg');
                         gtag('event', 'spasibo');
-                    }
+                    //}
+                     return true;
                 }
 
                 function submitForm() {
