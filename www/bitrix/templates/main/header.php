@@ -17,7 +17,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    <meta property="og:description" content="<?$APPLICATION->ShowProperty("description");?>">
 	    <meta property="og:image" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
    		<meta property="og:image:url" content="<?$APPLICATION->ShowProperty("image", '/assets/images/tmp/events/about-summit-bg.jpg');?>">
-	</head>
+		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
+    </head>
 	<? if (CSite::InDir('/summits/') || CSite::InDir('/en/summits/')): ?>
 		<body class="b-smoke-white">
 	<? else: ?>
