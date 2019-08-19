@@ -12616,7 +12616,6 @@ $(window).resize(function() {
                 function metrics() {
                     ym(48656639, 'reachGoal', 'reg');
                     gtag('event', 'spasibo');
-                    dataLayer.push({'event': 'spasibo'});
                     return true;
                 }
 
