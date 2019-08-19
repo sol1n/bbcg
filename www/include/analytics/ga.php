@@ -35,6 +35,18 @@ function gtag_report_conversion(url) {
 }
 </script>
 <script>
+
+function createFunctionWithTimeout(callback, opt_timeout) {
+  var called = false;
+  function fn() {
+    if (!called) {
+      called = true;
+      callback();
+    }
+  }
+  setTimeout(fn, opt_timeout || 1000);
+  return fn;
+}
 // Gets a reference to the form element, assuming
 // it contains the ID attribute "signup-form".
 var form = document.getElementsByClassName('summit-registration-block-form');
