@@ -34,25 +34,3 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
-<script>
-// Get a reference to the form element, assuming
-// it contains the ID attribute "signup-form".
-var form = document.getElementById('summit-reg-form');
-
-// Add a listener for the "submit" event.
-form.addEventListener('submit', function(event) {
-
-  // Prevent the browser from submitting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-  // Send the event to Google Analytics and
-  // resubmit the form once the hit is done.
-  gtag('event', 'spasibo', {
-    'event_callback': function() {
-      form.submit();
-    }
-  });
-});
-
-</script>
