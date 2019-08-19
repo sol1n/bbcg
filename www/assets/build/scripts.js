@@ -12615,7 +12615,8 @@ $(window).resize(function() {
 
                 function metrics() {
                     ym(48656639, 'reachGoal', 'reg');
-                    gtag('event', 'spasibo');
+                    gaorig = gtag('event', 'spasibo');
+                    console.log(gaorig);
                     gatest = dataLayer.push({'event': 'spasibo'});
                     console.log(gatest);
                     return true;
