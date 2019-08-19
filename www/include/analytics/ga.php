@@ -7,6 +7,7 @@
 
   gtag('config', 'UA-41882092-1');
   gtag('config', 'AW-719048509');
+  gtag('config', 'UA-145866702-1');
 </script>
 
 <script>
@@ -33,4 +34,25 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+</script>
+<script>
+// Gets a reference to the form element, assuming
+// it contains the ID attribute "signup-form".
+var form = document.getElementsByClassName('summit-registration-block-form');
+
+// Adds a listener for the "submit" event.
+form.addEventListener('submit', function(event) {
+
+  // Prevents the browser from submitting the form
+  // and thus unloading the current page.
+  event.preventDefault();
+
+  // Sends the event to Google Analytics and
+  // resubmits the form once the hit is done.
+  gtag('event', 'spasibo', { 'event_callback': {
+    createFunctionWithTimeout(function() {
+      form.submit();
+    })
+  }});
+});
 </script>
