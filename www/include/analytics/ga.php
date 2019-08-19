@@ -7,7 +7,6 @@
 
   gtag('config', 'UA-41882092-1');
   gtag('config', 'AW-719048509');
-  gtag('config', 'UA-145866702-1');
 </script>
 
 <script>

@@ -17,7 +17,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <script type="text/javascript">                 (function (d, s, i, r) {                                if (d.getElementById(i)) { return; }                                var n = d.createElement(s); e = d.getElementsByTagName(s)[0]; n.id = i;                                n.src = "https://webtracking-v01.bpmonline.com/Src/tracking_" + r + ".js"; e.parentNode.insertBefore(n, e);                 })(document, "script", "bpmTracking", "2x0FkbAH5pSraa43iDn21mAzzm7xZ7WFISnxiCKJ"); </script>
 		<?php include $_SERVER['DOCUMENT_ROOT'] . "/include/analytics/ga.php"; ?>
-        <script src="/assets/build/scripts.min.js?150719"></script>
+        <script src="/assets/build/scripts.min.js?190719"></script>
 
 		<? if (defined('NEED_MAP')): ?>
 			<? if (SITE_LANGUAGE == 'en'): ?>
