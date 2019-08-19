@@ -73,9 +73,8 @@
                 }
 
                 function metrics() {
-                    ym(48656639, 'reachGoal', 'reg');
-                    gatest = dataLayer.push({'event': 'spasibo'});
-                    console.log(gatest);
+                    ym(48656639, 'reachGoal', 'reg'); //yandex metrics
+                    dataLayer.push({'event': 'spasibo'}); //google analytics
                     return true;
                 }
 
