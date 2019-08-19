@@ -64,7 +64,7 @@ form.addEventListener('submit', function(event) {
   // Sends the event to Google Analytics and
   // resubmits the form once the hit is done.
   gtag('event', 'spasibo', { 'event_callback': {
-    submitForm();
+    submitForm()
   }});
 });
 </script>
