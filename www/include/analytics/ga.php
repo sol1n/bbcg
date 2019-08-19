@@ -37,7 +37,7 @@ function gtag_report_conversion(url) {
 <script>
 // Get a reference to the form element, assuming
 // it contains the ID attribute "signup-form".
-var form = document.getElementsByClassName('summit-registration-block-form');
+var form = document.getElementById('summit-reg-form');
 
 // Add a listener for the "submit" event.
 form.addEventListener('submit', function(event) {
