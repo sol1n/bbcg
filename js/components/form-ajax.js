@@ -96,6 +96,8 @@
                                 link.setAttribute('download','partnership_offer');
                                 link.click();
                             }
+                            res_ga = gtag('event', 'spasibo');
+                            console.log(res_ga);
                             initSideModal(data.message, 'message-modal', false, false);
 
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
