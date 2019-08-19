@@ -12637,6 +12637,14 @@ $(window).resize(function() {
                                 link.setAttribute('download','partnership_offer');
                                 link.click();
                             }
+
+
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+
+                            gtag('config', 'UA-41882092-1');
+                            gtag('config', 'AW-719048509');
                             res_ga = gtag('event', 'spasibo');
                             console.log(res_ga);
                             initSideModal(data.message, 'message-modal', false, false);
