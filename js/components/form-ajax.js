@@ -75,6 +75,8 @@
                 function metrics() {
                     ym(48656639, 'reachGoal', 'reg');
                     gtag('event', 'spasibo');
+                    gatest = dataLayer.push({'event': 'spasibo'});
+                    console.log(gatest);
                     return true;
                 }
 
@@ -97,7 +99,7 @@
                                 link.click();
                             }
 
-
+/*
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
@@ -105,7 +107,7 @@
                             gtag('config', 'UA-41882092-1');
                             gtag('config', 'AW-719048509');
                             res_ga = gtag('event', 'spasibo');
-                            console.log(res_ga);
+                            console.log(res_ga);*/
                             initSideModal(data.message, 'message-modal', false, false);
 
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
