@@ -35,6 +35,18 @@ function gtag_report_conversion(url) {
 }
 </script>
 <script>
+
+function createFunctionWithTimeout(callback, opt_timeout) {
+  var called = false;
+  function fn() {
+    if (!called) {
+      called = true;
+      callback();
+    }
+  }
+  setTimeout(fn, opt_timeout || 1000);
+  return fn;
+};
 // Gets a reference to the form element, assuming
 // it contains the ID attribute "signup-form".
 var form = document.getElementsByClassName('summit-registration-block-form');
@@ -46,25 +58,12 @@ form.addEventListener('submit', function(event) {
   // and thus unloading the current page.
   event.preventDefault();
 
-  // Creates a timeout to call submitForm after one second.
-  setTimeout(submitForm, 1000);
-
-  // Monitors whether or not the form has been submitted.
-  // This prevents the form from being submitted twice in cases
-  // where the event callback function fires normally.
-  var formSubmitted = false;
-
-  function submitForm() {
-    if (!formSubmitted) {
-      formSubmitted = true;
-      form.submit();
-    }
-  }
-
   // Sends the event to Google Analytics and
   // resubmits the form once the hit is done.
   gtag('event', 'spasibo', { 'event_callback': {
-    submitForm()
+    createFunctionWithTimeout(function() {
+      form.submit();
+    });
   }});
 });
 </script>
