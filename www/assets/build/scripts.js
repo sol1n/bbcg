@@ -12614,8 +12614,9 @@ $(window).resize(function() {
                 }
 
                 function metrics() {
-                    ym(48656639, 'reachGoal', 'reg'); //yandex metrics
-                    dataLayer.push({'event': 'spasibo'}); //google analytics
+                    ym(48656639, 'reachGoal', 'reg');
+                    gtag('event', 'spasibo');
+                    dataLayer.push({'event': 'spasibo'});
                     return true;
                 }
 
@@ -12637,16 +12638,6 @@ $(window).resize(function() {
                                 link.setAttribute('download','partnership_offer');
                                 link.click();
                             }
-
-/*
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-
-                            gtag('config', 'UA-41882092-1');
-                            gtag('config', 'AW-719048509');
-                            res_ga = gtag('event', 'spasibo');
-                            console.log(res_ga);*/
                             initSideModal(data.message, 'message-modal', false, false);
 
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
