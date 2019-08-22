@@ -136,6 +136,7 @@
                                     </div>
                                 </div>
                                 <input type="hidden" id="summit_name" value="<?=$arResult['NAME']?>"/>
+                                <input type="hidden" id="select_text"/>
                             </div>
                             <div class="submit-registration-block-form-footer">
                                 <div class="row">
