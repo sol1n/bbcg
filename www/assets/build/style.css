@@ -13372,7 +13372,7 @@ body {
 }
 .program-table-event-speakers b {
   color: #2b2a29;
-  font-weight: normal;
+  font-weight: 600;
 }
 @media (max-width: 1600px) {
   .program-table-event-speakers {
