@@ -1,13 +1,15 @@
 (function( $ ) {
     $.fn.formAjax = function() {
         this.each(function() {
-
+            select_text = $("[name=summit_reg_select]:selected").text();
             $('[name=summit_reg_select]').on('change', function() {//показываем поле "Другое" если этот пункт выбран
                 if ( this.value === "o_other" ) {
                     $('[name=other_container]').show();
+                    select_text = $('input[name=other]').val();
                 } else {
                     $('[name=other_container]').hide();
                     $('input[name=other]').val('');
+                    select_text = $("[name=summit_reg_select]:selected").text();
                 }
             });
 
@@ -101,6 +103,10 @@
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
+                                $('#select_text').val(select_text);
+                                console.log($('#select_text').val());
+                                console.log(select_text);
+
                                 metrics();
 
                                 //передача данных в CRM
@@ -113,6 +119,8 @@
                                         "FullJobTitle": "#summit-registration-block [name=title]", // должность посетителя
                                         "Event": "#summit_name", // название саммита
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
+                                        "CGRString1": "#summit-registration-block [name=promocode]", // промокод
+                                        "CGRLandingLeadSource": "css-selector", //откуда вы узнали о нас
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
@@ -241,6 +249,7 @@
                             $form[0].reset();
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
+                            $('input[name=select_text]').val('');//очищаем скрытое поле "откуда вы узнали он нас"
                         } else if (data && data.message) {
                             $form.spin(false);
                             initSideModal('Ошибка: '+data.message, 'message-modal', false, false);
