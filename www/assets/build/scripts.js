@@ -12542,7 +12542,7 @@ $(window).resize(function() {
 (function( $ ) {
     $.fn.formAjax = function() {
         this.each(function() {
-            select_text = $("[name=summit_reg_select]:selected").text();
+            select_text = $("[name=summit_reg_select]").find(":selected").text();
             $('[name=summit_reg_select]').on('change', function() {//показываем поле "Другое" если этот пункт выбран
                 if ( this.value === "o_other" ) {
                     $('[name=other_container]').show();
@@ -12550,7 +12550,7 @@ $(window).resize(function() {
                 } else {
                     $('[name=other_container]').hide();
                     $('input[name=other]').val('');
-                    select_text = $("[name=summit_reg_select]:selected").text();
+                    select_text = $("[name=summit_reg_select]").find(":selected").text();
                 }
             });
 
@@ -12644,9 +12644,7 @@ $(window).resize(function() {
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
 
-                                $('#select_text').val(select_text);
-                                console.log($('#select_text').val());
-                                console.log(select_text);
+                                $('#select_text').val(select_text); //добавляем значение поля откуда вы узнали о нас в скрытое поле для передачи в CRM
 
                                 metrics();
 
@@ -12661,7 +12659,7 @@ $(window).resize(function() {
                                         "Event": "#summit_name", // название саммита
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
-                                        "CGRLandingLeadSource": "css-selector", //откуда вы узнали о нас
+                                        "CGRLandingLeadSource": "#select_text", //откуда вы узнали о нас
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
