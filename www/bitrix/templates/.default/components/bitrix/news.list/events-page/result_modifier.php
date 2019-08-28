@@ -242,8 +242,12 @@
             $hall = !empty($item['PROPERTIES']['EN_HALL']['VALUE'])
                 ? $item['PROPERTIES']['EN_HALL']['VALUE']
                 : $item['PROPERTIES']['HALL']['VALUE'];
+            $detail_text = !empty($item['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'])
+                ? $item['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']
+                : $item['~DETAIL_TEXT'];
         } else {
             $hall = $item['PROPERTIES']['HALL']['VALUE'];
+            $detail_text = $item['~DETAIL_TEXT'];
         }
         $morning = new DateTime($arParams['DATE']);
         $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
@@ -262,7 +266,7 @@
             'name' => $item['NAME'],
             'speakers' => $item['speakers'],
             'description' => $item['PREVIEW_TEXT'],
-            'detail' => $item['DETAIL_TEXT'],
+            'detail' => $detail_text,
             'duration' => $item['minutes'],
             'offset' => $offset,
             'begin' => $item['begin'],
@@ -290,8 +294,12 @@
                 $hall = !empty($item['PROPERTIES']['EN_HALL']['VALUE'])
                     ? $item['PROPERTIES']['EN_HALL']['VALUE']
                     : $item['PROPERTIES']['HALL']['VALUE'];
+                $detail_text = !empty($item['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT'])
+                    ? $item['PROPERTIES']['EN_DETAIL_TEXT']['~VALUE']['TEXT']
+                    : $item['~DETAIL_TEXT'];
             } else {
                 $hall = $item['PROPERTIES']['HALL']['VALUE'];
+                $detail_text = $item['~DETAIL_TEXT'];
             }
             $morning = new DateTime($arParams['DATE']);
             $morning->modify("+" . $arResult['FIRST_HOUR'] . " hours");
@@ -305,12 +313,13 @@
                 $morning->modify('+1 hour');
             }
 
+
             $arResult['TIMELINE'][$counter][$k][] = [
                 'id' => $item['ID'],
                 'name' => $item['NAME'],
                 'speakers' => $item['speakers'],
                 'description' => $item['PREVIEW_TEXT'],
-                'detail' => $item['DETAIL_TEXT'],
+                'detail' => $detail_text,
                 'duration' => $item['minutes'],
                 'offset' => $offset,
                 'begin' => $item['begin'],
