@@ -159,11 +159,13 @@
                             <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/images/icons/icon-contacts-phone-white.svg"); ?>
                         </div>
                         <div class="summit-registration-block-card-value">
-                            <? if(!empty($arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'])): ?>
-                                <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
-                            <? else: ?>
-                                <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');">+7 (495) 785-22-06</a> <br>
-                            <? endif ?>
+                            <span class="main-phone-1">
+                                <? if(!empty($arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'])): ?>
+                                    <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
+                                <? else: ?>
+                                    <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');">+7 (495) 785-22-06</a> <br>
+                                <? endif ?>
+                            </span>
                         </div>
                         <?=Loc::GetMessage('CONTACT_PERSON', [], $arParams['LANG'])?>
                         <? if(!empty($arResult['PROPERTIES']['ALT_REG_PERSON']['VALUE'])): ?>
