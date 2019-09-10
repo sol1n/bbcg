@@ -14,8 +14,8 @@
             <div class="main-footer-phones-icon">
                 <? echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/images/icons/icon-footer-phone.svg') ?>
             </div>
-            <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');">+7 (495) 785-22-06</a>, <br>
-            <a href="tel:+74957811134" onclick="return gtag_report_conversion('tel:+74957811134');">+7 (495) 781-11-34</a>
+            <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');"><span class="main-phones">+7 (495) 785-22-06</span></a>, <br>
+            <a href="tel:+74957811134" onclick="return gtag_report_conversion('tel:+74957811134');"><span class="main-phones">+7 (495) 781-11-34</span></a>
         </div>
         <div class="main-footer-links">
             <?$APPLICATION->IncludeComponent("bitrix:menu", "main-footer-links", Array("ROOT_MENU_TYPE" => "bottom"), false);?>
