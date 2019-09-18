@@ -5399,6 +5399,97 @@ body {
 .summits-block-slider-item {
   font-size: 0;
 }
+@media (min-width: 1200px) {
+  #video-banner {
+    display: block!important;
+  }
+  #video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+  #video-banner {
+    height: 700px!important;
+    display: block!important;
+  }
+  #video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  #video-banner {
+    height: 580px!important;
+    display: block!important;
+  }
+  #video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #video-banner {
+    height: 430px!important;
+    display: block!important;
+  }
+  #video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+#video-banner {
+  position: relative;
+  height: 980px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+.hidden-on-desktop {
+  display: block;
+}
+@media (min-width: 768px) {
+  .hidden-on-desktop {
+    display: none;
+  }
+}
 .programs-block {
   background-color: #e7c54f;
   background-image: linear-gradient(302deg, #f1cf4f, #f1cf4f 30%, #e7c54f 30%, #e7c54f 100%);

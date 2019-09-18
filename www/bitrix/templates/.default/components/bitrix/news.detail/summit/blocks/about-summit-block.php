@@ -7,7 +7,19 @@
         $background = '/assets/images/tmp/events/about-summit-bg.jpg';
     }
 ?>
-<section class="about-summit-block" style="background-image: url('<?=$background?>')">
+
+<?
+$section_class = '';
+if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
+    <?$section_class = 'hidden-on-desktop';?>
+    <section id="video-banner">
+          <video preload="auto" playsinline autoplay muted loop id="video-background">
+              <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
+          </video>
+    </section>
+<?endif;?>
+
+<section class="about-summit-block <?=$section_class;?>" style="background-image: url('<?=$background?>')">
     <div class="wrapper">
         <div class="about-summit-block-content">
             <h1 class="about-summit-block-title">
