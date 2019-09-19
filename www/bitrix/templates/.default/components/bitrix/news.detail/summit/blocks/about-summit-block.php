@@ -16,6 +16,19 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
           <video preload="auto" playsinline autoplay muted loop id="video-background">
               <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
           </video>
+          <div class="wrapper">
+              <div class="about-summit-block-button">
+                  <?
+                      $now_date = date('d.m.Y');
+                      $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
+                  ?>
+                  <? if(strtotime($now_date) < strtotime($end_date)): ?>
+                      <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
+                          <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                      </a>
+                  <? endif; ?>
+              </div>
+          </div>
     </section>
 <?endif;?>
 
