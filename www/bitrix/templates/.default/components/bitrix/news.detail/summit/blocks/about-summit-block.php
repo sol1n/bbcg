@@ -34,7 +34,15 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
 
 <section class="about-summit-block <?=$section_class;?>" style="background-image: url('<?=$background?>')">
     <div class="wrapper">
-        <div class="about-summit-block-content">
+        <?
+        $promoblock_class = '';
+        $reg_button_title = 'REGISTRATION';
+        if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y") {
+            $promoblock_class = 'about-summit-block-content-alternative';
+            $reg_button_title = 'ALT_BECOME_SPEAKER';
+        }
+        ?>
+        <div class="about-summit-block-content <?=$promoblock_class;?>">
             <h1 class="about-summit-block-title">
                 <?=$arResult['NAME']?>
             </h1>
@@ -49,13 +57,26 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
             <div class="about-summit-block-button">
+                <? if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y"): ?>
+                    <? if (is_null($user) or !isset($user['UF_SUBSCRIBE']) or ($user['UF_SUBSCRIBE'] != 1)): ?>
+                        <? if (is_null($user)): ?>
+                            <a href="#subscribe" class="button button-red" data-side-modal data-side-modal-url="/include/subscribe/anonymous.php" data-side-modal-class="registration-modal">
+                                <?=Loc::GetMessage('SUBSCRIBE', [], $arParams['LANG'])?>
+                            </a>
+                        <? else: ?>
+                            <a href="#subscribe" class="button button-red" data-side-modal data-side-modal-url="/include/subscribe/user.php" data-side-modal-class="registration-modal">
+                                <?=Loc::GetMessage('SUBSCRIBE', [], $arParams['LANG'])?>
+                            </a>
+                        <? endif ?>
+                    <? endif ?>
+                <? endif ?>
                 <?
                     $now_date = date('d.m.Y');
                     $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
                 ?>
                 <? if(strtotime($now_date) < strtotime($end_date)): ?>
                     <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
-                        <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                        <?=Loc::GetMessage($reg_button_title, [], $arParams['LANG'])?>
                     </a>
                 <? endif; ?>
             </div>

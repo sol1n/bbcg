@@ -9867,6 +9867,77 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+.about-summit-block-content-alternative {
+  max-width: none;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.about-summit-block-content-alternative .about-summit-block-title {
+  padding-top: 70px;
+  text-align: center;
+}
+.about-summit-block-content-alternative .about-summit-block-date {
+  display: none;
+}
+.about-summit-block-content-alternative .about-summit-block-button {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+.about-summit-block-content-alternative .about-summit-block-button .button {
+  min-width: 300px;
+  padding: 14px 30px;
+  margin: 0 40px 40px 40px;
+}
+@media (max-width: 767px) {
+  .about-summit-block-content-alternative {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-summit-block-content-alternative .about-summit-block-title {
+    padding-top: 40px;
+  }
+  .about-summit-block-content-alternative .about-summit-block-desc {
+    font-size: 18px!important;
+    line-height: 24px!important;
+  }
+  .about-summit-block-content-alternative .about-summit-block-button .button {
+    min-width: 280px;
+    padding: 14px 30px;
+    margin: 0 0px 30px 0px;
+  }
+}
+@media (max-width: 359px) {
+  .about-summit-block-content-alternative {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-summit-block-content-alternative .about-summit-block-title {
+    padding-top: 30px;
+  }
+  .about-summit-block-content-alternative .about-summit-block-desc {
+    font-size: 18px!important;
+    line-height: 24px!important;
+  }
+  .about-summit-block-content-alternative .about-summit-block-button .button {
+    min-width: 250px;
+    padding: 14px 20px;
+    margin: 0 0px 20px 0px;
+    font-size: 13px;
+  }
+}
+.about-summit-block-content-alternative .about-summit-block-desc {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 5px;
+}
+.about-summit-block-content-alternative .about-summit-block-desc::before {
+  display: none;
+}
 .about-summit-block-title {
   font-family: 'GilroyExtraBold', Tahoma, sans-serif;
   font-size: 48px;
