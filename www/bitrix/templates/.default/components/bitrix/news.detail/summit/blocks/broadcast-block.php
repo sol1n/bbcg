@@ -1,5 +1,5 @@
 <?php
-if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
+if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT'])): ?>
     <section class="sessions-block" id="broadcast-block">
         <div class="wrapper">
             <div class="sessions-block-header">
@@ -7,7 +7,7 @@ if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
                     <h3 class="sessions-block-title">Видеотрансляция</h3>
                 </div>
             </div>
-            <iframe width="100%" height="450" src="<?=$arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <?=$arResult["PROPERTIES"]["BROADCAST_LINK"]["~VALUE"]["TEXT"];?>
         </div>
     </section>
 <? endif; ?>
