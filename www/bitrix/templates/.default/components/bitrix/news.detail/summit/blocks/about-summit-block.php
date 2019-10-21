@@ -26,6 +26,11 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
                           <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
                       </a>
                   <? endif; ?>
+                  <? if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
+                        <a href="#broadcast-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
+                            <?=Loc::GetMessage('GO_TO_BROADCAST', [], $arParams['LANG'])?>
+                        </a>
+                  <? endif; ?>
               </div>
           </div>
     </section>
