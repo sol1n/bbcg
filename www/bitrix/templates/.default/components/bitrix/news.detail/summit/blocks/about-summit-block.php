@@ -6,6 +6,9 @@
     } else {
         $background = '/assets/images/tmp/events/about-summit-bg.jpg';
     }
+
+    $now_date = date('d.m.Y');
+    $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
 ?>
 
 <?
@@ -18,10 +21,6 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
           </video>
           <div class="wrapper">
               <div class="about-summit-block-button">
-                  <?
-                      $now_date = date('d.m.Y');
-                      $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
-                  ?>
                   <? if(strtotime($now_date) < strtotime($end_date)): ?>
                       <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
                           <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
@@ -39,7 +38,7 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
         $reg_button_title = 'REGISTRATION';
         if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y") {
             $promoblock_class = 'about-summit-block-content-alternative';
-            $reg_button_title = 'ALT_BECOME_SPEAKER';
+            //$reg_button_title = 'ALT_BECOME_SPEAKER';
         }
         ?>
         <div class="about-summit-block-content <?=$promoblock_class;?>">
@@ -70,10 +69,6 @@ if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
                         <? endif ?>
                     <? endif ?>
                 <? endif ?>
-                <?
-                    $now_date = date('d.m.Y');
-                    $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
-                ?>
                 <? if(strtotime($now_date) < strtotime($end_date)): ?>
                     <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
                         <?=Loc::GetMessage($reg_button_title, [], $arParams['LANG'])?>
