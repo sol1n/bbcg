@@ -26,4 +26,6 @@
 	$MESS["O_MASSMEDIA"] = "СМИ";
 	$MESS["O_OTHER"] = "Другое";
 	$MESS["OTHER"] = "Ваш вариант";
+	$MESS["SUBSCRIBE"] = "Узнать подробности первым";
+	$MESS["ALT_BECOME_SPEAKER"] = "Стать спикером";
 ?>
