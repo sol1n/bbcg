@@ -13,27 +13,40 @@
 
 <?
 $section_class = '';
-if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):?>
-    <?$section_class = 'hidden-on-desktop';?>
-    <section id="video-banner">
-          <video preload="auto" playsinline autoplay muted loop id="video-background">
-              <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
-          </video>
-          <div class="wrapper">
-              <div class="about-summit-block-button">
-                  <? if(strtotime($now_date) < strtotime($end_date)): ?>
-                      <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
-                          <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
-                      </a>
-                  <? endif; ?>
-                  <? if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
-                        <a href="#broadcast-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
-                            <?=Loc::GetMessage('GO_TO_BROADCAST', [], $arParams['LANG'])?>
-                        </a>
-                  <? endif; ?>
-              </div>
-          </div>
+if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT']) && ($arResult['PROPERTIES']['BROADCAST_PROMO']['VALUE'] == 'Y')):
+?>
+    <?$section_class = 'hidden';?>
+    <section>
+        <div class="youtube-iframe-container">
+            <?=$arResult["PROPERTIES"]["BROADCAST_LINK"]["~VALUE"]["TEXT"];?>
+        </div>
     </section>
+<? else: ?>
+        <?
+        $section_class = '';
+        if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):
+        ?>
+            <?$section_class = 'hidden-on-desktop';?>
+            <section id="video-banner">
+                <video preload="auto" playsinline autoplay muted loop id="video-background">
+                    <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
+                </video>
+                <div class="wrapper">
+                    <div class="about-summit-block-button">
+                        <? if(strtotime($now_date) < strtotime($end_date)): ?>
+                            <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
+                                <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                            </a>
+                        <? endif; ?>
+                        <? if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
+                            <a href="#broadcast-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
+                                <?=Loc::GetMessage('GO_TO_BROADCAST', [], $arParams['LANG'])?>
+                            </a>
+                        <? endif; ?>
+                    </div>
+                </div>
+            </section>
+        <?endif;?>
 <?endif;?>
 
 <section class="about-summit-block <?=$section_class;?>" style="background-image: url('<?=$background?>')">

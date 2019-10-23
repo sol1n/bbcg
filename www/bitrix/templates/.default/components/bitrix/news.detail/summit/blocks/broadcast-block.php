@@ -1,5 +1,5 @@
 <?php
-if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT'])): ?>
+if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT']) && ($arResult['PROPERTIES']['BROADCAST_PROMO']['VALUE'] != 'Y')): ?>
     <section class="sessions-block" id="broadcast-block">
         <div class="wrapper">
             <div class="sessions-block-header">
