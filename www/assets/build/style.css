@@ -5545,7 +5545,6 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
@@ -5564,7 +5563,6 @@ body {
     min-height: 100%;
     width: 100%;
     height: auto;
-    z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
@@ -5584,7 +5582,6 @@ body {
     min-height: 100%;
     width: 100%;
     height: auto;
-    z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
@@ -5603,7 +5600,6 @@ body {
     min-height: 100%;
     width: 100%;
     height: auto;
-    z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
@@ -5640,6 +5636,19 @@ body {
   .hidden-on-desktop {
     display: none;
   }
+}
+.youtube-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.youtube-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .programs-block {
   background-color: #e7c54f;
