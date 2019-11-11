@@ -2,20 +2,13 @@
     <div class="wrapper">
         <div class="register-iphone-block-left">
             <h3 class="register-iphone-block-title">
-                Зарегистрируйтесь на сайте BBCG
+                Скачай приложение bbcg
             </h3>
             <div class="register-iphone-block-subtitle">
                 Регистрация дает доступ к эксклюзивным новостям
                 и презентациям, возможность задать вопрос спикеру,
                 а также скидки на участие в саммитах
             </div>
-            <? if (! $USER->IsAuthorized()): ?>
-                <div class="register-iphone-block-button">
-                    <a href="/registration/" data-side-modal data-side-modal-prevent-mobile data-side-modal-url="/include/blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-light-burgundy">
-                        Регистрация на сайте
-                    </a>
-                </div>
-            <? endif ?>
         </div>
         <div class="register-iphone-block-right">
             <div class="register-iphone-block-screen"></div>
