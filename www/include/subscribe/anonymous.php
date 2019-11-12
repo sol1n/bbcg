@@ -69,30 +69,31 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-type">Тип компании</label>
+                <label class="form-label" for="registration-form-type">Тип компании *</label>
                 <div class="form-select">
-                    <select name="type" id="registration-form-type">
-                        <option>Ритейл</option>
-                        <option>Другое</option>
+                    <select name="type" id="registration-form-type" required>
+                        <option label="Не выбрано"></option>
+                        <option value="t_retail">Ритейл</option>
+                        <option value="t_other">Другое</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-work">Сфера деятельности</label>
+                <label class="form-label" for="registration-form-work">Сфера деятельности *</label>
                 <div class="form-select" id="registration-form-work">
-                    <select name="work">
-                        <option>Не выбрано</option>
-                        <option>Food (торговля, производство продуктов питания и товаров fmcg)</option>
-                        <option>DIY (торговля, производство товаров для строительства, ремонта и дома)</option>
-                        <option>Fashion (торговля, производство одежды, обуви, аксессуаров)</option>
-                        <option>Drogerie (торговля, производство косметики, бытовой химии)</option>
-                        <option>Electronics & mobile (торговля, производство БТиЭ)</option>
-                        <option>Jewelry (торговля, производство ювелирных изделий)</option>
-                        <option>Baby (торговля, производство товаров для детей)</option>
-                        <option>B2B-компания (IT, логистика, оборудование, услуги и т.д.)</option>
-                        <option>Другое</option>
+                    <select name="work" required>
+                        <option label="Не выбрано"></option>
+                        <option value="w_food">Food (торговля, производство продуктов питания и товаров fmcg)</option>
+                        <option value="w_diy">DIY (торговля, производство товаров для строительства, ремонта и дома)</option>
+                        <option value="w_fashion">Fashion (торговля, производство одежды, обуви, аксессуаров)</option>
+                        <option value="w_drogerie">Drogerie (торговля, производство косметики, бытовой химии)</option>
+                        <option value="w_electornics">Electronics & mobile (торговля, производство БТиЭ)</option>
+                        <option value="w_jewelry">Jewelry (торговля, производство ювелирных изделий)</option>
+                        <option value="w_baby">Baby (торговля, производство товаров для детей)</option>
+                        <option value="w_b2b">B2B-компания (IT, логистика, оборудование, услуги и т.д.)</option>
+                        <option value="w_other">Другое</option>
                     </select>
                 </div>
             </div>
