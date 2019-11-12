@@ -8604,6 +8604,9 @@ body {
 .form-control-radio [type="radio"]:focus + label::before {
   border-color: #49b5e8;
 }
+.form-select select.error {
+  border: 1px solid #ad1b34;
+}
 .form-control-radio-group {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

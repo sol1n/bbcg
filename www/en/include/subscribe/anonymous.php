@@ -54,14 +54,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-organisation">Company</label>
-                <input id="registration-form-organisation" type="text" name="organisation" class="form-input">
+                <label class="form-label" for="registration-form-organisation">Company *</label>
+                <input id="registration-form-organisation" type="text" name="organisation" class="form-input" required>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-title">Position</label>
-                <input id="registration-form-title" type="text" name="title" class="form-input">
+                <label class="form-label" for="registration-form-title">Position *</label>
+                <input id="registration-form-title" type="text" name="title" class="form-input" required>
             </div>
         </div>
     </div>
@@ -69,30 +69,31 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-type">Company type</label>
+                <label class="form-label" for="registration-form-type">Company type *</label>
                 <div class="form-select">
-                    <select name="type" id="registration-form-type">
-                        <option value="Ритейл">Retail</option>
-                        <option value="Другое">Other</option>
+                    <select name="type" id="registration-form-type" required>
+                        <option label="Not chosen"></option>
+                        <option value="t_retail">Retail</option>
+                        <option value="t_other">Other</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="form-label" for="registration-form-work">Field of activity</label>
+                <label class="form-label" for="registration-form-work">Field of activity *</label>
                 <div class="form-select" id="registration-form-work">
-                    <select name="work">
-                        <option value="Не выбрано">Not chosen</option>
-                        <option value="Food (торговля, производство продуктов питания и товаров fmcg)">Food (trade, food and fmcg)</option>
-                        <option value="DIY (торговля, производство товаров для строительства, ремонта и дома)">DIY (trade, manufacture of goods for construction, repair and home)</option>
-                        <option value="Fashion (торговля, производство одежды, обуви, аксессуаров)">Fashion (trade, clothing, footwear, accessories)</option>
-                        <option value="Drogerie (торговля, производство косметики, бытовой химии)">Drogerie ( of cosmetics, household chemicals)</option>
-                        <option value="Electronics & mobile (торговля, производство БТиЭ)">Electronics & mobile (trade, manufacture)</option>
-                        <option value="Jewelry (торговля, производство ювелирных изделий)">Jewelry (trade, manufacture of jewelry)</option>
-                        <option value="Baby (торговля, производство товаров для детей)">Baby (trade, production of goods for children)</option>
-                        <option value="B2B-компания (IT, логистика, оборудование, услуги и т.д.)">B2B-company (IT, logistics, equipment, services, etc.)</option>
-                        <option value="Другое">Other</option>
+                    <select name="work" required>
+                        <option label="Not chosen"></option>
+                        <option value="w_food">Food (trade, food and fmcg)</option>
+                        <option value="w_diy">DIY (trade, manufacture of goods for construction, repair and home)</option>
+                        <option value="w_fashion">Fashion (trade, clothing, footwear, accessories)</option>
+                        <option value="w_drogerie">Drogerie ( of cosmetics, household chemicals)</option>
+                        <option value="w_electornics">Electronics & mobile (trade, manufacture)</option>
+                        <option value="w_jewelry">Jewelry (trade, manufacture of jewelry)</option>
+                        <option value="w_baby">Baby (trade, production of goods for children)</option>
+                        <option value="w_b2b">B2B-company (IT, logistics, equipment, services, etc.)</option>
+                        <option value="w_other">Other</option>
                     </select>
                 </div>
             </div>

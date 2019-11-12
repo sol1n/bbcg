@@ -51,7 +51,7 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
     ]));
     $result = curl_exec($curl);
     curl_close($curl);
-    
+
     $parsed = json_decode($result);
     if (!isset($parsed->success) || !$parsed->success) {
         {
@@ -72,11 +72,11 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
         {
             $password = generateRandomString(6);
             $arAuthResult = $USER->Register(
-                $_POST['email'], 
-                $_POST['first_name'], 
-                $_POST['last_name'], 
-                $password, 
-                $password, 
+                $_POST['email'],
+                $_POST['first_name'],
+                $_POST['last_name'],
+                $password,
+                $password,
                 $_POST['email']
               );
 
@@ -93,14 +93,33 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                 $USER->Logout();
                 $u = new CUser;
 
+                $ar_works = [
+                    'w_food' => 'Food (торговля, производство продуктов питания и товаров fmcg)',
+                    'w_diy' => 'DIY (торговля, производство товаров для строительства, ремонта и дома)',
+                    'w_fashion' => 'Fashion (торговля, производство одежды, обуви, аксессуаров)',
+                    'w_drogerie' => 'Drogerie (торговля, производство косметики, бытовой химии)',
+                    'w_electornics' => 'Electronics & mobile (торговля, производство БТиЭ)',
+                    'w_jewelry' => 'Jewelry (торговля, производство ювелирных изделий)',
+                    'w_baby' => 'Baby (торговля, производство товаров для детей)',
+                    'w_b2b' => 'B2B-компания (IT, логистика, оборудование, услуги и т.д.)',
+                    'w_other' => 'Другое'
+                ];
+                $work = $ar_works[$_POST['work']];
+
+                $ar_type = [
+                    't_retail' => 'Ритейл',
+                    't_other' => 'Другое'
+                ];
+                $type = $ar_type[$_POST['type']];
+
                 $fields = [
                     'SECOND_NAME' => $_POST['middle_name'],
                     'PERSONAL_PHONE' => $_POST['phone'],
                     'WORK_COMPANY' => $_POST['organisation'],
                     'WORK_POSITION' => $_POST['title'],
                     'UF_SUBSCRIBE' => (isset($_POST['mailing']) && $_POST['mailing'] == 'on') ? 1 : 0,
-                    'WORK_PROFILE' => $_POST['work'],
-                    'WORK_DEPARTMENT' => $_POST['type'],
+                    'WORK_PROFILE' => $work,
+                    'WORK_DEPARTMENT' => $type,
 
                 ];
 
@@ -124,12 +143,12 @@ if ($_POST['first_name'] && $_POST['last_name'] && $_POST['email'] && $_POST['ph
                     'phone' => $_POST['phone'],
                     'company' => $_POST['organisation'] ?? '',
                     'position' => $_POST['title'] ?? '',
-                    'work' => $_POST['work'] ?? '',
-                    'type' => $_POST['type'] ?? '',
+                    'work' => $work ?? '',
+                    'type' => $type ?? '',
                 ];
                 sendEmail($_POST['email'], $messages['theme'], $messages['template'], $data);
                 sendEmail(ADMINISTRATION_EMAIL, 'Регистрация пользователя', 'user/register-to-admin', $data);
-            }   
+            }
         }
     }
 }
