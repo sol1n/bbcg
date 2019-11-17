@@ -77,11 +77,11 @@ if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT']) && ($arRes
                 <? if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y"): ?>
                     <? if (is_null($user) or !isset($user['UF_SUBSCRIBE']) or ($user['UF_SUBSCRIBE'] != 1)): ?>
                         <? if (is_null($user)): ?>
-                            <a href="#subscribe" class="button button-red" data-side-modal data-side-modal-url="/include/subscribe/anonymous.php" data-side-modal-class="registration-modal">
+                            <a href="#subscribe" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>" data-side-modal data-side-modal-url="/include/subscribe/anonymous.php" data-side-modal-class="registration-modal">
                                 <?=Loc::GetMessage('SUBSCRIBE', [], $arParams['LANG'])?>
                             </a>
                         <? else: ?>
-                            <a href="#subscribe" class="button button-red" data-side-modal data-side-modal-url="/include/subscribe/user.php" data-side-modal-class="registration-modal">
+                            <a href="#subscribe" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>" data-side-modal data-side-modal-url="/include/subscribe/user.php" data-side-modal-class="registration-modal">
                                 <?=Loc::GetMessage('SUBSCRIBE', [], $arParams['LANG'])?>
                             </a>
                         <? endif ?>

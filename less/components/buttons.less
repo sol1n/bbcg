@@ -325,6 +325,17 @@
   }
 }
 
+.button-dw-green {
+  background-color: @c-dw-green;
+  border-color: @c-dw-green;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@c-dw-green, 10%);
+    color: #fff;
+  }
+}
+
 .button-old-gold-invert {
   background-color: @c-white;
   border-color: @c-white;
@@ -334,6 +345,19 @@
   &:focus {
     background-color: darken(@c-old-gold, 10%);
     border-color: darken(@c-old-gold, 10%);
+    color: #fff;
+  }
+}
+
+.button-dw-green-invert {
+  background-color: @c-white;
+  border-color: @c-white;
+  color: @c-dw-green;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@c-dw-green, 10%);
+    border-color: darken(@c-dw-green, 10%);
     color: #fff;
   }
 }

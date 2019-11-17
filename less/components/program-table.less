@@ -490,6 +490,14 @@
   border-left: 3px solid @c-program-old-gold;
 }
 
+.program-table-event-dw-green {
+  border-left: 3px solid @c-program-dw-green;
+}
+
+.program-table-event-dw-green {
+  border-left: 3px solid @c-program-dw-green;
+}
+
 .program-table-event-green {
   border-left: 3px solid @c-program-green;
 }
@@ -758,6 +766,7 @@
 .program-table-filter-select-blue,
 .program-table-filter-select-navy,
 .program-table-filter-select-old-gold,
+.program-table-filter-select-dw-green,
 .program-table-filter-select-green,
 .program-table-filter-select-green-light {
   &::before {
@@ -799,6 +808,12 @@
 .program-table-filter-select-old-gold {
   &::before {
     background-color: @c-program-old-gold;
+  }
+}
+
+.program-table-filter-select-dw-green {
+  &::before {
+    background-color: @c-program-dw-green;
   }
 }
 
@@ -933,6 +948,12 @@
   }
 }
 
+.program-table-filter-item-dw-green {
+  &::before {
+    background-color: @c-program-dw-green;
+  }
+}
+
 .program-table-filter-item-green {
   &::before {
     background-color: @c-program-green;
@@ -996,6 +1017,10 @@
 
 .program-table-mobile-event-old-gold {
   border-left-color: @c-program-old-gold;
+}
+
+.program-table-mobile-event-dw-green {
+  border-left-color: @c-program-dw-green;
 }
 
 .program-table-mobile-event-orange {
@@ -1114,9 +1139,14 @@
       color: @c-navy;
     });
 
-    .navy-theme({
+    .old-gold-theme({
       border-color: @c-old-gold;
       color: @c-old-gold;
+    });
+
+    .dw-green-theme({
+      border-color: @c-dw-green;
+      color: @c-dw-green;
     });
 
     &:hover {
@@ -1177,6 +1207,11 @@
         background-color: @c-old-gold;
         color: #fff;
       });
+
+      .dw-green-theme({
+        background-color: @c-dw-green;
+        color: #fff;
+      });
     }
   }
 
@@ -1227,6 +1262,10 @@
 
       .old-gold-theme({
         background-color: @c-old-gold;
+      });
+
+      .dw-green-theme({
+        background-color: @c-dw-green;
       });
     }
   }
