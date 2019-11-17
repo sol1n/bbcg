@@ -63,6 +63,10 @@ a {
       .old-gold-theme({
         color: @c-old-gold;
       });
+
+      .dw-green-theme({
+        color: @c-dw-green;
+      });
     }
   }
 
@@ -218,6 +222,10 @@ h6, .h6 {
       .old-gold-theme({
         background-color: @c-old-gold;
       });
+
+      .dw-green-theme({
+        background-color: @c-dw-green;
+      });
     }
 
     ul {
@@ -276,6 +284,10 @@ h6, .h6 {
           .old-gold-theme({
             border-color: @c-old-gold;
           });
+
+          .dw-green-theme({
+            border-color: @c-dw-green;
+          });
         }
       }
     }
@@ -312,6 +324,24 @@ h6, .h6 {
       li {
         &::before {
           border-color: @c-old-gold;
+        }
+      }
+    }
+  }
+}
+
+.ul-square-dw-green {
+  .ul-square;
+
+  li {
+    &::before {
+      background-color: @c-dw-green;
+    }
+
+    ul {
+      li {
+        &::before {
+          border-color: @c-dw-green;
         }
       }
     }
