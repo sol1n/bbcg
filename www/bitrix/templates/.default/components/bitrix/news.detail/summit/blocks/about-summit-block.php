@@ -1,60 +1,73 @@
 <?
-    use \Bitrix\Main\Localization\Loc;
+use \Bitrix\Main\Localization\Loc;
 
-    if ($arResult['DETAIL_PICTURE']) {
-        $background = $arResult['DETAIL_PICTURE']['SRC'];
-    } else {
-        $background = '/assets/images/tmp/events/about-summit-bg.jpg';
-    }
+if ($arResult['DETAIL_PICTURE']) {
+    $background = $arResult['DETAIL_PICTURE']['SRC'];
+    $image_height = 'style="height: '.$arResult['DETAIL_PICTURE']['HEIGHT'].'px"';
+} else {
+    $background = '/assets/images/tmp/events/about-summit-bg.jpg';
+    $image_height = 'style="height: 527px"';;
+}
 
-    $now_date = date('d.m.Y');
-    $end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
-?>
+$promo_type = $arResult['PROPERTIES']['PROMO_TYPE']['VALUE_XML_ID'];
+if ($promo_type != 'SIMPLE'){
+    $image_height = '';
+}
 
-<?
+$now_date = date('d.m.Y');
+$end_date = $arResult["PROPERTIES"]["END"]["VALUE"];
+
 $section_class = '';
-if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT']) && ($arResult['PROPERTIES']['BROADCAST_PROMO']['VALUE'] == 'Y')):
-?>
-    <?$section_class = 'hidden';?>
-    <section>
-        <div class="youtube-iframe-container">
-            <?=$arResult["PROPERTIES"]["BROADCAST_LINK"]["~VALUE"]["TEXT"];?>
+
+if ($promo_type == 'BROADCAST'): ?>
+    <? if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT'])): ?>
+        <? $section_class = 'hidden'; ?>
+        <section>
+            <div class="youtube-iframe-container">
+                <?=$arResult["PROPERTIES"]["BROADCAST_LINK"]["~VALUE"]["TEXT"];?>
+            </div>
+        </section>
+    <? endif; ?>
+<? elseif ($promo_type == 'VIDEO'): ?>
+    <? if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])): ?>
+        <?$section_class = 'hidden-on-desktop';?>
+        <section id="video-banner">
+            <video preload="auto" playsinline autoplay muted loop id="video-background">
+                <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
+            </video>
+            <div class="wrapper">
+                <div class="about-summit-block-button">
+                    <? if(strtotime($now_date) < strtotime($end_date)): ?>
+                        <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
+                            <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                        </a>
+                    <? endif; ?>
+                </div>
+            </div>
+        </section>
+    <?endif;?>
+<? elseif ($promo_type == 'SIMPLE'): ?>
+    <?$section_class = 'hidden-on-desktop';?>
+    <section class="about-summit-block hidden-on-mobile" style="background-image: url('<?=$background?>')">
+        <div class="wrapper" <?=$image_height?>>
+            <? if(strtotime($now_date) < strtotime($end_date)): ?>
+                <div style="height: 70%;"></div>
+                <div class="about-summit-block-button text-center">
+                    <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?> js-smooth-scroll">
+                        <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
+                    </a>
+                </div>
+            <? endif; ?>
         </div>
     </section>
-<? else: ?>
-        <?
-        $section_class = '';
-        if(!empty($arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE'])):
-        ?>
-            <?$section_class = 'hidden-on-desktop';?>
-            <section id="video-banner">
-                <video preload="auto" playsinline autoplay muted loop id="video-background">
-                    <source src="/upload/documents/video/<?=$arResult['PROPERTIES']['BACKGROUND_VIDEO']['VALUE']?>" type="video/mp4">
-                </video>
-                <div class="wrapper">
-                    <div class="about-summit-block-button">
-                        <? if(strtotime($now_date) < strtotime($end_date)): ?>
-                            <a href="#summit-registration-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
-                                <?=Loc::GetMessage('REGISTRATION', [], $arParams['LANG'])?>
-                            </a>
-                        <? endif; ?>
-                        <? if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE'])): ?>
-                            <a href="#broadcast-block" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>-invert js-smooth-scroll">
-                                <?=Loc::GetMessage('GO_TO_BROADCAST', [], $arParams['LANG'])?>
-                            </a>
-                        <? endif; ?>
-                    </div>
-                </div>
-            </section>
-        <?endif;?>
 <?endif;?>
 
 <section class="about-summit-block <?=$section_class;?>" style="background-image: url('<?=$background?>')">
     <div class="wrapper">
         <?
-        $promoblock_class = '';
         $reg_button_title = 'REGISTRATION';
-        if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y") {
+        $promoblock_class = '';
+        if ($promo_type == 'ALT') {
             $promoblock_class = 'about-summit-block-content-alternative';
             //$reg_button_title = 'ALT_BECOME_SPEAKER';
         }
@@ -74,7 +87,7 @@ if(!empty($arResult['PROPERTIES']['BROADCAST_LINK']['VALUE']['TEXT']) && ($arRes
                 <?=$arResult['PREVIEW_TEXT']?>
             </div>
             <div class="about-summit-block-button">
-                <? if($arResult['PROPERTIES']['ALT_PROMO']['VALUE'] == "Y"): ?>
+                <? if ($promo_type == 'ALT'): ?>
                     <? if (is_null($user) or !isset($user['UF_SUBSCRIBE']) or ($user['UF_SUBSCRIBE'] != 1)): ?>
                         <? if (is_null($user)): ?>
                             <a href="#subscribe" class="button button-<?=$arResult['PROPERTIES']['COLOR']['VALUE']?>" data-side-modal data-side-modal-url="/include/subscribe/anonymous.php" data-side-modal-class="registration-modal">

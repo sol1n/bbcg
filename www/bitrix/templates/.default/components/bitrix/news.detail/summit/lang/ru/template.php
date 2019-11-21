@@ -28,5 +28,4 @@
 	$MESS["OTHER"] = "Ваш вариант";
 	$MESS["SUBSCRIBE"] = "Узнать подробности первым";
 	$MESS["ALT_BECOME_SPEAKER"] = "Стать спикером";
-	$MESS["GO_TO_BROADCAST"] = "Смотреть трансляцию";
 ?>
