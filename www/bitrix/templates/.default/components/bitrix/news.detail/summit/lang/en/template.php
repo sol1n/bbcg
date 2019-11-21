@@ -28,5 +28,4 @@
 	$MESS["OTHER"] = "Your option";
 	$MESS["SUBSCRIBE"] = "Find out the details first";
 	$MESS["ALT_BECOME_SPEAKER"] = "Become a speaker";
-	$MESS["GO_TO_BROADCAST"] = "Watch the broadcast";
 ?>

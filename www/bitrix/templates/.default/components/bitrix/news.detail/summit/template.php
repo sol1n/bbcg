@@ -3,7 +3,6 @@
 ?>
 <?php include "blocks/about-summit-block.php"; ?>
 <?php include "blocks/main-speakers-block.php"; ?>
-<?php include "blocks/broadcast-block.php"; ?>
 <?php include "blocks/summit-text-block.php"; ?>
 <?php include "blocks/sessions-block.php"; ?>
 <?php include "blocks/speakers-block.php"; ?>
