@@ -14616,8 +14616,6 @@ body {
   }
 }
 .events-calendar-item-header {
-  padding: 20px;
-  border-bottom: 1px solid #CCD3D7;
   text-align: center;
 }
 .events-calendar-item-header-title {
@@ -14631,32 +14629,6 @@ body {
 .events-calendar-item-header-title svg {
   max-width: 100%;
 }
-.events-calendar-item-header-subtitle {
-  font-family: 'GilroyExtraBold', Tahoma, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 12px;
-  color: #90999D;
-}
-.events-calendar-item-icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 128px;
-  height: 128px;
-  border: 6px solid #DCE1E4;
-  margin-bottom: 30px;
-}
-.events-calendar-item-icon img {
-  max-width: 100%;
-  max-height: 100%;
-}
 .events-calendar-item-body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -14668,28 +14640,41 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px 20px;
+  padding: 0 20px 15px 20px;
   color: #2b2a29;
-}
-.events-calendar-item-body-title {
-  font-family: 'GilroyExtraBold', Tahoma, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
 }
 .events-calendar-item-description {
   font-size: 14px;
   line-height: 20px;
   margin-top: 2px;
 }
+.events-calendar-item-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  border: 6px solid #dce1e4;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
 .events-calendar-item-meta {
   margin-top: auto;
   padding-top: 16px;
 }
 .events-calendar-item-date {
-  font-family: 'GilroyExtraBold', Tahoma, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: #872742;
+}
+.events-calendar-item-small-line {
+  border-top: 2px solid;
+  padding-bottom: 5px;
 }
 .team-block .speakers-block-card-title {
   opacity: .9;
