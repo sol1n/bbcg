@@ -3,7 +3,7 @@ if (isset($_REQUEST['section']) && !empty($_REQUEST['section'])) {
 	$parentSection = $_REQUEST['section'];
 } else {
 	$summitsSectionCache = new CPHPCache();
-	if($summitsSectionCache->InitCache(3600, 'summits-first-section', '/summits-first-section'))
+	if($summitsSectionCache->InitCache(3600, 'summits-first-section-new', '/summits-first-section-new'))
 	{
 		extract($summitsSectionCache->GetVars());
 	}
@@ -20,11 +20,12 @@ if (isset($_REQUEST['section']) && !empty($_REQUEST['section'])) {
 		if ($parentSection) {
 			$parentSection = $parentSection['CODE'];
 		}
+        /*
         //show current year if next year summit exist
         $currYear = date("Y");
         if ($parentSection > $currYear){
             $parentSection = $currYear;
-        }
+        }*/
 
 		$summitsSectionCache->EndDataCache(['parentSection' => $parentSection]);
 	}
