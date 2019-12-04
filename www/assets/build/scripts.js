@@ -12660,7 +12660,6 @@ $(window).resize(function() {
                                         "FullJobTitle": "#summit-registration-block [name=title]", // должность посетителя
                                         "Event": "#summit_name", // название саммита
                                         "CGRString1": "#summit-registration-block [name=promocode]", // промокод
-                                        "CGRString1": "#summit-registration-block [name=promocode]", // промокод
                                         "CGRLandingLeadSource": "#select_text", //откуда вы узнали о нас
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
