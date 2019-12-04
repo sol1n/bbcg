@@ -12,9 +12,9 @@
                                     <img src="<?=$img['src']?>" alt="<?=$item['NAME']?>">
                                 </div>
                             <? elseif ($item['PROPERTIES']['ICON']['VALUE']): ?>
-                                <? $icon = CFile::GetPath($item['PROPERTIES']['ICON']['VALUE']); ?>
+                                <?$icon = CFile::ResizeImageGet($item['PROPERTIES']['ICON']['VALUE'], Array("width" => 116, "height" => 116), BX_RESIZE_IMAGE_EXACT, false); ?>
                                 <div class="events-calendar-item-icon">
-                                    <img src="<?=$icon?>" alt="<?=$item['NAME']?>">
+                                    <img src="<?=$icon['src']?>" alt="<?=$item['NAME']?>">
                                 </div>
                             <? endif ?>
                             <div class="events-calendar-item-header-title m-t">
