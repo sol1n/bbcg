@@ -1286,6 +1286,12 @@ li.fancybox-thumbs-loading {
 .b-smoke-white {
   background-color: #f5f8fa;
 }
+.c-black {
+  color: #000000;
+}
+.b-black {
+  background-color: #000000;
+}
 .c-cool-grey {
   color: #90999d;
 }
@@ -5140,6 +5146,12 @@ body {
 }
 .events-block-item-salad .events-block-item-footer {
   background-color: #006d70;
+}
+.events-block-item-black .events-block-item-border {
+  border-color: #000000;
+}
+.events-block-item-black .events-block-item-footer {
+  background-color: #000000;
 }
 .events-block-slider {
   position: relative;
