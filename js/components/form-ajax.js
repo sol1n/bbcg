@@ -101,6 +101,7 @@
 
                             if($form.data('crm-token') === 'summit-reg-form'){ // форма регистрации на саммит
                                 console.log('summit-reg-form to CRM');
+                                var summit_name = $('#summit_name').val();
 
                                 if($('[name=summit_reg_select]').val() === "o_other" ) {
                                     select_text = $('input[name=other]').val();
@@ -246,6 +247,7 @@
                                 metrics();
                             }
                             $form[0].reset();
+                            $('#summit_name').val(summit_name);
                             $('[name=other_container]').hide();//скрываем поле "Другое" у формы регистрации на саммит
                             $('input[name=other]').val('');//очищаем поле "Другое" на форме регистрации
                             $('#select_text').val('');//очищаем скрытое поле "откуда вы узнали он нас"
