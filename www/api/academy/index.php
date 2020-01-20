@@ -42,7 +42,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
     ]));
     $result = curl_exec($curl);
     curl_close($curl);
-    
+
     $parsed = json_decode($result);
     if (!isset($parsed->success) || !$parsed->success) {
         {
@@ -52,9 +52,55 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             ]);
         }
     } else {
-        $page = isset($_REQUEST['from']) && isset($from[$_REQUEST['from']]) ? $from[$_REQUEST['from']] : ''; 
+        $page = isset($_REQUEST['from']) && isset($from[$_REQUEST['from']]) ? $from[$_REQUEST['from']] : '';
 
         CModule::IncludeModule('iblock');
+
+        //find selected cource
+        $program = '';
+        if (isset($_REQUEST['program']) && is_numeric($_REQUEST['program'])) {
+
+            $arSelect = Array("ID", "IBLOCK_ID", "NAME", "PROPERTY_*");
+            $arFilter = Array("IBLOCK_ID"=>COURCES_IBLOCK, "ID"=> $_REQUEST['program'], "ACTIVE"=>"Y");
+            $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
+            while($ob = $res->GetNextElement()){
+                $arProgram['FIELDS'] = $ob->GetFields();
+                $arProgram['PROPERTIES'] = $ob->GetProperties();
+            }
+
+            $end = FormatDate('d.m', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+            $begin = FormatDate('d.m', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+            if ($begin == $end) {
+                //One-day course
+                $day = FormatDate('j', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $month = mb_strtolower(FormatDate('F', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                $year = mb_strtolower(FormatDate('Y', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                $format_date = ' ('.$day.' '.$month.' '.$year.')';
+            } else {
+                $end = FormatDate('m', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                $begin = FormatDate('m', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+                if ($begin == $end) {
+                    //Start and end dates are in one month
+                    $endDay = FormatDate('j', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                    $beginDay = FormatDate('j', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                    $days = "$beginDay – $endDay";
+                    $month = mb_strtolower(FormatDate('F', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                    $year = mb_strtolower(FormatDate('Y', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS")));
+                    $format_date = ' ('.$days.' '.$month.' '.$year.')';
+                } else {
+                    //Start and end dates are in different months
+                    $endDay = FormatDate('j', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                    $endMonth = FormatDate('F', MakeTimeStamp($arProgram["PROPERTIES"]['END']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                    $beginDay = FormatDate('j', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+                    $beginMonth = FormatDate('F', MakeTimeStamp($arProgram["PROPERTIES"]['BEGIN']['VALUE'], "DD.MM.YYYY HH:MI:SS"));
+
+                    $format_date = ' ('.$beginDay.' '.$beginMonth.' - '.$endDay.' '.$endMonth.' '.$year.')';
+                }
+            }
+        }
+        $cource = $arProgram['FIELDS']['NAME'].$format_date
 
         $el = new CIblockElement;
         $result = $el->Add([
@@ -67,7 +113,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 'LAST_NAME' => $_REQUEST['surname'],
                 'POSITION' => $_REQUEST['title'],
                 'COMPANY' => $_REQUEST['company'],
-                'PROGRAM' => $_REQUEST['program']
+                'PROGRAM' => $cource
             ]
         ]);
         echo json_encode([
@@ -79,15 +125,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
         if (function_exists('fastcgi_finish_request')) {
             fastcgi_finish_request();
         }
-        
-        $program = '';
-        if (isset($_REQUEST['program']) && is_numeric($_REQUEST['program'])) {
-            $program = CIblockElement::GetByID($_REQUEST['program'])->Fetch();
-            if ($program) {
-                $program = $program['NAME'];
-            }
-        }
-        
+
         $data = [
             'name' => $_REQUEST['name'],
             'surname' => $_REQUEST['surname'],
@@ -95,13 +133,13 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
             'phone' => $_REQUEST['phone'],
             'company' => $_REQUEST['company'],
             'position' => $_REQUEST['title'],
-            'program' => $program
+            'program' => $cource
         ];
-        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'academy/administration', $data, [], ['sol1n@mail.ru']);
+        $result = sendEmail(RETAIL_EMAIL, 'Заявка на сайте', 'academy/administration', $data, [], ['sol1n@mail.ru', 'dr.nightingale@mail.ru']);
     }
 }
 else
-{  
+{
     echo json_encode([
         'success' => false,
         'message' => $messages['empty']
