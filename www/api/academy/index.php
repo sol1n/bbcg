@@ -100,7 +100,7 @@ if ($_POST['name'] && $_POST['surname'] && $_POST['phone'] && $_POST['email'] &&
                 }
             }
         }
-        $cource = $arProgram['FIELDS']['NAME'].$format_date
+        $cource = $arProgram['FIELDS']['NAME'].$format_date;
 
         $el = new CIblockElement;
         $result = $el->Add([
