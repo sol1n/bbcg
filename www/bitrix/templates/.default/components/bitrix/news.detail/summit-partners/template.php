@@ -12,24 +12,28 @@
 <div class="wrapper m-t-md m-b-md">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-9 m-b-md">
-            <? foreach ($arResult['SECTIONS'] as $section): ?>
-                <h2 class="text-center"><?=$section['NAME']?></h2>
-                <div class="row">
-                    <? foreach ($section['ITEMS'] as $item): ?>
-                        <div class="col-xs-12 col-sm-6 col-md-4 m-b-md">
-                            <? if ($item['PROPERTY_LINK_VALUE']): ?>
-                                <a target="_blank" href="<?=$item['PROPERTY_LINK_VALUE']?>" class="partners-block-card">
-                                    <img src="<?=$item['PREVIEW_PICTURE']?>" alt="<?=$item['NAME']?>">
-                                </a>
-                            <? else: ?>
-                                <a class="partners-block-card ">
-                                    <img src="<?=$item['PREVIEW_PICTURE']?>" alt="<?=$item['NAME']?>">
-                                </a>
-                            <? endif ?>
-                        </div>
-                    <? endforeach ?>
-                </div>
-            <? endforeach ?>
+            <? if (!empty($arResult['SECTIONS'])):?>
+                <? foreach ($arResult['SECTIONS'] as $section): ?>
+                    <h2 class="text-center"><?=$section['NAME']?></h2>
+                    <div class="row">
+                        <? foreach ($section['ITEMS'] as $item): ?>
+                            <div class="col-xs-12 col-sm-6 col-md-4 m-b-md">
+                                <? if ($item['PROPERTY_LINK_VALUE']): ?>
+                                    <a target="_blank" href="<?=$item['PROPERTY_LINK_VALUE']?>" class="partners-block-card">
+                                        <img src="<?=$item['PREVIEW_PICTURE']?>" alt="<?=$item['NAME']?>">
+                                    </a>
+                                <? else: ?>
+                                    <a class="partners-block-card ">
+                                        <img src="<?=$item['PREVIEW_PICTURE']?>" alt="<?=$item['NAME']?>">
+                                    </a>
+                                <? endif ?>
+                            </div>
+                        <? endforeach ?>
+                    </div>
+                <? endforeach ?>
+            <? else:?>
+                <h3>Информация о партнерах обновляется.</h3>
+            <?endif;?>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 m-b-md">
                 <?
