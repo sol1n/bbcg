@@ -14,6 +14,8 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     <div id="registration-form-overlay" class="form-overlay"></div>
     <input type="text" name="full_name" class="form-input hidden">
     <input type="text" name="event" class="form-input hidden" value="Подписка на рассылку">
+    <input type="text" name="type_selected" class="form-input hidden">
+    <input type="text" name="field_selected" class="form-input hidden">
     <div class="row">
         <div class="col-xs-12 col-sm-4">
             <div class="form-group">
