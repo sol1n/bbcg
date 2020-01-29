@@ -161,7 +161,11 @@
                         <div class="summit-registration-block-card-value">
                             <span class="main-phone-1">
                                 <? if(!empty($arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'])): ?>
-                                    <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
+                                    <? if(($arParams['LANG'] == 'en') && (!empty($arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE']))): ?>
+                                        <a href="tel:<?=$arResult['PROPERTIES']['EN_ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['EN_ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['EN_ALT_REG_PHONE']['VALUE'] ?></a> <br>
+                                    <? else: ?>
+                                        <a href="tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>" onclick="return gtag_report_conversion('tel:<?=$arResult['PROPERTIES']['ALT_REG_PHONE']['DESCRIPTION'] ?>');"><?=$arResult['PROPERTIES']['ALT_REG_PHONE']['VALUE'] ?></a> <br>
+                                    <? endif ?>
                                 <? else: ?>
                                     <a href="tel:+74957852206" onclick="return gtag_report_conversion('tel:+74957852206');">+7 (495) 785-22-06</a> <br>
                                 <? endif ?>
@@ -169,7 +173,7 @@
                         </div>
                         <?=Loc::GetMessage('CONTACT_PERSON', [], $arParams['LANG'])?>
                         <? if(!empty($arResult['PROPERTIES']['ALT_REG_PERSON']['VALUE'])): ?>
-                            <? if($arParams['LANG'] == 'en'): ?>
+                            <? if(($arParams['LANG'] == 'en') && (!empty($arResult['PROPERTIES']['EN_ALT_REG_PERSON']['VALUE']))): ?>
                                 <?=$arResult['PROPERTIES']['EN_ALT_REG_PERSON']['VALUE'] ?>
                             <? else: ?>
                                 <?=$arResult['PROPERTIES']['ALT_REG_PERSON']['VALUE'] ?>
@@ -185,13 +189,21 @@
                         </div>
                         <div class="summit-registration-block-card-value">
                             <? if(!empty($arResult['PROPERTIES']['ALT_REG_EMAIL']['VALUE'])): ?>
-                                <a href="mailto:<?=$arResult['PROPERTIES']['ALT_REG_EMAIL']['VALUE'] ?>"><?=$arResult['PROPERTIES']['ALT_REG_EMAIL']['VALUE'] ?></a>
+                                <? if(($arParams['LANG'] == 'en') && (!empty($arResult['PROPERTIES']['EN_ALT_REG_EMAIL']['VALUE']))): ?>
+                                    <a href="mailto:<?=$arResult['PROPERTIES']['EN_ALT_REG_EMAIL']['VALUE'] ?>"><?=$arResult['PROPERTIES']['EN_ALT_REG_EMAIL']['VALUE'] ?></a>
+                                <? else: ?>
+                                    <a href="mailto:<?=$arResult['PROPERTIES']['ALT_REG_EMAIL']['VALUE'] ?>"><?=$arResult['PROPERTIES']['ALT_REG_EMAIL']['VALUE'] ?></a>
+                                <? endif ?>
                             <? else: ?>
                                 <a href="mailto:iren@b2bcg.ru">iren@b2bcg.ru</a>
                             <? endif ?>
                         </div>
                         <? if ($arResult['PROPERTIES']['REQUEST_FILE']['VALUE']): ?>
-                            <? $file = CFile::GetPath($arResult['PROPERTIES']['REQUEST_FILE']['VALUE']); ?>
+                            <? if(($arParams['LANG'] == 'en') && (!empty($arResult['PROPERTIES']['EN_REQUEST_FILE']['VALUE']))): ?>
+                                <? $file = CFile::GetPath($arResult['PROPERTIES']['EN_REQUEST_FILE']['VALUE']); ?>
+                            <? else: ?>
+                                <? $file = CFile::GetPath($arResult['PROPERTIES']['REQUEST_FILE']['VALUE']); ?>
+                            <? endif ?>
                             <?=Loc::GetMessage('DOWNLOAD_AND_SEND_REQUEST', ['FILE' => $file], $arParams['LANG'])?>
                         <? endif ?>
                     </div>
