@@ -158,6 +158,11 @@
                                 var fio = $(".subscribe-form [name=last_name]").val()+" "+$(".subscribe-form [name=first_name]").val()+" "+$(".subscribe-form [name=middle_name]").val();
                                 $(".subscribe-form [name=full_name]").val(fio); // ФИО посетителя
 
+                                var type_selected = $(".subscribe-form [name=type] option:selected").text();
+                                var field_selected = $(".subscribe-form [name=work] option:selected").text();
+                                $(".subscribe-form [name=type_selected]").val(type_selected);
+                                $(".subscribe-form [name=field_selected]").val(field_selected);
+
                                 //передача данных в CRM
                                 var crm_config = {
                                     fields: {
@@ -167,6 +172,8 @@
                                         "Company": ".subscribe-form [name=organisation]", // название компании
                                         "FullJobTitle": ".subscribe-form [name=title]", // должность посетителя
                                         "Event": ".subscribe-form [name=event]", // событие
+                                        "CGRSector": ".subscribe-form [name=type_selected]", // Тип компании
+                                        "CGRFieldOfActivity": ".subscribe-form [name=field_selected]", // Сфера деятельности
                                     },
                                     landingId: "b75941f4-65c1-441b-94ee-7fb1c6eac35b",
                                     serviceUrl: "http://bpm.b2bcg.ru:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
