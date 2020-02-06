@@ -48,7 +48,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         </div>
     </div>
     <div class="registration-form-submit">
-        <button type="submit" class="button button-<?=$_REQUEST['color']);?>">
+        <button type="submit" class="button button-<?=$_REQUEST['color'];?>">
             Отправить заявку
         </button>
     </div>
