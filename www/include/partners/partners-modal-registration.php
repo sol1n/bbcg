@@ -2,7 +2,6 @@
 define('STOP_STATISTICS', true);
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
 ?>
-
 <div class="registration-modal-title ">
     Стать партнером B2BCG
 </div>
@@ -49,7 +48,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         </div>
     </div>
     <div class="registration-form-submit">
-        <button type="submit" class="button button-red">
+        <button type="submit" class="button button-<?=$_REQUEST['color']);?>">
             Отправить заявку
         </button>
     </div>
