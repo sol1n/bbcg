@@ -23,7 +23,7 @@ if(!empty($arParams['COLOR']))
                 id="partners-form"
                 href="#"
                 data-side-modal
-                data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php"
+                data-side-modal-url="<?=$lang?>/include/partners/partners-modal-registration.php?color=<?=$color?>"
                 data-side-modal-class="registration-modal contestform-modal"
                 data-side-modal-prevent-overlay-close
                 data-side-modal-prevent-esc-close
