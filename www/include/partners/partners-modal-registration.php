@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 ?>
 
 <div class="registration-modal-title ">
-    Скачать партнерское предложение
+    Стать партнером B2BCG
 </div>
 <form action="/api/partners/" method="POST" class="summit-registration-block-form" data-validate data-form-ajax>
     <input type="hidden" name="from" value="partners">
