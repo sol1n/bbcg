@@ -44,13 +44,13 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
         </div>
         <div class="col-xs-12 col-sm-12">
             <div class="submit-registration-block-form-hint">
-                Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
+                Нажимая кнопку «Отправить заявку», я принимаю условия <a href="/eula/" target="_blank">Пользовательского соглашения</a> и даю согласие на обработку персональных данных.
             </div>
         </div>
     </div>
     <div class="registration-form-submit">
         <button type="submit" class="button button-red">
-            Скачать в PDF
+            Отправить заявку
         </button>
     </div>
 </form>

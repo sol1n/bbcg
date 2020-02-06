@@ -51,7 +51,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
     </div>
     <div class="registration-form-submit">
         <button type="submit" class="button button-red">
-            Download PDF
+            Registration
         </button>
     </div>
 </form>
