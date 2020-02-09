@@ -97,7 +97,7 @@ global $eventsFilter;
 $eventsFilter = $arParams['FILTER'];
 $APPLICATION->IncludeComponent(
     "bitrix:news.list",
-    "events-page",
+    "events-page-test",
     Array(
         "FILTER_NAME" => "eventsFilter",
         "ADD_SECTIONS_CHAIN" => "N",

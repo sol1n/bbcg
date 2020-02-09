@@ -125,6 +125,24 @@ $arUrlRewrite = array(
 		"RULE" => "summit=\$1",
 		"PATH" => "/summits/events/index.php",
 	),
+
+    /**/
+    array(
+        "CONDITION" => "#^/(.*)/events-test/([0-9]+)/.*#",
+        "RULE" => "summit=\$1&id=\$2",
+        "PATH" => "/summits/events-test/detail.php",
+    ),
+    array(
+        "CONDITION" => "#^/(.*)/events-test/(.*)/.*#",
+        "RULE" => "summit=\$1&date=\$2",
+        "PATH" => "/summits/events-test/index.php",
+    ),
+    array(
+        "CONDITION" => "#^/(.*)/events-test/.*#",
+        "RULE" => "summit=\$1",
+        "PATH" => "/summits/events-test/index.php",
+    ),/**/
+
 	array(
 		"CONDITION" => "#^/(.*)/about/(.*)/.*#",
 		"RULE" => "summit=\$1&page=\$2",
