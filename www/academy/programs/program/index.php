@@ -15,6 +15,6 @@ while($ob = $res->GetNextElement()){
 $link = CFile::GetPath($arProps["PROGRAM_LINK"]["VALUE"]);
 
 header("Content-type: application/pdf");
-header("Content-Disposition: inline; filename=".$arFields["NAME"].".pdf");
+header("Content-Disposition: inline; filename=\"".$arFields["NAME"].".pdf\"");
 @readfile($_SERVER['DOCUMENT_ROOT'].$link);
 ?>
